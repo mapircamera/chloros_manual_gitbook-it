@@ -1,221 +1,221 @@
-# Choosing Target Images
+# Selezione delle immagini target
 
-Marking which images contain calibration targets is a crucial step that significantly speeds up the Chloros processing pipeline. By pre-selecting target images, you eliminate the need for Chloros to scan every image in your dataset for calibration targets.
+Contrassegnare le immagini che contengono target di calibrazione è un passaggio fondamentale che velocizza notevolmente il processo di elaborazione di Chloros. Preselezionando le immagini target, si elimina la necessità che Chloros esegua la scansione di ogni immagine nel set di dati alla ricerca di target di calibrazione.
 
-## Why Mark Target Images?
+## Perché contrassegnare le immagini target?
 
-### Processing Speed
+### Velocità di elaborazione
 
-Without marking target images, Chloros must:
+Senza contrassegnare le immagini target, Chloros deve:
 
-* Scan every single image in your project
-* Run target detection algorithms on each image
-* Check hundreds or thousands of images unnecessarily
+* Scansionare ogni singola immagine nel progetto
+* Eseguire algoritmi di rilevamento dei target su ogni immagine
+* Controllare centinaia o migliaia di immagini inutilmente
 
-**Result**: Processing can take significantly longer, especially for large datasets.
+**Risultato**: l&#x27;elaborazione può richiedere molto più tempo, specialmente per set di dati di grandi dimensioni.
 
-### With Marked Target Images
+### Con immagini target contrassegnate
 
-When you check the Target column for specific images:
+Quando si seleziona la colonna Target per immagini specifiche:
 
-* Chloros only scans the checked images for targets
-* Target detection completes much faster
-* Overall processing time is greatly reduced
+* Chloros esegue la scansione solo delle immagini selezionate alla ricerca di target
+* Il rilevamento dei target viene completato molto più rapidamente
+* Il tempo di elaborazione complessivo viene notevolmente ridotto
 
-{% hint style="success" %}
-**Speed Improvement**: Marking 2-3 target images in a 500-image dataset can reduce target detection time from 30+ minutes to under 1 minute.
+{% suggerimento style=&quot;success&quot; %}
+**Miglioramento della velocità**: contrassegnando 2-3 immagini target in un set di dati di 500 immagini è possibile ridurre il tempo di rilevamento dei target da oltre 30 minuti a meno di 1 minuto.
 {% endhint %}
 
 ***
 
-## How to Mark Target Images
+## Come contrassegnare le immagini target
 
-### Step 1: Identify Your Target Images
+### Passaggio 1: identificare le immagini target
 
-Look through your imported images in the File Browser and identify which images contain calibration targets.
+Esaminare le immagini importate nel File Browser e identificare quali immagini contengono target di calibrazione.
 
-**Common scenarios:**
+**Scenari comuni:**
 
-* **Pre-capture target**: Captured before starting the session
-* **Post-capture target**: Captured after completing the session
-* **In-field targets**: Targets placed within the capture area
-* **Multiple targets**: 2-3 target images per session (recommended)
+* **Obiettivo pre-acquisizione**: acquisito prima dell&#x27;inizio della sessione
+* **Obiettivo post-acquisizione**: acquisito dopo il completamento della sessione
+* **Obiettivi sul campo**: obiettivi posizionati all&#x27;interno dell&#x27;area di acquisizione
+* **Obiettivi multipli**: 2-3 immagini target per sessione (consigliato)
 
-### Step 2: Check the Target Column
+### Passaggio 2: controllare la colonna Target
 
-For each image containing a calibration target:
+Per ogni immagine contenente un target di calibrazione:
 
-1. Locate the image in the File Browser table
-2. Find the **Target** column (rightmost column)
-3. Click the checkbox in the Target column for that image
-4. Repeat for all images containing targets
+1. Individuare l&#x27;immagine nella tabella del File Browser
+2. Trovare la colonna **Target** (colonna all&#x27;estrema destra)
+3. Fare clic sulla casella di controllo nella colonna Target per quell&#x27;immagine
+4. Ripetere l&#x27;operazione per tutte le immagini contenenti target
 
-### Step 3: Verify Your Selection
+### Passaggio 3: verificare la selezione
 
-Before processing, double-check:
+Prima dell&#x27;elaborazione, ricontrollare:
 
-* [ ] All images with calibration targets are checked
-* [ ] No non-target images are accidentally checked
-* [ ] Targets are clearly visible in checked images
-
-***
-
-## Best Practices for Target Images
-
-### Target Capture Guidelines
-
-**Timing:**
-
-* Capture target images immediately before and throughout your capture session
-* Within the same lighting conditions as your DAQ light sensor
-* Ideally capture target images as often as possible for the best results. Otherwise, the light sensor data will be used to adjust the calibration over time.
-
-**Camera Position:**
-
-* Hold camera above target such that is is centered and fills around 40-60% of the image center.
-* Keep camera parallel/nadir to target surface
-
-**Lighting:**
-
-* Same ambient lighting as your DAQ light sensor
-* Avoid shadows on the target surfaces
-* Don't block your light source with your body, vehicle or vegetation
-* Overcast conditions provide most consistent results
-
-**Target Condition:**
-
-* Keep target panels clean and dry
-* All 4 panels should be clearly visible and unobstructed
-* Targets perpendicular/nadir to the light source if possible
-
-### How Many Target Images?
-
-**Minimum:** 1 target image per session. **Recommended:** 3-5 target images per session.
-
-**Best practice schedule:**
-
-* 3-5 images captured shortly after the light sensor is recording
-* Rotate the camera between captures for the best results
-* Optional: periodically mid-session if lighting conditions change constantly
+* [ ] Tutte le immagini con target di calibrazione sono selezionate
+* [ ] Nessuna immagine non target è stata selezionata accidentalmente
+* [ ] I target sono chiaramente visibili nelle immagini selezionate
 
 ***
 
-## Working with Multiple Cameras
+## Best practice per le immagini target
 
-### Dual-Camera Setups
+### Linee guida per l&#x27;acquisizione dei target
 
-If using two MAPIR cameras simultaneously (e.g., Survey3W RGN + Survey3N OCN):
+**Tempistica:**
 
-1. Capture target images with **both cameras** at the same time
-2. Use the **same physical target** for both cameras
-3. Mark target images for **both camera types** in the File Browser
-4. Chloros will use appropriate targets for each camera's calibration
+* Acquisire le immagini target immediatamente prima e durante la sessione di acquisizione
+* Nelle stesse condizioni di illuminazione del sensore di luce DAQ
+* Idealmente, acquisire le immagini target il più spesso possibile per ottenere i migliori risultati. In caso contrario, i dati del sensore di luce verranno utilizzati per regolare la calibrazione nel tempo.
 
-### Camera Model Column
+**Posizione della fotocamera:**
 
-The **Camera Model** column helps identify which images came from which camera:
+* Tenere la fotocamera sopra il target in modo che sia centrata e riempia circa il 40-60% del centro dell&#x27;immagine.
+* Mantenere la fotocamera parallela/nadir rispetto alla superficie del target
+
+**Illuminazione:**
+
+* Stessa illuminazione ambientale del sensore di luce DAQ
+* Evitare ombre sulle superfici del bersaglio
+* Non ostruire la fonte di luce con il proprio corpo, veicoli o vegetazione
+* Le condizioni di cielo coperto forniscono i risultati più coerenti
+
+**Condizioni del bersaglio:**
+
+* Mantenere i pannelli del bersaglio puliti e asciutti
+* Tutti e 4 i pannelli devono essere chiaramente visibili e senza ostacoli
+* Se possibile, i bersagli devono essere perpendicolari/nadir rispetto alla fonte di luce
+
+### Quante immagini del bersaglio?
+
+**Minimo:** 1 immagine target per sessione. **Consigliato:** 3-5 immagini target per sessione.
+
+**Programma di best practice:**
+
+* 3-5 immagini acquisite poco dopo l&#x27;inizio della registrazione del sensore di luce
+* Ruotare la telecamera tra un&#x27;acquisizione e l&#x27;altra per ottenere i migliori risultati
+* Opzionale: periodicamente a metà sessione se le condizioni di illuminazione cambiano costantemente
+
+***
+
+## Utilizzo di più telecamere
+
+### Configurazioni a doppia fotocamera
+
+Se si utilizzano due fotocamere MAPIR contemporaneamente (ad esempio, Survey3W RGN + Survey3N OCN):
+
+1. Acquisire le immagini target con **entrambe le telecamere** contemporaneamente
+2. Utilizzare lo **stesso target fisico** per entrambe le telecamere
+3. Contrassegnare le immagini target per **entrambi i tipi di telecamera** nel File Browser
+4. Chloros utilizzerà i target appropriati per la calibrazione di ciascuna telecamera
+
+### Colonna Modello fotocamera
+
+La colonna **Modello fotocamera** aiuta a identificare quali immagini provengono da quale fotocamera:
 
 * Survey3W\_RGN
 * Survey3N\_OCN
 * Survey3W\_RGB
-* etc.
+* ecc.
 
-Use this column to verify you've marked targets for each camera type in your project.
-
-***
-
-## Target Detection Settings
-
-### Adjusting Detection Sensitivity
-
-If Chloros isn't detecting your targets correctly, adjust these settings in [Project Settings](adjusting-project-settings.md):
-
-**Minimum calibration sample area:**
-
-* **Default**: 25 pixels
-* **Increase** if getting false detections on small artifacts
-* **Decrease** if targets aren't being detected
-
-**Minimum target clustering:**
-
-* **Default**: 60
-* **Increase** if targets are being split into multiple detections
-* **Decrease** if targets with color variation aren't fully detected
+Utilizzare questa colonna per verificare di aver contrassegnato i target per ciascun tipo di telecamera nel progetto.
 
 ***
 
-## Common Target Image Issues
+## Impostazioni di rilevamento dei target
 
-### Problem: No Targets Detected
+### Regolazione della sensibilità di rilevamento
 
-**Possible causes:**
+Se Chloros non rileva correttamente i target, regolare queste impostazioni in [Impostazioni progetto](adjusting-project-settings.md):
 
-* Target images not marked in File Browser
-* Target too small in frame (< 30% of image)
-* Poor lighting (shadows, glare)
-* Target detection settings too strict
+**Area minima di campionamento della calibrazione:**
 
-**Solutions:**
+* **Impostazione predefinita**: 25 pixel
+* **Aumentare** se si ottengono rilevamenti errati su piccoli artefatti
+* **Diminuire** se i target non vengono rilevati
 
-1. Verify Target column is checked for correct images
-2. Review target image quality in preview
-3. Recapture targets if quality is poor
-4. Adjust target detection settings if needed
+**Raggruppamento minimo dei target:**
 
-### Problem: False Target Detections
-
-**Possible causes:**
-
-* White buildings, vehicles, or ground cover mistaken for targets
-* Bright patches in vegetation
-* Detection sensitivity too low
-
-**Solutions:**
-
-1. Mark only actual target images to limit detection scope
-2. Increase minimum calibration sample area
-3. Increase minimum target clustering value
-4. Ensure target images show only the target (minimal background clutter)
+* **Impostazione predefinita**: 60
+* **Aumentare** se i target vengono suddivisi in più rilevamenti
+* **Diminuire** se i target con variazioni di colore non vengono rilevati completamente
 
 ***
 
-## Verification Checklist
+## Problemi comuni relativi alle immagini dei target
 
-Before starting processing, verify your target image selection:
+### Problema: nessun target rilevato
 
-* [ ] At least 1 target image marked per session
-* [ ] Target column checkboxes are checked for all target images
-* [ ] Target images captured within same timeframe as survey
-* [ ] Targets clearly visible in preview when clicked
-* [ ] All 4 calibration panels visible in each target image
-* [ ] No shadows or obstructions on targets
-* [ ] For dual-camera: Targets marked for both camera types
+**Possibili cause:**
+
+* Immagini dei target non contrassegnate nel File Browser
+* Target troppo piccolo nell&#x27;inquadratura (&lt; 30% dell&#x27;immagine)
+* Illuminazione scadente (ombre, riflessi)
+* Impostazioni di rilevamento dei target troppo rigide
+
+**Soluzioni:**
+
+1. Verificare che la colonna Target sia selezionata per le immagini corrette
+2. Controllare la qualità dell&#x27;immagine del target nell&#x27;anteprima
+3. Catturare nuovamente i target se la qualità è scadente
+4. Regolare le impostazioni di rilevamento dei target, se necessario
+
+### Problema: rilevamenti di target falsi
+
+**Possibili cause:**
+
+* Edifici bianchi, veicoli o copertura del suolo scambiati per bersagli
+* Macchie luminose nella vegetazione
+* Sensibilità di rilevamento troppo bassa
+
+**Soluzioni:**
+
+1. Contrassegnare solo le immagini dei bersagli effettivi per limitare l&#x27;ambito di rilevamento
+2. Aumentare l&#x27;area minima del campione di calibrazione
+3. Aumentare il valore minimo di raggruppamento dei bersagli
+4. Assicurarsi che le immagini dei bersagli mostrino solo il bersaglio (disturbo minimo dello sfondo)
 
 ***
 
-## Target-Free Processing
+## Lista di controllo per la verifica
 
-### Processing Without Calibration Targets
+Prima di avviare l&#x27;elaborazione, verificare la selezione delle immagini dei bersagli:
 
-While not recommended for scientific work, you can process without targets:
+* [ ] Almeno 1 immagine del bersaglio contrassegnata per sessione
+* [ ] Le caselle di controllo della colonna Bersaglio sono selezionate per tutte le immagini dei bersagli
+* [ ] Immagini dei bersagli acquisite nello stesso intervallo di tempo del rilevamento
+* [ ] Bersagli chiaramente visibili nell&#x27;anteprima quando si fa clic
+* [ ] Tutti e 4 i pannelli di calibrazione visibili in ciascuna immagine del bersaglio
+* [ ] Nessuna ombra o ostruzione sui target
+* [ ] Per doppia fotocamera: target contrassegnati per entrambi i tipi di fotocamera
 
-1. Leave all Target column checkboxes unchecked
-2. **Disable** "Reflectance calibration" in Project Settings
-3. Vignette correction will still be applied
-4. Output will not be calibrated for absolute reflectance
+***
 
-{% hint style="warning" %}
-**Not Recommended**: Without reflectance calibration, pixel values represent relative brightness only, not scientific reflectance measurements. Use calibration targets for accurate, repeatable results.
+## Elaborazione senza target
+
+### Elaborazione senza target di calibrazione
+
+Sebbene non sia consigliabile per lavori scientifici, è possibile eseguire l&#x27;elaborazione senza target:
+
+1. Lasciare deselezionate tutte le caselle di controllo della colonna Target
+2. **Disattivare** &quot;Calibrazione della riflettanza&quot; nelle impostazioni del progetto
+3. La correzione della vignettatura verrà comunque applicata
+4. L&#x27;output non verrà calibrato per la riflettanza assoluta
+
+{% hint style=&quot;warning&quot; %}
+**Non raccomandato**: senza la calibrazione della riflettanza, i valori dei pixel rappresentano solo la luminosità relativa, non misurazioni scientifiche della riflettanza. Utilizzare i target di calibrazione per ottenere risultati accurati e ripetibili.
 {% endhint %}
 
 ***
 
-## Next Steps
+## Passaggi successivi
 
-Once you've marked your target images:
+Dopo aver contrassegnato le immagini target:
 
-1. **Review your settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-2. **Start processing** - See [Starting the Processing](starting-the-processing.md)
-3. **Monitor progress** - See [Monitoring the Processing](monitoring-the-processing.md)
+1. **Rivedere le impostazioni** - Vedere [Regolazione delle impostazioni del progetto](adjusting-project-settings.md)
+2. **Avviare l&#x27;elaborazione** - Vedere [Avvio dell&#x27;elaborazione](starting-the-processing.md)
+3. **Monitorare lo stato di avanzamento** - Vedere [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
 
-For more information about calibration targets themselves, see [Calibration Targets](../calibration-targets.md).
+Per ulteriori informazioni sui target di calibrazione, vedere [Target di calibrazione](../calibration-targets.md).

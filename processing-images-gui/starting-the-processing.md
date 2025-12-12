@@ -1,366 +1,366 @@
-# Starting the Processing
+# Avvio dell&#x27;elaborazione
 
-Once you've imported your images, marked your calibration targets, and configured your project settings, you're ready to begin processing. This page guides you through initiating the Chloros processing pipeline.
+Una volta importate le immagini, contrassegnati i target di calibrazione e configurate le impostazioni del progetto, è possibile avviare l&#x27;elaborazione. Questa pagina guida l&#x27;utente attraverso l&#x27;avvio della pipeline di elaborazione Chloros.
 
-## Pre-Processing Checklist
+## Lista di controllo pre-elaborazione
 
-Before clicking the Start button, verify that everything is ready:
+Prima di fare clic sul pulsante Avvia, verificare che tutto sia pronto:
 
-* [ ] **Files imported** - All images appear in File Browser
-* [ ] **Target images marked** - Target column checked for calibration images
-* [ ] **Camera models detected** - Camera Model column shows correct cameras
-* [ ] **Settings configured** - Project Settings reviewed and adjusted
-* [ ] **Indices selected** - Desired multispectral indices added (if needed)
-* [ ] **Export format chosen** - Output format appropriate for your workflow
+* [ ] **File importati** - Tutte le immagini vengono visualizzate nel File Browser
+* [ ] **Immagini target contrassegnate** - Colonna Target controllata per le immagini di calibrazione
+* [ ] **Modelli di fotocamera rilevati** - La colonna Modello fotocamera mostra le fotocamere corrette
+* [ ] **Impostazioni configurate** - Impostazioni del progetto riviste e regolate
+* [ ] **Indici selezionati** - Indici multispettrali desiderati aggiunti (se necessario)
+* [ ] **Formato di esportazione scelto** - Formato di output appropriato per il tuo flusso di lavoro
 
-{% hint style="info" %}
-**Tip**: Click through a few images in the File Browser to verify they loaded correctly before processing.
+{% hint style=&quot;info&quot; %}
+**Suggerimento**: clicca su alcune immagini nel File Browser per verificare che siano state caricate correttamente prima dell&#x27;elaborazione.
 {% endhint %}
 
 ***
 
-## Starting the Processing
+## Avvio dell&#x27;elaborazione
 
-### Locate the Start Button
+### Individuare il pulsante Avvia
 
-The Start/Play button is located in the top header bar of Chloros:
+Il pulsante Avvia/Riproduci si trova nella barra di intestazione superiore di Chloros:
 
-* Position: Top center of the window
-* Icon: **Play/Start button** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
-* Status: Button is enabled (bright) when ready to process
+* Posizione: parte superiore centrale della finestra
+* Icona: **pulsante Riproduci/Avvia** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Stato: il pulsante è abilitato (illuminato) quando è pronto per l&#x27;elaborazione
 
-### Click to Start
+### Fare clic per avviare
 
-1. Click the **Play/Start button** in the top header
-2. Processing begins immediately
-3. The button becomes disabled (grayed out) during processing
-4. Progress bar updates, showing processing status
+1. Fare clic sul **pulsante Riproduci/Avvia** nell&#x27;intestazione superiore
+2. L&#x27;elaborazione inizia immediatamente
+3. Il pulsante viene disabilitato (grigio) durante l&#x27;elaborazione
+4. La barra di avanzamento si aggiorna, mostrando lo stato dell&#x27;elaborazione
 
-{% hint style="success" %}
-**Processing Started**: Once clicked, Chloros automatically handles all processing steps - target detection, debayering, calibration, index calculation, and export.
+{% hint style=&quot;success&quot; %}
+**Elaborazione avviata**: una volta cliccato, Chloros gestisce automaticamente tutte le fasi di elaborazione: rilevamento del target, debayering, calibrazione, calcolo dell&#x27;indice ed esportazione.
 {% endhint %}
 
 ***
 
-## Understanding Processing Modes
+## Comprensione delle modalità di elaborazione
 
-Chloros operates in two different processing modes depending on your license:
+Chloros funziona in due diverse modalità di elaborazione a seconda della licenza:
 
-### Free Mode (Sequential Processing)
+### Modalità gratuita (elaborazione sequenziale)
 
-**Available to all users**
+**Disponibile per tutti gli utenti**
 
-**How it works:**
+**Come funziona:**
 
-* Processes images one at a time, sequentially
-* Single-threaded operation
-* Lower memory usage
+* Elabora le immagini una alla volta, in modo sequenziale
+* Funzionamento a thread singolo
+* Minore utilizzo di memoria
 
-**Progress bar shows 2 stages:**
+**La barra di avanzamento mostra 2 fasi:**
 
-1. **Target Detect** - Scanning for calibration targets
-2. **Processing** - Applying calibration and exporting images
+1. **Rilevamento del target** - Scansione dei target di calibrazione
+2. **Elaborazione** - Applicazione della calibrazione ed esportazione delle immagini
 
-**Processing time:**
+**Tempo di elaborazione:**
 
-* Much slower than Chloros+ parallel mode
-* Suitable for small to medium datasets (< 200 images)
+* Molto più lento rispetto alla modalità parallela Chloros+
+* Adatto per set di dati di piccole e medie dimensioni (&lt; 200 immagini)
 
-### Chloros+ Mode (Parallel Processing)
+### Modalità Chloros+ (elaborazione parallela)
 
-**Requires Chloros+ license**
+**Richiede la licenza Chloros+**
 
-**How it works:**
+**Come funziona:**
 
-* Processes multiple images simultaneously
-* Multi-threaded operation (up to 16 parallel workers)
-* Utilizes multiple CPU cores
-* Optional GPU (CUDA) acceleration with NVIDIA graphics cards
+* Elabora più immagini contemporaneamente
+* Funzionamento multi-thread (fino a 16 worker paralleli)
+* Utilizza più core CPU
+* Accelerazione GPU (CUDA) opzionale con schede grafiche NVIDIA
 
-**Progress bar shows 4 stages:**
+**La barra di avanzamento mostra 4 fasi:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining image metadata and preparing pipeline
-3. **Calibrating** - Applying corrections and calibrations
-4. **Exporting** - Saving processed images and indices
+1. **Rilevamento** - Ricerca dei target di calibrazione
+2. **Analisi** - Esame dei metadati dell&#x27;immagine e preparazione della pipeline
+3. **Calibrazione** - Applicazione delle correzioni e delle calibrazioni
+4. **Esportazione** - Salvataggio delle immagini elaborate e degli indici
 
-**Progress bar interaction:**
+**Interazione con la barra di avanzamento:**
 
-* **Hover mouse** over bar to see detailed 4-stage dropdown panel
-* **Click** progress bar to freeze the dropdown panel in place
-* **Click again** to unfreeze and hide panel
+* **Passa il mouse** sulla barra per visualizzare il pannello a tendina dettagliato con le 4 fasi
+* **Clicca** sulla barra di avanzamento per bloccare il pannello a tendina in posizione
+* **Clicca di nuovo** per sbloccare e nascondere il pannello
 
-**Processing time:**
+**Tempo di elaborazione:**
 
-* Significantly faster than free mode
-* Scales with CPU core count
-* GPU acceleration further improves speed
+* Significativamente più veloce rispetto alla modalità gratuita
+* Scalabile in base al numero di core della CPU
+* L&#x27;accelerazione GPU migliora ulteriormente la velocità
 
-{% hint style="info" %}
-**Chloros+ Speed**: Parallel processing can be 5-10x faster than sequential mode for large datasets. A 500-image project that takes 2 hours in free mode may complete in 15-20 minutes with Chloros+.
+{% hint style=&quot;info&quot; %}
+**Chloros+ Velocità**: l&#x27;elaborazione parallela può essere 5-10 volte più veloce della modalità sequenziale per set di dati di grandi dimensioni. Un progetto di 500 immagini che richiede 2 ore in modalità gratuita può essere completato in 15-20 minuti con Chloros+.
 {% endhint %}
 
 ***
 
-## What Happens During Processing
+## Cosa succede durante l&#x27;elaborazione
 
-### Stage 1: Target Detection
+### Fase 1: Rilevamento del target
 
-**What Chloros does:**
+**Cosa fa Chloros:**
 
-* Scans marked target images (or all images if none marked)
-* Identifies the 4 calibration panels in each target
-* Extracts reflectance values from target panels
-* Records target timestamps for calibration scheduling
+* Scansiona le immagini target contrassegnate (o tutte le immagini se nessuna è contrassegnata)
+* Identifica i 4 pannelli di calibrazione in ciascun target
+* Estrae i valori di riflettanza dai pannelli target
+* Registra i timestamp dei target per la pianificazione della calibrazione
 
-**Duration:** 1-30 seconds (with marked targets), 5-30+ minutes (unmarked)
+**Durata:** 1-30 secondi (con target contrassegnati), 5-30+ minuti (non contrassegnati)
 
-### Stage 2: Debayering (RAW Conversion)
+### Fase 2: Debayering (conversione RAW)
 
-**What Chloros does:**
+**Cosa fa Chloros:**
 
-* Converts RAW Bayer pattern data to full RGB images
-* Applies high-quality demosaicing algorithm
-* Preserves maximum image quality and detail
+* Converte i dati RAW del pattern Bayer in immagini RGB complete
+* Applica un algoritmo di demosaicing di alta qualità
+* Preserva la massima qualità e il massimo dettaglio dell&#x27;immagine
 
-**Duration:** Varies by image count and CPU speed
+**Durata:** varia in base al numero di immagini e alla velocità della CPU
 
-### Stage 3: Calibration
+### Fase 3: Calibrazione
 
-**What Chloros does:**
+**Cosa fa Chloros:**
 
-* **Vignette correction**: Removes lens darkening at edges
-* **Reflectance calibration**: Normalizes using target reflectance values
-* Applies corrections across all bands/channels
-* Uses appropriate calibration target for each image based on timestamp
+* **Correzione vignettatura**: rimuove l&#x27;oscuramento dell&#x27;obiettivo ai bordi
+* **Calibrazione riflettanza**: normalizza utilizzando i valori di riflettanza target
+* Applica correzioni su tutte le bande/canali
+* Utilizza un target di calibrazione appropriato per ogni immagine in base al timestamp
 
-**Duration:** Majority of processing time
+**Durata:** la maggior parte del tempo di elaborazione
 
-### Stage 4: Index Calculation
+### Fase 4: calcolo dell&#x27;indice
 
-**What Chloros does:**
+**Cosa fa Chloros:**
 
-* Calculates configured multispectral indices (NDVI, NDRE, etc.)
-* Applies band math to calibrated images
-* Generates index images for each selected index
+* Calcola gli indici multispettrali configurati (NDVI, NDRE, ecc.)
+* Applica la matematica delle bande alle immagini calibrate
+* Genera immagini indice per ciascun indice selezionato
 
-**Duration:** A few seconds per image
+**Durata:** pochi secondi per immagine
 
-### Stage 5: Export
+### Fase 5: esportazione
 
-**What Chloros does:**
+**Cosa fa Chloros:**
 
-* Saves calibrated images in selected format
-* Exports index images with configured LUT colors
-* Writes files to camera model subfolders
-* Preserves original filenames with suffixes
+* Salva le immagini calibrate nel formato selezionato
+* Esporta le immagini indice con i colori LUT configurati
+* Scrive i file nelle sottocartelle del modello di fotocamera
+* Conserva i nomi dei file originali con i suffissi
 
-**Duration:** Varies by export format and file size
+**Durata:** varia in base al formato di esportazione e alle dimensioni del file
 
 ***
 
-## Processing Behavior
+## Comportamento di elaborazione
 
-### Automatic Processing Pipeline
+### Pipeline di elaborazione automatica
 
-Once started, the entire pipeline runs automatically:
+Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
-* No user interaction needed
-* All configured steps execute in sequence
-* Progress updates shown in real-time
+* Non è necessaria alcuna interazione da parte dell&#x27;utente
+* Tutti i passaggi configurati vengono eseguiti in sequenza
+* Aggiornamenti sullo stato di avanzamento mostrati in tempo reale
 
-### Computer Usage During Processing
+### Utilizzo del computer durante l&#x27;elaborazione
 
-**Free Mode:**
+**Modalità libera:**
 
-* Relatively low CPU usage (single-threaded)
-* Computer remains responsive for other tasks
-* Safe to minimize Chloros and work in other applications
+* Utilizzo della CPU relativamente basso (single-threaded)
+* Il computer rimane reattivo per altre attività
+* È sicuro ridurre a icona Chloros e lavorare in altre applicazioni
 
-**Chloros+ Parallel Mode:**
+**Chloros+ Modalità parallela:**
 
-* High CPU usage (multi-threaded, up to 16 cores)
-* With GPU acceleration: High GPU usage
-* Computer may be less responsive during processing
-* Avoid starting other CPU-intensive tasks
+* Utilizzo elevato della CPU (multi-threaded, fino a 16 core)
+* Con accelerazione GPU: utilizzo elevato della GPU
+* Il computer potrebbe essere meno reattivo durante l&#x27;elaborazione
+* Evitare di avviare altre attività che richiedono un uso intensivo della CPU
 
-{% hint style="warning" %}
-**Performance Tip**: For best Chloros+ performance, close other applications and let Chloros use full system resources.
+{% hint style=&quot;warning&quot; %}
+**Suggerimento sulle prestazioni**: per ottenere le migliori prestazioni da Chloros+, chiudere le altre applicazioni e lasciare che Chloros utilizzi tutte le risorse di sistema.
 {% endhint %}
 
-### Processing Cannot Be Paused
+### L&#x27;elaborazione non può essere messa in pausa
 
-**Important limitations:**
+**Limitazioni importanti:**
 
-* Once started, processing cannot be paused
-* You can cancel processing, but progress is lost
-* Partial results are not saved
-* Must restart from beginning if canceled
+* Una volta avviata, l&#x27;elaborazione non può essere messa in pausa.
+* È possibile annullare l&#x27;elaborazione, ma i progressi andranno persi.
+* I risultati parziali non vengono salvati.
+* Se annullata, è necessario ricominciare dall&#x27;inizio.
 
-**Planning tip:** For very large projects, consider processing in batches or using CLI for better control.
-
-***
-
-## Monitoring Your Processing
-
-While processing runs, you can:
-
-* **Watch progress bar** - See overall completion percentage
-* **View current stage** - Detect, Analyze, Calibrate, or Export
-* **Check log tab** - See detailed processing messages and warnings
-* **Preview completed images** - Some export files may appear during processing
-
-For detailed information on monitoring, see [Monitoring the Processing](monitoring-the-processing.md).
+**Suggerimento di pianificazione:** per progetti di grandi dimensioni, prendere in considerazione l&#x27;elaborazione in batch o l&#x27;utilizzo di CLI per un controllo migliore.
 
 ***
 
-## Canceling Processing
+## Monitoraggio dell&#x27;elaborazione
 
-If you need to stop processing:
+Durante l&#x27;elaborazione, è possibile:
 
-### How to Cancel
+* **Visualizzare la barra di avanzamento**: vedere la percentuale di completamento complessiva
+* **Visualizzare la fase corrente**: rilevamento, analisi, calibrazione o esportazione
+* **Controllare la scheda del registro**: vedere i messaggi e gli avvisi dettagliati relativi all&#x27;elaborazione
+* **Visualizzare in anteprima le immagini completate**: alcuni file di esportazione potrebbero essere visualizzati durante l&#x27;elaborazione
 
-1. Locate the **Stop/Cancel button** (replaces Start button during processing)
-2. Click the Stop button
-3. Processing halts immediately
-4. Partial results are discarded
+Per informazioni dettagliate sul monitoraggio, vedere [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md).
 
-### When to Cancel
+***
 
-**Valid reasons to cancel:**
+## Annullamento dell&#x27;elaborazione
 
-* Realized incorrect settings were used
-* Forgot to mark target images
-* Wrong images imported
-* System running too slow or unresponsive
+Se è necessario interrompere l&#x27;elaborazione:
 
-**After canceling:**
+### Come annullare
 
-* Review and fix any issues
-* Adjust settings as needed
-* Restart processing from the beginning
-* For the cleanest experience, completely close Chloros and restart
+1. Individuare il **pulsante Interrompi/Annulla** (sostituisce il pulsante Avvia durante l&#x27;elaborazione)
+2. Fare clic sul pulsante Interrompi
+3. L&#x27;elaborazione si interrompe immediatamente
+4. I risultati parziali vengono eliminati
 
-{% hint style="warning" %}
-**No Partial Results**: Canceling discards all progress. Chloros does not save partially processed images.
+### Quando annullare
+
+**Motivi validi per annullare:**
+
+* Si è resi conto di aver utilizzato impostazioni errate
+* Si è dimenticato di contrassegnare le immagini di destinazione
+* Sono state importate immagini errate
+* Il sistema è troppo lento o non risponde
+
+**Dopo l&#x27;annullamento:**
+
+* Rivedere e correggere eventuali problemi
+* Regolare le impostazioni secondo necessità
+* Riavviare l&#x27;elaborazione dall&#x27;inizio
+* Per un&#x27;esperienza ottimale, chiudere completamente Chloros e riavviare
+
+{% hint style=&quot;warning&quot; %}
+**Nessun risultato parziale**: l&#x27;annullamento elimina tutti i progressi. Chloros non salva le immagini elaborate parzialmente.
 {% endhint %}
 
 ***
 
-## Processing Time Estimates
+## Stime dei tempi di elaborazione
 
-Actual processing time varies greatly based on:
+Il tempo di elaborazione effettivo varia notevolmente in base a:
 
-* Number of images
-* Image resolution
-* RAW vs JPG input format
-* Processing mode (Free vs Chloros+)
-* CPU speed and core count
-* GPU availability (Chloros+ only)
-* Number of indices to calculate
-* Export format complexity
+* Numero di immagini
+* Risoluzione delle immagini
+* Formato di input RAW o JPG
+* Modalità di elaborazione (Free o Chloros+)
+* Velocità della CPU e numero di core
+* Disponibilità della GPU (solo Chloros+)
+* Numero di indici da calcolare
+* Complessità del formato di esportazione
 
-### Rough Estimates (Chloros+, 12MP images, modern CPU)
+### Stime approssimative (Chloros+, immagini da 12 MP, CPU moderna)
 
-| Image Count | Free Mode | Chloros+ (CPU) | Chloros+ (GPU) |
+| Numero di immagini | Modalità gratuita | Chloros+ (CPU) | Chloros+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
-| 50 images   | 15-20 min | 5-8 min        | 3-5 min        |
-| 100 images  | 30-40 min | 10-15 min      | 5-8 min        |
-| 200 images  | 1-1.5 hrs | 20-30 min      | 10-15 min      |
-| 500 images  | 2-3 hrs   | 45-60 min      | 20-30 min      |
-| 1000 images | 4-6 hrs   | 1.5-2 hrs      | 40-60 min      |
+| 50 immagini   | 15-20 min | 5-8 min        | 3-5 min        |
+| 100 immagini  | 30-40 min | 10-15 min      | 5-8 min        |
+| 200 immagini  | 1-1,5 ore | 20-30 min      | 10-15 min      |
+| 500 immagini  | 2-3 ore   | 45-60 min      | 20-30 min      |
+| 1000 immagini | 4-6 ore   | 1,5-2 ore      | 40-60 min      |
 
-{% hint style="info" %}
-**First Run**: Initial processing may take longer as Chloros builds caches and profiles. Subsequent processing of similar datasets will be faster.
+{% hint style=&quot;info&quot; %}
+**Prima esecuzione**: l&#x27;elaborazione iniziale potrebbe richiedere più tempo poiché Chloros crea cache e profili. L&#x27;elaborazione successiva di set di dati simili sarà più veloce.
 {% endhint %}
 
 ***
 
-## Common Issues at Start
+## Problemi comuni all&#x27;avvio
 
-### Start Button Disabled (Grayed Out)
+### Pulsante di avvio disabilitato (grigio)
 
-**Possible causes:**
+**Possibili cause:**
 
-* No images imported
-* Backend not fully started
-* Previous processing still running
-* Project not fully loaded
+* Nessuna immagine importata
+* Backend non completamente avviato
+* Elaborazione precedente ancora in esecuzione
+* Progetto non completamente caricato
 
-**Solutions:**
+**Soluzioni:**
 
-1. Wait for backend to fully initialize (check main menu icon)
-2. Verify images are imported in File Browser
-3. Restart Chloros if button remains disabled
-4. Check Debug Log for error messages
+1. Attendere che il backend sia completamente inizializzato (controllare l&#x27;icona del menu principale)
+2. Verificare che le immagini siano state importate nel File Browser
+3. Riavviare Chloros se il pulsante rimane disabilitato
+4. Controllare il log di debug per eventuali messaggi di errore
 
-### Processing Starts Then Immediately Fails
+### L&#x27;elaborazione si avvia ma fallisce immediatamente
 
-**Possible causes:**
+**Possibili cause:**
 
-* No valid images in project
-* Corrupted image files
-* Insufficient disk space
-* Insufficient memory (RAM)
+* Nessuna immagine valida nel progetto
+* File immagine danneggiati
+* Spazio su disco insufficiente
+* Memoria insufficiente (RAM)
 
-**Solutions:**
+**Soluzioni:**
 
-1. Check Debug Log <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> for error messages
-2. Verify disk space available
-3. Try processing a smaller subset of images
-4. Verify images are not corrupted
+1. Controllare il log di debug <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> per eventuali messaggi di errore
+2. Verificare lo spazio disponibile sul disco
+3. Provare a elaborare un sottoinsieme più piccolo di immagini
+4. Verificare che le immagini non siano danneggiate
 
-### "No Targets Detected" Warning
+### Avviso &quot;Nessun target rilevato&quot;
 
-**Possible causes:**
+**Possibili cause:**
 
-* Forgot to mark target images
-* Target images don't contain visible targets
-* Target detection settings too strict
+* Dimenticato di contrassegnare le immagini target
+* Le immagini target non contengono target visibili
+* Impostazioni di rilevamento dei target troppo rigide
 
-**Solutions:**
+**Soluzioni:**
 
-1. Review [Choosing Target Images](choosing-target-images.md)
-2. Mark appropriate images in Target column
-3. Verify targets are visible in marked images
-4. Adjust target detection settings if needed
-
-***
-
-## Tips for Successful Processing
-
-### Before Starting
-
-1. **Test with small subset first** - Process 10-20 images to verify settings
-2. **Check available disk space** - Ensure 2-3x dataset size free
-3. **Close unnecessary applications** - Free up system resources
-4. **Verify target images** - Preview marked targets to ensure quality
-5. **Save project** - Project auto-saves, but good practice to save manually
-
-### During Processing
-
-1. **Avoid system sleep** - Disable power saving modes
-2. **Keep Chloros in foreground** - Or at least visible in taskbar
-3. **Monitor progress occasionally** - Check for warnings or errors
-4. **Don't load other heavy applications** - Especially with Chloros+ parallel mode
-
-### Chloros+ GPU Acceleration
-
-If using NVIDIA GPU acceleration:
-
-1. Update NVIDIA drivers to latest version
-2. Ensure GPU has 4GB+ VRAM
-3. Close GPU-intensive applications (games, video editing)
-4. Monitor GPU temperature (ensure adequate cooling)
+1. Rivedere [Scelta delle immagini target](choosing-target-images.md)
+2. Contrassegnare le immagini appropriate nella colonna Target
+3. Verificare che i target siano visibili nelle immagini contrassegnate
+4. Regolare le impostazioni di rilevamento dei target, se necessario
 
 ***
 
-## Next Steps
+## Suggerimenti per un&#x27;elaborazione corretta
 
-Once processing has started:
+### Prima di iniziare
 
-1. **Monitor the progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-2. **Wait for completion** - Processing runs automatically
-3. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
+1. **Eseguire prima un test con un piccolo sottoinsieme** - Elaborare 10-20 immagini per verificare le impostazioni
+2. **Controllare lo spazio disponibile sul disco** - Assicurarsi di avere uno spazio libero pari a 2-3 volte la dimensione del set di dati
+3. **Chiudere le applicazioni non necessarie** - Liberare risorse di sistema
+4. **Verificare le immagini target** - Visualizzare in anteprima i target contrassegnati per assicurarne la qualità
+5. **Salvare il progetto** - Il progetto viene salvato automaticamente, ma è buona norma salvarlo manualmente.
 
-For information about what to do during processing, see [Monitoring the Processing](monitoring-the-processing.md).
+### Durante l&#x27;elaborazione
+
+1. **Evitare la sospensione del sistema** - Disattivare le modalità di risparmio energetico.
+2. **Mantenere Chloros in primo piano** - O almeno visibile nella barra delle applicazioni.
+3. **Controllare occasionalmente lo stato di avanzamento** - Verificare la presenza di avvisi o errori.
+4. **Non caricare altre applicazioni pesanti** - Soprattutto con la modalità parallela Chloros+
+
+### Chloros+ Accelerazione GPU
+
+Se si utilizza l&#x27;accelerazione GPU NVIDIA:
+
+1. Aggiornare i driver NVIDIA all&#x27;ultima versione
+2. Assicurarsi che la GPU abbia 4 GB+ di VRAM
+3. Chiudere le applicazioni che richiedono un uso intensivo della GPU (giochi, editing video)
+4. Monitorare la temperatura della GPU (assicurarsi che il raffreddamento sia adeguato)
+
+***
+
+## Passaggi successivi
+
+Una volta avviata l&#x27;elaborazione:
+
+1. **Monitorare lo stato di avanzamento** - Vedere [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
+2. **Attendere il completamento** - L&#x27;elaborazione viene eseguita automaticamente
+3. **Esaminare i risultati** - Vedere [Completamento dell&#x27;elaborazione](finishing-the-processing.md)
+
+Per informazioni su cosa fare durante l&#x27;elaborazione, vedere [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md).

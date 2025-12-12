@@ -1,6 +1,6 @@
 # Lingue supportate
 
-Chloros fornisce un supporto completo dell'interfaccia in **38 lingue in tutto il mondo**, rendendolo accessibile agli utenti di tutto il mondo. Puoi cambiare lingua istantaneamente su tutte le interfacce: desktop, browser, CLI e Python SDK.
+Chloros offre un supporto completo dell&#x27;interfaccia in **38 lingue in tutto il mondo**, rendendolo accessibile agli utenti di ogni parte del globo. È possibile cambiare lingua istantaneamente su tutte le interfacce: Desktop, Browser, CLI e Python SDK.
 
 Chloros supporta le seguenti lingue:
 
@@ -9,17 +9,17 @@ Chloros supporta le seguenti lingue:
 3. 🇵🇹 **Português** (portoghese)
 4. 🇫🇷 **Français** (francese)
 5. 🇩🇪 **Deutsch** (tedesco)
-6. 🇮🇹 **Italiano** (Italiano)
+6. 🇮🇹 **Italiano**
 7. 🇯🇵 **日本語** (giapponese)
 8. 🇰🇷 **한국어** (coreano)
 9. 🇨🇳 **简体中文** (cinese semplificato)
-10. 🇹🇼 **繁體中文** (cinese tradizionale)
-11. 🇷🇺 **Русский** (russo)
-12. 🇳🇱 **Nederlands** (olandese)
-13. 🇸🇦 **العربية** (arabo)
-14. 🇵🇱 **Polski** (polacco)
-15. 🇹🇷 **Türkçe** (turco)
-16. 🇮🇳 **हिंदी** (hindi)
+10. 🇹🇼 **繁體中文** (Cinese tradizionale)
+11. 🇷🇺 **Русский** (Russo)
+12. 🇳🇱 **Nederlands** (Olandese)
+13. 🇸🇦 **العربية** (Arabo)
+14. 🇵🇱 **Polski** (Polacco)
+15. 🇹🇷 **Türkçe** (Turco)
+16. 🇮🇳 **हिंदी** (Hindi)
 17. 🇮🇩 **Bahasa Indonesia** (indonesiano)
 18. 🇻🇳 **Tiếng Việt** (vietnamita)
 19. 🇹🇭 **ไทย** (tailandese)
@@ -29,44 +29,44 @@ Chloros supporta le seguenti lingue:
 23. 🇫🇮 **Suomi** (finlandese)
 24. 🇬🇷 **Ελληνικά** (greco)
 25. 🇨🇿 **Čeština** (ceco)
-26. 🇭🇺 **Magiaro** (ungherese)
+26. 🇭🇺 **Magyar** (ungherese)
 27. 🇷🇴 **Română** (rumeno)
 28. 🇺🇦 **Українська** (ucraino)
 29. 🇧🇷 **Português Brasileiro** (portoghese brasiliano)
 30. 🇭🇰 **粵語** (cantonese)
 31. 🇲🇾 **Bahasa Melayu** (malese)
-32. 🇸🇰 **Slovenčina** (slovacco)
-33. 🇧🇬 **Български** (bulgaro)
-34. 🇭🇷 **Hrvatski** (croato)
-35. 🇱🇹 **Lietuvių** (lituano)
+32. 🇸🇰 **Slovenčina** (Slovacco)
+33. 🇧🇬 **Български** (Bulgaro)
+34. 🇭🇷 **Hrvatski** (Croato)
+35. 🇱🇹 **Lietuvių** (Lituano)
 36. 🇱🇻 **Latviešu** (lettone)
 37. 🇪🇪 **Eesti** (estone)
 38. 🇸🇮 **Slovenščina** (sloveno)
 
-## Come cambiare lingua
+## Come cambiare la lingua
 
-### Nel desktop/browser Chloros
+### In Chloros Desktop/Browser
 
-1. Apri le impostazioni dell'applicazione
-2. Passare al menu di selezione della lingua
-3. Scegli la tua lingua preferita dall'elenco
-4. L'interfaccia si aggiornerà immediatamente
+1. Apri le impostazioni dell&#x27;applicazione
+2. Vai al menu di selezione della lingua
+3. Scegli la lingua preferita dall&#x27;elenco
+4. L&#x27;interfaccia si aggiornerà immediatamente
 
 ### In Chloros CLI
 
-Utilizza il parametro della lingua con i tuoi comandi per impostare la lingua dell'interfaccia.
+Utilizza il parametro della lingua con i comandi per impostare la lingua dell&#x27;interfaccia.
 
-### Nell'SDK di Chloros Python
+### In Chloros Python SDK
 
-Imposta il parametro della lingua durante l'inizializzazione dell'SDK per ottenere messaggi e output nella tua lingua preferita.
+Imposta il parametro della lingua durante l&#x27;inizializzazione di SDK per ricevere messaggi e output nella lingua preferita.
 
 ## Copertura
 
-Tutte le 38 lingue sono completamente supportate in:
+Tutte le 38 lingue sono completamente supportate su:
 
-* **Chloros Desktop** - Traduzione completa della GUI
-* **Chloros Browser** - Interfaccia Web in tutte le lingue
-* **Chloros CLI**: interfaccia della riga di comando e messaggi di output
-* **Chloros Python SDK**: messaggi API e documentazione
+* **Chloros Desktop** - Traduzione completa dell&#x27;interfaccia grafica
+* **Chloros Browser** - Interfaccia web in tutte le lingue
+* **Chloros CLI** - Interfaccia a riga di comando e messaggi di output
+* **Chloros Python SDK** - Messaggi e documentazione API
 
 Il supporto linguistico garantisce che gli utenti di tutto il mondo possano lavorare in modo efficiente nella loro lingua madre senza barriere.

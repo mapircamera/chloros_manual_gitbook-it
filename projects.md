@@ -1,17 +1,13 @@
-# Progetti
+# GUI: Progetti
 
-Chloros ti permette di creare progetti che possono essere riaperti in futuro.
+Chloros consente di creare progetti che possono essere riaperti in futuro.
 
 ## Nuovo progetto
 
-__TAG_1<img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
-
-Seleziona "Nuovo progetto" dal menu principale e inserisci un nome univoco per il tuo progetto.
+<figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>Selezionare &quot;Nuovo progetto&quot; dal menu principale e inserire un nome univoco per il progetto.
 
 ## Apri progetto
 
-__TAG_1<img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>Selezionare &quot;Apri progetto&quot; per visualizzare un elenco dei progetti esistenti nella cartella Progetto. Se non esistono progetti, il menu secondario laterale non si aprirà. Nella foto sopra è possibile vedere alcuni progetti creati dalla GUI (t1, t2, t3). I progetti DATE\_TIME sono stati creati da CLI utilizzando lo schema di denominazione predefinito dei progetti. Facendo clic sul nome di un progetto, questo verrà aperto.
 
-Seleziona "Apri progetto" per visualizzare un elenco di progetti esistenti nella cartella dei progetti. Se non esistono progetti, il menu laterale secondario non si aprirà. Puoi vedere alcuni progetti creati dalla GUI (t1, t2, t3) elencati nella foto sopra. I progetti DATE\_TIME sono stati creati dalla CLI utilizzando lo schema di denominazione dei progetti predefinito. Facendo clic su qualsiasi nome di progetto lo si aprirà.
-
-Facendo clic sul pulsante "Apri cartella progetto" si apre l'esploratore file del computer nel percorso del progetto. Puoi modificare il percorso del progetto in [Impostazioni del progetto](project-settings/page-2.md).
+Facendo clic sul pulsante &quot;Apri cartella progetto&quot; si aprirà l&#x27;esploratore di file del computer nel percorso del progetto. È possibile modificare il percorso del progetto in [Impostazioni progetto](project-settings/project-settings.md).

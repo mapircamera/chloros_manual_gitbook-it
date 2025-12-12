@@ -1,247 +1,247 @@
-# Opening an Image Full Screen
+# Apertura di un&#x27;immagine a schermo intero
 
-The Chloros Image Viewer provides a dedicated full-screen interface for viewing, analyzing, and manipulating your multispectral images. Whether viewing original images or processed outputs, the Image Viewer offers powerful tools for inspection and analysis.
+Il visualizzatore di immagini Chloros offre un&#x27;interfaccia dedicata a schermo intero per la visualizzazione, l&#x27;analisi e la manipolazione delle immagini multispettrali. Sia che si tratti di immagini originali o di output elaborati, il visualizzatore di immagini offre potenti strumenti per l&#x27;ispezione e l&#x27;analisi.
 
-## Accessing the Image Viewer
+## Accesso all&#x27;Image Viewer
 
-### From the File Browser
+### Dal File Browser
 
-The most common way to open an image in the Image Viewer:
+Il modo più comune per aprire un&#x27;immagine nell&#x27;Image Viewer:
 
-1. Ensure you're in the **File Browser** tab <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Click any **image thumbnail** in the image grid
-3. The image opens in the **main preview area** (center of screen)
-4. The image is now loaded and ready for full-screen viewing
+1. Assicurarsi di essere nella scheda **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Fare clic su una qualsiasi delle **miniature delle immagini** nella griglia delle immagini
+3. L&#x27;immagine si apre nell&#x27;**area di anteprima principale** (al centro dello schermo)
+4. L&#x27;immagine è ora caricata e pronta per la visualizzazione a schermo intero
 
-### Opening the Image Viewer Tab
+### Apertura della scheda Visualizzatore immagini
 
-Once an image is loaded in the preview area:
+Una volta caricata un&#x27;immagine nell&#x27;area di anteprima:
 
-1. Click the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> icon in the left sidebar
-2. The Image Viewer tab opens, displaying the selected image full-screen
-3. Advanced viewing and analysis tools become available in the left sidebar
-
-***
-
-## Image Viewer Interface Overview
-
-### Main Display Area
-
-The largest portion of the screen shows your image:
-
-* **Full resolution**: Images displayed at native resolution
-* **Zoomable**: Use controls or mouse wheel to zoom
-* **Pannable**: Click and drag to move around when zoomed
-* **Aspect ratio maintained**: Images scale proportionally
+1. Fare clic sull&#x27;icona **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> nella barra laterale sinistra
+2. Si aprirà la scheda Visualizzatore immagini, che mostrerà l&#x27;immagine selezionata a schermo intero
+3. Nella barra laterale sinistra saranno disponibili strumenti avanzati di visualizzazione e analisi
 
 ***
 
-## Viewing Options
+## Panoramica dell&#x27;interfaccia del Visualizzatore immagini
 
-### Basic Image Navigation
+### Area di visualizzazione principale
 
-#### Browse Through Images
+La parte più grande dello schermo mostra l&#x27;immagine:
 
-Navigate through your image set using keyboard shortcuts or buttons:
-
-* **Next image**: Click → button or press **→** (Right Arrow) key
-* **Previous image**: Click ← button or press **←** (Left Arrow) key
-* **Jump to specific image**: Return to File Browser and click desired thumbnail
-
-#### Zoom Controls
-
-Adjust magnification to inspect image details:
-
-**Zoom In:**
-
-* Click **+** (Plus) button
-* Press **+** or **=** key
-* Scroll mouse wheel **up**
-
-**Zoom Out:**
-
-* Click **−** (Minus) button
-* Press **−** (Minus) key
-* Scroll mouse wheel **down**
-
-**Fit to Screen:**
-
-* Click **↔** (Fit) button
-* Press **0** (Zero) key
-* Double-click on image
-
-#### Pan When Zoomed
-
-When zoomed in beyond screen size:
-
-1. Move mouse cursor over image
-2. Click and **hold left mouse button**
-3. **Drag** to move image around
-4. Release to stop panning
-
-**Alternative**: Use arrow keys to pan in small increments
+* **Risoluzione completa**: immagini visualizzate alla risoluzione nativa
+* **Zoomabile**: utilizzare i controlli o la rotellina del mouse per ingrandire
+* **Panoramica**: fare clic e trascinare per spostarsi durante lo zoom
+* **Proporzioni mantenute**: le immagini vengono ridimensionate in modo proporzionale
 
 ***
 
-## Pixel Value Inspection
+## Opzioni di visualizzazione
 
-### Viewing Pixel Values at Cursor
+### Navigazione di base delle immagini
 
-As you move your mouse cursor over the image, pixel values display in real-time:
+#### Sfogliare le immagini
 
-**Value display location:**
+Navigare nella serie di immagini utilizzando le scorciatoie da tastiera o i pulsanti:
 
-* **Floating number and red line in right side index LUT gradient legend**
-* **When zoomed in further, floating value near cursor and highlighted pixel**
-* Shows values for pixel **under cursor or highlighted**
-* Updates as you move mouse
+* **Immagine successiva**: clicca sul pulsante → o premi il tasto **→** (freccia destra)
+* **Immagine precedente**: clicca sul pulsante ← o premi il tasto **←** (freccia sinistra)
+* **Passa a un&#x27;immagine specifica**: torna al File Browser e clicca sulla miniatura desiderata
 
-***
+#### Controlli di zoom
 
-## Image Types You Can View
+Regola l&#x27;ingrandimento per esaminare i dettagli dell&#x27;immagine:
 
-### Original Images (Pre-Processing)
+**Ingrandisci:**
 
-**RAW + JPG images from camera:**
+* Fai clic sul pulsante **+** (più)
+* Premi il tasto **+** o **=**
+* Scorri la rotellina del mouse **verso l&#x27;alto**
 
-* Display RAW data as previewed
-* Show original, uncorrected values
-* Useful for checking image quality before processing
+**Riduci:**
 
-### Calibrated Reflectance Images
+* Fai clic sul pulsante **−** (meno)
+* Premi il tasto **−** (meno)
+* Scorri la rotellina del mouse **verso il basso**
 
-**After processing:**
+**Adatta allo schermo:**
 
-* Vignette corrected
-* Reflectance calibrated
-* Multi-band TIFF (Red, Green, NIR, etc.)
-* Scientific data ready for analysis
+* Fare clic sul pulsante **↔** (Adatta)
+* Premere il tasto **0** (Zero)
+* Fare doppio clic sull&#x27;immagine
 
-### Index Images
+#### Panoramica durante lo zoom
 
-**NDVI, NDRE, GNDVI, etc. (\_NDVI.tif files):**
+Quando lo zoom supera le dimensioni dello schermo:
 
-* Single-band grayscale images
-* Pixel values represent index calculation results
-* Range typically -1 to +1 for normalized indices
-* Can apply color LUTs for visualization
+1. Spostare il cursore del mouse sull&#x27;immagine
+2. Fare clic e **tenere premuto il tasto sinistro del mouse**
+3. **Trascinare** per spostare l&#x27;immagine
+4. Rilasciare per interrompere lo spostamento
 
-***
-
-## Index and LUT Application
-
-Apply multispectral indices and color Look-Up Tables:
-
-1. Locate **Index/LUT Sandbox** in **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
-2. Select vegetation index (NDVI, NDRE, etc.)
-3. Select multispectral formula, or create your own custom one (Chloros+ only)
-4. Apply color LUT gradient for visualization
-5. Adjust value ranges and thresholds
-
-See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
+**Alternativa**: utilizzare i tasti freccia per spostarsi con piccoli incrementi
 
 ***
 
-## Keyboard Shortcuts
+## Ispezione del valore dei pixel
 
-### Navigation
+### Visualizzazione dei valori dei pixel al cursore
 
-* **→** (Right Arrow): Next image
-* **←** (Left Arrow): Previous image
-* **Home**: First image in list
-* **End**: Last image in list
+Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel vengono visualizzati in tempo reale:
+
+**Posizione di visualizzazione del valore:**
+
+* **Numero fluttuante e linea rossa nella legenda del gradiente LUT dell&#x27;indice sul lato destro**
+* **Quando si ingrandisce ulteriormente, valore fluttuante vicino al cursore e pixel evidenziato**
+* Mostra i valori dei pixel **sotto il cursore o evidenziati**
+* Si aggiorna mentre si sposta il mouse
+
+***
+
+## Tipi di immagini che è possibile visualizzare
+
+### Immagini originali (pre-elaborazione)
+
+**Immagini RAW + JPG dalla fotocamera:**
+
+* Visualizza i dati RAW come anteprima
+* Mostra i valori originali non corretti
+* Utile per controllare la qualità dell&#x27;immagine prima dell&#x27;elaborazione
+
+### Immagini di riflettanza calibrate
+
+**Dopo l&#x27;elaborazione:**
+
+* Vignettatura corretta
+* Riflettanza calibrata
+* Multibanda TIFF (Red, Green, NIR, ecc.)
+* Dati scientifici pronti per l&#x27;analisi
+
+### Immagini indice
+
+**NDVI, NDRE, GNDVI, ecc. (file \_NDVI.tif):**
+
+* Immagini in scala di grigi a banda singola
+* I valori dei pixel rappresentano i risultati del calcolo dell&#x27;indice
+* Intervallo tipicamente compreso tra -1 e +1 per gli indici normalizzati
+* È possibile applicare LUT di colore per la visualizzazione
+
+***
+
+## Applicazione di indici e LUT
+
+Applicare indici multispettrali e tabelle di ricerca dei colori:
+
+1. Individuare **Index/LUT Sandbox** nella <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra laterale
+2. Selezionare l&#x27;indice di vegetazione (NDVI, NDRE, ecc.)
+3. Selezionare la formula multispettrale o crearne una personalizzata (solo Chloros+)
+4. Applicare il gradiente LUT a colori per la visualizzazione
+5. Regolare gli intervalli di valori e le soglie
+
+Per istruzioni dettagliate, consultare [Index/LUT Sandbox](index-lut-sandbox.md).
+
+***
+
+## Scorciatoie da tastiera
+
+### Navigazione
+
+* **→** (freccia destra): immagine successiva
+* **←** (freccia sinistra): immagine precedente
+* **Home**: prima immagine dell&#x27;elenco
+* **Fine**: Ultima immagine nell&#x27;elenco
 
 ### Zoom
 
-* **+** or **=**: Zoom in
-* **−**: Zoom out
-* **0** (Zero): Fit to screen
-* **Mouse Wheel**: Zoom in/out
+* **+** o **=**: Ingrandisci
+* **−**: Riduci
+* **0** (Zero): Adatta allo schermo
+* **Rotellina del mouse**: Ingrandisci/Riduci
 
-### View Controls
+### Controlli di visualizzazione
 
-* **P**: Toggle pixel percent mode
-* **L**: Toggle layers panel
-* **Esc**: Close full-screen or return to File Browser
+* **P**: Attiva/disattiva la modalità percentuale dei pixel
+* **L**: Attiva/disattiva il pannello dei livelli
+* **Esc**: Chiude la modalità a schermo intero o torna al File Browser
 
-### Other
+### Altro
 
-* **Ctrl+S**: Save current image
-* **F**: Full-screen mode (if available)
-
-***
-
-### Verifying Index Calculations
-
-Check that indices calculated correctly:
-
-1. Open NDVI or other index image
-2. Check vegetation areas:
-   * **NDVI**: Should show 0.4-0.9 for healthy plants
-   * **NDRE**: Higher values for vigorous growth
-   * **GNDVI**: Similar to NDVI but chlorophyll-sensitive
-3. Check non-vegetation:
-   * **Soil**: Near 0 or slightly negative
-   * **Water**: Negative values (-0.5 to 0)
+* **Ctrl+S**: Salva l&#x27;immagine corrente
+* **F**: Modalità a schermo intero (se disponibile)
 
 ***
 
-## Troubleshooting Viewing Issues
+### Verifica dei calcoli dell&#x27;indice
 
-### Image Won't Open
+Verificare che gli indici siano stati calcolati correttamente:
 
-**Possible causes:**
-
-* File corrupted during processing
-* Unsupported file format
-* Insufficient memory for large image
-
-**Solutions:**
-
-1. Try opening in external viewer to verify file integrity
-2. Check file format matches expected type
-3. Close other applications to free memory
-4. Try smaller/different image
-
-### Black or White Image Display
-
-**Possible causes:**
-
-* Value range outside display capability
-* 32-bit float image with unusual values
-* Index calculation error
-
-**Solutions:**
-
-1. Check pixel values - if all very low or very high, adjust display range
-2. Try opening in QGIS or similar with auto-range adjustment
-3. Check Debug Log from processing for errors
-
-### Pixel Values Seem Wrong
-
-**Possible causes:**
-
-* Viewing wrong image (original vs processed)
-* Calibration didn't apply correctly
-* Light sensor data wasn't included in input
-* Percent mode toggled incorrectly
-
-**Solutions:**
-
-1. Verify you're viewing processed output (check filename suffix)
-2. Check percent mode button state
-3. Compare with known-good images from same dataset
+1. Aprire NDVI o un&#x27;altra immagine dell&#x27;indice
+2. Controllare le aree di vegetazione:
+   * **NDVI**: dovrebbe mostrare 0,4-0,9 per le piante sane
+   * **NDRE**: valori più alti per una crescita vigorosa
+   * **GNDVI**: simile a NDVI ma sensibile alla clorofilla
+3. Controllare le aree non vegetate:
+   * **Suolo**: vicino a 0 o leggermente negativo
+   * **Acqua**: valori negativi (da -0,5 a 0)
 
 ***
 
-## Next Steps
+## Risoluzione dei problemi di visualizzazione
 
-Now that you can view images full-screen:
+### L&#x27;immagine non si apre
 
-* [**Image Layers**](image-layers.md) - Learn about multi-band visualization
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Apply custom indices and color mapping
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Understand available indices
+**Possibili cause:**
 
-For processing workflow, see:
+* File danneggiato durante l&#x27;elaborazione
+* Formato file non supportato
+* Memoria insufficiente per immagini di grandi dimensioni
 
-* [**Processing Images (GUI)**](../processing-images-gui/page-1.md) - Complete processing guide
+**Soluzioni:**
+
+1. Provare ad aprire il file in un visualizzatore esterno per verificarne l&#x27;integrità
+2. Verificare che il formato del file corrisponda al tipo previsto
+3. Chiudere le altre applicazioni per liberare memoria
+4. Provare con un&#x27;immagine più piccola/diversa
+
+### Visualizzazione dell&#x27;immagine in bianco e nero
+
+**Possibili cause:**
+
+* Intervallo di valori al di fuori delle capacità di visualizzazione
+* Immagine a 32 bit con valori insoliti
+* Errore di calcolo dell&#x27;indice
+
+**Soluzioni:**
+
+1. Controllare i valori dei pixel: se sono tutti molto bassi o molto alti, regolare l&#x27;intervallo di visualizzazione
+2. Provare ad aprire il file in QGIS o in un programma simile con regolazione automatica dell&#x27;intervallo
+3. Controllare il log di debug dell&#x27;elaborazione per individuare eventuali errori
+
+### I valori dei pixel sembrano errati
+
+**Possibili cause:**
+
+* Visualizzazione di un&#x27;immagine errata (originale anziché elaborata)
+* La calibrazione non è stata applicata correttamente
+* I dati del sensore di luce non sono stati inclusi nell&#x27;input
+* La modalità percentuale è stata attivata in modo errato
+
+**Soluzioni:**
+
+1. Verificare di stare visualizzando l&#x27;output elaborato (controllare il suffisso del nome del file)
+2. Controllare lo stato del pulsante della modalità percentuale
+3. Confrontare con immagini note come corrette provenienti dallo stesso set di dati
+
+***
+
+## Passaggi successivi
+
+Ora che è possibile visualizzare le immagini a schermo intero:
+
+* [**Livelli immagine**](image-layers.md) - Informazioni sulla visualizzazione multibanda
+* [**Sandbox indice/LUT**](index-lut-sandbox.md) - Applicazione di indici personalizzati e mappatura dei colori
+* [**Formule indice multispettrale**](../project-settings/multispectral-index-formulas.md) - Comprendi gli indici disponibili
+
+Per il flusso di lavoro di elaborazione, vedi:
+
+* [**Elaborazione delle immagini (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Guida completa all&#x27;elaborazione
