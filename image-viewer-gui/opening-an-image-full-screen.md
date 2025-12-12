@@ -1,6 +1,6 @@
 # Apertura di un&#x27;immagine a schermo intero
 
-Il visualizzatore di immagini Chloros offre un&#x27;interfaccia dedicata a schermo intero per la visualizzazione, l&#x27;analisi e la manipolazione delle immagini multispettrali. Sia che si tratti di immagini originali o di output elaborati, il visualizzatore di immagini offre potenti strumenti per l&#x27;ispezione e l&#x27;analisi.
+Il visualizzatore di immagini Chloros offre un&#x27;interfaccia dedicata a schermo intero per la visualizzazione, l&#x27;analisi e la manipolazione delle immagini multispettrali. Sia che si tratti di immagini originali o di risultati elaborati, il visualizzatore di immagini offre potenti strumenti per l&#x27;ispezione e l&#x27;analisi.
 
 ## Accesso all&#x27;Image Viewer
 
@@ -31,7 +31,7 @@ La parte più grande dello schermo mostra l&#x27;immagine:
 
 * **Risoluzione completa**: immagini visualizzate alla risoluzione nativa
 * **Zoomabile**: utilizzare i controlli o la rotellina del mouse per ingrandire
-* **Panoramica**: fare clic e trascinare per spostarsi durante lo zoom
+* **Panoramica**: fare clic e trascinare per spostarsi quando si ingrandisce
 * **Proporzioni mantenute**: le immagini vengono ridimensionate in modo proporzionale
 
 ***
@@ -198,7 +198,7 @@ Verificare che gli indici siano stati calcolati correttamente:
 
 **Soluzioni:**
 
-1. Provare ad aprire il file in un visualizzatore esterno per verificarne l&#x27;integrità
+1. Provare ad aprire il file in un visualizzatore esterno per verificare l&#x27;integrità del file
 2. Verificare che il formato del file corrisponda al tipo previsto
 3. Chiudere le altre applicazioni per liberare memoria
 4. Provare con un&#x27;immagine più piccola/diversa
@@ -214,14 +214,14 @@ Verificare che gli indici siano stati calcolati correttamente:
 **Soluzioni:**
 
 1. Controllare i valori dei pixel: se sono tutti molto bassi o molto alti, regolare l&#x27;intervallo di visualizzazione
-2. Provare ad aprire il file in QGIS o in un programma simile con regolazione automatica dell&#x27;intervallo
-3. Controllare il log di debug dell&#x27;elaborazione per individuare eventuali errori
+2. Provare ad aprire in QGIS o simili con regolazione automatica dell&#x27;intervallo
+3. Controllare il log di debug dall&#x27;elaborazione per eventuali errori
 
 ### I valori dei pixel sembrano errati
 
 **Possibili cause:**
 
-* Visualizzazione di un&#x27;immagine errata (originale anziché elaborata)
+* Visualizzazione di un&#x27;immagine errata (originale vs elaborata)
 * La calibrazione non è stata applicata correttamente
 * I dati del sensore di luce non sono stati inclusi nell&#x27;input
 * La modalità percentuale è stata attivata in modo errato

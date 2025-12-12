@@ -1,6 +1,6 @@
 # Avvio dell&#x27;elaborazione
 
-Una volta importate le immagini, contrassegnati i target di calibrazione e configurate le impostazioni del progetto, è possibile avviare l&#x27;elaborazione. Questa pagina guida l&#x27;utente attraverso l&#x27;avvio della pipeline di elaborazione Chloros.
+Dopo aver importato le immagini, contrassegnato i target di calibrazione e configurato le impostazioni del progetto, è possibile avviare l&#x27;elaborazione. Questa pagina guida l&#x27;utente attraverso l&#x27;avvio della pipeline di elaborazione Chloros.
 
 ## Lista di controllo pre-elaborazione
 
@@ -13,9 +13,9 @@ Prima di fare clic sul pulsante Avvia, verificare che tutto sia pronto:
 * [ ] **Indici selezionati** - Indici multispettrali desiderati aggiunti (se necessario)
 * [ ] **Formato di esportazione scelto** - Formato di output appropriato per il tuo flusso di lavoro
 
-{% hint style=&quot;info&quot; %}
+{% suggerimento style=&quot;info&quot; %}
 **Suggerimento**: clicca su alcune immagini nel File Browser per verificare che siano state caricate correttamente prima dell&#x27;elaborazione.
-{% endhint %}
+{% fine suggerimento %}
 
 ***
 
@@ -58,7 +58,7 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 
 **La barra di avanzamento mostra 2 fasi:**
 
-1. **Rilevamento del target** - Scansione dei target di calibrazione
+1. **Rilevamento target** - Scansione dei target di calibrazione
 2. **Elaborazione** - Applicazione della calibrazione ed esportazione delle immagini
 
 **Tempo di elaborazione:**
@@ -80,19 +80,19 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 **La barra di avanzamento mostra 4 fasi:**
 
 1. **Rilevamento** - Ricerca dei target di calibrazione
-2. **Analisi** - Esame dei metadati dell&#x27;immagine e preparazione della pipeline
-3. **Calibrazione** - Applicazione delle correzioni e delle calibrazioni
+2. **Analisi** - Esame dei metadati delle immagini e preparazione della pipeline
+3. **Calibrazione** - Applicazione di correzioni e calibrazioni
 4. **Esportazione** - Salvataggio delle immagini elaborate e degli indici
 
 **Interazione con la barra di avanzamento:**
 
-* **Passa il mouse** sulla barra per visualizzare il pannello a tendina dettagliato con le 4 fasi
-* **Clicca** sulla barra di avanzamento per bloccare il pannello a tendina in posizione
-* **Clicca di nuovo** per sbloccare e nascondere il pannello
+* **Passa il mouse** sulla barra per visualizzare il pannello a discesa dettagliato in 4 fasi
+* **Clicca** sulla barra di avanzamento per bloccare il pannello a discesa
+* **Fare nuovamente clic** per sbloccare e nascondere il pannello
 
 **Tempo di elaborazione:**
 
-* Significativamente più veloce rispetto alla modalità gratuita
+* Significativamente più veloce rispetto alla modalità libera
 * Scalabile in base al numero di core della CPU
 * L&#x27;accelerazione GPU migliora ulteriormente la velocità
 
@@ -109,17 +109,17 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 **Cosa fa Chloros:**
 
 * Scansiona le immagini target contrassegnate (o tutte le immagini se nessuna è contrassegnata)
-* Identifica i 4 pannelli di calibrazione in ciascun target
-* Estrae i valori di riflettanza dai pannelli target
-* Registra i timestamp dei target per la pianificazione della calibrazione
+* Identifica i 4 pannelli di calibrazione in ciascun bersaglio
+* Estrae i valori di riflettanza dai pannelli bersaglio
+* Registra i timestamp dei bersagli per la pianificazione della calibrazione
 
-**Durata:** 1-30 secondi (con target contrassegnati), 5-30+ minuti (non contrassegnati)
+**Durata:** 1-30 secondi (con bersagli contrassegnati), 5-30+ minuti (non contrassegnati)
 
 ### Fase 2: Debayering (conversione RAW)
 
 **Cosa fa Chloros:**
 
-* Converte i dati RAW del pattern Bayer in immagini RGB complete
+* Converte i dati RAW del modello Bayer in immagini RGB complete
 * Applica un algoritmo di demosaicing di alta qualità
 * Preserva la massima qualità e il massimo dettaglio dell&#x27;immagine
 
@@ -144,9 +144,9 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 * Applica la matematica delle bande alle immagini calibrate
 * Genera immagini indice per ciascun indice selezionato
 
-**Durata:** pochi secondi per immagine
+**Durata:** Alcuni secondi per immagine
 
-### Fase 5: esportazione
+### Fase 5: Esportazione
 
 **Cosa fa Chloros:**
 
@@ -155,7 +155,7 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 * Scrive i file nelle sottocartelle del modello di fotocamera
 * Conserva i nomi dei file originali con i suffissi
 
-**Durata:** varia in base al formato di esportazione e alle dimensioni del file
+**Durata:** varia a seconda del formato di esportazione e delle dimensioni del file
 
 ***
 
@@ -167,7 +167,7 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
 * Non è necessaria alcuna interazione da parte dell&#x27;utente
 * Tutti i passaggi configurati vengono eseguiti in sequenza
-* Aggiornamenti sullo stato di avanzamento mostrati in tempo reale
+* Gli aggiornamenti sullo stato di avanzamento vengono visualizzati in tempo reale
 
 ### Utilizzo del computer durante l&#x27;elaborazione
 
@@ -192,12 +192,12 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
 **Limitazioni importanti:**
 
-* Una volta avviata, l&#x27;elaborazione non può essere messa in pausa.
-* È possibile annullare l&#x27;elaborazione, ma i progressi andranno persi.
-* I risultati parziali non vengono salvati.
-* Se annullata, è necessario ricominciare dall&#x27;inizio.
+* Una volta avviata, l&#x27;elaborazione non può essere messa in pausa
+* È possibile annullare l&#x27;elaborazione, ma i progressi andranno persi
+* I risultati parziali non vengono salvati
+* Se annullata, è necessario ricominciare dall&#x27;inizio
 
-**Suggerimento di pianificazione:** per progetti di grandi dimensioni, prendere in considerazione l&#x27;elaborazione in batch o l&#x27;utilizzo di CLI per un controllo migliore.
+**Suggerimento per la pianificazione:** per progetti di grandi dimensioni, prendere in considerazione l&#x27;elaborazione in batch o l&#x27;utilizzo di CLI per un controllo migliore.
 
 ***
 
@@ -205,10 +205,10 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
 Durante l&#x27;elaborazione, è possibile:
 
-* **Visualizzare la barra di avanzamento**: vedere la percentuale di completamento complessiva
-* **Visualizzare la fase corrente**: rilevamento, analisi, calibrazione o esportazione
-* **Controllare la scheda del registro**: vedere i messaggi e gli avvisi dettagliati relativi all&#x27;elaborazione
-* **Visualizzare in anteprima le immagini completate**: alcuni file di esportazione potrebbero essere visualizzati durante l&#x27;elaborazione
+* **Osservare la barra di avanzamento** - Visualizzare la percentuale di completamento complessiva
+* **Visualizzare la fase corrente** - Rilevamento, analisi, calibrazione o esportazione
+* **Controllare la scheda del registro** - Visualizzare messaggi e avvisi dettagliati sull&#x27;elaborazione
+* **Visualizzare in anteprima le immagini completate** - Alcuni file di esportazione potrebbero essere visualizzati durante l&#x27;elaborazione
 
 Per informazioni dettagliate sul monitoraggio, vedere [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md).
 
@@ -241,7 +241,7 @@ Se è necessario interrompere l&#x27;elaborazione:
 * Riavviare l&#x27;elaborazione dall&#x27;inizio
 * Per un&#x27;esperienza ottimale, chiudere completamente Chloros e riavviare
 
-{% hint style=&quot;warning&quot; %}
+{% suggerimento style=&quot;warning&quot; %}
 **Nessun risultato parziale**: l&#x27;annullamento elimina tutti i progressi. Chloros non salva le immagini elaborate parzialmente.
 {% endhint %}
 
@@ -306,7 +306,7 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 **Soluzioni:**
 
 1. Controllare il log di debug <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> per eventuali messaggi di errore
-2. Verificare lo spazio disponibile sul disco
+2. Verificare lo spazio disponibile su disco
 3. Provare a elaborare un sottoinsieme più piccolo di immagini
 4. Verificare che le immagini non siano danneggiate
 
@@ -334,7 +334,7 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 1. **Eseguire prima un test con un piccolo sottoinsieme** - Elaborare 10-20 immagini per verificare le impostazioni
 2. **Controllare lo spazio disponibile sul disco** - Assicurarsi di avere uno spazio libero pari a 2-3 volte la dimensione del set di dati
 3. **Chiudere le applicazioni non necessarie** - Liberare risorse di sistema
-4. **Verificare le immagini target** - Visualizzare in anteprima i target contrassegnati per assicurarne la qualità
+4. **Verificare le immagini target** - Visualizzare in anteprima i target contrassegnati per assicurarsi della qualità
 5. **Salvare il progetto** - Il progetto viene salvato automaticamente, ma è buona norma salvarlo manualmente.
 
 ### Durante l&#x27;elaborazione
@@ -349,7 +349,7 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 Se si utilizza l&#x27;accelerazione GPU NVIDIA:
 
 1. Aggiornare i driver NVIDIA all&#x27;ultima versione
-2. Assicurarsi che la GPU abbia 4 GB+ di VRAM
+2. Assicurarsi che la GPU abbia almeno 4 GB di VRAM
 3. Chiudere le applicazioni che richiedono un uso intensivo della GPU (giochi, editing video)
 4. Monitorare la temperatura della GPU (assicurarsi che il raffreddamento sia adeguato)
 

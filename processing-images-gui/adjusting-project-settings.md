@@ -1,14 +1,14 @@
-# Regolazione delle impostazioni di progetto
+# Regolazione delle impostazioni del progetto
 
-Prima di elaborare le immagini, è importante configurare le impostazioni di progetto in modo che corrispondano ai requisiti del flusso di lavoro. Il pannello Impostazioni di progetto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> offre un controllo completo su calibrazione, opzioni di elaborazione, indici multispettrali e formati di esportazione.
+Prima di elaborare le immagini, è importante configurare le impostazioni del progetto in modo che corrispondano ai requisiti del flusso di lavoro. Il pannello Impostazioni progetto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> offre un controllo completo su calibrazione, opzioni di elaborazione, indici multispettrali e formati di esportazione.
 
 ## Accesso alle impostazioni del progetto
 
 1. Aprire il progetto in Chloros
 2. Fare clic sull&#x27;icona **Impostazioni del progetto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> nella barra laterale sinistra
-3. Il pannello Impostazioni del progetto mostra tutte le opzioni di configurazione
+3. Il pannello Impostazioni del progetto visualizza tutte le opzioni di configurazione
 
-{% hint style=&quot;info&quot; %}
+{% suggerimento style=&quot;info&quot; %}
 **Le impostazioni vengono salvate automaticamente** con il progetto. Quando si riapre un progetto, tutte le impostazioni vengono ripristinate.
 {% endhint %}
 
@@ -87,7 +87,7 @@ Configura quali indici di vegetazione calcolare ed esportare.
 **Formule personalizzate (solo Chloros+):**
 
 * Creazione di formule personalizzate per indici multispettrali
-* Utilizzo di calcoli matematici su tutte le bande dell&#x27;immagine
+* Utilizzo di calcoli matematici su banda con tutti i canali dell&#x27;immagine
 * Salvataggio di formule personalizzate per il riutilizzo
 
 Per tutti gli indici e le formule disponibili, vedere [Formule per indici multispettrali](../project-settings/multispectral-index-formulas.md).
@@ -169,9 +169,9 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 * **Pin di esposizione 2**: selezionare la seconda fotocamera o &quot;Non utilizzare&quot;
 * La stessa fotocamera non può essere assegnata a entrambi i pin
 
-{% suggerimento style=&quot;warning&quot; %}
+{% hint style=&quot;warning&quot; %}
 **Importante**: i pin di esposizione devono essere assegnati correttamente alle rispettive telecamere. Un&#x27;assegnazione errata comporterà dati di geolocalizzazione errati.
-{% fine suggerimento %}
+{% endhint %}
 
 ***
 
@@ -186,7 +186,7 @@ Quando si elaborano immagini provenienti da più fotocamere MAPIR in un unico pr
 3. PPK: assegnare manualmente a ciascuna fotocamera il pin di esposizione corretto
 4. Tutte le fotocamere utilizzano lo stesso formato di esportazione e gli stessi indici
 
-**Esempio**: Survey3W RGN + Survey3N OCN doppio supporto per fotocamera
+**Esempio**: Survey3W RGN + Survey3N OCN rig a doppia fotocamera
 
 ### Rilevamenti time-lapse o multi-data
 
@@ -211,14 +211,14 @@ Per progetti con molte immagini (oltre 500):
 
 ## Verifica delle impostazioni
 
-Prima di iniziare l&#x27;elaborazione, controllare queste impostazioni chiave:
+Prima di iniziare l&#x27;elaborazione, controlla queste impostazioni chiave:
 
 * [ ] Modello di fotocamera rilevato correttamente nel File Browser
 * [ ] Correzione vignetta abilitata
 * [ ] Calibrazione riflettanza abilitata
 * [ ] Importata almeno un&#x27;immagine target di calibrazione
-* [ ] Aggiunti gli indici multispettrali desiderati
-* [ ] Formato di esportazione appropriato per il flusso di lavoro
+* [ ] Indici multispettrali desiderati aggiunti
+* [ ] Formato di esportazione appropriato per il tuo flusso di lavoro
 * [ ] Impostazioni PPK configurate (se si utilizza .daq con eventi di esposizione)
 
 ***

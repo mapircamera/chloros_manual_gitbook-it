@@ -31,7 +31,7 @@ Queste impostazioni controllano il modo in cui Chloros rileva ed elabora i targe
 * **Tipo**: Numero
 * **Intervallo**: da 0 a 100
 * **Impostazione predefinita**: 60
-* **Descrizione**: Controlla la soglia di raggruppamento per raggruppare aree di colore simile durante il rilevamento dei target di calibrazione. Valori più alti richiedono che colori più simili vengano raggruppati insieme, con conseguente rilevamento dei target più conservativo. Valori più bassi consentono una maggiore variazione di colore all&#x27;interno di un gruppo di target.
+* **Descrizione**: Controlla la soglia di raggruppamento per raggruppare regioni di colore simile durante il rilevamento dei target di calibrazione. Valori più alti richiedono che colori più simili vengano raggruppati insieme, con conseguente rilevamento dei target più conservativo. Valori più bassi consentono una maggiore variazione di colore all&#x27;interno di un gruppo di target.
 * **Quando regolare**:
   * Aumentare se i target di calibrazione vengono suddivisi in più rilevamenti.
   * Diminuire se i target di calibrazione con variazioni di colore non vengono rilevati completamente.
@@ -47,7 +47,7 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 * **Tipo**: Casella di controllo
 * **Impostazione predefinita**: Abilitata (selezionata)
 * **Descrizione**: Applica la correzione della vignettatura per compensare l&#x27;oscuramento dell&#x27;obiettivo ai bordi delle immagini. La vignettatura è un fenomeno ottico comune in cui gli angoli e i bordi di un&#x27;immagine appaiono più scuri rispetto al centro a causa delle caratteristiche dell&#x27;obiettivo.
-* **Quando disattivare**: disattivare solo se la combinazione fotocamera/obiettivo ha già applicato la correzione della vignettatura o se si desidera correggere manualmente la vignettatura in post-elaborazione.
+* **Quando disabilitare**: disabilitare solo se la combinazione fotocamera/obiettivo ha già applicato la correzione della vignettatura o se si desidera correggere manualmente la vignettatura in post-elaborazione.
 
 ### Calibrazione della riflettanza / bilanciamento del bianco
 
@@ -62,7 +62,7 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 * **Opzioni**:
   * Alta qualità (più veloce) - Attualmente l&#x27;unica opzione disponibile
 * **Impostazione predefinita**: Alta qualità (più veloce)
-* **Descrizione**: Seleziona l&#x27;algoritmo di demosaicizzazione utilizzato per convertire i dati grezzi del sensore con pattern Bayer in immagini a colori. Il metodo &quot;Alta qualità (più veloce)&quot; offre un equilibrio ottimale tra velocità di elaborazione e qualità dell&#x27;immagine.
+* **Descrizione**: Seleziona l&#x27;algoritmo di demosaicing utilizzato per convertire i dati grezzi del sensore con pattern Bayer in immagini a colori. Il metodo &quot;Alta qualità (più veloce)&quot; offre un equilibrio ottimale tra velocità di elaborazione e qualità dell&#x27;immagine.
 * **Nota**: nelle versioni future di Chloros potrebbero essere aggiunti ulteriori metodi di debayer.
 
 ### Intervallo minimo di ricalibrazione
@@ -72,8 +72,8 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 * **Impostazione predefinita**: 0 secondi
 * **Descrizione**: Imposta l&#x27;intervallo di tempo minimo (in secondi) tra l&#x27;utilizzo dei target di calibrazione. Se impostato su 0, Chloros utilizzerà tutti i target di calibrazione rilevati. Se impostato su un valore più alto, Chloros utilizzerà solo i target di calibrazione separati da almeno questo numero di secondi, riducendo il tempo di elaborazione per i set di dati con acquisizioni frequenti dei target di calibrazione.
 * **Quando regolare**:
-  * Impostare su 0 per la massima precisione di calibrazione quando le condizioni di illuminazione variano.
-  * Aumentare (ad esempio, a 60-300 secondi) per un&#x27;elaborazione più rapida quando l&#x27;illuminazione è costante e si dispone di immagini di target di calibrazione frequenti.
+  * Impostare su 0 per ottenere la massima precisione di calibrazione quando le condizioni di illuminazione variano.
+  * Aumentare (ad esempio, a 60-300 secondi) per una elaborazione più rapida quando l&#x27;illuminazione è costante e si dispone di immagini di target di calibrazione frequenti.
 
 ### Offset fuso orario sensore di luce
 
@@ -90,7 +90,7 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 
 * **Tipo**: Casella di controllo
 * **Impostazione predefinita**: Disabilitato (deselezionato)
-* **Descrizione**: Abilita l&#x27;uso delle correzioni cinematiche post-elaborate (PPK) dai registratori DAQ MAPIR contenenti un GPS (GNSS). Quando è abilitato, Chloros utilizzerà tutti i file di log .daq contenenti dati sui pin di esposizione nella directory del progetto e applicherà correzioni di geolocalizzazione precise alle immagini.
+* **Descrizione**: Abilita l&#x27;uso delle correzioni cinematiche post-elaborate (PPK) dai registratori DAQ MAPIR contenenti un GPS (GNSS). Quando è abilitato, Chloros utilizzerà tutti i file di log .daq contenenti dati relativi ai pin di esposizione nella directory del progetto e applicherà correzioni di geolocalizzazione precise alle immagini.
 * **Requisiti**: nella directory del progetto deve essere presente un file di log .daq con voci relative ai pin di esposizione
 * **Quando abilitare**: si consiglia di abilitare sempre la correzione PPK se nel file di log .daq sono presenti voci relative al feedback di esposizione.
 
@@ -101,27 +101,27 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 * **Opzioni**:
   * Nomi dei modelli di fotocamera rilevati nel progetto
   * &quot;Non utilizzare&quot; - Ignora questo pin di esposizione
-* **Impostazione predefinita**: selezionata automaticamente in base alla configurazione del progetto
+* **Impostazione predefinita**: selezionato automaticamente in base alla configurazione del progetto
 * **Descrizione**: assegna una fotocamera specifica al Pin di esposizione 1 per la sincronizzazione temporale PPK. Il pin di esposizione registra il momento esatto in cui viene attivato l&#x27;otturatore della fotocamera, fondamentale per una geolocalizzazione PPK accurata.
 * **Comportamento di selezione automatica**:
   * Fotocamera singola + pin singolo: seleziona automaticamente la fotocamera
-  * Telecamera singola + due pin: il pin 1 viene assegnato automaticamente alla telecamera
-  * Telecamere multiple: è necessaria la selezione manuale
+  * Fotocamera singola + due pin: il Pin 1 viene assegnato automaticamente alla fotocamera
+  * Telecamere multiple: selezione manuale richiesta
 
 ### Pin di esposizione 2
 
-* **Tipo**: selezione a discesa
-* **Visibilità**: visibile solo quando &quot;Applica correzioni PPK&quot; è abilitato E i dati di esposizione sono disponibili per il pin 2
+* **Tipo**: selezione a tendina
+* **Visibilità**: visibile solo quando &quot;Applica correzioni PPK&quot; è abilitato E i dati di esposizione sono disponibili per il Pin 2
 * **Opzioni**:
   * Nomi dei modelli di telecamera rilevati nel progetto
-  * &quot;Non utilizzare&quot;: ignora questo pin di esposizione
-* **Impostazione predefinita**: selezionato automaticamente in base alla configurazione del progetto
-* **Descrizione**: assegna una fotocamera specifica al pin di esposizione 2 per la sincronizzazione temporale PPK quando si utilizza una configurazione a doppia fotocamera.
+  * &quot;Non utilizzare&quot; - Ignora questo pin di esposizione
+* **Predefinito**: selezionato automaticamente in base alla configurazione del progetto
+* **Descrizione**: assegna una fotocamera specifica al Pin di esposizione 2 per la sincronizzazione temporale PPK quando si utilizza una configurazione a doppia fotocamera.
 * **Comportamento di selezione automatica**:
-  * Fotocamera singola + pin singolo: il pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
-  * Telecamera singola + due pin: il pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
-  * Telecamere multiple: è necessaria la selezione manuale
-* **Nota**: la stessa telecamera non può essere assegnata contemporaneamente al pin 1 e al pin 2.
+  * Fotocamera singola + pin singolo: il Pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
+  * Fotocamera singola + due pin: il pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
+  * Fotocamere multiple: è necessaria la selezione manuale
+* **Nota**: la stessa fotocamera non può essere assegnata contemporaneamente al pin 1 e al pin 2.
 
 ***
 
@@ -145,14 +145,14 @@ Queste impostazioni consentono di configurare gli indici multispettrali per l&#x
   * Impostare valori soglia per l&#x27;analisi
   * Creare formule indice personalizzate
 
-### Formule personalizzate (Funzionalità Chloros+)
+### Formule personalizzate (funzionalità Chloros+)
 
 * **Tipo**: Matrice di definizioni di formule personalizzate
 * **Descrizione**: Consente di creare e salvare formule di indici multispettrali personalizzate utilizzando la matematica delle bande. Le formule personalizzate vengono salvate con le impostazioni del progetto e possono essere utilizzate proprio come gli indici integrati.
 * **Come creare**:
   1. Nel pannello di configurazione dell&#x27;indice, cercare l&#x27;opzione formula personalizzata
   2. Definire la formula utilizzando gli identificatori di banda (ad esempio, NIR, Red, Green, Blue)
-  3. Salvare la formula con un nome descrittivo
+  3. Salva la formula con un nome descrittivo
 * **Sintassi della formula**: sono supportate le operazioni matematiche standard, tra cui:
   * Aritmetica: `+`, `-`, `*`, `/`
   * Parentesi per l&#x27;ordine delle operazioni
@@ -177,7 +177,7 @@ Queste impostazioni controllano il formato e la qualità delle immagini elaborat
 * **Formati consigliati**:
   * **TIFF (16 bit)**: consigliato per analisi scientifiche e flussi di lavoro professionali. Conserva la massima qualità dei dati senza artefatti di compressione. Ideale per analisi multispettrali e ulteriori elaborazioni in software GIS.
   * **TIFF (32 bit, percentuale)**: ideale per flussi di lavoro che richiedono valori di riflettanza in percentuale (0-100%). Offre la massima precisione per le misurazioni radiometriche.
-  * **PNG (8 bit)**: ideale per la visualizzazione sul web e la visualizzazione generale. File di dimensioni inferiori con compressione senza perdita di dati, ma gamma dinamica ridotta.
+  * **PNG (8 bit)**: ideale per la visualizzazione sul web e la visualizzazione generale. File di dimensioni inferiori con compressione senza perdita di dati, ma con una gamma dinamica ridotta.
   * **JPG (8 bit)**: file di dimensioni minime, ideale solo per anteprime e visualizzazione sul web. Utilizza una compressione con perdita di dati che non è adatta all&#x27;analisi scientifica.
 
 ***
@@ -186,13 +186,13 @@ Queste impostazioni controllano il formato e la qualità delle immagini elaborat
 
 Questa funzione consente di salvare le impostazioni del progetto corrente come modello riutilizzabile.
 
-* **Tipo**: Inserimento di testo + pulsante Salva
-* **Descrizione**: Immettere un nome descrittivo per il modello di impostazioni e fare clic sull&#x27;icona Salva. Il modello memorizzerà tutte le impostazioni del progetto corrente (rilevamento del target, opzioni di elaborazione, indici e formato di esportazione) per un facile riutilizzo in progetti futuri.
+* **Tipo**: immissione di testo + pulsante Salva
+* **Descrizione**: inserire un nome descrittivo per il modello di impostazioni e fare clic sull&#x27;icona Salva. Il modello memorizzerà tutte le impostazioni del progetto corrente (rilevamento del target, opzioni di elaborazione, indici e formato di esportazione) per un facile riutilizzo in progetti futuri.
 * **Casi d&#x27;uso**:
   * Creare modelli per diversi sistemi di telecamere (RGB, multispettrale, NIR)
   * Salvare configurazioni standard per tipi di colture specifici o flussi di lavoro di analisi
   * Condividere impostazioni coerenti all&#x27;interno di un team
-* **Come utilizzare**:
+* **Come si usa**:
   1. Configurare tutte le impostazioni desiderate per il progetto
   2. Inserire un nome per il modello (ad esempio, &quot;RedEdge Survey3 NDVI Standard&quot;)
   3. Fare clic sull&#x27;icona di salvataggio
@@ -230,7 +230,7 @@ Le impostazioni vengono applicate nel seguente ordine:
 
 ### Impostazioni ed elaborazione delle immagini
 
-La maggior parte delle modifiche alle impostazioni (in particolare nelle categorie Elaborazione ed Esportazione) attiverà una rielaborazione delle immagini per riflettere le nuove impostazioni. Tuttavia, alcune impostazioni sono &quot;solo esportazione&quot; e non richiedono una rielaborazione immediata:
+La maggior parte delle modifiche alle impostazioni (in particolare nelle categorie Elaborazione ed Esportazione) attiverà una rielaborazione delle immagini per riflettere le nuove impostazioni. Tuttavia, alcune impostazioni sono &quot;solo per l&#x27;esportazione&quot; e non richiedono una rielaborazione immediata:
 
 * Salva modello di progetto
 * Directory di lavoro

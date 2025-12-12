@@ -14,11 +14,11 @@ Una volta creato o aperto un progetto in Chloros, il passo successivo consiste n
 
 ***
 
-## Aggiungere immagini al progetto
+## Aggiunta di immagini al progetto
 
 Esistono due modi principali per aggiungere immagini al progetto:
 
-### Metodo 1: aggiungere file
+### Metodo 1: aggiunta di file
 
 Utilizzare questa opzione per importare singoli file immagine o una piccola selezione di file.
 
@@ -53,7 +53,7 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 
 ### Data e ora
 
-* Data e ora in cui l&#x27;immagine è stata acquisita
+* Data e ora di acquisizione dell&#x27;immagine
 * Estratto dai metadati EXIF dell&#x27;immagine
 * Utilizzato per la sincronizzazione PPK e il rilevamento del target di calibrazione
 
@@ -81,7 +81,7 @@ Per rimuovere le immagini indesiderate dal progetto:
 2. Fare clic sul pulsante **&quot;Rimuovi selezionati&quot;**
 3. Confermare la rimozione (i file non vengono eliminati dal disco, ma solo rimossi dal progetto)
 
-### Ordinamento e filtro
+### Ordinamento e filtraggio
 
 * **Ordina per colonna**: fare clic su qualsiasi intestazione di colonna per ordinare le immagini
 * **Ordinamento per data**: utile per organizzare sequenze di acquisizione cronologiche
@@ -95,7 +95,7 @@ Per rimuovere le immagini indesiderate dal progetto:
 
 Fare clic su una miniatura qualsiasi nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
 
-1. L&#x27;immagine appare nel pannello di anteprima centrale
+1. L&#x27;immagine viene visualizzata nel pannello di anteprima centrale
 2. Utilizzare i controlli di zoom per esaminare i dettagli dell&#x27;immagine
 3. Passa da un&#x27;immagine all&#x27;altra utilizzando i tasti freccia
 
@@ -175,7 +175,7 @@ Se il progetto contiene immagini provenienti da più telecamere MAPIR:
 **Possibili cause:**
 
 * Metadati EXIF modificati
-* Immagini modificate in un software esterno
+* Immagini modificate con software esterno
 * Trasferimento file incompleto
 
 **Soluzione**: reimportare i file originali non modificati dalla fotocamera/scheda SD
@@ -198,7 +198,7 @@ Una volta importati i file:
 1. **Rivedere l&#x27;elenco dei file** - Assicurarsi che tutte le immagini siano state caricate correttamente
 2. **Controllare i modelli di fotocamera** - Verificare il corretto rilevamento della fotocamera
 3. **Contrassegnare le immagini di destinazione** - Vedere [Scelta delle immagini di destinazione](choosing-target-images.md)
-4. **Regolare le impostazioni** - Configurare le opzioni di elaborazione in [Impostazioni di progetto](adjusting-project-settings.md)
+4. **Regolare le impostazioni** - Configurare le opzioni di elaborazione in [Impostazioni progetto](adjusting-project-settings.md)
 5. **Avvia l&#x27;elaborazione** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
 
 Per informazioni dettagliate sulla configurazione del progetto, vedi [Modifica delle impostazioni del progetto](adjusting-project-settings.md).

@@ -12,7 +12,7 @@ metaLinks:
 
 ### TIFF (32 bit, percentuale %)
 
-32 bit (pixel float 0,0 - 1,0) TIFF (.tif) output in formato. I valori dei pixel rappresentano le percentuali di riflettanza dove 0,0 = 0% e 1,0 = 100%.
+32 bit (pixel float 0,0 - 1,0) TIFF (.tif) formato di output. I valori dei pixel rappresentano le percentuali di riflettanza dove 0,0 = 0% e 1,0 = 100%.
 
 ### **JPG (8 bit)**
 

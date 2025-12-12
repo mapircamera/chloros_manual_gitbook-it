@@ -22,7 +22,7 @@ Quando si seleziona la colonna Target per immagini specifiche:
 * Il rilevamento dei target viene completato molto più rapidamente
 * Il tempo di elaborazione complessivo viene notevolmente ridotto
 
-{% suggerimento style=&quot;success&quot; %}
+{% hint style=&quot;success&quot; %}
 **Miglioramento della velocità**: contrassegnando 2-3 immagini target in un set di dati di 500 immagini è possibile ridurre il tempo di rilevamento dei target da oltre 30 minuti a meno di 1 minuto.
 {% endhint %}
 
@@ -95,7 +95,7 @@ Prima dell&#x27;elaborazione, ricontrollare:
 **Programma di best practice:**
 
 * 3-5 immagini acquisite poco dopo l&#x27;inizio della registrazione del sensore di luce
-* Ruotare la telecamera tra un&#x27;acquisizione e l&#x27;altra per ottenere i migliori risultati
+* Ruotare la telecamera tra un&#x27;acquisizione e l&#x27;altra per ottenere risultati ottimali
 * Opzionale: periodicamente a metà sessione se le condizioni di illuminazione cambiano costantemente
 
 ***
@@ -166,16 +166,16 @@ Se Chloros non rileva correttamente i target, regolare queste impostazioni in [I
 
 **Possibili cause:**
 
-* Edifici bianchi, veicoli o copertura del suolo scambiati per bersagli
+* Edifici bianchi, veicoli o copertura del suolo scambiati per obiettivi
 * Macchie luminose nella vegetazione
 * Sensibilità di rilevamento troppo bassa
 
 **Soluzioni:**
 
-1. Contrassegnare solo le immagini dei bersagli effettivi per limitare l&#x27;ambito di rilevamento
+1. Contrassegnare solo le immagini degli obiettivi effettivi per limitare l&#x27;ambito di rilevamento
 2. Aumentare l&#x27;area minima del campione di calibrazione
-3. Aumentare il valore minimo di raggruppamento dei bersagli
-4. Assicurarsi che le immagini dei bersagli mostrino solo il bersaglio (disturbo minimo dello sfondo)
+3. Aumentare il valore minimo di raggruppamento degli obiettivi
+4. Assicurarsi che le immagini degli obiettivi mostrino solo l&#x27;obiettivo (minimo disturbo di fondo)
 
 ***
 
@@ -186,7 +186,7 @@ Prima di avviare l&#x27;elaborazione, verificare la selezione delle immagini dei
 * [ ] Almeno 1 immagine del bersaglio contrassegnata per sessione
 * [ ] Le caselle di controllo della colonna Bersaglio sono selezionate per tutte le immagini dei bersagli
 * [ ] Immagini dei bersagli acquisite nello stesso intervallo di tempo del rilevamento
-* [ ] Bersagli chiaramente visibili nell&#x27;anteprima quando si fa clic
+* [ ] Bersagli chiaramente visibili nell&#x27;anteprima quando cliccati
 * [ ] Tutti e 4 i pannelli di calibrazione visibili in ciascuna immagine del bersaglio
 * [ ] Nessuna ombra o ostruzione sui target
 * [ ] Per doppia fotocamera: target contrassegnati per entrambi i tipi di fotocamera
@@ -212,7 +212,7 @@ Sebbene non sia consigliabile per lavori scientifici, è possibile eseguire l&#x
 
 ## Passaggi successivi
 
-Dopo aver contrassegnato le immagini target:
+Una volta contrassegnate le immagini target:
 
 1. **Rivedere le impostazioni** - Vedere [Regolazione delle impostazioni del progetto](adjusting-project-settings.md)
 2. **Avviare l&#x27;elaborazione** - Vedere [Avvio dell&#x27;elaborazione](starting-the-processing.md)

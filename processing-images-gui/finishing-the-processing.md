@@ -8,7 +8,7 @@ Al termine dell&#x27;elaborazione, verranno visualizzati diversi indicatori:
 
 * ✅ **Barra di avanzamento**: raggiunge il 100% di completamento
 * ✅ **Registro di debug**: mostra il messaggio &quot;Elaborazione completata&quot;
-* ✅ **Pulsante Avvia**: si riattiva (pronto per la prossima elaborazione)
+* ✅ **Pulsante di avvio**: si riattiva (pronto per la prossima elaborazione)
 * ✅ **File di output**: tutte le immagini elaborate vengono salvate nella sottocartella del modello di fotocamera
 
 ***
@@ -39,7 +39,7 @@ Al termine dell&#x27;elaborazione, verranno visualizzati diversi indicatori:
 
 **Visualizzatori consigliati:**
 
-* **QGIS** - Software GIS gratuito (ideale per analisi multispettrali georeferenziate)
+* **QGIS** - Software GIS gratuito (ideale per l&#x27;analisi multispettrale georeferenziata)
 * **IrfanView** - Visualizzatore di immagini veloce e leggero (supporta TIFF)
 * **Adobe Photoshop** - Editing professionale (supporta TIFF)
 * **GIMP** - Alternativa gratuita a Photoshop
@@ -52,9 +52,9 @@ Utilizza Image Viewer integrato in Chloros per una visualizzazione avanzata:
 1. Fai clic su una miniatura dell&#x27;immagine nel File Browser
 2. L&#x27;immagine si apre nell&#x27;area di anteprima principale
 3. Fai clic sulla scheda **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> nella barra laterale sinistra
-4. Utilizza [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) per l&#x27;analisi interattiva
+4. Utilizzare [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) per l&#x27;analisi interattiva
 
-Consulta [Visualizzatore immagini](../image-viewer-gui/opening-an-image-full-screen.md) per istruzioni dettagliate.
+Vedere [Visualizzatore immagini](../image-viewer-gui/opening-an-image-full-screen.md) per istruzioni dettagliate.
 
 ***
 
@@ -75,7 +75,7 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 1. Fare clic sul pulsante **&quot;Copia&quot;** o **&quot;Scarica&quot;**
 2. Salvare come file di testo nella cartella del progetto
 3. Includere nella documentazione del progetto
-4. Inviare all&#x27;assistenza MAPIR in caso di problemi riscontrati
+4. Inviare all&#x27;assistenza MAPIR in caso di problemi
 
 ***
 
@@ -95,7 +95,7 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 1. Controllare il log di debug per messaggi di salto/errore
 2. Verificare che lo spazio su disco fosse sufficiente
 3. Contare i file: dovrebbe corrispondere a (conteggio originale - conteggio di destinazione) × (indici + 1)
-4. Reimportare e rielaborare i file mancanti
+4. Reimportare e rielaborare eventuali file mancanti
 
 ### Problema: bordi scuri o chiari (vignettatura ancora visibile)
 
@@ -116,15 +116,15 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 **Possibili cause:**
 
 * Nessun target di calibrazione rilevato
-* Modello di target di calibrazione errato selezionato
+* Modello di target di calibrazione selezionato errato
 * Calibrazione della riflettanza disabilitata
 * Immagini target di scarsa qualità
 
 **Soluzioni:**
 
-1. Verificare che la calibrazione della riflettanza sia abilitata
+1. Verificare che la calibrazione della riflettanza sia stata abilitata
 2. Controllare i messaggi &quot;Target trovato&quot; nel registro di debug
-3. Verificare la qualità dell&#x27;immagine target
+3. Verificare la qualità dell&#x27;immagine del target
 4. Rielaborare con i target corretti contrassegnati
 
 ### Problema: i valori NDVI sembrano errati
@@ -142,7 +142,7 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 2. Verificare che sia stato incluso il registro del sensore di luce.
 3. Verificare che siano stati rilevati gli obiettivi di calibrazione.
 4. Assicurarsi che sia stato rilevato il modello di fotocamera corretto.
-5. Controllare i tempi e le condizioni di acquisizione dell&#x27;immagine dell&#x27;obiettivo.
+5. Controllare i tempi e le condizioni di acquisizione delle immagini target.
 
 ***
 
@@ -159,27 +159,27 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
    * WebODM
 2. **Conservare i metadati EXIF**: assicurarsi che i dati GPS siano conservati per il geotagging
 3. **Flussi di lavoro calibrati**: utilizzare immagini di riflettanza per garantire l&#x27;accuratezza scientifica
-4. **Elaborare mosaici indice**: Creare ortomosaici NDVI da singole immagini indice
-5. **Esportare GeoTIFF georeferenziato**: per l&#x27;utilizzo in applicazioni GIS
+4. **Elaborare i mosaici indice**: creare ortomosaici NDVI da singole immagini indice
+5. **Esportare GeoTIFF georeferenziato**: per l&#x27;uso in applicazioni GIS
 
 ### Per l&#x27;analisi GIS
 
 **Flusso di lavoro consigliato:**
 
 1. **Caricare in QGIS, ArcGIS o simili**
-2. **Utilizzare immagini di riflettanza TIFF a 16 bit** per l&#x27;analisi multibanda
+2. **Utilizzare immagini di riflettanza a 16 bit TIFF** per analisi multibanda
 3. **Utilizzare immagini indice** (NDVI, NDRE) come livelli di vegetazione pronti all&#x27;uso
-4. **Calcolatore raster**: combinare bande per analisi personalizzate
-5. **Esportazione**: creare mappe di classificazione, rilevamento delle modifiche, mappe dello stato di salute della vegetazione
+4. **Calcolatrice raster**: combinare le bande per analisi personalizzate
+5. **Esportare**: creare mappe di classificazione, rilevamento delle modifiche, mappe dello stato di salute della vegetazione
 
 ### Per analisi diretta/reportistica
 
 **Flusso di lavoro consigliato:**
 
 1. **Utilizzare immagini indice con colori LUT** per report visivi
-2. **Estrarre statistiche**: media NDVI per campo/appezzamento
-3. **Serie temporali**: confronta gli indici tra più sessioni
-4. **Genera report**: includi mappe, statistiche e visualizzazioni
+2. **Estrazione delle statistiche**: media NDVI per campo/appezzamento
+3. **Serie temporali**: confronto degli indici tra più sessioni
+4. **Generazione di report**: includere mappe, statistiche e visualizzazioni
 
 ***
 
@@ -189,13 +189,13 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 
 **Cosa salvare:**
 
-* ✅ **Immagini RAW/JPG originali** - Archivia su un&#x27;unità separata/cloud
+* ✅ **Immagini RAW/JPG originali** - Archiviare su un&#x27;unità separata/cloud
 * ✅ **Risultati elaborati** - Conservare immagini e indici calibrati
 * ✅ **File di progetto** - Contiene tutte le impostazioni per la rielaborazione, se necessario
 * ✅ **Registro di debug** - Documenta i dettagli dell&#x27;elaborazione
-* ✅ **Immagini di calibrazione** - Per la verifica e la rielaborazione
+* ✅ **Immagini target di calibrazione** - Per la verifica e la rielaborazione
 
-**Raccomandazioni per l&#x27;archiviazione:**
+**Consigli per l&#x27;archiviazione:**
 
 * **Backup immediato**: disco rigido esterno
 * **Archivio a lungo termine**: archiviazione cloud (Google Drive, Dropbox, ecc.)
@@ -222,7 +222,7 @@ Per più sessioni/set di dati:
 
 * Creare un progetto separato per ogni sessione
 * Utilizzare impostazioni del modello coerenti
-* Elaborare una alla volta
+* Elaborare una sessione alla volta
 
 **Opzione 2: Chloros CLI (solo Chloros+)**
 
@@ -238,7 +238,7 @@ Per più sessioni/set di dati:
 
 ***
 
-## Risoluzione dei problemi Post-elaborazione
+## Risoluzione dei problemi di post-elaborazione
 
 ### Rielaborazione con impostazioni diverse
 
@@ -246,7 +246,7 @@ Se i risultati non sono soddisfacenti:
 
 1. Conservare le immagini originali (non eliminarle mai)
 2. Aprire lo stesso progetto in Chloros
-3. Modificare le impostazioni nel pannello Impostazioni progetto
+3. Regolare le impostazioni nel pannello Impostazioni progetto
 4. Eseguire nuovamente l&#x27;elaborazione: i risultati sovrascriveranno quelli precedenti
 
 ### Elaborazione di un sottoinsieme di immagini
@@ -271,15 +271,15 @@ In caso di problemi:
 
 ## Riepilogo: flusso di lavoro completo
 
-Hai completato l&#x27;intero flusso di lavoro di elaborazione Chloros:
+Hai completato il flusso di lavoro completo di elaborazione Chloros:
 
 1. ✅ **Progetto creato** - Vedi [Progetti](../projects.md)
 2. ✅ **Aggiunti file** - Vedi [Aggiunta di file](adding-files-to-a-project.md)
 3. ✅ **Modificate impostazioni** - Vedi [Modifica delle impostazioni del progetto](adjusting-project-settings.md)
-4. ✅ **Contrassegnati gli obiettivi** - Vedi [Scelta delle immagini di destinazione](choosing-target-images.md)
-5. ✅ **Avviata l&#x27;elaborazione** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
+4. ✅ **Obiettivi contrassegnati** - Vedi [Scelta delle immagini di destinazione](choosing-target-images.md)
+5. ✅ **Elaborazione avviata** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
 6. ✅ **Monitoraggio dell&#x27;avanzamento** - Vedi [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
-7. ✅ **Revisione dei risultati** - Questa pagina
+7. ✅ **Risultati revisionati** - Questa pagina
 
 **Le immagini multispettrali calibrate e con correzione della riflettanza sono pronte per l&#x27;analisi!**
 

@@ -1,6 +1,6 @@
 # Monitoraggio dell&#x27;elaborazione
 
-Una volta avviata l&#x27;elaborazione, Chloros offre diversi modi per monitorare lo stato di avanzamento, verificare la presenza di eventuali problemi e comprendere cosa sta succedendo con il set di dati. Questa pagina spiega come monitorare l&#x27;elaborazione e interpretare le informazioni fornite da Chloros.
+Una volta avviata l&#x27;elaborazione, Chloros offre diversi modi per monitorare lo stato di avanzamento, verificare la presenza di eventuali problemi e comprendere cosa sta succedendo con il proprio set di dati. Questa pagina spiega come monitorare l&#x27;elaborazione e interpretare le informazioni fornite da Chloros.
 
 ## Panoramica della barra di avanzamento
 
@@ -34,9 +34,9 @@ Per gli utenti con licenza Chloros+:
 
 **Funzionalità interattive:**
 
-* **Passa con il mouse** sulla barra di avanzamento per visualizzare il pannello espanso in 4 fasi
-* **Fare clic** sulla barra di avanzamento per bloccare/fissare il pannello espanso
-* **Fare nuovamente clic** per sbloccare e nascondere automaticamente all&#x27;uscita del mouse
+* **Passa con il mouse** sulla barra di avanzamento per visualizzare il pannello espanso a 4 fasi
+* **Clicca** sulla barra di avanzamento per bloccare/fissare il pannello espanso
+* **Clicca di nuovo** per sbloccare e nascondere automaticamente all&#x27;uscita del mouse
 * Ogni fase mostra l&#x27;avanzamento individuale (0-100%)
 
 ***
@@ -71,7 +71,7 @@ Per gli utenti con licenza Chloros+:
 
 ### Fase 2: Analisi
 
-**Cosa succede:**
+**Cosa sta succedendo:**
 
 * Lettura dei metadati EXIF delle immagini (timestamp, impostazioni di esposizione)
 * Determinazione della strategia di calibrazione in base ai timestamp degli obiettivi
@@ -96,8 +96,8 @@ Per gli utenti con licenza Chloros+:
 
 * **Debayering**: Conversione del pattern Bayer RAW in 3 canali
 * **Correzione vignettatura**: rimozione dell&#x27;oscuramento dei bordi dell&#x27;obiettivo
-* **Calibrazione della riflettanza**: normalizzazione con valori target
-* **Calcolo dell&#x27;indice**: calcolo degli indici multispettrali
+* **Calibrazione riflettanza**: normalizzazione con valori target
+* **Calcolo indice**: calcolo indici multispettrali
 * Elaborazione di ciascuna immagine attraverso l&#x27;intera pipeline
 
 **Durata:** la maggior parte del tempo di elaborazione totale (60-80%)
@@ -116,7 +116,7 @@ Per gli utenti con licenza Chloros+:
 
 **Cosa tenere d&#x27;occhio:**
 
-* Avanzamento costante attraverso il conteggio delle immagini
+* Progressi costanti attraverso il conteggio delle immagini
 * Controllare il registro di debug per i messaggi di completamento per ogni immagine
 * Avvisi relativi alla qualità dell&#x27;immagine o a problemi di calibrazione
 
@@ -137,7 +137,7 @@ Per gli utenti con licenza Chloros+:
 * File in fase di scrittura
 * Formato di esportazione e destinazione
 
-**Cosa tenere sotto controllo:**
+**Cosa tenere d&#x27;occhio:**
 
 * Avvisi relativi allo spazio su disco
 * Errori di scrittura dei file
@@ -191,7 +191,7 @@ Problemi critici che possono causare il fallimento dell&#x27;elaborazione:
 [ERROR] No targets detected - enable reflectance calibration or mark target images
 ```
 
-**Azione:** Interrompere l&#x27;elaborazione, risolvere l&#x27;errore, riavviare.
+**Azione:** interrompere l&#x27;elaborazione, risolvere l&#x27;errore, riavviare.
 
 ### Messaggi di log comuni
 
@@ -386,7 +386,7 @@ Una volta completata l&#x27;elaborazione:
 
 1. **Esaminare i risultati** - Vedere [Completamento dell&#x27;elaborazione](finishing-the-processing.md)
 2. **Controllare la cartella di output** - Verificare che tutti i file siano stati esportati correttamente
-3. **Controllare il registro di debug** - Verificare la presenza di eventuali avvisi o errori
+3. **Esaminare il registro di debug** - Verificare la presenza di eventuali avvisi o errori
 4. **Visualizzare in anteprima le immagini elaborate** - Utilizzare Image Viewer o un software esterno
 
 Per informazioni sulla revisione e l&#x27;utilizzo dei risultati elaborati, vedere [Completamento dell&#x27;elaborazione](finishing-the-processing.md).

@@ -98,7 +98,7 @@ Prima di installare SDK, assicurarsi di avere:
 pip install chloros-sdk
 ```
 
-**Con supporto per il monitoraggio dello stato di avanzamento:**
+**Con supporto per il monitoraggio dell&#x27;avanzamento:**
 
 ```bash
 pip install chloros-sdk[progress]
@@ -209,7 +209,7 @@ Crea un nuovo progetto Chloros.
 | Parametro      | Tipo | Obbligatorio | Descrizione                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
 | `project_name` | str  | Sì      | Nome del progetto                                     |
-| `camera`       | str  | No       | Modello della telecamera (ad es. &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
+| `camera`       | str  | No       | Modello di telecamera (ad es. &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
 
 **Restituisce:** `dict` - Risposta alla creazione del progetto
 
@@ -259,7 +259,7 @@ Configura le impostazioni di elaborazione.
 | Parametro                 | Tipo | Predefinito                 | Descrizione                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
 | `debayer`                 | str  | &quot;Alta qualità (più veloce)&quot; | Metodo Debayer                  |
-| `vignette_correction`     | bool | `True`                  | Abilita correzione vignetta      |
+| `vignette_correction`     | bool | `True`                  | Abilita correzione vignettatura      |
 | `reflectance_calibration` | bool | `True`                  | Abilita calibrazione riflettanza  |
 | `indices`                 | list | `None`                  | Indici di vegetazione da calcolare |
 | `export_format`           | str  | &quot;TIFF (16 bit)&quot;         | Formato di output                   |
@@ -309,9 +309,9 @@ Elabora le immagini del progetto.
 | Parametro           | Tipo     | Predefinito      | Descrizione                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
 | `mode`              | str      | `"parallel"` | Modalità di elaborazione: &quot;parallel&quot; o &quot;serial&quot;   |
-| `wait`              | bool     | `True`       | Attendere il completamento                       |
-| `progress_callback` | callable | `None`       | Funzione di callback di avanzamento (progress, msg) |
-| `poll_interval`     | float    | `2.0`        | Intervallo di polling per l&#x27;avanzamento (secondi)   |
+| `wait`              | bool     | `True`       | Attesa completamento                       |
+| `progress_callback` | callable | `None`       | Funzione di callback progresso (progress, msg) |
+| `poll_interval`     | float    | `2.0`        | Intervallo di polling per lo stato di avanzamento (secondi)   |
 
 **Restituisce:** `dict` - Risultati dell&#x27;elaborazione
 
@@ -343,7 +343,7 @@ chloros.process(wait=False)
 
 #### `get_config()`
 
-Ottiene la configurazione corrente del progetto.
+Ottieni la configurazione corrente del progetto.
 
 **Restituisce:** `dict` - Configurazione corrente del progetto
 
@@ -396,7 +396,7 @@ Funzione di utilità su una riga per elaborare una cartella.
 | ------------------------- | -------- | --------------- | ------------------------------ |
 | `folder_path`             | str/Path | Obbligatorio        | Percorso della cartella con le immagini     |
 | `project_name`            | str      | Generato automaticamente  | Nome del progetto                   |
-| `camera`                  | str      | `None`          | Modello fotocamera                |
+| `camera`                  | str      | `None`          | Modello della fotocamera                |
 | `indices`                 | list     | `["NDVI"]`      | Indici da calcolare           |
 | `vignette_correction`     | bool     | `True`          | Abilita correzione vignettatura     |
 | `reflectance_calibration` | bool     | `True`          | Abilita calibrazione riflettanza |
@@ -455,7 +455,7 @@ with ChlorosLocal() as chloros:
 
 ## Esempi completi
 
-### Esempio 1: elaborazione di base
+### Esempio 1: Elaborazione di base
 
 Elaborazione di una cartella con impostazioni predefinite:
 
@@ -619,7 +619,7 @@ print(df)
 
 ***
 
-### Esempio 5: monitoraggio personalizzato dello stato di avanzamento
+### Esempio 5: Monitoraggio personalizzato dello stato di avanzamento
 
 Monitoraggio avanzato dello stato di avanzamento con registrazione:
 
@@ -658,9 +658,9 @@ logging.info("Processing complete!")
 
 ***
 
-### Esempio 6: gestione degli errori
+### Esempio 6: Gestione degli errori
 
-Gestione degli errori affidabile per l&#x27;uso in produzione:
+Gestione degli errori robusta per l&#x27;uso in produzione:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -712,7 +712,7 @@ else:
 
 ### Esempio 7: Strumento da riga di comando
 
-Creazione di uno strumento CLI personalizzato con SDK:
+Creare uno strumento CLI personalizzato con SDK:
 
 ```python
 #!/usr/bin/env python
@@ -975,7 +975,7 @@ chloros = ChlorosLocal(timeout=120)  # 2 minutes
 
 ### Porta già in uso
 
-**Problema:** porta backend 5000 occupata
+**Problema:** Porta backend 5000 occupata
 
 **Soluzioni:**
 
@@ -997,13 +997,13 @@ Get-NetTCPConnection -LocalPort 5000
 
 ### Ottimizzare la velocità di elaborazione
 
-1. **Utilizza la modalità parallela** (richiede Chloros+)
+1. **Utilizzare la modalità parallela** (richiede Chloros+)
 
 ```python
 chloros.process(mode="parallel")  # Up to 16 workers
 ```
 
-2. **Riduci la risoluzione di output** (se accettabile)
+2. **Ridurre la risoluzione di output** (se accettabile)
 
 ```python
 chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
@@ -1016,7 +1016,7 @@ chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Elaborare su SSD** (non su HDD)
+4. **Elabora su SSD** (non su HDD)
 
 ***
 
@@ -1151,17 +1151,17 @@ chloros.process(progress_callback=notebook_progress)
 
 ### D: Posso distribuire app create con SDK?
 
-**R:** Il codice SDK può essere integrato nelle vostre applicazioni, ma:
+**R:** Il codice SDK può essere integrato nelle tue applicazioni, ma:
 
 * Gli utenti finali devono avere Chloros installato
 * Gli utenti finali devono avere licenze Chloros+ attive
-* La distribuzione commerciale richiede licenze OEM
+* La distribuzione commerciale richiede una licenza OEM.
 
-Contatta info@mapir.camera per richieste relative alle licenze OEM.
+Contattare info@mapir.camera per richieste relative alle licenze OEM.
 
 ***
 
-### D: Come posso aggiornare SDK?
+### D: Come si aggiorna SDK?
 
 ```bash
 pip install --upgrade chloros-sdk

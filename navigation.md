@@ -28,7 +28,7 @@ Il menu laterale sinistro contiene varie icone con cui interagire:
 
 #### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Impostazioni progetto](project-settings/project-settings.md)
 
-La scheda Impostazioni progetto consente di regolare le impostazioni globali e di elaborazione del progetto. Regolare queste impostazioni prima di iniziare l&#x27;elaborazione dei file.
+La scheda Impostazioni progetto consente di regolare le impostazioni globali e di elaborazione del progetto. Regolarle prima di iniziare l&#x27;elaborazione dei file.
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Browser file
 
@@ -40,7 +40,7 @@ Quando si fa clic su un&#x27;immagine nel visualizzatore immagini principale, qu
 
 #### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Registro di debug
 
-Esamina il registro per le stampe di debug quando si verificano dei problemi. Copia/scarica il registro e invialo al [Supporto MAPIR](https://www.mapir.camera/community/contact) per assistenza.
+Controllare il registro per le stampe di debug quando si verificano dei problemi. Copiare/scaricare il registro e inviarlo al [Supporto MAPIR](https://www.mapir.camera/community/contact) per assistenza.
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Accesso utente](chloros+-login.md)
 

@@ -8,7 +8,7 @@
 * 🔗 **Integrazione** - Integrazione nei flussi di lavoro e nelle pipeline esistenti
 * 💻 **Funzionamento headless** - Esecuzione senza GUI
 * 🌍 **Multilingue** - Supporto per 38 lingue
-* ⚡ **Elaborazione parallela** - Si adatta dinamicamente alla tua CPU (fino a 16 lavoratori paralleli)
+* ⚡ **Elaborazione parallela** - Si adatta dinamicamente alla tua CPU (fino a 16 worker paralleli)
 
 ### Requisiti
 
@@ -20,7 +20,7 @@
 | **Internet**         | Necessario per l&#x27;attivazione della licenza                                     |
 | **Spazio su disco**       | Varia in base alle dimensioni del progetto                                              |
 
-{% hint style=&quot;warning&quot; %}
+{% suggerimento style=&quot;warning&quot; %}
 **Requisiti di licenza**: CLI richiede un abbonamento a pagamento a Chloros+. I piani standard (gratuiti) non consentono l&#x27;accesso a CLI. Visita [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) per effettuare l&#x27;aggiornamento.
 {% endhint %}
 
@@ -106,14 +106,14 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--format`            | Scelta  | TIFF (16 bit)  | Formato di output: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
 | `--min-target-size`   | Intero | Auto           | Dimensione minima target in pixel per il rilevamento del pannello di calibrazione                          |
 | `--target-clustering` | Intero | Auto           | Soglia di raggruppamento target (0-100)                                                    |
-| `--exposure-pin-1`    | Stringa  | Nessuna           | Blocco esposizione per modello di fotocamera (Pin 1)                                                 |
-| `--exposure-pin-2`    | Stringa  | Nessuna           | Blocco esposizione per modello di fotocamera (Pin 2)                                                 |
+| `--exposure-pin-1`    | Stringa  | Nessuna           | Blocco esposizione per modello fotocamera (Pin 1)                                                 |
+| `--exposure-pin-2`    | Stringa  | Nessuna           | Blocco esposizione per modello fotocamera (Pin 2)                                                 |
 | `--recal-interval`    | Intero | Auto           | Intervallo di ricalibrazione in secondi                                                      |
 | `--timezone-offset`   | Intero | 0              | Offset fuso orario in ore                                                               |
 
 ***
 
-### `login` - Autentica account
+### `login` - Autenticazione account
 
 Accedi con le tue credenziali Chloros+ per abilitare l&#x27;elaborazione CLI.
 
@@ -295,9 +295,9 @@ chloros-cli language ja
 
 ***
 
-### `set-project-folder` - Imposta cartella di progetto predefinita
+### `set-project-folder` - Imposta cartella progetto predefinita
 
-Modifica la posizione della cartella di progetto predefinita (condivisa con GUI).
+Modifica la posizione predefinita della cartella del progetto (condivisa con GUI).
 
 **Sintassi:**
 
@@ -313,7 +313,7 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Mostra cartella del progetto
+### `get-project-folder` - Mostra cartella di progetto
 
 Visualizza la posizione corrente della cartella di progetto predefinita.
 
@@ -353,13 +353,13 @@ chloros-cli reset-project-folder
 
 Queste opzioni si applicano a tutti i comandi:
 
-| Opzione          | Tipo    | Impostazione predefinita       | Descrizione                                      |
+| Opzione          | Tipo    | Predefinita       | Descrizione                                      |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Percorso    | Rilevato automaticamente | Percorso dell&#x27;eseguibile del backend                       |
-| `--port`        | Intero | 5000          | Numero di porta del backend API                          |
+| `--backend-exe` | Percorso    | Rilevato automaticamente | Percorso dell&#x27;eseguibile backend                       |
+| `--port`        | Intero | 5000          | Numero porta backend API                          |
 | `--restart`     | Flag    | -             | Forza il riavvio del backend (termina i processi esistenti) |
-| `--version`     | Flag    | -             | Mostra le informazioni sulla versione e chiudi                |
-| `--help`        | Flag    | -             | Mostra le informazioni di aiuto e chiudi                   |
+| `--version`     | Flag    | -             | Mostra le informazioni sulla versione e chiude                |
+| `--help`        | Flag    | -             | Mostra le informazioni di aiuto e chiude                   |
 
 **Esempio con opzioni globali:**
 
@@ -387,7 +387,7 @@ Chloros+ CLI **adatta automaticamente** l&#x27;elaborazione parallela alle capac
 | ------------- | ---------- | -------- | -------- | --------------- |
 | **High-End**  | 16+ core  | 32+ GB   | Fino a 16 | Velocità massima   |
 | **Fascia media** | 8-15 core | 16-31 GB | 8-16     | Velocità eccellente |
-| **Fascia bassa**   | 4-7 core  | 8-15 GB  | 4-8      | Buona velocità      |
+| **Fascia bassa**   | 4-7 core  | 8-15 GB  | 4-8      | Velocità buona      |
 
 {% hint style=&quot;success&quot; %}
 **Ottimizzazione automatica**: CLI rileva automaticamente le specifiche del sistema e configura l&#x27;elaborazione parallela ottimale. Non è necessaria alcuna configurazione manuale!
@@ -405,8 +405,8 @@ CLI utilizza **Alta qualità (più veloce)** come algoritmo Debayer predefinito 
 
 **Cosa fa:** corregge la caduta di luce ai bordi dell&#x27;immagine (angoli più scuri comuni nelle immagini delle fotocamere).
 
-* **Abilitata per impostazione predefinita** - La maggior parte degli utenti dovrebbe mantenerla abilitata.
-* Utilizzare `--no-vignette` per disabilitarla.
+* **Abilitata per impostazione predefinita** - La maggior parte degli utenti dovrebbe mantenerla abilitata
+* Utilizzare `--no-vignette` per disabilitarla
 
 {% hint style=&quot;success&quot; %}
 **Raccomandazione**: abilitare sempre la correzione vignetta per garantire una luminosità uniforme in tutto il fotogramma.
@@ -416,7 +416,7 @@ CLI utilizza **Alta qualità (più veloce)** come algoritmo Debayer predefinito 
 
 Converte i valori grezzi del sensore in percentuali di riflettanza standardizzate utilizzando pannelli di calibrazione.
 
-* **Abilitato per impostazione predefinita** - Essenziale per l&#x27;analisi della vegetazione.
+* **Abilitata per impostazione predefinita** - Essenziale per l&#x27;analisi della vegetazione.
 * Richiede pannelli di calibrazione nelle immagini.
 * Utilizzare `--no-reflectance` per disabilitare.
 
@@ -430,7 +430,7 @@ Converte i valori grezzi del sensore in percentuali di riflettanza standardizzat
 
 * **Disabilitato per impostazione predefinita**
 * Utilizzare `--ppk` per abilitare
-* Richiede file .daq nella cartella di progetto dal sensore di luce MAPIR DAQ-A-SD.
+* Richiede file .daq nella cartella del progetto dal sensore di luce MAPIR DAQ-A-SD.
 
 ### Formati di output
 
@@ -600,7 +600,7 @@ Tempi di elaborazione tipici per 100 immagini (12 MP ciascuna):
 
 | Modalità              | Tempo      | Hardware                                     |
 | ----------------- | --------- | -------------------------------------------- |
-| **Modalità parallela** | 5-10 min  | i7/Ryzen 7, 16 GB di RAM, SSD (fino a 16 worker) |
+| **Modalità parallela** | 5-10 min  | i7/Ryzen 7, 16 GB di RAM, SSD (fino a 16 lavoratori) |
 | **Modalità parallela** | 10-15 min | i5/Ryzen 5, 8 GB di RAM, HDD (fino a 8 worker)   |
 
 {% hint style=&quot;info&quot; %}
@@ -651,8 +651,8 @@ Backend failed to start within 30 seconds
 
 **Soluzioni:**
 
-1. Controlla se il backend è già in esecuzione (chiudilo prima)
-2. Controlla che il firewall Windows non lo stia bloccando
+1. Verifica se il backend è già in esecuzione (chiudilo prima)
+2. Verifica che Windows il firewall non lo stia bloccando
 3. Prova una porta diversa:
 
 ```powershell
@@ -715,7 +715,7 @@ No images found in the specified folder
 
 **Soluzioni:**
 
-1. Verificare lo spazio disponibile sul disco (assicurarsi che sia sufficiente per l&#x27;output)
+1. Verificare lo spazio disponibile su disco (assicurarsi che sia sufficiente per l&#x27;output)
 2. Chiudere le altre applicazioni per liberare memoria
 3. Ridurre il numero di immagini (elaborare in batch)
 
@@ -775,13 +775,13 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### D: Posso elaborare più cartelle contemporaneamente?
+### D: È possibile elaborare più cartelle contemporaneamente?
 
 **A:** Non direttamente con un unico comando, ma è possibile utilizzare uno script per elaborare le cartelle in sequenza. Vedere la sezione [Automazione e scripting](CLI.md#automation--scripting).
 
 ***
 
-### D: Come posso salvare l&#x27;output CLI in un file di log?
+### D: Come posso salvare l&#x27;output di CLI in un file di log?
 
 **PowerShell:**
 
@@ -802,8 +802,8 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 **R:** CLI:
 
 1. Interromperà l&#x27;elaborazione in modo corretto
-2. Spegnerà il backend
-3. Uscira con il codice 130
+2. Chiuderà il backend
+3. Usciremo con il codice 130
 
 Le immagini parzialmente elaborate potrebbero rimanere nella cartella di output.
 
@@ -895,7 +895,7 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ### Esempio 4: elaborazione con correzione PPK
 
-Applicare correzioni PPK con riflettanza:
+Applicazione delle correzioni PPK con riflettanza:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -907,7 +907,7 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ### Esempio 5: posizione di output personalizzata
 
-Elaborare su un&#x27;unità diversa con formato specifico:
+Elaborazione su un&#x27;unità diversa con formato specifico:
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^

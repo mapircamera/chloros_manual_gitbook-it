@@ -99,7 +99,7 @@ Sblocca funzionalità avanzate con un abbonamento Chloros+:
 
 ### Risoluzione dei problemi
 
-**L&#x27;installazione non riesce e viene visualizzato un messaggio di errore:**
+**L&#x27;installazione non riesce e viene visualizzato il seguente messaggio di errore:**
 
 * Assicurati di disporre dei diritti di amministratore
 * Disattiva temporaneamente il software antivirus
