@@ -16,7 +16,7 @@
 ## Elaborazione delle immagini (GUI)
 
 * [Regolazione delle impostazioni del progetto](processing-images-gui/adjusting-project-settings.md)
-* [Aggiunta di file a un progetto](processing-images-gui/page-1.md)
+* [Aggiunta di file a un progetto](processing-images-gui/adding-files-to-a-project.md)
 * [Scelta delle immagini di destinazione](processing-images-gui/choosing-target-images.md)
 * [Avvio dell'elaborazione](processing-images-gui/starting-the-processing.md)
 * [Monitoraggio del trattamento](processing-images-gui/monitoring-the-processing.md)
@@ -24,11 +24,11 @@
 
 ## IMPOSTAZIONI DEL PROGETTO
 
-* [Impostazioni del progetto](project-settings/page-2.md)
+* [Impostazioni del progetto](project-settings/project-settings.md)
 * [Formule dell'indice multispettrale](project-settings/multispectral-index-formulas.md)
 
 ## VISUALIZZATORE IMMAGINI (GUI)
 
-* [Apertura di un'immagine a schermo intero](image-viewer-gui/page-3.md)
+* [Apertura di un'immagine a schermo intero](image-viewer-gui/opening-an-image-full-screen.md)
 * [Livelli di immagine](image-viewer-gui/image-layers.md)
 * [Sandbox indice/LUT](image-viewer-gui/index-lut-sandbox.md)
