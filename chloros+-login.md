@@ -6,7 +6,9 @@ Il menu <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> consen
 
 Una volta effettuato l&#x27;accesso, verranno visualizzati i dettagli dell&#x27;account:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Login
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+
+## CLI Login
 
 Accedi con le tue credenziali Chloros+ per abilitare l&#x27;elaborazione CLI.
 
@@ -28,7 +30,9 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Output:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Scadenza del piano
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+
+### Scadenza del piano
 
 La scadenza del piano nella GUI indica quando la licenza non sarà più valida. Per gli abbonamenti mensili ricorrenti, la scadenza è alla fine del mese. Per gli abbonamenti annuali, è un anno dopo l&#x27;inizio dell&#x27;abbonamento. Il controllo della licenza richiede una connessione Internet mensile per la verifica, con un periodo di tolleranza di 30 giorni.
 

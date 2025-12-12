@@ -14,7 +14,9 @@ Dal menu principale è possibile avviare un nuovo progetto, aprire un progetto e
 
 Quando è abilitato, il pulsante di avvio dell&#x27;elaborazione avvia la pipeline di elaborazione delle immagini.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra di avanzamento <img src=".gitbook/assets/image (5).png" alt="" data-size="line">Nella modalità gratuita Chloros, che elabora tutti i file in sequenza, la barra di avanzamento mostrerà 2 fasi: Rilevamento target ed Elaborazione.
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra di avanzamento <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+
+Nella modalità gratuita Chloros, che elabora tutti i file in sequenza, la barra di avanzamento mostrerà 2 fasi: Rilevamento target ed Elaborazione.
 
 Nella modalità a pagamento con licenza Chloros+, che elabora tutti i file contemporaneamente, la barra di avanzamento mostra 4 fasi: Rilevamento, Analisi, Calibrazione, Esportazione. Se si posiziona il cursore del mouse sulla barra di avanzamento Chloros+, verrà visualizzato il pannello esteso con 4 barre di avanzamento in modo da poter seguire l&#x27;operazione. Facendo clic sulla barra di avanzamento superiore si bloccherà il pannello a discesa, facendo nuovamente clic lo si sbloccherà.
 
