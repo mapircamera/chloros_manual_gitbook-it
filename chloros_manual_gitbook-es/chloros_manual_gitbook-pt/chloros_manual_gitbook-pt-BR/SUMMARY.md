@@ -1,34 +1,34 @@
-# Table of contents
+# Sommario
 
-* [Getting Started](README.md)
-* [GUI : Navigation](navigation.md)
-* [GUI : Projects](projects.md)
-* [CLI : Command Line](CLI.md)
-* [API : Python SDK](api-python-sdk.md)
-* [Supported Cameras](supported-cameras.md)
-* [Output Image Formats](output-image-formats.md)
-* [Chloros+ Login](chloros+-login.md)
-* [Calibration Targets](calibration-targets.md)
-* [Supported Languages](supported-languages.md)
-* [Download](download.md)
-* [FAQ](faq.md)
+* [Iniziare](README.md)
+* [GUI: Navigazione](navigation.md)
+* [GUI: progetti](projects.md)
+* [CLI: riga di comando](CLI.md)
+* [API: SDK Python](api-python-sdk.md)
+* [Fotocamere supportate](supported-cameras.md)
+* [Formati immagine di output](output-image-formats.md)
+* [Chloros+ Accedi](chloros+-login.md)
+* [Obiettivi di calibrazione](calibration-targets.md)
+* [Lingue supportate](supported-languages.md)
+* [Scaricamento](download.md)
+* [Domande frequenti](faq.md)
 
-## Processing Images (GUI)
+## Elaborazione delle immagini (GUI)
 
-* [Adjusting Project Settings](processing-images-gui/adjusting-project-settings.md)
-* [Adding Files to a Project](processing-images-gui/page-1.md)
-* [Choosing Target Images](processing-images-gui/choosing-target-images.md)
-* [Starting the Processing](processing-images-gui/starting-the-processing.md)
-* [Monitoring the Processing](processing-images-gui/monitoring-the-processing.md)
-* [Finishing the Processing](processing-images-gui/finishing-the-processing.md)
+* [Regolazione delle impostazioni del progetto](processing-images-gui/adjusting-project-settings.md)
+* [Aggiunta di file a un progetto](processing-images-gui/page-1.md)
+* [Scelta delle immagini di destinazione](processing-images-gui/choosing-target-images.md)
+* [Avvio dell'elaborazione](processing-images-gui/starting-the-processing.md)
+* [Monitoraggio del trattamento](processing-images-gui/monitoring-the-processing.md)
+* [Fine della lavorazione](processing-images-gui/finishing-the-processing.md)
 
-## PROJECT SETTINGS
+## IMPOSTAZIONI DEL PROGETTO
 
-* [Project Settings](project-settings/page-2.md)
-* [Multispectral Index Formulas](project-settings/multispectral-index-formulas.md)
+* [Impostazioni del progetto](project-settings/page-2.md)
+* [Formule dell'indice multispettrale](project-settings/multispectral-index-formulas.md)
 
-## IMAGE VIEWER (GUI)
+## VISUALIZZATORE IMMAGINI (GUI)
 
-* [Opening an Image Full Screen](image-viewer-gui/page-3.md)
-* [Image Layers](image-viewer-gui/image-layers.md)
-* [Index/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Apertura di un'immagine a schermo intero](image-viewer-gui/page-3.md)
+* [Livelli di immagine](image-viewer-gui/image-layers.md)
+* [Sandbox indice/LUT](image-viewer-gui/index-lut-sandbox.md)

@@ -1,41 +1,41 @@
-﻿# Chloros User Manual - Italian
+﻿# Manuale Utente Chloros - Italiano
 
-This is the Italian translation of the Chloros Professional Multispectral Image Processing Software user manual.
+Questa è la traduzione italiana del manuale utente del software di elaborazione immagini multispettrali Chloros Professional.
 
-## About Chloros
+## A proposito di Chloros
 
-Chloros is professional multispectral image processing software that transforms imagery into actionable insights with powerful desktop software, command-line tools, and Python API.
+Chloros è un software professionale di elaborazione delle immagini multispettrali che trasforma le immagini in informazioni fruibili con un potente software desktop, strumenti da riga di comando e API Python.
 
-### Features
-- Desktop and Browser interfaces
-- CLI and Python SDK (Chloros+)
-- Available in 28 languages
-- 24+ vegetation indices
-- Reflectance calibration
-- Ambient light sensor support
+### Caratteristiche
+- Interfacce desktop e browser
+- CLI e SDK Python (Chloros+)
+- Disponibile in 28 lingue
+- 24+ indici di vegetazione
+- Calibrazione della riflettanza
+- Supporto sensore di luce ambientale
 
-## Documentation
+## Documentazione
 
-This manual is synchronized with GitBook. The documentation covers:
-- Installation and setup
-- Image processing workflows
-- Calibration procedures
-- Vegetation index calculations
-- CLI and Python SDK usage
-- API reference
+Questo manuale è sincronizzato con GitBook. La documentazione riguarda:
+- Installazione e configurazione
+- Flussi di lavoro per l'elaborazione delle immagini
+- Procedure di calibrazione
+- Calcoli dell'indice di vegetazione
+- Utilizzo della CLI e dell'SDK Python
+- Riferimento API
 
-## Links
+## Collegamenti
 
-- [Main Website](https://www.mapir.camera)
-- [Chloros Download](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
-- [Chloros+ Plans](https://cloud.mapir.camera/pricing)
-- [English Documentation](https://mapir.gitbook.io/chloros)
-- [Support](https://www.mapir.camera/community/contact)
+- [Sito Web principale](https://www.mapir.camera)
+- [Scarica Cloro](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
+- [Piani Chloros+](https://cloud.mapir.camera/pricing)
+- [Documentazione inglese](https://mapir.gitbook.io/chloros)
+- [Supporto](https://www.mapir.camera/community/contact)
 
-## Translation Status
+## Stato della traduzione
 
-Translation in progress - This manual will be translated to Italian soon.
+Traduzione in corso - Questo manuale sarà presto tradotto in italiano.
 
-## License
+## Licenza
 
-Copyright MAPIR Camera. All rights reserved.
+Copyright della fotocamera MAPIR. Tutti i diritti riservati.
