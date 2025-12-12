@@ -9,11 +9,15 @@ metaLinks:
 
 MAPIR offre vari target di calibrazione per coprire una vasta gamma di applicazioni. Il compatto T4-R50 mostrato di seguito contiene 4 pannelli che sono stati misurati per la riflettanza della luce da 250 a 2.500 nm.
 
-<figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>I target di riferimento diffusi T4 hanno le seguenti curve di riflettanza, [scarica i dati qui](https://cdn.shopify.com/s/files/1/0972/5566/files/MAPIR_Diffuse_Reflectance_Standard_Calibration_Target_Data_T4.xlsx?v=1741759157):
+<figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>
+
+I target di riferimento diffusi T4 hanno le seguenti curve di riflettanza, [scarica i dati qui](https://cdn.shopify.com/s/files/1/0972/5566/files/MAPIR_Diffuse_Reflectance_Standard_Calibration_Target_Data_T4.xlsx?v=1741759157):
 
 <figure><img src=".gitbook/assets/MAPIR Diffuse Reflectance Standard Calibration Target Data T4 (250-2500nm).png" alt=""><figcaption><p>MAPIR T4 Riflettanza :: 250-2500 nm</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/MAPIR Diffuse Reflectance Standard Calibration Target Data T4 (400-1000nm).png" alt=""><figcaption><p>MAPIR T4 Riflettanza :: 400-1000 nm</p></figcaption></figure>Osservando il grafico della riflettanza è possibile notare che i valori sono la lunghezza d&#x27;onda (asse x) rispetto alla percentuale di riflettanza (asse y). Quando acquisiamo un&#x27;immagine del target di calibrazione, creiamo una relazione tra il valore dei pixel e la percentuale di riflettanza, all&#x27;interno dello spettro a cui sono sensibili ciascuna delle bande del sensore della fotocamera.
+<figure><img src=".gitbook/assets/MAPIR Diffuse Reflectance Standard Calibration Target Data T4 (400-1000nm).png" alt=""><figcaption><p>MAPIR T4 Riflettanza :: 400-1000 nm</p></figcaption></figure>
+
+Osservando il grafico della riflettanza è possibile notare che i valori sono la lunghezza d&#x27;onda (asse x) rispetto alla percentuale di riflettanza (asse y). Quando acquisiamo un&#x27;immagine del target di calibrazione, creiamo una relazione tra il valore dei pixel e la percentuale di riflettanza, all&#x27;interno dello spettro a cui sono sensibili ciascuna delle bande del sensore della fotocamera.
 
 Ciò significa che con ogni immagine acquisita con le nostre fotocamere, è possibile utilizzare una foto dei nostri target di riflettanza, come il [T4-R50](https://www.mapir.camera/collections/calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t3-r50) o il [T4-R125](https://www.mapir.camera/collections/multispectral-reflectance-reference-calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t4-r125) per calibrare le immagini in base alla riflettanza. Una volta calibrato, ogni pixel dell&#x27;immagine è uguale alla percentuale di riflettanza.
 
