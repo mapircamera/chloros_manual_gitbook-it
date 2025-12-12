@@ -4,61 +4,82 @@ Chloros offre un supporto completo dell&#x27;interfaccia in **38 lingue in tutto
 
 Chloros supporta le seguenti lingue:
 
-1. 🇺🇸 **Inglese**
-2. 🇪🇸 **Español** (spagnolo)
-3. 🇵🇹 **Português** (portoghese)
-4. 🇫🇷 **Français** (francese)
-5. 🇩🇪 **Deutsch** (tedesco)
-6. 🇮🇹 **Italiano**
-7. 🇯🇵 **日本語** (giapponese)
-8. 🇰🇷 **한국어** (coreano)
-9. 🇨🇳 **简体中文** (cinese semplificato)
-10. 🇹🇼 **繁體中文** (Cinese tradizionale)
-11. 🇷🇺 **Русский** (Russo)
-12. 🇳🇱 **Nederlands** (Olandese)
-13. 🇸🇦 **العربية** (Arabo)
-14. 🇵🇱 **Polski** (Polacco)
-15. 🇹🇷 **Türkçe** (Turco)
-16. 🇮🇳 **हिंदी** (Hindi)
-17. 🇮🇩 **Bahasa Indonesia** (indonesiano)
-18. 🇻🇳 **Tiếng Việt** (vietnamita)
-19. 🇹🇭 **ไทย** (tailandese)
-20. 🇸🇪 **Svenska** (svedese)
-21. 🇩🇰 **Dansk** (danese)
-22. 🇳🇴 **Norsk** (norvegese)
-23. 🇫🇮 **Suomi** (finlandese)
-24. 🇬🇷 **Ελληνικά** (greco)
-25. 🇨🇿 **Čeština** (ceco)
-26. 🇭🇺 **Magyar** (ungherese)
-27. 🇷🇴 **Română** (rumeno)
-28. 🇺🇦 **Українська** (ucraino)
-29. 🇧🇷 **Português Brasileiro** (portoghese brasiliano)
-30. 🇭🇰 **粵語** (cantonese)
-31. 🇲🇾 **Bahasa Melayu** (malese)
-32. 🇸🇰 **Slovenčina** (Slovacco)
-33. 🇧🇬 **Български** (Bulgaro)
-34. 🇭🇷 **Hrvatski** (Croato)
-35. 🇱🇹 **Lietuvių** (Lituano)
-36. 🇱🇻 **Latviešu** (lettone)
-37. 🇪🇪 **Eesti** (estone)
-38. 🇸🇮 **Slovenščina** (sloveno)
+| # | Lingua | Nome nativo | Codice CLI |
+|---|----------|-------------|----------|
+| 1 | 🇺🇸 Inglese | Inglese | `en` |
+| 2 | 🇪🇸 Spagnolo | Español | `es` |
+| 3 | 🇵🇹 Portoghese | Português | `pt` |
+| 4 | 🇫🇷 Francese | Français | `fr` |
+| 5 | 🇩🇪 Tedesco | Deutsch | `de` |
+| 6 | 🇮🇹 Italiano | Italiano | `it` |
+| 7 | 🇯🇵 Giapponese | 日本語 | `ja` |
+| 8 | 🇰🇷 Coreano | 한국어 | `ko` |
+| 9 | 🇨🇳 Cinese (semplificato) | 简体中文 | `zh` |
+| 10 | 🇹🇼 Cinese (tradizionale) | 繁體中文 | `zh-TW` |
+| 11 | 🇷🇺 Russo | Русский | `ru` |
+| 12 | 🇳🇱 Olandese | Nederlands | `nl` |
+| 13 | 🇸🇦 Arabo | العربية | `ar` |
+| 14 | 🇵🇱 Polacco | Polski | `pl` |
+| 15 | 🇹🇷 Turco | Türkçe | `tr` |
+| 16 | 🇮🇳 Hindi | हिंदी | `hi` |
+| 17 | 🇮🇩 Indonesiano | Bahasa Indonesia | `id` |
+| 18 | 🇻🇳 Vietnamita | Tiếng Việt | `vi` |
+| 19 | 🇹🇭 Thailandese | ไทย | `th` |
+| 20 | 🇸🇪 Svedese | Svenska | `sv` |
+| 21 | 🇩🇰 Danese | Dansk | `da` |
+| 22 | 🇳🇴 Norvegese | Norsk | `no` |
+| 23 | 🇫🇮 Finlandese | Suomi | `fi` |
+| 24 | 🇬🇷 Greco | Ελληνικά | `el` |
+| 25 | 🇨🇿 Ceco | Čeština | `cs` |
+| 26 | 🇭🇺 Ungherese | Magyar | `hu` |
+| 27 | 🇷🇴 Rumeno | Română | `ro` |
+| 28 | 🇺🇦 Ucraino | Українська | `uk` |
+| 29 | 🇧🇷 Portoghese brasiliano | Português Brasileiro | `pt-BR` |
+| 30 | 🇭🇰 Cantonese | 粵語 | `zh-HK` |
+| 31 | 🇲🇾 Malese | Bahasa Melayu | `ms` |
+| 32 | 🇸🇰 Slovacco | Slovenčina | `sk` |
+| 33 | 🇧🇬 Bulgaro | Български | `bg` |
+| 34 | 🇭🇷 Croato | Hrvatski | `hr` |
+| 35 | 🇱🇹 Lituano | Lietuvių | `lt` |
+| 36 | 🇱🇻 Lettone | Latviešu | `lv` |
+| 37 | 🇪🇪 Estone | Eesti | `et` |
+| 38 | 🇸🇮 Sloveno | Slovenščina | `sl` |
 
 ## Come cambiare la lingua
 
 ### In Chloros Desktop/Browser
 
-1. Apri le impostazioni dell&#x27;applicazione
-2. Vai al menu di selezione della lingua
-3. Scegli la lingua preferita dall&#x27;elenco
-4. L&#x27;interfaccia si aggiornerà immediatamente
+1. Apri le impostazioni dell&#x27;applicazione.
+2. Vai al menu di selezione della lingua.
+3. Scegli la lingua che preferisci dall&#x27;elenco.
+4. L&#x27;interfaccia si aggiornerà immediatamente.
 
 ### In Chloros CLI
 
-Utilizza il parametro della lingua con i comandi per impostare la lingua dell&#x27;interfaccia.
+Utilizza il comando `language` per visualizzare o modificare la lingua dell&#x27;interfaccia CLI:
+
+```bash
+# View current language
+chloros-cli language
+
+# Change to Spanish
+chloros-cli language es
+
+# Change to Chinese (Simplified)
+chloros-cli language zh
+
+# Change to Brazilian Portuguese
+chloros-cli language pt-BR
+
+# List all available languages
+chloros-cli language --list
+```
+
+Per ulteriori dettagli, consulta la [documentazione CLI](CLI.md).
 
 ### In Chloros Python SDK
 
-Imposta il parametro della lingua durante l&#x27;inizializzazione di SDK per ricevere messaggi e output nella lingua preferita.
+Impostare il parametro della lingua durante l&#x27;inizializzazione di SDK per ricevere messaggi e output nella lingua preferita.
 
 ## Copertura
 
