@@ -1,11 +1,10 @@
 ---
-description: This page lists some multispectral indices that Chloros uses
+description: This page lists some multispectral indices that Chloros uses.
 metaLinks:
   alternates:
     - >-
       https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/multispectral-index-formulas
 ---
-
 # Formule dell&#x27;indice multispettrale
 
 Le formule dell&#x27;indice riportate di seguito utilizzano una combinazione degli intervalli di trasmissione media del filtro Survey3:
@@ -18,13 +17,13 @@ Quando si utilizzano queste formule, il nome può terminare con &quot;\_1&quot; 
 
 ## EVI - Indice di vegetazione potenziato
 
-Questo indice è stato originariamente sviluppato per essere utilizzato con i dati MODIS come miglioramento rispetto a NDVI, ottimizzando il segnale della vegetazione in aree con un elevato indice di area fogliare (LAI). È particolarmente utile nelle regioni con valori elevati di LAI, dove NDVI potrebbe saturarsi. Utilizza la regione di riflettanza blu per correggere i segnali di fondo del suolo e ridurre le influenze atmosferiche, compresa la dispersione degli aerosol.
+Questo indice è stato originariamente sviluppato per essere utilizzato con i dati MODIS come miglioramento rispetto a NDVI, ottimizzando il segnale di vegetazione in aree con un elevato indice di area fogliare (LAI). È particolarmente utile nelle regioni con LAI elevato, dove NDVI potrebbe saturarsi. Utilizza la regione di riflettanza blu per correggere i segnali di fondo del suolo e ridurre le influenze atmosferiche, compresa la dispersione degli aerosol.
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-I valori EVI dovrebbero essere compresi tra 0 e 1 per i pixel della vegetazione. Caratteristiche luminose come nuvole ed edifici bianchi, insieme a caratteristiche scure come l&#x27;acqua, possono causare valori di pixel anomali in un&#x27;immagine EVI. Prima di creare un&#x27;immagine EVI, è necessario mascherare le nuvole e le caratteristiche luminose dall&#x27;immagine di riflettanza e, facoltativamente, impostare una soglia per i valori dei pixel da 0 a 1.
+I valori EVI dovrebbero essere compresi tra 0 e 1 per i pixel della vegetazione. Caratteristiche luminose come nuvole ed edifici bianchi, insieme a caratteristiche scure come l&#x27;acqua, possono causare valori anomali dei pixel in un&#x27;immagine EVI. Prima di creare un&#x27;immagine EVI, è necessario mascherare le nuvole e gli elementi luminosi dall&#x27;immagine di riflettanza e, facoltativamente, impostare una soglia per i valori dei pixel da 0 a 1.
 
 _Riferimento: Huete, A., et al. &quot;Panoramica delle prestazioni radiometriche e biofisiche degli indici di vegetazione MODIS&quot;. Remote Sensing of Environment 83 (2002):195–213._
 
@@ -32,7 +31,7 @@ _Riferimento: Huete, A., et al. &quot;Panoramica delle prestazioni radiometriche
 
 ## FCI1 - Indice di copertura forestale 1
 
-Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che includono una banda di bordo rosso.
+Questo indice distingue le chiome delle foreste da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che includono una banda di bordo rosso.
 
 $$
 FCI1 = Red * RedEdge
@@ -46,7 +45,7 @@ _Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indi
 
 ## FCI2 - Indice di copertura forestale 2
 
-Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che non includono una banda di bordo rosso.
+Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che non includono una banda rossa.
 
 $$
 FCI2 = Red * NIR
@@ -132,7 +131,7 @@ _Riferimento: Gitelson, A. e M. Merzlyak. &quot;Telerilevamento della concentraz
 
 ## GOSAVI - Green Indice di vegetazione ottimizzato e corretto in base al suolo
 
-Questo indice è stato originariamente progettato con la fotografia a infrarossi a colori per prevedere il fabbisogno di azoto per il mais. È simile a OSAVI, ma sostituisce la banda verde con quella rossa.
+Questo indice è stato originariamente progettato con la fotografia a infrarossi a colori per prevedere il fabbisogno di azoto del mais. È simile a OSAVI, ma sostituisce la banda verde con quella rossa.
 
 $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
@@ -142,7 +141,7 @@ _Riferimento: Sripada, R., et al. &quot;Determinazione del fabbisogno stagionale
 
 ***
 
-## GRVI - Green Indice di vegetazione relativo
+## GRVI - Green Indice di vegetazione del rapporto
 
 Questo indice è sensibile ai tassi di fotosintesi nelle chiome delle foreste, poiché le riflettanze del verde e del rosso sono fortemente influenzate dai cambiamenti nei pigmenti fogliari.
 
@@ -156,7 +155,7 @@ _Riferimento: Sripada, R., et al. &quot;Aerial Color Infrared Photography for De
 
 ## GSAVI - Green Indice di vegetazione corretto per il suolo
 
-Questo indice è stato originariamente progettato con la fotografia a infrarossi a colori per prevedere il fabbisogno di azoto per il mais. È simile a SAVI, ma sostituisce la banda verde con quella rossa.
+Questo indice è stato originariamente progettato con la fotografia a infrarossi a colori per prevedere il fabbisogno di azoto del mais. È simile a SAVI, ma sostituisce la banda verde con quella rossa.
 
 $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
@@ -168,7 +167,7 @@ _Riferimento: Sripada, R., et al. &quot;Determinazione del fabbisogno stagionale
 
 ## LAI - Indice di area fogliare
 
-Questo indice viene utilizzato per stimare la copertura fogliare e per prevedere la crescita e la resa delle colture. ENVI calcola il valore verde LAI utilizzando la seguente formula empirica di Boegh et al (2002):
+Questo indice viene utilizzato per stimare la copertura fogliare e per prevedere la crescita e la resa delle colture. ENVI calcola il verde LAI utilizzando la seguente formula empirica di Boegh et al (2002):
 
 $$
 LAI = 3.618 * EVI - 0.118
@@ -224,7 +223,7 @@ _Riferimento: Qi, J., A. Chehbouni, A. Huete, Y. Kerr e S. Sorooshian. &quot;A M
 
 ## NDRE- Differenza normalizzata RedEdge
 
-Questo indice è simile a NDVI, ma confronta il contrasto tra NIR e RedEdge invece che Red, che spesso rileva prima lo stress della vegetazione.
+Questo indice è simile a NDVI, ma confronta il contrasto tra NIR e RedEdge invece che con Red, che spesso rileva prima lo stress della vegetazione.
 
 $$
 NDRE = {NIR - RedEdge \over NIR + RedEdge  }
@@ -254,13 +253,13 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Riferimento: Goel, N. e W. Qin. &quot;Influenze dell&#x27;architettura della chioma sulle relazioni tra vari indici di vegetazione e LAI e Fpar: una simulazione al computer.&quot; Remote Sensing Reviews 10 (1994): 309-347._
+_Riferimento: Goel, N. e W. Qin. &quot;Influenze dell&#x27;architettura della chioma sulle relazioni tra vari indici di vegetazione e LAI e Fpar: una simulazione al computer&quot;. Remote Sensing Reviews 10 (1994): 309-347._
 
 ***
 
-## OSAVI - Indice di vegetazione ottimizzato e corretto per il suolo
+## OSAVI - Indice di vegetazione ottimizzato e corretto in base al suolo
 
-Questo indice si basa sull&#x27;indice di vegetazione corretto in base al suolo (SAVI). Utilizza un valore standard di 0,16 per il fattore di correzione dello sfondo della chioma. Rondeaux (1996) ha determinato che questo valore fornisce una maggiore variazione del suolo rispetto a SAVI per una copertura vegetale bassa, dimostrando al contempo una maggiore sensibilità alla copertura vegetale superiore al 50%. Questo indice è più adatto alle aree con vegetazione relativamente rada, dove il suolo è visibile attraverso la copertura vegetale.
+Questo indice si basa sull&#x27;indice di vegetazione corretto in base al suolo (SAVI). Utilizza un valore standard di 0,16 per il fattore di correzione dello sfondo della chioma. Rondeaux (1996) ha stabilito che questo valore fornisce una maggiore variazione del suolo rispetto a SAVI per una copertura vegetale bassa, dimostrando al contempo una maggiore sensibilità alla copertura vegetale superiore al 50%. Questo indice è particolarmente indicato per aree con vegetazione relativamente rada, dove il suolo è visibile attraverso la copertura vegetale.
 
 $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
@@ -290,11 +289,11 @@ $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
 $$
 
-_Riferimento: Huete, A. &quot;A Soil-Adjusted Vegetation Index (SAVI)&quot;. Remote Sensing of Environment 25 (1988): 295-309._
+_Riferimento: Huete, A. &quot;A Soil-Adjusted Vegetation Index (SAVI).&quot; Remote Sensing of Environment 25 (1988): 295-309._
 
 ***
 
-## TDVI - Indice di vegetazione differenziale trasformato
+## TDVI - Indice di vegetazione trasformato
 
 Questo indice è utile per monitorare la copertura vegetale in ambienti urbani. Non si satura come NDVI e SAVI.
 

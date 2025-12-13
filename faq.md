@@ -1,10 +1,9 @@
 ---
-description: Frequently Asked Questions
+description: Domande frequenti
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
 ---
-
 # Domande frequenti
 
 <details>
@@ -19,7 +18,7 @@ No, Chloros supporta solo l&#x27;elaborazione delle immagini delle fotocamere MA
 
 <summary>Posso calibrare le mie immagini per la riflettanza senza un target di calibrazione?</summary>
 
-No. Senza un&#x27;immagine del target di calibrazione acquisita insieme alle immagini non target, non sarà possibile correlare i valori dei pixel dell&#x27;immagine a una percentuale di riflettanza nota. Se non si include anche il registro di un sensore di luce MAPIR, lo spettro della luce ambientale non verrà misurato e i risultati di riflettanza non saranno accurati.
+No. Senza un&#x27;immagine del target di calibrazione acquisita più o meno nello stesso momento in cui vengono acquisite le immagini non target, non sarà possibile correlare i valori dei pixel dell&#x27;immagine a una percentuale di riflettanza nota. Se non si include anche il registro di un sensore di luce MAPIR, lo spettro della luce ambientale non verrà misurato e i risultati di riflettanza non saranno accurati.
 
 </details>
 
@@ -57,15 +56,15 @@ Nella tabella del browser dei file, preselezionando le immagini target nella col
 
 <details>
 
-<summary>Se intendo caricare le mie immagini su <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> devo elaborarle in Chloros prima del caricamento?</summary>
+<summary>Se carico le mie immagini su <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> devo elaborarle in Chloros prima del caricamento?</summary>
 
-Se hai intenzione di caricare le immagini sulla nostra piattaforma di elaborazione online [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), non modificare le immagini prima del caricamento. Il Cloud eseguirà tutte le stesse elaborazioni e molto altro ancora.
+Se hai intenzione di caricare le immagini sulla nostra piattaforma di elaborazione online [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), non modificare le immagini prima del caricamento. Cloud eseguirà tutte le stesse elaborazioni e molto altro ancora.
 
 </details>
 
 <details>
 
-<summary>MAPIR supporterà mai la funzione X? Mi piacerebbe davvero che MAPIR offrisse X.</summary>
+<summary>MAPIR supporterà mai la funzione X? Mi piacerebbe molto che MAPIR offrisse X.</summary>
 
 Siamo sempre interessati a ricevere feedback sui nostri prodotti. Se riscontrate un problema con i nostri prodotti o avete un suggerimento su come migliorarli, vi preghiamo di [CONTATTARCI](https://www.mapir.camera/community/contact) per condividere le vostre opinioni. La maggior parte della nostra attività di ricerca e sviluppo è guidata dall&#x27;ascolto delle esigenze più importanti dei nostri clienti.
 
