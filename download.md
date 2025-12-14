@@ -3,7 +3,6 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
-
 # Download
 
 Scarica l&#x27;ultima versione di Chloros per Windows per iniziare a elaborare immagini multispettrali.
@@ -41,11 +40,11 @@ Scarica l&#x27;ultima versione di Chloros per Windows per iniziare a elaborare i
 
 #### **Procedura di installazione:**
 
-1. Scaricare il file `CHLOROS INSTALLER - CURRENT VERSION.exe`.
-2. Fare doppio clic sul programma di installazione per avviare l&#x27;installazione.
-3. Seguire le istruzioni della procedura guidata di installazione.
-4. Scegliere la directory di installazione (impostazione predefinita: `C:\Program Files\Chloros\`).
-5. Completare l&#x27;installazione e avviare Chloros.
+1. Scaricare il file `CHLOROS INSTALLER - CURRENT VERSION.exe`
+2. Fare doppio clic sul programma di installazione per avviare l&#x27;installazione
+3. Seguire le istruzioni della procedura guidata di installazione
+4. Scegliere la directory di installazione (impostazione predefinita: `C:\Program Files\Chloros\`)
+5. Completare l&#x27;installazione e avviare Chloros
 6. Accedere con il proprio account MAPIR Cloud Chloros+ (o continuare con la versione gratuita)
 
 {% hint style=&quot;success&quot; %}
@@ -166,3 +165,5 @@ Hai bisogno di aiuto per l&#x27;installazione o la configurazione?
 **Versione gratuita**: disponibile per uso personale e commerciale con limitazioni delle funzionalità
 
 **Chloros+**: licenza basata su abbonamento per funzionalità avanzate e implementazioni commerciali
+
+<figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption></figcaption></figure>

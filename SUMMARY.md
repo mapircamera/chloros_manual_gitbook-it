@@ -1,6 +1,6 @@
 # Indice
 
-* [Introduzione](README.md)
+* [Guida introduttiva](README.md)
 * [GUI: Navigazione](navigation.md)
 * [GUI: Progetti](projects.md)
 * [CLI: Riga di comando](CLI.md)
@@ -30,5 +30,5 @@
 ## VISUALIZZATORE DI IMMAGINI (GUI)
 
 * [Apertura di un&#x27;immagine a schermo intero](image-viewer-gui/opening-an-image-full-screen.md)
-* [Livelli immagine](image-viewer-gui/image-layers.md)
+* [Livelli dell&#x27;immagine](image-viewer-gui/image-layers.md)
 * [Sandbox indice/LUT](image-viewer-gui/index-lut-sandbox.md)

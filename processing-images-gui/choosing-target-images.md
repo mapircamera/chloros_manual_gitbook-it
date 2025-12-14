@@ -90,7 +90,7 @@ Prima dell&#x27;elaborazione, ricontrollare:
 
 ### Quante immagini del bersaglio?
 
-**Minimo:** 1 immagine target per sessione. **Consigliato:** 3-5 immagini target per sessione.
+**Minimo:** 1 immagine bersaglio per sessione. **Consigliato:** 3-5 immagini bersaglio per sessione.
 
 **Programma di best practice:**
 
@@ -197,7 +197,7 @@ Prima di avviare l&#x27;elaborazione, verificare la selezione delle immagini dei
 
 ### Elaborazione senza target di calibrazione
 
-Sebbene non sia consigliabile per lavori scientifici, è possibile eseguire l&#x27;elaborazione senza target:
+Sebbene non sia consigliato per lavori scientifici, è possibile eseguire l&#x27;elaborazione senza target:
 
 1. Lasciare deselezionate tutte le caselle di controllo della colonna Target
 2. **Disattivare** &quot;Calibrazione della riflettanza&quot; nelle impostazioni del progetto
@@ -212,9 +212,9 @@ Sebbene non sia consigliabile per lavori scientifici, è possibile eseguire l&#x
 
 ## Passaggi successivi
 
-Una volta contrassegnate le immagini target:
+Dopo aver contrassegnato le immagini target:
 
-1. **Rivedere le impostazioni** - Vedere [Regolazione delle impostazioni del progetto](adjusting-project-settings.md)
+1. **Rivedere le impostazioni** - Vedere [Regolazione delle impostazioni di progetto](adjusting-project-settings.md)
 2. **Avviare l&#x27;elaborazione** - Vedere [Avvio dell&#x27;elaborazione](starting-the-processing.md)
 3. **Monitorare lo stato di avanzamento** - Vedere [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
 

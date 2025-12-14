@@ -6,9 +6,9 @@ Prima di elaborare le immagini, è importante configurare le impostazioni del pr
 
 1. Aprire il progetto in Chloros
 2. Fare clic sull&#x27;icona **Impostazioni del progetto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> nella barra laterale sinistra
-3. Il pannello Impostazioni del progetto visualizza tutte le opzioni di configurazione
+3. Il pannello Impostazioni del progetto mostra tutte le opzioni di configurazione
 
-{% suggerimento style=&quot;info&quot; %}
+{% hint style=&quot;info&quot; %}
 **Le impostazioni vengono salvate automaticamente** con il progetto. Quando si riapre un progetto, tutte le impostazioni vengono ripristinate.
 {% endhint %}
 
@@ -21,7 +21,7 @@ Prima di elaborare le immagini, è importante configurare le impostazioni del pr
 Per i flussi di lavoro tipici della fotocamera MAPIR Survey3, le impostazioni predefinite funzionano bene:
 
 * ✅ **Correzione vignettatura**: Abilitata
-* ✅ **Calibrazione riflettanza**: Abilitata (richiede immagini di target MAPIR)
+* ✅ **Calibrazione riflettanza**: Abilitata (richiede immagini di bersagli MAPIR)
 * ✅ **Metodo Debayer**: Alta qualità (più veloce)
 * ✅ **Formato di esportazione**: TIFF (16 bit)
 
@@ -87,7 +87,7 @@ Configura quali indici di vegetazione calcolare ed esportare.
 **Formule personalizzate (solo Chloros+):**
 
 * Creazione di formule personalizzate per indici multispettrali
-* Utilizzo di calcoli matematici su banda con tutti i canali dell&#x27;immagine
+* Utilizzo di calcoli matematici su tutte le bande dell&#x27;immagine
 * Salvataggio di formule personalizzate per il riutilizzo
 
 Per tutti gli indici e le formule disponibili, vedere [Formule per indici multispettrali](../project-settings/multispectral-index-formulas.md).
@@ -169,9 +169,9 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 * **Pin di esposizione 2**: selezionare la seconda fotocamera o &quot;Non utilizzare&quot;
 * La stessa fotocamera non può essere assegnata a entrambi i pin
 
-{% hint style=&quot;warning&quot; %}
+{% suggerimento style=&quot;warning&quot; %}
 **Importante**: i pin di esposizione devono essere assegnati correttamente alle rispettive telecamere. Un&#x27;assegnazione errata comporterà dati di geolocalizzazione errati.
-{% endhint %}
+{% fine suggerimento %}
 
 ***
 
@@ -186,7 +186,7 @@ Quando si elaborano immagini provenienti da più fotocamere MAPIR in un unico pr
 3. PPK: assegnare manualmente a ciascuna fotocamera il pin di esposizione corretto
 4. Tutte le fotocamere utilizzano lo stesso formato di esportazione e gli stessi indici
 
-**Esempio**: Survey3W RGN + Survey3N OCN rig a doppia fotocamera
+**Esempio**: Survey3W RGN + Survey3N OCN doppio supporto per fotocamera
 
 ### Rilevamenti time-lapse o multi-data
 

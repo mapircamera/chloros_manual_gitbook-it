@@ -1,6 +1,6 @@
 # Sandbox Indice/LUT
 
-La Sandbox Indice/LUT è uno spazio di lavoro interattivo all&#x27;interno del visualizzatore di immagini Chloros che consente di sperimentare in tempo reale il calcolo di indici multispettrali e la visualizzazione dei colori. Questo potente strumento consente di testare diversi indici, perfezionare gli intervalli di valori e creare visualizzazioni pronte per la pubblicazione senza dover rielaborare l&#x27;intero set di dati.
+La Sandbox Indice/LUT è uno spazio di lavoro interattivo all&#x27;interno del visualizzatore di immagini Chloros che consente di sperimentare in tempo reale calcoli di indici multispettrali e visualizzazioni a colori. Questo potente strumento aiuta a testare diversi indici, perfezionare gli intervalli di valori e creare visualizzazioni pronte per la pubblicazione senza dover rielaborare l&#x27;intero set di dati.
 
 ## Che cos&#x27;è la Sandbox Indice/LUT?
 
@@ -30,8 +30,8 @@ La Sandbox offre:
 * Richiede molto tempo
 * Ideale quando le impostazioni sono definitive
 
-{% hint style=&quot;success&quot; %}
-**Flusso di lavoro ottimale**: utilizzare Sandbox per sperimentare e trovare le impostazioni ottimali per indici e LUT, quindi applicare tali impostazioni durante l&#x27;elaborazione del progetto all&#x27;intero set di dati.
+{% suggerimento style=&quot;success&quot; %}
+**Flusso di lavoro ottimale**: utilizzare Sandbox per sperimentare e trovare le impostazioni ottimali per l&#x27;indice e la LUT, quindi applicare tali impostazioni durante l&#x27;elaborazione del progetto all&#x27;intero set di dati.
 {% endhint %}
 
 ***
@@ -40,9 +40,9 @@ La Sandbox offre:
 
 ### Comprensione degli indici precalcolati
 
-In Chloros, gli indici possono essere applicati durante l&#x27;elaborazione del progetto. Per determinare quali impostazioni di indice e LUT si desidera applicare alle esportazioni, è più semplice utilizzare il visualizzatore di immagini Sandbox.
+In Chloros, gli indici possono essere applicati durante l&#x27;elaborazione del progetto. Per determinare quali impostazioni di indice e LUT si desidera applicare alle esportazioni, è più semplice utilizzare il visualizzatore di immagini sandbox.
 
-La Sandbox consente di:
+Il sandbox consente di:
 
 * **Applicare nuovi indici e gradienti di colore (LUT)** per visualizzare i dati
 * **Regolare le impostazioni di visualizzazione** in modo interattivo
@@ -53,7 +53,7 @@ La Sandbox consente di:
 
 È possibile accedere alla sandbox Indice/LUT nella scheda **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> :
 
-1. Fare clic su un&#x27;immagine nella griglia delle immagini del browser dei file, che si aprirà nella scheda **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> .
+1. Fare clic su un&#x27;immagine nella griglia delle immagini del browser dei file per aprirla nella scheda **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> .
 2. Fare clic sulla scheda **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> per aprire la barra laterale a comparsa a sinistra, se non è già aperta
 
 ### Selezionare un&#x27;immagine a cui applicare un indice/LUT
@@ -62,19 +62,19 @@ Per lavorare con un indice nella barra laterale <img src="../.gitbook/assets/ico
 
 1. **Aprire un&#x27;immagine** dalla griglia immagini principale cliccandoci sopra
 2. Si aprirà la scheda **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> si aprirà
-3. Fare clic sul **menu a discesa Layer** (in alto a destra del visualizzatore)
-4. Selezionare il livello dal menu a discesa:
+3. Fare clic sul **menu a tendina Layer** (in alto a destra del visualizzatore)
+4. Selezionare il livello dal menu a tendina:
    * RAW (Riflettanza)
 
 ### Applicazione di un indice a un&#x27;immagine
 
-Una volta che l&#x27;immagine è a schermo intero e la barra laterale **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> è aperta:
+Una volta che l&#x27;immagine è a schermo intero e la barra laterale **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> è aperta:
 
 1. Selezionare la casella Indice nella parte superiore della barra laterale
-2. Scegliere il filtro della fotocamera dal menu a discesa a sinistra
-3. Scegliere la formula dell&#x27;indice desiderata dal menu a discesa a destra
+2. Scegliere il filtro della fotocamera dal menu a tendina a sinistra
+3. Scegliere la formula dell&#x27;indice desiderata dal menu a tendina a destra
 4. Trascinare i cerchi colorati del canale del filtro nelle posizioni indicate nella formula dell&#x27;indice sottostante
-5. Una volta che la formula è valida, l&#x27;immagine verrà aggiornata e mostrerà i valori dell&#x27;indice
+5. Una volta che la formula è valida, l&#x27;immagine si aggiornerà e mostrerà i valori dell&#x27;indice
 6. Spostare il cursore del mouse per vedere i valori nella posizione del cursore
 7. Ingrandisci per vedere i singoli pixel e i valori associati.
 
@@ -100,11 +100,11 @@ Per la documentazione completa sulla formula dell&#x27;indice, consulta [Formule
 
 ***
 
-## Utilizzo delle LUT (tabelle di consultazione)
+## Utilizzo delle LUT (tabelle di ricerca)
 
 ### Che cos&#x27;è una LUT?
 
-Una **tabella di consultazione (LUT)** mappa i valori numerici dell&#x27;indice ai colori per la visualizzazione:
+Una **tabella di ricerca (LUT)** associa i valori numerici dell&#x27;indice ai colori per la visualizzazione:
 
 * **Input**: valore pixel dell&#x27;indice (ad es. NDVI 0,65)
 * **Output**: colore RGB (ad es. verde brillante)
@@ -129,13 +129,13 @@ Una volta ottenuta un&#x27;immagine indice che mostra
 4. Regolare la modalità di ritaglio
 5. Selezionare la casella Indice nella barra laterale **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> nella barra laterale per applicare la LUT.
 
-### Selezione di una sfumatura di colore
+### Scegliere una sfumatura di colore
 
-**Selezione di una sfumatura:**
+**Selezionare una sfumatura:**
 
-1. Nel pannello LUT, individuare la **barra della gradazione di colore**
-2. Passare il mouse su di essa per visualizzare le impostazioni predefinite disponibili per la gradazione
-3. Selezionare la gradazione desiderata
+1. Nel pannello LUT, individuare la **barra della sfumatura colorata**
+2. Passa il mouse su di essa per visualizzare le impostazioni predefinite disponibili
+3. Seleziona la sfumatura desiderata
 4. L&#x27;immagine **si aggiorna immediatamente** con i nuovi colori quando la casella Indice è selezionata
 
 {% suggerimento style=&quot;success&quot; %}
@@ -149,28 +149,28 @@ Il **controllo Classi** determina il numero di gradazioni di colore distinte che
 **Opzioni per il numero di classi:**
 
 * **2-5 classi**: categorie molto ampie, zone distinte
-* **6-10 classi**: Equilibrate, ideali per la classificazione
-* **11-20 classi**: Gradienti uniformi, aspetto continuo
-* **20+ classi**: Quasi continuo, massima uniformità
+* **6-10 classi**: equilibrato, ottimo per la classificazione
+* **11-20 classi**: gradienti uniformi, aspetto continuo
+* **20+ classi**: quasi continuo, massima uniformità
 
 **Come regolare:**
 
-1. Nel pannello LUT, individuare i **quadrati dei campioni di colore sotto la barra del gradiente**
+1. Nel pannello LUT, individuare i **quadrati dei campioni di colore sotto la barra della sfumatura**
 2. Regolare il numero di classi aggiungendo con il pulsante +
 3. Rimuovere il numero di classi facendo doppio clic su un campione di colore
 4. La sfumatura si aggiorna **in tempo reale** sull&#x27;immagine
 
 **Effetto sulla visualizzazione:**
 
-* **Meno classi** (3-5): crea zone distinte, classificazione semplificata, categorie più facili da distinguere
-* **Classi medie** (6-10): approccio equilibrato, ottimo per la maggior parte delle applicazioni
-* **Più classi** (15-20): transizioni fluide, variazioni dettagliate, aspetto fotografico
+* **Poche classi** (3-5): crea zone distinte, classificazione semplificata, categorie più facili da distinguere
+* **Classi medie** (6-10): approccio equilibrato, adatto alla maggior parte delle applicazioni
+* **Più classi** (15-20): transizioni uniformi, variazioni dettagliate, aspetto fotografico
 
 **Quando utilizzare:**
 
 * **Poche classi (3-5)**: diapositive di presentazione, mappe di classificazione, report semplici
 * **Classi medie (6-10)**: analisi generale, dettagli equilibrati, report standard
-* **Molte classi (15-20)**: analisi scientifiche, ispezioni dettagliate, output di qualità pubblicabile
+* **Molte classi (15-20)**: analisi scientifica, ispezione dettagliata, output di qualità pubblicabile
 
 ### Regolazione fine degli intervalli di valori
 
@@ -178,8 +178,8 @@ I **controlli dell&#x27;intervallo di valori** determinano quali valori dell&#x2
 
 **Controlli dell&#x27;intervallo nel pannello LUT:**
 
-* **Valore minimo**: limite inferiore della scala cromatica
-* **Valore massimo**: limite superiore della scala cromatica
+* **Valore minimo**: limite inferiore della scala dei colori
+* **Valore massimo**: limite superiore della scala dei colori
 * **Valori intermedi**: distribuiti automaticamente tra il minimo e il massimo (in base al numero di classi)
 
 #### Regolazione dei valori minimi/massimi
@@ -193,24 +193,24 @@ I **controlli dell&#x27;intervallo di valori** determinano quali valori dell&#x2
 5. Ripetere l&#x27;operazione per il campo **Valore massimo** (ad esempio, `0.9`)
 6. La visualizzazione **si aggiorna immediatamente**
 
-{% hint style=&quot;info&quot; %}
-**Ridimensionamento automatico**: quando si applica una LUT per la prima volta, Chloros imposta automaticamente il valore minimo/massimo sull&#x27;intervallo di dati effettivo nell&#x27;immagine. È quindi possibile restringere questo intervallo per concentrarsi su intervalli di valori specifici di interesse.
+{% suggerimento style=&quot;info&quot; %}
+**Ridimensionamento automatico**: quando si applica una LUT per la prima volta, Chloros imposta automaticamente il minimo/massimo sull&#x27;intervallo di dati effettivo nell&#x27;immagine. È quindi possibile restringere questo intervallo per concentrarsi su intervalli di valori specifici di interesse.
 {% endhint %}
 
 **Esempio di regolazioni dell&#x27;intervallo NDVI:**
 
 * **Intervallo completo**: da `-1.0` a `1.0` (mostra tutti i valori possibili)
-* **Focalizzato sulla vegetazione**: da `0.2` a `0.9` (esclude il suolo nudo e l&#x27;acqua)
+* **Focus sulla vegetazione**: da `0.2` a `0.9` (esclude il suolo nudo e l&#x27;acqua)
 * **Solo vegetazione sana**: da `0.5` a `0.9` (evidenzia solo le piante vigorose)
 * **Rilevamento dello stress**: da `0.2` a `0.5` (enfatizza le aree problematiche)
-* **Intervallo personalizzato**: regolare in base ai valori dei pixel osservati
+* **Intervallo personalizzato**: regola in base ai valori dei pixel osservati
 
 **Perché regolare gli intervalli?**
 
-* **Aumentare il contrasto** nell&#x27;area di interesse
-* **Escludere valori irrilevanti** (ad esempio, specchi d&#x27;acqua, suolo nudo)
-* **Standardizzare la visualizzazione** su più immagini o date
-* **Enfatizzare le differenze sottili** all&#x27;interno di un intervallo di valori ristretto
+* **Aumenta il contrasto** nell&#x27;area di interesse
+* **Esclude i valori irrilevanti** (ad esempio, specchi d&#x27;acqua, terreno nudo)
+* **Standardizza la visualizzazione** su più immagini o date
+* **Enfatizza le differenze sottili** all&#x27;interno di un intervallo di valori ristretto
 
 ### Ritaglio dei valori fuori intervallo
 
@@ -221,7 +221,7 @@ Quando i valori dei pixel non rientrano nell&#x27;intervallo minimo/massimo defi
 #### 1. Minimo e massimo
 
 * Pixel **al di sotto del minimo** → visualizzazione utilizzando il **primo colore** della gradazione (ad es. rosso)
-* Pixel **superiori al massimo** → visualizzazione utilizzando l&#x27;**ultimo colore** nella sfumatura (ad esempio, verde)
+* Pixel **superiori al massimo** → visualizzazione utilizzando l&#x27;**ultimo colore** nella gradazione (ad es. verde)
 * **Caso d&#x27;uso**: enfatizzare gli estremi, mostrare l&#x27;intervallo completo dei dati con colori saturi ai limiti
 * **Esempio**: i valori NDVI inferiori a 0,2 appaiono tutti rossi, i valori superiori a 0,9 appaiono tutti verdi
 
@@ -239,15 +239,15 @@ Quando i valori dei pixel non rientrano nell&#x27;intervallo minimo/massimo defi
 #### 3. Sfondo dell&#x27;indice
 
 * I pixel **fuori intervallo** vengono visualizzati in **scala di grigi** (mostrando i valori dell&#x27;indice grezzi)
-* I pixel **nell&#x27;intervallo** mostrano **una sfumatura di colore**
-* **Caso d&#x27;uso**: evidenziazione sottile, mantenimento del contesto e sottolineatura delle aree di interesse
-* **Esempio**: evidenziazione a colori della vegetazione stressata (NDVI 0,3-0,5) e visualizzazione delle aree sane in grigio
+* I pixel **nell&#x27;intervallo** mostrano una **sfumatura di colore**
+* **Caso d&#x27;uso**: evidenziazione sottile, mantenimento del contesto con enfasi sulle aree di interesse
+* **Esempio**: evidenziazione a colori della vegetazione stressata (NDVI 0,3-0,5) con visualizzazione delle aree sane in grigio
 
 #### 4. Sfondo originale
 
 * I pixel **fuori intervallo** visualizzano l&#x27;**immagine multispettrale originale**
-* I pixel **all&#x27;interno dell&#x27;intervallo** mostrano una **sfumatura di colore**
-* **Caso d&#x27;uso**: il più intuitivo - combina il contesto naturale dell&#x27;immagine con una sovrapposizione di colori analitici
+* I pixel **all&#x27;interno dell&#x27;intervallo** mostrano **una sfumatura di colore**
+* **Caso d&#x27;uso**: il più intuitivo - combina il contesto dell&#x27;immagine naturale con una sovrapposizione di colori analitici
 * **Esempio**: vedere l&#x27;aspetto reale del campo/coltura con le aree di stress sovrapposte e codificate a colori
 
 ### Scegliere la modalità di ritaglio giusta
@@ -283,11 +283,11 @@ Per un controllo completo sulla visualizzazione, è possibile creare **gradienti
 
 **Strategie di personalizzazione:**
 
-* **Invertire la sfumatura**: capovolgere l&#x27;ordine dei colori per invertire il significato (ad esempio, verde=basso, rosso=alto)
+* **Invertire la sfumatura**: invertire l&#x27;ordine dei colori per invertire il significato (ad esempio, verde=basso, rosso=alto)
 * **Colori del marchio**: abbinare la tavolozza dei colori della propria organizzazione per i report
 * **Adatto ai daltonici**: utilizzare combinazioni arancione-blu o viola-giallo
 * **Ottimizzazione della stampa**: scegliere colori che funzionano sia nella stampa a colori che in scala di grigi
-* **Soglia multipla**: utilizzare colori distinti a soglie di valore specifiche per la classificazione
+* **Soglie multiple**: utilizzare colori distinti a soglie di valore specifiche per la classificazione
 
 {% hint style=&quot;info&quot; %}
 **Salvataggio di gradienti personalizzati**: i gradienti personalizzati possono essere salvati e riutilizzati. Fare clic sull&#x27;icona di salvataggio nel pannello LUT per conservare le combinazioni di colori personalizzate per un utilizzo futuro.
@@ -319,7 +319,7 @@ Tutte le regolazioni LUT nella sandbox aggiornano l&#x27;immagine **istantaneame
 **Flusso di lavoro tipico di ottimizzazione LUT:**
 
 1. **Selezionare il livello dell&#x27;indice** (ad es. RAW (riflettanza))
-2. **Applicare l&#x27;indice**: scegliere il filtro della fotocamera e la formula dell&#x27;indice, trascinare i cerchi colorati nella posizione appropriata nella formula dell&#x27;indice
+2. **Applicare l&#x27;indice** - Scegliere il filtro della fotocamera e la formula dell&#x27;indice, trascinare i cerchi colorati nella posizione appropriata nella formula dell&#x27;indice
 3. **Applicare il gradiente LUT** - Iniziare con il preset Red-Yellow-Green
 4. **Controllare i valori dei pixel** - Spostare il cursore, annotare gli intervalli di valori
 5. **Regolare min/max** - Restringere per concentrarsi sulla vegetazione (ad es. da 0,2 a 0,9)
@@ -331,7 +331,7 @@ Tutte le regolazioni LUT nella sandbox aggiornano l&#x27;immagine **istantaneame
 
 Comprendere i valori effettivi dei pixel è fondamentale per impostare intervalli LUT efficaci:
 
-**Come ispezionare i valori:**
+**Come controllare i valori:**
 
 1. I valori dei pixel vengono visualizzati quando l&#x27;immagine ha la casella Indice o entrambe le caselle Indice e LUT **selezionate**.
 2. **Spostare il cursore** su diverse aree dell&#x27;immagine
@@ -340,17 +340,17 @@ Comprendere i valori effettivi dei pixel è fondamentale per impostare intervall
 5. **Prendere nota** degli intervalli di valori per le diverse caratteristiche:
    * **Vegetazione sana**: ad esempio, NDVI 0,55-0,85
    * **Vegetazione stressata**: ad esempio, NDVI 0,30-0,50
-   * **Terreno nudo**: ad esempio, NDVI 0,05-0,25
+   * **Suolo nudo**: ad esempio, NDVI 0,05-0,25
    * **Acqua** (se presente): ad esempio, NDVI da -0,05 a 0,10
 
 **Utilizzo dei valori dei pixel per impostare gli intervalli LUT:**
 
-Dopo aver esaminato i valori dei pixel, regolare il minimo/massimo LUT di conseguenza:
+Dopo aver controllato i valori dei pixel, regola il minimo/massimo della LUT di conseguenza:
 
-**Scenario di esempio:**
+**Esempio:**
 
-* **Osservazione**: Valori del suolo = 0,05-0,25, Stressato = 0,25-0,50, Sano = 0,50-0,85
-* **Obiettivo**: visualizzare solo lo stato di salute delle piante (escludere il suolo)
+* **Osservazione**: valori del suolo = 0,05-0,25, stressato = 0,25-0,50, sano = 0,50-0,85
+* **Obiettivo**: visualizzare solo la salute delle piante (escludere il suolo)
 * **Impostazioni LUT**: Min = `0.25`, Max = `0.85`
 * **Ritaglio**: &quot;Sfondo originale&quot; per vedere il suolo nel suo colore naturale
 * **Risultato**: la sfumatura di colore si applica solo alla vegetazione, il suolo viene visualizzato come nell&#x27;immagine originale
@@ -371,15 +371,15 @@ Dopo aver esaminato i valori dei pixel, regolare il minimo/massimo LUT di conseg
 
 **Per creare un indice personalizzato:**
 
-1. **Aprire le Impostazioni del progetto** (prima dell&#x27;elaborazione) o la barra laterale della sandbox del Visualizzatore immagini
-2. Passare al **menu a tendina Formula indice**
-3. Cercare l&#x27;opzione **&quot;Personalizzato&quot;** (è necessario aver effettuato l&#x27;accesso con la licenza Chloros+)
+1. **Aprire le Impostazioni progetto** (prima dell&#x27;elaborazione) o la barra laterale della sandbox del Visualizzatore immagini.
+2. Passare al **menu a tendina Formula indice**.
+3. Cercare l&#x27;opzione **&quot;Personalizzato&quot;** (è necessario aver effettuato l&#x27;accesso con la licenza Chloros+).
 4. **Definire la formula** utilizzando le variabili di banda:
    * Nomi delle bande: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, ecc.
    * Operatori: `+`, `-`, `*`, `/`, `^` (esponente)
    * Funzioni: `sqrt()`, `abs()`, ecc. (se supportate)
    * Parentesi: `()` per l&#x27;ordine delle operazioni
-5. **Assegna un nome al tuo indice** (ad esempio, &quot;MyIndex&quot; o &quot;CustomNDVI&quot;)
+5. **Assegnare un nome all&#x27;indice** (ad esempio, &quot;MyIndex&quot; o &quot;CustomNDVI&quot;)
 6. **Salvare la configurazione**
 
 **Esempi di formule personalizzate:**

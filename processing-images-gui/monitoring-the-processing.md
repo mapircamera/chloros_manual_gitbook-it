@@ -35,8 +35,8 @@ Per gli utenti con licenza Chloros+:
 **Funzionalità interattive:**
 
 * **Passa con il mouse** sulla barra di avanzamento per visualizzare il pannello espanso a 4 fasi
-* **Clicca** sulla barra di avanzamento per bloccare/fissare il pannello espanso
-* **Clicca di nuovo** per sbloccare e nascondere automaticamente all&#x27;uscita del mouse
+* **Fare clic** sulla barra di avanzamento per bloccare/fissare il pannello espanso
+* **Fare nuovamente clic** per sbloccare e nascondere automaticamente all&#x27;uscita del mouse
 * Ogni fase mostra l&#x27;avanzamento individuale (0-100%)
 
 ***
@@ -108,7 +108,7 @@ Per gli utenti con licenza Chloros+:
 * Immagine corrente in elaborazione
 * Immagini completate / Immagini totali
 
-**Comportamento di elaborazione:**
+**Comportamento dell&#x27;elaborazione:**
 
 * **Modalità libera**: elabora un&#x27;immagine alla volta in sequenza
 * **Modalità Chloros+**: elabora fino a 16 immagini contemporaneamente
@@ -116,7 +116,7 @@ Per gli utenti con licenza Chloros+:
 
 **Cosa tenere d&#x27;occhio:**
 
-* Progressi costanti attraverso il conteggio delle immagini
+* Avanzamento costante attraverso il conteggio delle immagini
 * Controllare il registro di debug per i messaggi di completamento per ogni immagine
 * Avvisi relativi alla qualità dell&#x27;immagine o a problemi di calibrazione
 
@@ -191,7 +191,7 @@ Problemi critici che possono causare il fallimento dell&#x27;elaborazione:
 [ERROR] No targets detected - enable reflectance calibration or mark target images
 ```
 
-**Azione:** interrompere l&#x27;elaborazione, risolvere l&#x27;errore, riavviare.
+**Azione:** Interrompere l&#x27;elaborazione, risolvere l&#x27;errore, riavviare.
 
 ### Messaggi di log comuni
 
@@ -209,7 +209,7 @@ Problemi critici che possono causare il fallimento dell&#x27;elaborazione:
 Per copiare il registro per la risoluzione dei problemi o l&#x27;assistenza:
 
 1. Aprire il pannello Registro di debug
-2. Fare clic sul pulsante **&quot;Copia registro&quot;** (o fare clic con il tasto destro del mouse → Seleziona tutto)
+2. Fare clic sul pulsante **&quot;Copia registro&quot;** (o fare clic con il pulsante destro del mouse → Seleziona tutto)
 3. Incollare in un file di testo o in un&#x27;e-mail
 4. Se necessario, inviare all&#x27;assistenza MAPIR
 
@@ -250,7 +250,7 @@ Per copiare il registro per la risoluzione dei problemi o l&#x27;assistenza:
 
 * Elaborare batch più piccoli
 * Chiudere altre applicazioni
-* Aggiornare la RAM se si elaborano regolarmente set di dati di grandi dimensioni
+* Aumentare la RAM se si elaborano regolarmente grandi set di dati
 
 ### Utilizzo della GPU (Chloros+ con CUDA)
 
@@ -374,7 +374,7 @@ Interrompere l&#x27;elaborazione se si verificano:
 Al termine dell&#x27;elaborazione:
 
 * La barra di avanzamento raggiunge il 100%
-* Nel registro di debug viene visualizzato il messaggio **&quot;Elaborazione completata&quot;**
+* Il messaggio **&quot;Elaborazione completata&quot;** viene visualizzato nel registro di debug
 * Il pulsante Avvia viene nuovamente abilitato
 * Tutti i file di output si trovano nella sottocartella del modello di fotocamera
 

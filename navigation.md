@@ -18,7 +18,7 @@ Quando è abilitato, il pulsante di avvio dell&#x27;elaborazione avvia la pipeli
 
 Nella modalità gratuita Chloros, che elabora tutti i file in sequenza, la barra di avanzamento mostrerà 2 fasi: Rilevamento target ed Elaborazione.
 
-Nella modalità a pagamento con licenza Chloros+, che elabora tutti i file contemporaneamente, la barra di avanzamento mostra 4 fasi: Rilevamento, Analisi, Calibrazione, Esportazione. Se si posiziona il cursore del mouse sulla barra di avanzamento Chloros+, verrà visualizzato il pannello esteso con 4 barre di avanzamento in modo da poter seguire l&#x27;operazione. Facendo clic sulla barra di avanzamento superiore si bloccherà il pannello a discesa, facendo nuovamente clic lo si sbloccherà.
+Nella modalità a pagamento con licenza Chloros+, che elabora tutti i file contemporaneamente, la barra di avanzamento mostra 4 fasi: Rilevamento, Analisi, Calibrazione, Esportazione. Se si posiziona il cursore del mouse sulla barra di avanzamento Chloros+, verrà visualizzato il pannello esteso con 4 barre di avanzamento in modo da poter seguire l&#x27;operazione. Facendo clic sulla barra di avanzamento superiore si bloccherà il pannello a discesa, facendo clic di nuovo lo si sbloccherà.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -32,7 +32,7 @@ La scheda Impostazioni progetto consente di regolare le impostazioni globali e d
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Browser file
 
-Aggiungere file/cartelle e rimuovere file dal progetto. I file duplicati vengono ignorati. Selezionare la casella della colonna di destinazione per qualsiasi immagine di destinazione e l&#x27;elaborazione prenderà in considerazione solo le immagini selezionate come destinazioni, velocizzando notevolmente il tempo di elaborazione.
+Aggiungi file/cartelle e rimuovi file dal progetto. I file duplicati vengono ignorati. Seleziona la casella della colonna di destinazione per qualsiasi immagine di destinazione e l&#x27;elaborazione prenderà in considerazione solo le immagini selezionate come destinazioni, velocizzando notevolmente il tempo di elaborazione.
 
 #### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Visualizzatore immagini](image-viewer-gui/opening-an-image-full-screen.md)
 
@@ -40,7 +40,7 @@ Quando si fa clic su un&#x27;immagine nel visualizzatore immagini principale, qu
 
 #### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Registro di debug
 
-Controllare il registro per le stampe di debug quando si verificano dei problemi. Copiare/scaricare il registro e inviarlo al [Supporto MAPIR](https://www.mapir.camera/community/contact) per assistenza.
+Esamina il registro per le stampe di debug quando si verificano dei problemi. Copia/scarica il registro e invialo al [Supporto MAPIR](https://www.mapir.camera/community/contact) per assistenza.
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Accesso utente](chloros+-login.md)
 

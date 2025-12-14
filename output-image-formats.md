@@ -3,12 +3,11 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
 ---
-
 # Formati immagine di output
 
 ### TIFF (16 bit)
 
-16 bit (numero digitale pixel 0 - 65535) Output in formato TIFF (.tif).
+Output in formato 16 bit (numero digitale pixel 0 - 65535) TIFF (.tif).
 
 ### TIFF (32 bit, percentuale %)
 

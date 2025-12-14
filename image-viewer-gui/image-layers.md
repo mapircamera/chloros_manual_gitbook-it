@@ -7,11 +7,11 @@ Il menu a tendina Livelli immagine nel visualizzatore di immagini Chloros consen
 In Chloros, i **livelli** si riferiscono alle diverse uscite immagine disponibili per una singola immagine sorgente. Quando si elaborano le immagini, Chloros crea più versioni:
 
 * **Immagini originali** (file JPG e RAW dalla fotocamera)
-* Risultati **con riflettanza calibrata** (se la calibrazione della riflettanza era abilitata)
+* Uscite **calibrate per riflettanza** (se la calibrazione della riflettanza era abilitata)
 * **Immagini target** (se l&#x27;immagine contiene target di calibrazione)
-* **Immagini indice** (NDVI, NDRE, GNDVI, ecc. se gli indici erano configurati)
+* **Immagini indice** (NDVI, NDRE, GNDVI, ecc. se sono stati configurati gli indici)
 
-Il **menu a tendina Layer Selector** in alto a destra nell&#x27;Image Viewer consente di passare istantaneamente da una versione all&#x27;altra senza uscire dal visualizzatore.
+Il **menu a tendina Selettore livelli** in alto a destra nel Visualizzatore immagini consente di passare istantaneamente da una versione all&#x27;altra senza uscire dal visualizzatore.
 
 ***
 
@@ -32,14 +32,14 @@ Il **menu a tendina Layer Selector** in alto a destra nell&#x27;Image Viewer con
 
 ### RAW (originale)
 
-* Dati originali del sensore RAW dalla fotocamera
+* I dati originali del sensore RAW della fotocamera
 * Debayering senza post-elaborazione applicata
 * Profondità di bit superiore rispetto al JPG (in genere dati del sensore a 12 o 14 bit)
 
 **Quando visualizzare:**
 
 * Ispezione della qualità dei dati originali del sensore
-* Controllo di eventuali problemi o artefatti del sensore
+* Verifica di eventuali problemi o artefatti del sensore
 * Confronto dei risultati prima/dopo l&#x27;elaborazione
 
 ### RAW (Target)
@@ -60,8 +60,8 @@ Il **menu a tendina Layer Selector** in alto a destra nell&#x27;Image Viewer con
 
 ### RAW (riflettanza)
 
-* Immagine di output con riflettanza calibrata
-* Correzione vignettatura (se abilitata nell&#x27;elaborazione)
+* L&#x27;immagine di output con riflettanza calibrata
+* Vignettatura corretta (se abilitata nell&#x27;elaborazione)
 * Riflettanza calibrata utilizzando i dati target (se abilitati)
 * Multibanda TIFF con tutti i canali della fotocamera
 * I valori dei pixel rappresentano la riflettanza percentuale (quando si utilizza la modalità percentuale)
@@ -91,15 +91,15 @@ Il **menu a tendina Layer Selector** in alto a destra nell&#x27;Image Viewer con
 * RAW (indice NDVI)
 * RAW (indice NDRE)
 * RAW (indice GNDVI)
-* RAW (OSAVI Index)
-* RAW (EVI Index)
-* RAW (SAVI Index)
-* E molti altri... (vedere [Formule indici multispettrali](../project-settings/multispectral-index-formulas.md))
+* RAW (Indice OSAVI)
+* RAW (Indice EVI)
+* RAW (Indice SAVI)
+* E molti altri... (vedere [Formule indice multispettrale](../project-settings/multispectral-index-formulas.md))
 
 **Quando visualizzare:**
 
 * Esaminare i risultati del calcolo dell&#x27;indice
-* Controllare gli intervalli di valori dell&#x27;indice
+* Controllare gli intervalli dei valori dell&#x27;indice
 * Identificare le aree di interesse
 * Verificare le immagini dell&#x27;indice prima di utilizzarle nel GIS o nell&#x27;analisi
 
@@ -150,11 +150,11 @@ Non tutti i livelli sono disponibili per ogni immagine:
 
 Quando si naviga verso un&#x27;immagine diversa (utilizzando i tasti freccia o facendo clic sulle miniature):
 
-**La preferenza del livello viene mantenuta:**
+**La preferenza dei livelli viene mantenuta:**
 
 * Se si visualizza &quot;RAW (Riflettanza)&quot;, l&#x27;immagine successiva mostra &quot;RAW (Riflettanza)&quot; (se disponibile)
 * Se si visualizza &quot;RAW (NDVI Indice)&quot;, l&#x27;immagine successiva mostra &quot;RAW (NDVI Indice)&quot; (se disponibile)
-* Se lo stesso livello non esiste, viene impostato JPG come impostazione predefinita
+* Se lo stesso livello non esiste, viene impostato come predefinito JPG
 
 **Esempio di flusso di lavoro:**
 
@@ -173,7 +173,7 @@ Quando si naviga verso un&#x27;immagine diversa (utilizzando i tasti freccia o f
 **Obiettivo**: confrontare l&#x27;immagine originale con quella calibrata
 
 1. Apri l&#x27;immagine elaborata in Image Viewer
-2. Seleziona **RAW (originale)** dal menu a tendina
+2. Selezionare **RAW (Originale)** dal menu a tendina
 3. Notare la vignettatura e i valori non calibrati
 4. Passare a **RAW (Riflettanza)** dal menu a tendina
 5. Confrontare: vignettatura rimossa, valori calibrati
@@ -187,15 +187,15 @@ Quando si naviga verso un&#x27;immagine diversa (utilizzando i tasti freccia o f
 3. Utilizzare il tasto freccia → per passare all&#x27;immagine successiva
 4. Il livello NDVI persiste automaticamente
 5. Continuare con tutte le immagini, controllando i modelli NDVI
-6. Passare a **RAW (NDRE Index)** per confrontare
+6. Passa a **RAW (NDRE Index)** per confrontare
 
 ### Flusso di lavoro 3: Verifica del target
 
 **Obiettivo**: Verificare che tutte le immagini target siano state rilevate correttamente
 
-1. Passare a un&#x27;immagine target
-2. Selezionare **RAW (Target)** dal menu a tendina
-3. Verificare che i target di calibrazione siano chiaramente visibili e rilevati
+1. Passa a un&#x27;immagine target
+2. Seleziona **RAW (Target)** dal menu a tendina
+3. Verifica che i target di calibrazione siano chiaramente visibili e rilevati
 4. Passare all&#x27;immagine target successiva
 5. Ripetere la verifica per tutti i target
 
@@ -208,7 +208,7 @@ Quando si naviga verso un&#x27;immagine diversa (utilizzando i tasti freccia o f
 3. Abilitare la modalità **Pixel Percent** (pulsante nella barra degli strumenti in alto a destra)
 4. Spostare il cursore sulle aree di vegetazione
 5. Verificare che i valori dei pixel rientrino negli intervalli previsti (30-70% per NIR, 5-15% per Red)
-6. Controllare che le aree di suolo e acqua abbiano valori appropriati
+6. Controllare che i valori delle aree di suolo e acqua siano appropriati
 
 ***
 
@@ -251,22 +251,22 @@ Livelli diversi mostrano intervalli di valori dei pixel diversi:
 
 ### Cambio efficiente dei livelli
 
-* **Scorciatoie da tastiera**: sebbene non esistano scorciatoie da tastiera per i livelli, le frecce di navigazione (←/→) funzionano su tutti i livelli
+* **Conoscenza delle scorciatoie da tastiera**: Sebbene non esistano scorciatoie da tastiera per i livelli, le frecce di navigazione (←/→) funzionano su tutti i livelli
 * **Flussi di lavoro coerenti**: selezionare un livello (ad esempio, NDVI) e rivedere l&#x27;intero set di dati prima di passare a un altro
 * **Confronto rapido**: passare da Originale a Riflettanza per verificare la qualità dell&#x27;elaborazione
 
 ### Considerazioni sulle prestazioni
 
-* **Il formato JPG è quello che si carica più velocemente**: utilizzarlo per una navigazione rapida tra molte immagini
-* **I livelli RAW si caricano più lentamente**: risoluzione e profondità di bit più elevate
-* **Livelli indice**: velocità simile a quella dei livelli Riflettanza
-* **Il primo caricamento è il più lento**: le visualizzazioni successive dello stesso livello vengono memorizzate nella cache e sono più veloci
+* **Il formato JPG è quello che si carica più velocemente**: utilizzarlo per una navigazione rapida tra molte immagini.
+* **I livelli RAW si caricano più lentamente**: risoluzione e profondità di bit più elevate.
+* **Livelli indice**: velocità simile a quella dei livelli di riflettanza.
+* **Il primo caricamento è il più lento**: le visualizzazioni successive dello stesso livello vengono memorizzate nella cache e sono più veloci.
 
 ### Verifica della qualità
 
-* **Controllare sempre RAW (originale)**: verificare la qualità dei dati di origine prima di fidarsi dei risultati elaborati
-* **Confrontare i livelli**: utilizzare il cambio di livello per verificare che l&#x27;elaborazione abbia funzionato correttamente
-* **Controllare gli intervalli dell&#x27;indice**: utilizzare la modalità Percentuale pixel con i livelli indice per verificare che i valori siano ragionevoli
+* **Controllare sempre il formato RAW (originale)**: verificare la qualità dei dati di origine prima di fidarsi dei risultati elaborati.
+* **Confronta i livelli**: utilizza il cambio di livello per verificare che l&#x27;elaborazione abbia funzionato correttamente
+* **Controlla gli intervalli dell&#x27;indice**: utilizza la modalità Percentuale pixel con i livelli indice per verificare che i valori siano ragionevoli
 
 ***
 
@@ -287,7 +287,7 @@ Livelli diversi mostrano intervalli di valori dei pixel diversi:
 
 1. Verificare che l&#x27;immagine sia stata elaborata (controllare la cartella di output per i file elaborati)
 2. Controllare le impostazioni del progetto per confermare che gli indici siano stati configurati
-3. Elaborare nuovamente con gli indici desiderati abilitati
+3. Rielaborare con gli indici desiderati abilitati
 
 ### Livello errato visualizzato
 
@@ -295,17 +295,17 @@ Livelli diversi mostrano intervalli di valori dei pixel diversi:
 
 **Causa**: le preferenze di livello dell&#x27;immagine precedente sono state riportate, ma quel livello non esiste nell&#x27;immagine corrente
 
-**Soluzione**: Chloros torna automaticamente al formato JPG quando il livello preferito non è disponibile: si tratta di un comportamento normale.
+**Soluzione**: Chloros torna automaticamente al formato JPG quando il livello preferito non è disponibile: si tratta di un comportamento normale
 
 ### Impossibile visualizzare i target di calibrazione
 
-**Problema**: il livello RAW (Target) non mostra il rilevamento dei target.
+**Problema**: il livello RAW (target) non mostra il rilevamento dei target.
 
 **Possibili cause:**
 
-* I target non sono stati rilevati durante l&#x27;elaborazione
-* L&#x27;immagine non contiene effettivamente i target
-* Impostazioni di rilevamento dei target troppo rigide
+* I target non sono stati rilevati durante l&#x27;elaborazione.
+* L&#x27;immagine non contiene effettivamente i target.
+* Le impostazioni di rilevamento dei target sono troppo rigide.
 
 **Soluzioni:**
 
@@ -324,9 +324,9 @@ Durante la visualizzazione di qualsiasi livello, è possibile utilizzare:
 
 * **Controlli di zoom**: ingrandire per esaminare i dettagli
 * **Panoramica**: fare clic e trascinare per spostarsi nell&#x27;immagine ingrandita
-* **Controllo del valore dei pixel**: visualizzare i valori nella posizione del cursore
+* **Ispezione del valore dei pixel**: visualizzare i valori nella posizione del cursore
 * **Frecce di navigazione**: spostarsi tra le immagini mantenendo il livello
-* **Modalità percentuale pixel**: passare dalla visualizzazione DN a quella percentuale
+* **Modalità percentuale dei pixel**: passare dalla visualizzazione DN a quella percentuale
 
 Vedere [Apertura di un&#x27;immagine a schermo intero](opening-an-image-full-screen.md) per la documentazione completa sul visualizzatore di immagini.
 
@@ -334,19 +334,19 @@ Vedere [Apertura di un&#x27;immagine a schermo intero](opening-an-image-full-scr
 
 Per test e visualizzazione interattivi dell&#x27;indice:
 
-* **Calcolo dell&#x27;indice in tempo reale**: prova diverse formule dell&#x27;indice
-* **Mappatura dei colori LUT**: applica gradienti di colore agli indici in scala di grigi
-* **Esporta visualizzazioni**: salva immagini dell&#x27;indice colorate
+* **Calcolo dell&#x27;indice in tempo reale**: testare diverse formule dell&#x27;indice
+* **Mappatura dei colori LUT**: applicare gradienti di colore agli indici in scala di grigi
+* **Esportare le visualizzazioni**: salvare le immagini dell&#x27;indice colorate
 
-Per ulteriori dettagli, consulta [Sandbox indice/LUT](index-lut-sandbox.md).
+Per ulteriori dettagli, consultare [Index/LUT Sandbox](index-lut-sandbox.md).
 
 ***
 
 ## Passaggi successivi
 
-Ora che hai compreso i livelli delle immagini:
+Ora che avete compreso i livelli delle immagini:
 
 * [**Apertura di un&#x27;immagine a schermo intero**](opening-an-image-full-screen.md) - Guida completa all&#x27;Image Viewer
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Visualizzazione interattiva degli indici
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Visualizzazione interattiva dell&#x27;indice
 * [**Formule dell&#x27;indice multispettrale**](../project-settings/multispectral-index-formulas.md) - Riferimento agli indici disponibili
 * [**Completamento dell&#x27;elaborazione**](../processing-images-gui/finishing-the-processing.md) - Comprensione dei risultati elaborati

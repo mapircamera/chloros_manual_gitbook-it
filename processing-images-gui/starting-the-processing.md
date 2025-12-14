@@ -1,6 +1,6 @@
 # Avvio dell&#x27;elaborazione
 
-Dopo aver importato le immagini, contrassegnato i target di calibrazione e configurato le impostazioni del progetto, è possibile avviare l&#x27;elaborazione. Questa pagina guida l&#x27;utente attraverso l&#x27;avvio della pipeline di elaborazione Chloros.
+Una volta importate le immagini, contrassegnati i target di calibrazione e configurate le impostazioni del progetto, è possibile avviare l&#x27;elaborazione. Questa pagina guida l&#x27;utente attraverso l&#x27;avvio della pipeline di elaborazione Chloros.
 
 ## Lista di controllo pre-elaborazione
 
@@ -13,9 +13,9 @@ Prima di fare clic sul pulsante Avvia, verificare che tutto sia pronto:
 * [ ] **Indici selezionati** - Indici multispettrali desiderati aggiunti (se necessario)
 * [ ] **Formato di esportazione scelto** - Formato di output appropriato per il tuo flusso di lavoro
 
-{% suggerimento style=&quot;info&quot; %}
+{% hint style=&quot;info&quot; %}
 **Suggerimento**: clicca su alcune immagini nel File Browser per verificare che siano state caricate correttamente prima dell&#x27;elaborazione.
-{% fine suggerimento %}
+{% endhint %}
 
 ***
 
@@ -86,9 +86,9 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 
 **Interazione con la barra di avanzamento:**
 
-* **Passa il mouse** sulla barra per visualizzare il pannello a discesa dettagliato in 4 fasi
-* **Clicca** sulla barra di avanzamento per bloccare il pannello a discesa
-* **Fare nuovamente clic** per sbloccare e nascondere il pannello
+* **Passa il mouse** sulla barra per visualizzare il pannello a tendina dettagliato con le 4 fasi
+* **Clicca** sulla barra di avanzamento per bloccare il pannello a tendina
+* **Clicca di nuovo** per sbloccare e nascondere il pannello
 
 **Tempo di elaborazione:**
 
@@ -109,11 +109,11 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 **Cosa fa Chloros:**
 
 * Scansiona le immagini target contrassegnate (o tutte le immagini se nessuna è contrassegnata)
-* Identifica i 4 pannelli di calibrazione in ciascun bersaglio
-* Estrae i valori di riflettanza dai pannelli bersaglio
-* Registra i timestamp dei bersagli per la pianificazione della calibrazione
+* Identifica i 4 pannelli di calibrazione in ciascun target
+* Estrae i valori di riflettanza dai pannelli target
+* Registra i timestamp dei target per la pianificazione della calibrazione
 
-**Durata:** 1-30 secondi (con bersagli contrassegnati), 5-30+ minuti (non contrassegnati)
+**Durata:** 1-30 secondi (con target contrassegnati), 5-30+ minuti (non contrassegnati)
 
 ### Fase 2: Debayering (conversione RAW)
 
@@ -144,9 +144,9 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 * Applica la matematica delle bande alle immagini calibrate
 * Genera immagini indice per ciascun indice selezionato
 
-**Durata:** Alcuni secondi per immagine
+**Durata:** pochi secondi per immagine
 
-### Fase 5: Esportazione
+### Fase 5: esportazione
 
 **Cosa fa Chloros:**
 
@@ -167,7 +167,7 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
 * Non è necessaria alcuna interazione da parte dell&#x27;utente
 * Tutti i passaggi configurati vengono eseguiti in sequenza
-* Gli aggiornamenti sullo stato di avanzamento vengono visualizzati in tempo reale
+* Aggiornamenti sullo stato di avanzamento mostrati in tempo reale
 
 ### Utilizzo del computer durante l&#x27;elaborazione
 
@@ -184,7 +184,7 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 * Il computer potrebbe essere meno reattivo durante l&#x27;elaborazione
 * Evitare di avviare altre attività che richiedono un uso intensivo della CPU
 
-{% hint style=&quot;warning&quot; %}
+{% suggerimento style=&quot;warning&quot; %}
 **Suggerimento sulle prestazioni**: per ottenere le migliori prestazioni da Chloros+, chiudere le altre applicazioni e lasciare che Chloros utilizzi tutte le risorse di sistema.
 {% endhint %}
 
@@ -192,10 +192,10 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
 **Limitazioni importanti:**
 
-* Una volta avviata, l&#x27;elaborazione non può essere messa in pausa
-* È possibile annullare l&#x27;elaborazione, ma i progressi andranno persi
-* I risultati parziali non vengono salvati
-* Se annullata, è necessario ricominciare dall&#x27;inizio
+* Una volta avviata, l&#x27;elaborazione non può essere messa in pausa.
+* È possibile annullare l&#x27;elaborazione, ma i progressi andranno persi.
+* I risultati parziali non vengono salvati.
+* Se annullata, è necessario ricominciare dall&#x27;inizio.
 
 **Suggerimento per la pianificazione:** per progetti di grandi dimensioni, prendere in considerazione l&#x27;elaborazione in batch o l&#x27;utilizzo di CLI per un controllo migliore.
 
@@ -229,7 +229,7 @@ Se è necessario interrompere l&#x27;elaborazione:
 
 **Motivi validi per annullare:**
 
-* Si è resi conto di aver utilizzato impostazioni errate
+* Si è reso conto di aver utilizzato impostazioni errate
 * Si è dimenticato di contrassegnare le immagini di destinazione
 * Sono state importate immagini errate
 * Il sistema è troppo lento o non risponde
@@ -241,7 +241,7 @@ Se è necessario interrompere l&#x27;elaborazione:
 * Riavviare l&#x27;elaborazione dall&#x27;inizio
 * Per un&#x27;esperienza ottimale, chiudere completamente Chloros e riavviare
 
-{% suggerimento style=&quot;warning&quot; %}
+{% hint style=&quot;warning&quot; %}
 **Nessun risultato parziale**: l&#x27;annullamento elimina tutti i progressi. Chloros non salva le immagini elaborate parzialmente.
 {% endhint %}
 
@@ -348,7 +348,7 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 
 Se si utilizza l&#x27;accelerazione GPU NVIDIA:
 
-1. Aggiornare i driver NVIDIA all&#x27;ultima versione
+1. Aggiornare i driver NVIDIA alla versione più recente
 2. Assicurarsi che la GPU abbia almeno 4 GB di VRAM
 3. Chiudere le applicazioni che richiedono un uso intensivo della GPU (giochi, editing video)
 4. Monitorare la temperatura della GPU (assicurarsi che il raffreddamento sia adeguato)
