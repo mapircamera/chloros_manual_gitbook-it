@@ -26,7 +26,7 @@ Prima di fare clic sul pulsante Avvia, verificare che tutto sia pronto:
 Il pulsante Avvia/Riproduci si trova nella barra di intestazione superiore di Chloros:
 
 * Posizione: parte superiore centrale della finestra
-* Icona: **pulsante Riproduci/Avvia** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Icona: **pulsante Riproduci/Avvia** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 * Stato: il pulsante è abilitato (illuminato) quando è pronto per l&#x27;elaborazione
 
 ### Fare clic per avviare
@@ -58,10 +58,8 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 
 **La barra di avanzamento mostra 2 fasi:**
 
-1. **Rilevamento target** - Scansione dei target di calibrazione
-2. **Elaborazione** - Applicazione della calibrazione ed esportazione delle immagini
-
-**Tempo di elaborazione:**
+1.**Rilevamento target** - Scansione dei target di calibrazione
+2. **Elaborazione** - Applicazione della calibrazione ed esportazione delle immagini**Tempo di elaborazione:**
 
 * Molto più lento rispetto alla modalità parallela Chloros+
 * Adatto per set di dati di piccole e medie dimensioni (&lt; 200 immagini)
@@ -79,18 +77,12 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 
 **La barra di avanzamento mostra 4 fasi:**
 
-1. **Rilevamento** - Ricerca dei target di calibrazione
+1.**Rilevamento** - Ricerca dei target di calibrazione
 2. **Analisi** - Esame dei metadati delle immagini e preparazione della pipeline
 3. **Calibrazione** - Applicazione di correzioni e calibrazioni
-4. **Esportazione** - Salvataggio delle immagini elaborate e degli indici
-
-**Interazione con la barra di avanzamento:**
-
-* **Passa il mouse** sulla barra per visualizzare il pannello a tendina dettagliato con le 4 fasi
-* **Clicca** sulla barra di avanzamento per bloccare il pannello a tendina
-* **Clicca di nuovo** per sbloccare e nascondere il pannello
-
-**Tempo di elaborazione:**
+4. **Esportazione** - Salvataggio delle immagini elaborate e degli indici**Interazione con la barra di avanzamento:*** **Passa il mouse** sulla barra per visualizzare il pannello a tendina dettagliato con le 4 fasi
+* **Clicca** sulla barra di avanzamento per bloccare il pannello a tendina in posizione
+* **Clicca di nuovo** per sbloccare e nascondere il pannello**Tempo di elaborazione:**
 
 * Significativamente più veloce rispetto alla modalità libera
 * Scalabile in base al numero di core della CPU
@@ -109,17 +101,17 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 **Cosa fa Chloros:**
 
 * Scansiona le immagini target contrassegnate (o tutte le immagini se nessuna è contrassegnata)
-* Identifica i 4 pannelli di calibrazione in ciascun target
-* Estrae i valori di riflettanza dai pannelli target
-* Registra i timestamp dei target per la pianificazione della calibrazione
+* Identifica i 4 pannelli di calibrazione in ciascun bersaglio
+* Estrae i valori di riflettanza dai pannelli bersaglio
+* Registra i timestamp dei bersagli per la pianificazione della calibrazione
 
-**Durata:** 1-30 secondi (con target contrassegnati), 5-30+ minuti (non contrassegnati)
+**Durata:** 1-30 secondi (con bersagli contrassegnati), 5-30+ minuti (non contrassegnati)
 
 ### Fase 2: Debayering (conversione RAW)
 
 **Cosa fa Chloros:**
 
-* Converte i dati RAW del modello Bayer in immagini RGB complete
+* Converte i dati RAW del pattern Bayer in immagini RGB complete
 * Applica un algoritmo di demosaicing di alta qualità
 * Preserva la massima qualità e il massimo dettaglio dell&#x27;immagine
 
@@ -127,16 +119,14 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 
 ### Fase 3: Calibrazione
 
-**Cosa fa Chloros:**
-
-* **Correzione vignettatura**: rimuove l&#x27;oscuramento dell&#x27;obiettivo ai bordi
+**Cosa fa Chloros:*** **Correzione vignettatura**: rimuove l&#x27;oscuramento dell&#x27;obiettivo ai bordi
 * **Calibrazione riflettanza**: normalizza utilizzando i valori di riflettanza target
 * Applica correzioni su tutte le bande/canali
 * Utilizza un target di calibrazione appropriato per ogni immagine in base al timestamp
 
 **Durata:** la maggior parte del tempo di elaborazione
 
-### Fase 4: calcolo dell&#x27;indice
+### Fase 4: Calcolo dell&#x27;indice
 
 **Cosa fa Chloros:**
 
@@ -151,13 +141,11 @@ Chloros funziona in due diverse modalità di elaborazione a seconda della licenz
 **Cosa fa Chloros:**
 
 * Salva le immagini calibrate nel formato selezionato
-* Esporta le immagini indice con i colori LUT configurati
+* Esporta le immagini dell&#x27;indice con i colori LUT configurati
 * Scrive i file nelle sottocartelle del modello di fotocamera
 * Conserva i nomi dei file originali con i suffissi
 
-**Durata:** varia a seconda del formato di esportazione e delle dimensioni del file
-
-***
+**Durata:** varia a seconda del formato di esportazione e delle dimensioni del file***
 
 ## Comportamento di elaborazione
 
@@ -167,7 +155,7 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 
 * Non è necessaria alcuna interazione da parte dell&#x27;utente
 * Tutti i passaggi configurati vengono eseguiti in sequenza
-* Aggiornamenti sullo stato di avanzamento mostrati in tempo reale
+* Gli aggiornamenti sullo stato di avanzamento vengono visualizzati in tempo reale
 
 ### Utilizzo del computer durante l&#x27;elaborazione
 
@@ -197,9 +185,7 @@ Una volta avviata, l&#x27;intera pipeline viene eseguita automaticamente:
 * I risultati parziali non vengono salvati.
 * Se annullata, è necessario ricominciare dall&#x27;inizio.
 
-**Suggerimento per la pianificazione:** per progetti di grandi dimensioni, prendere in considerazione l&#x27;elaborazione in batch o l&#x27;utilizzo di CLI per un controllo migliore.
-
-***
+**Suggerimento per la pianificazione:** per progetti molto grandi, prendere in considerazione l&#x27;elaborazione in batch o l&#x27;utilizzo di CLI per un controllo migliore.***
 
 ## Monitoraggio dell&#x27;elaborazione
 
@@ -254,7 +240,7 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 * Numero di immagini
 * Risoluzione delle immagini
 * Formato di input RAW o JPG
-* Modalità di elaborazione (Free o Chloros+)
+* Modalità di elaborazione (Free vs Chloros+)
 * Velocità della CPU e numero di core
 * Disponibilità della GPU (solo Chloros+)
 * Numero di indici da calcolare
@@ -334,21 +320,21 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 1. **Eseguire prima un test con un piccolo sottoinsieme** - Elaborare 10-20 immagini per verificare le impostazioni
 2. **Controllare lo spazio disponibile sul disco** - Assicurarsi di avere uno spazio libero pari a 2-3 volte la dimensione del set di dati
 3. **Chiudere le applicazioni non necessarie** - Liberare risorse di sistema
-4. **Verificare le immagini target** - Visualizzare in anteprima i target contrassegnati per assicurarsi della qualità
-5. **Salvare il progetto** - Il progetto viene salvato automaticamente, ma è buona norma salvarlo manualmente.
+4. **Verificare le immagini target** - Visualizzare in anteprima i target contrassegnati per assicurarne la qualità
+5. **Salvare il progetto** - Il progetto viene salvato automaticamente, ma è buona norma salvarlo manualmente
 
 ### Durante l&#x27;elaborazione
 
-1. **Evitare la sospensione del sistema** - Disattivare le modalità di risparmio energetico.
-2. **Mantenere Chloros in primo piano** - O almeno visibile nella barra delle applicazioni.
-3. **Controllare occasionalmente lo stato di avanzamento** - Verificare la presenza di avvisi o errori.
+1. **Evitare la sospensione del sistema** - Disattivare le modalità di risparmio energetico
+2. **Mantenere Chloros in primo piano** - O almeno visibile nella barra delle applicazioni
+3. **Controllare occasionalmente lo stato di avanzamento** - Verificare la presenza di avvisi o errori
 4. **Non caricare altre applicazioni pesanti** - Soprattutto con la modalità parallela Chloros+
 
 ### Chloros+ Accelerazione GPU
 
 Se si utilizza l&#x27;accelerazione GPU NVIDIA:
 
-1. Aggiornare i driver NVIDIA alla versione più recente
+1. Aggiornare i driver NVIDIA all&#x27;ultima versione
 2. Assicurarsi che la GPU abbia almeno 4 GB di VRAM
 3. Chiudere le applicazioni che richiedono un uso intensivo della GPU (giochi, editing video)
 4. Monitorare la temperatura della GPU (assicurarsi che il raffreddamento sia adeguato)

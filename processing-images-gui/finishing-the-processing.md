@@ -9,16 +9,15 @@ Al termine dell&#x27;elaborazione, verranno visualizzati diversi indicatori:
 * ✅ **Barra di avanzamento**: raggiunge il 100% di completamento
 * ✅ **Registro di debug**: mostra il messaggio &quot;Elaborazione completata&quot;
 * ✅ **Pulsante Avvio**: diventa nuovamente abilitato (pronto per la prossima elaborazione)
-* ✅ **File di output**: tutte le immagini elaborate vengono salvate nella sottocartella del modello di fotocamera
-
-***
+* ✅ **File di output**: tutte le immagini elaborate vengono salvate nella sottocartella del modello di fotocamera***
 
 ## Individuazione delle immagini elaborate
 
 ### Apertura della cartella di output
 
-1. Fare clic sull&#x27;icona **Menu principale** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (in alto a sinistra)
+1. Fare clic sull&#x27;icona **Menu principale** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> (in alto a sinistra)
 2. Selezionare **&quot;Apri cartella progetto&quot;**
+
 3. Si aprirà Esplora file nella directory del progetto
 4. Individuare il progetto in base al nome
 
@@ -30,16 +29,14 @@ Al termine dell&#x27;elaborazione, verranno visualizzati diversi indicatori:
 
 **Anteprima integrata in Windows:**
 
-1. Passare alla sottocartella del modello di fotocamera
-2. Selezionare un file immagine
+1. Passa alla sottocartella del modello di fotocamera
+2. Seleziona un file immagine
 3. L&#x27;anteprima viene visualizzata nel riquadro di anteprima di Windows Explorer
-4. Utilizzare i tasti freccia per sfogliare le immagini
+4. Utilizza i tasti freccia per sfogliare le immagini
 
 ### Anteprima in visualizzatori di immagini esterni
 
-**Visualizzatori consigliati:**
-
-* **QGIS** - Software GIS gratuito (ideale per l&#x27;analisi multispettrale georeferenziata)
+**Visualizzatori consigliati:*** **QGIS** - Software GIS gratuito (ideale per analisi multispettrali georeferenziate)
 * **IrfanView** - Visualizzatore di immagini veloce e leggero (supporta TIFF)
 * **Adobe Photoshop** - Editing professionale (supporta TIFF)
 * **GIMP** - Alternativa gratuita a Photoshop
@@ -72,7 +69,8 @@ Consulta [Visualizzatore immagini](../image-viewer-gui/opening-an-image-full-scr
 
 Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;assistenza MAPIR:
 
-1. Fare clic sul pulsante **&quot;Copia&quot;** o **&quot;Scarica&quot;**
+1. Fare clic sul pulsante **&quot;Copia&quot;**o**&quot;Scarica&quot;**
+
 2. Salvare come file di testo nella cartella del progetto
 3. Includere nella documentazione del progetto
 4. Inviare all&#x27;assistenza MAPIR in caso di problemi
@@ -92,7 +90,7 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 
 **Soluzioni:**
 
-1. Controllare il registro di debug per messaggi di salto/errore
+1. Controllare il log di debug per messaggi di salto/errore
 2. Verificare che lo spazio su disco fosse sufficiente
 3. Contare i file: dovrebbe corrispondere a (conteggio originale - conteggio di destinazione) × (indici + 1)
 4. Reimportare e rielaborare eventuali file mancanti
@@ -101,7 +99,7 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 
 **Possibili cause:**
 
-* Correzione della vignettatura disabilitata
+* Correzione vignettatura disabilitata
 * Fotocamera/obiettivo non presenti nel database dei profili Chloros
 * Vignettatura estrema oltre la capacità di correzione
 
@@ -124,19 +122,15 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 
 1. Verificare che la calibrazione della riflettanza sia abilitata
 2. Controllare i messaggi &quot;Target trovato&quot; nel registro di debug
-3. Verificare la qualità dell&#x27;immagine del target
+3. Verificare la qualità dell&#x27;immagine target
 4. Rielaborare con i target corretti contrassegnati
 
 ### Problema: i valori NDVI sembrano errati
 
-**Intervalli NDVI previsti:**
-
-* **Acqua, rocce, suolo**: da -0,1 a 0,2
+**Intervalli NDVI previsti:*** **Acqua, rocce, suolo**: da -0,1 a 0,2
 * **Vegetazione rada/malsana**: da 0,2 a 0,4
 * **Vegetazione moderata**: da 0,4 a 0,6
-* **Vegetazione sana e fitta**: da 0,6 a 0,9
-
-**Se i valori non rientrano in questi intervalli:**
+* **Vegetazione sana e fitta**: da 0,6 a 0,9**Se i valori non rientrano in questi intervalli:**
 
 1. Verificare che sia stata applicata la calibrazione della riflettanza.
 2. Verificare che sia stato incluso il registro del sensore di luce.
@@ -148,26 +142,27 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 
 ## Utilizzo delle immagini elaborate
 
-### Per la fotogrammetria/creazione di ortomosaici
+### Per la fotogrammetria / creazione di ortomosaici
 
 **Flusso di lavoro consigliato:**
 
-1. **Importare le immagini di riflettanza calibrate** nel software di fotogrammetria:
+1.**Importare le immagini di riflettanza calibrate** nel software di fotogrammetria:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
    * WebODM
 2. **Conservare i metadati EXIF**: assicurarsi che i dati GPS siano conservati per il geotagging
 3. **Flussi di lavoro calibrati**: utilizzare immagini di riflettanza per garantire l&#x27;accuratezza scientifica
-4. **Elaborare mosaici indice**: Creare ortomosaici NDVI da singole immagini indice
-5. **Esportare GeoTIFF georeferenziato**: per l&#x27;utilizzo in applicazioni GIS
+4. **Elaborare mosaici indice**: creare ortomosaici NDVI da singole immagini indice
+5. **Esporta GeoTIFF georeferenziato**: per l&#x27;utilizzo in applicazioni GIS
 
 ### Per l&#x27;analisi GIS
 
 **Flusso di lavoro consigliato:**
 
-1. **Caricare in QGIS, ArcGIS o simili**
-2. **Utilizzare immagini di riflettanza a 16 bit TIFF** per analisi multibanda
+1.**Carica in QGIS, ArcGIS o simili**
+
+2.**Utilizzare immagini di riflettanza a 16 bit TIFF** per analisi multibanda
 3. **Utilizzare immagini indice** (NDVI, NDRE) come livelli di vegetazione pronti all&#x27;uso
 4. **Calcolatore raster**: combinare bande per analisi personalizzate
 5. **Esportazione**: creare mappe di classificazione, rilevamento delle modifiche, mappe dello stato di salute della vegetazione
@@ -176,32 +171,22 @@ Per conservare una registrazione dell&#x27;elaborazione o per inviarla all&#x27;
 
 **Flusso di lavoro consigliato:**
 
-1. **Utilizzare immagini indice con colori LUT** per report visivi
+1.**Utilizzare immagini indice con colori LUT** per report visivi
 2. **Estrarre statistiche**: media NDVI per campo/appezzamento
 3. **Serie temporali**: confronta gli indici tra più sessioni
-4. **Genera report**: includi mappe, statistiche e visualizzazioni
-
-***
+4. **Genera report**: includi mappe, statistiche e visualizzazioni***
 
 ## Archiviazione e backup
 
 ### Strategia di backup consigliata
 
-**Cosa salvare:**
-
-* ✅ **Immagini RAW/JPG originali** - Archivia su un&#x27;unità separata/cloud
+**Cosa salvare:*** ✅ **Immagini RAW/JPG originali** - Archivia su un&#x27;unità separata/cloud
 * ✅ **Risultati elaborati** - Conservare immagini e indici calibrati
 * ✅ **File di progetto** - Contiene tutte le impostazioni per la rielaborazione, se necessario
 * ✅ **Registro di debug** - Documenta i dettagli dell&#x27;elaborazione
-* ✅ **Immagini di calibrazione** - Per la verifica e la rielaborazione
-
-**Consigli per l&#x27;archiviazione:**
-
-* **Backup immediato**: disco rigido esterno
+* ✅ **Immagini di calibrazione** - Per la verifica e la rielaborazione**Consigli per l&#x27;archiviazione:*** **Backup immediato**: disco rigido esterno
 * **Archivio a lungo termine**: archiviazione cloud (Google Drive, Dropbox, ecc.)
-* **Dati critici**: conservare 2-3 copie in luoghi diversi
-
-***
+* **Dati critici**: conservare 2-3 copie in luoghi diversi***
 
 ## Prossime elaborazioni
 
@@ -212,17 +197,16 @@ Se in futuro si elaborano set di dati simili:
 1. **Salvare il modello di progetto** (se non è già stato fatto)
 2. **Creare un nuovo progetto** utilizzando il modello salvato
 3. **Importare nuove immagini**
-4. **Elaborare** con impostazioni identiche per garantire la coerenza
+
+4.**Elaborare**con impostazioni identiche per garantire la coerenza
 
 ### Elaborazione in batch di più sessioni
 
-Per più sessioni/set di dati:
-
-**Opzione 1: GUI - Progetti multipli**
+Per più sessioni/set di dati:**Opzione 1: GUI - Progetti multipli**
 
 * Creare un progetto separato per ogni sessione
 * Utilizzare impostazioni del modello coerenti
-* Elaborare una sessione alla volta
+* Elaborare una alla volta
 
 **Opzione 2: Chloros CLI (solo Chloros+)**
 
@@ -244,7 +228,7 @@ Per più sessioni/set di dati:
 
 Se i risultati non sono soddisfacenti:
 
-1. Conservare le immagini originali (non cancellarle mai)
+1. Conservare le immagini originali (non eliminarle mai)
 2. Aprire lo stesso progetto in Chloros
 3. Modificare le impostazioni nel pannello Impostazioni progetto
 4. Eseguire nuovamente l&#x27;elaborazione: i risultati sovrascriveranno quelli precedenti
@@ -258,16 +242,14 @@ Per rielaborare solo immagini specifiche:
 3. Utilizzare lo stesso modello di impostazioni
 4. Elaborare un set di dati più piccolo
 
-### Assistenza
+### Ottenere assistenza
 
 In caso di problemi:
 
 * 📧 **E-mail**: info@mapir.camera (includere il log di debug)
 * 🌐 **Assistenza**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **FAQ**: [Domande frequenti](../faq.md)
-* 📖 **Documentazione**: [Manuale Chloros](../)
-
-***
+* 📖 **Documentazione**: [Manuale Chloros](../)***
 
 ## Riepilogo: flusso di lavoro completo
 
@@ -275,13 +257,11 @@ Hai completato l&#x27;intero flusso di lavoro di elaborazione Chloros:
 
 1. ✅ **Progetto creato** - Vedi [Progetti](../projects.md)
 2. ✅ **Aggiunti file** - Vedi [Aggiunta di file](adding-files-to-a-project.md)
-3. ✅ **Modificate impostazioni** - Vedi [Modifica delle impostazioni del progetto](adjusting-project-settings.md)
+3. ✅ **Modificate le impostazioni** - Vedi [Modifica delle impostazioni del progetto](adjusting-project-settings.md)
 4. ✅ **Contrassegnati gli obiettivi** - Vedi [Scelta delle immagini di destinazione](choosing-target-images.md)
 5. ✅ **Avviata l&#x27;elaborazione** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
-6. ✅ **Monitoraggio dell&#x27;avanzamento** - Vedi [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
-7. ✅ **Revisione dei risultati** - Questa pagina
-
-**Le immagini multispettrali calibrate e con correzione della riflettanza sono pronte per l&#x27;analisi!**
+6. ✅ **Monitorato lo stato di avanzamento** - Vedi [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
+7. ✅ **Risultati revisionati** - Questa pagina**Le immagini multispettrali calibrate e con riflettanza corretta sono pronte per l&#x27;analisi!**
 
 ***
 

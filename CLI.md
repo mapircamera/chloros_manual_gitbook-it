@@ -1,6 +1,6 @@
 # CLI : Riga di comando
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>**Chloros CLI** offre un potente accesso da riga di comando al motore di elaborazione delle immagini Chloros, consentendo l&#x27;automazione, la creazione di script e il funzionamento senza monitor per i flussi di lavoro di imaging.
+<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>**Chloros CLI** fornisce un potente accesso da riga di comando al motore di elaborazione delle immagini Chloros, consentendo l&#x27;automazione, la creazione di script e il funzionamento senza monitor per i flussi di lavoro di imaging.
 
 ### Caratteristiche principali
 
@@ -20,7 +20,7 @@
 | **Internet**         | Necessario per l&#x27;attivazione della licenza                                     |
 | **Spazio su disco**       | Varia in base alle dimensioni del progetto                                              |
 
-{% suggerimento style=&quot;warning&quot; %}
+{% hint style=&quot;warning&quot; %}
 **Requisiti di licenza**: CLI richiede un abbonamento a pagamento a Chloros+. I piani standard (gratuiti) non consentono l&#x27;accesso a CLI. Visita [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) per effettuare l&#x27;aggiornamento.
 {% endhint %}
 
@@ -30,8 +30,9 @@
 
 CLI è automaticamente incluso nell&#x27;installatore Chloros:
 
-1. Scarica ed esegui **Chloros Installer.exe**
-2. Completa la procedura guidata di installazione
+1. Scaricare ed eseguire **Chloros Installer.exe**
+
+2. Completare la procedura guidata di installazione
 3. CLI installato in: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
 {% hint style=&quot;success&quot; %}
@@ -106,14 +107,14 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--format`            | Scelta  | TIFF (16 bit)  | Formato di output: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
 | `--min-target-size`   | Intero | Auto           | Dimensione minima target in pixel per il rilevamento del pannello di calibrazione                          |
 | `--target-clustering` | Intero | Auto           | Soglia di raggruppamento target (0-100)                                                    |
-| `--exposure-pin-1`    | Stringa  | Nessuna           | Blocco esposizione per modello fotocamera (Pin 1)                                                 |
-| `--exposure-pin-2`    | Stringa  | Nessuna           | Blocco esposizione per modello fotocamera (Pin 2)                                                 |
+| `--exposure-pin-1`    | Stringa  | Nessuna           | Blocco esposizione per modello di fotocamera (Pin 1)                                                 |
+| `--exposure-pin-2`    | Stringa  | Nessuna           | Blocco esposizione per modello di fotocamera (Pin 2)                                                 |
 | `--recal-interval`    | Intero | Auto           | Intervallo di ricalibrazione in secondi                                                      |
 | `--timezone-offset`   | Intero | 0              | Offset fuso orario in ore                                                               |
 
 ***
 
-### `login` - Autenticazione account
+### `login` - Autentica account
 
 Accedi con le tue credenziali Chloros+ per abilitare l&#x27;elaborazione CLI.
 
@@ -133,9 +134,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 **Caratteri speciali**: utilizzare virgolette singole attorno alle password contenenti caratteri come `$`, `!` o spazi.
 {% endhint %}
 
-**Output:**
-
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
+**Output:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
 ### `logout` - Cancella credenziali
 
@@ -160,11 +159,15 @@ chloros-cli logout
 ℹ Credentials cleared from cache
 ```
 
+{% hint style=&quot;info&quot; %}
+**Utenti SDK**: Python SDK fornisce anche un metodo programmatico `logout()` per cancellare le credenziali all&#x27;interno degli script Python. Per ulteriori dettagli, consultare la [documentazione Python SDK](api-python-sdk.md#logout).
+{% endhint %}
+
 ***
 
 ### `status` - Controlla lo stato della licenza
 
-Visualizza la licenza corrente e lo stato di autenticazione.
+Visualizza lo stato attuale della licenza e dell&#x27;autenticazione.
 
 **Sintassi:**
 
@@ -209,13 +212,11 @@ chloros-cli export-status
 chloros-cli export-status
 ```
 
-**Caso d&#x27;uso:** richiamare questo comando durante l&#x27;esecuzione dell&#x27;elaborazione per controllare lo stato di avanzamento dell&#x27;esportazione.
-
-***
+**Caso d&#x27;uso:** richiamare questo comando durante l&#x27;esecuzione dell&#x27;elaborazione per controllare lo stato di avanzamento dell&#x27;esportazione.***
 
 ### `language` - Gestione della lingua dell&#x27;interfaccia
 
-Visualizza o modifica la lingua dell&#x27;interfaccia CLI.
+Visualizzare o modificare la lingua dell&#x27;interfaccia CLI.
 
 **Sintassi:**
 
@@ -290,14 +291,14 @@ chloros-cli language ja
 | `sl`    | Sloveno             | Slovenščina      |
 
 {% hint style=&quot;success&quot; %}
-**Persistenza automatica**: la lingua preferita viene salvata in `~/.chloros/cli_language.json` e rimane attiva per tutte le sessioni.
+**Persistenza automatica**: la lingua preferita viene salvata in `~/.chloros/cli_language.json` e rimane attiva in tutte le sessioni.
 {% endhint %}
 
 ***
 
 ### `set-project-folder` - Imposta cartella progetto predefinita
 
-Modifica la posizione predefinita della cartella del progetto (condivisa con GUI).
+Modifica la posizione della cartella progetto predefinita (condivisa con GUI).
 
 **Sintassi:**
 
@@ -313,9 +314,9 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Mostra cartella di progetto
+### `get-project-folder` - Mostra cartella del progetto
 
-Visualizza la posizione corrente della cartella di progetto predefinita.
+Visualizza la posizione corrente della cartella predefinita del progetto.
 
 **Sintassi:**
 
@@ -353,13 +354,13 @@ chloros-cli reset-project-folder
 
 Queste opzioni si applicano a tutti i comandi:
 
-| Opzione          | Tipo    | Predefinita       | Descrizione                                      |
+| Opzione          | Tipo    | Predefinito       | Descrizione                                      |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
 | `--backend-exe` | Percorso    | Rilevato automaticamente | Percorso dell&#x27;eseguibile backend                       |
 | `--port`        | Intero | 5000          | Numero porta backend API                          |
 | `--restart`     | Flag    | -             | Forza il riavvio del backend (termina i processi esistenti) |
-| `--version`     | Flag    | -             | Mostra le informazioni sulla versione e chiude                |
-| `--help`        | Flag    | -             | Mostra le informazioni di aiuto e chiude                   |
+| `--version`     | Flag    | -             | Mostra le informazioni sulla versione e esci                |
+| `--help`        | Flag    | -             | Mostra le informazioni di aiuto ed esci                   |
 
 **Esempio con opzioni globali:**
 
@@ -373,21 +374,17 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ### Elaborazione parallela
 
-Chloros+ CLI **adatta automaticamente** l&#x27;elaborazione parallela alle capacità del computer:
-
-**Come funziona:**
+Chloros+ CLI **adatta automaticamente**l&#x27;elaborazione parallela alle capacità del computer:**Come funziona:**
 
 * Rileva i core della CPU e la RAM
 * Assegna i worker: **2× core della CPU** (utilizza l&#x27;hyperthreading)
-* **Massimo: 16 worker paralleli** (per garantire la stabilità)
-
-**Livelli di sistema:**
+* **Massimo: 16 worker paralleli** (per garantire la stabilità)**Livelli di sistema:**
 
 | Tipo di sistema   | CPU        | RAM      | Worker  | Prestazioni     |
 | ------------- | ---------- | -------- | -------- | --------------- |
 | **High-End**  | 16+ core  | 32+ GB   | Fino a 16 | Velocità massima   |
 | **Fascia media** | 8-15 core | 16-31 GB | 8-16     | Velocità eccellente |
-| **Fascia bassa**   | 4-7 core  | 8-15 GB  | 4-8      | Velocità buona      |
+| **Fascia bassa**   | 4-7 core  | 8-15 GB  | 4-8      | Buona velocità      |
 
 {% hint style=&quot;success&quot; %}
 **Ottimizzazione automatica**: CLI rileva automaticamente le specifiche del sistema e configura l&#x27;elaborazione parallela ottimale. Non è necessaria alcuna configurazione manuale!
@@ -395,7 +392,7 @@ Chloros+ CLI **adatta automaticamente** l&#x27;elaborazione parallela alle capac
 
 ### Metodi Debayer
 
-CLI utilizza **Alta qualità (più veloce)** come algoritmo Debayer predefinito e consigliato:
+CLI utilizza **Alta qualità (più veloce)** come algoritmo debayer predefinito e consigliato:
 
 | Metodo                      | Qualità | Velocità | Descrizione                                 |
 | --------------------------- | ------- | ----- | ------------------------------------------- |
@@ -426,11 +423,11 @@ Converte i valori grezzi del sensore in percentuali di riflettanza standardizzat
 
 ### Correzioni PPK
 
-**Cosa fa:** applica correzioni cinematiche post-elaborate utilizzando i dati di registro DAQ-A-SD per una maggiore precisione GPS.
+**Cosa fa:** applica correzioni cinematiche post-elaborate utilizzando i dati di registro DAQ-A-SD per una maggiore precisione del GPS.
 
 * **Disabilitato per impostazione predefinita**
 * Utilizzare `--ppk` per abilitare
-* Richiede file .daq nella cartella del progetto dal sensore di luce MAPIR DAQ-A-SD.
+* Richiede file .daq nella cartella del progetto dal sensore di luce DAQ-A-SD MAPIR.
 
 ### Formati di output
 
@@ -584,6 +581,7 @@ if __name__ == '__main__':
 ### Esempio di struttura dell&#x27;output
 
 ```
+
 MyProject/
 ├── project.json                             # Project metadata
 ├── 2025_0203_193056_008.JPG                # Original JPG
@@ -600,7 +598,7 @@ Tempi di elaborazione tipici per 100 immagini (12 MP ciascuna):
 
 | Modalità              | Tempo      | Hardware                                     |
 | ----------------- | --------- | -------------------------------------------- |
-| **Modalità parallela** | 5-10 min  | i7/Ryzen 7, 16 GB di RAM, SSD (fino a 16 lavoratori) |
+| **Modalità parallela** | 5-10 min  | i7/Ryzen 7, 16 GB di RAM, SSD (fino a 16 worker) |
 | **Modalità parallela** | 10-15 min | i5/Ryzen 5, 8 GB di RAM, HDD (fino a 8 worker)   |
 
 {% hint style=&quot;info&quot; %}
@@ -641,11 +639,10 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 
 ***
 
-### Impossibile avviare il backend
-
-**Errore:**
+### Impossibile avviare il backend**Errore:**
 
 ```
+
 Backend failed to start within 30 seconds
 ```
 
@@ -667,11 +664,10 @@ chloros-cli --restart process "C:\Datasets\Field_A"
 
 ***
 
-### Problemi di licenza/autenticazione
-
-**Errore:**
+### Problemi di licenza/autenticazione**Errore:**
 
 ```
+
 Chloros+ license required for CLI access
 ```
 
@@ -694,11 +690,10 @@ chloros-cli status
 
 ***
 
-### Nessuna immagine trovata
-
-**Errore:**
+### Nessuna immagine trovata**Errore:**
 
 ```
+
 No images found in the specified folder
 ```
 
@@ -711,9 +706,7 @@ No images found in the specified folder
 
 ***
 
-### Elaborazione bloccata o in sospeso
-
-**Soluzioni:**
+### Elaborazione bloccata o in sospeso**Soluzioni:**
 
 1. Verificare lo spazio disponibile su disco (assicurarsi che sia sufficiente per l&#x27;output)
 2. Chiudere le altre applicazioni per liberare memoria
@@ -721,11 +714,10 @@ No images found in the specified folder
 
 ***
 
-### Porta già in uso
-
-**Errore:**
+### Porta già in uso**Errore:**
 
 ```
+
 Port 5000 is already in use
 ```
 
@@ -743,7 +735,7 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ### D: È necessaria una licenza per CLI?
 
-**R:** Sì! CLI richiede una **licenza Chloros+ a pagamento**.
+**R:**Sì! CLI richiede una**licenza Chloros+ a pagamento**.
 
 * ❌ Piano Standard (gratuito): CLI disabilitato
 * ✅ Piani Chloros+ (a pagamento): CLI completamente abilitato
@@ -752,9 +744,7 @@ Abbonati su: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pri
 
 ***
 
-### D: Posso utilizzare CLI su un server senza GUI?
-
-**R:** Sì! CLI funziona completamente senza interfaccia grafica. Requisiti:
+### D: Posso usare CLI su un server senza GUI?**R:** Sì! CLI funziona completamente senza interfaccia grafica. Requisiti:
 
 * Windows Server 2016 o versioni successive
 * Visual C++ Redistributable installato
@@ -763,9 +753,7 @@ Abbonati su: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pri
 
 ***
 
-### D: Dove vengono salvate le immagini elaborate?
-
-**R:** Per impostazione predefinita, le immagini elaborate vengono salvate nella **stessa cartella dell&#x27;input** nelle sottocartelle del modello di fotocamera (ad esempio, `Survey3N_RGN/`).
+### D: Dove vengono salvate le immagini elaborate?**R:**Per impostazione predefinita, le immagini elaborate vengono salvate nella**stessa cartella dell&#x27;input** nelle sottocartelle del modello di fotocamera (ad esempio, `Survey3N_RGN/`).
 
 Utilizzare l&#x27;opzione `-o` per specificare una cartella di output diversa:
 
@@ -775,15 +763,9 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### D: È possibile elaborare più cartelle contemporaneamente?
+### D: Posso elaborare più cartelle contemporaneamente?**A:** Non direttamente con un unico comando, ma è possibile utilizzare uno script per elaborare le cartelle in sequenza. Vedere la sezione [Automazione e scripting](CLI.md#automation--scripting).***
 
-**A:** Non direttamente con un unico comando, ma è possibile utilizzare uno script per elaborare le cartelle in sequenza. Vedere la sezione [Automazione e scripting](CLI.md#automation--scripting).
-
-***
-
-### D: Come posso salvare l&#x27;output di CLI in un file di log?
-
-**PowerShell:**
+### D: Come posso salvare l&#x27;output di CLI in un file di log?**PowerShell:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
@@ -797,27 +779,19 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 
 ***
 
-### D: Cosa succede se premo Ctrl+C durante l&#x27;elaborazione?
-
-**R:** CLI:
+### D: Cosa succede se premo Ctrl+C durante l&#x27;elaborazione?**R:** CLI:
 
 1. Interromperà l&#x27;elaborazione in modo corretto
 2. Chiuderà il backend
-3. Usciremo con il codice 130
+3. Uscira con il codice 130
 
 Le immagini parzialmente elaborate potrebbero rimanere nella cartella di output.
 
 ***
 
-### D: Posso automatizzare l&#x27;elaborazione di CLI?
+### D: Posso automatizzare l&#x27;elaborazione di CLI?**R:** Certamente! CLI è progettato per l&#x27;automazione. Vedere [Automazione e scripting](CLI.md#automation--scripting) per esempi di PowerShell, Batch e Python.***
 
-**R:** Certamente! CLI è progettato per l&#x27;automazione. Vedere [Automazione e scripting](CLI.md#automation--scripting) per esempi di PowerShell, Batch e Python.
-
-***
-
-### D: Come posso verificare la versione di CLI?
-
-**R:**
+### D: Come posso verificare la versione di CLI?**R:**
 
 ```powershell
 chloros-cli --version
@@ -826,6 +800,7 @@ chloros-cli --version
 **Output:**
 
 ```
+
 Chloros CLI 1.0.2
 ```
 
@@ -851,9 +826,7 @@ chloros-cli language --help
 
 * **E-mail**: info@mapir.camera
 * **Sito web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Prezzi**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
-
-***
+* **Prezzi**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***
 
 ## Esempi completi
 
@@ -880,7 +853,7 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Esempio 3: elaborazione rapida dell&#x27;anteprima
+### Esempio 3: elaborazione anteprima veloce
 
 8 bit PNG senza calibrazione per una rapida revisione:
 
@@ -895,7 +868,7 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ### Esempio 4: elaborazione con correzione PPK
 
-Applicazione delle correzioni PPK con riflettanza:
+Applicare correzioni PPK con riflettanza:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -907,7 +880,7 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ### Esempio 5: posizione di output personalizzata
 
-Elaborazione su un&#x27;unità diversa con formato specifico:
+Elaborare su un&#x27;unità diversa con formato specifico:
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^

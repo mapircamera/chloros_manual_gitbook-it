@@ -22,42 +22,35 @@ Esistono due modi principali per aggiungere immagini al progetto:
 
 Utilizzare questa opzione per importare singoli file immagine o una piccola selezione di file.
 
-1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** nella parte superiore del pannello File Browser.
-2. Passare alla cartella contenente le immagini.
-3. Selezionare uno o più file immagine (tenere premuto **Ctrl** per selezionare più file).
-4. Fare clic su **&quot;Apri&quot;** per importare i file selezionati.
+1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> nella parte superiore del pannello File Browser
+2. Passa alla cartella contenente le immagini
+3. Seleziona uno o più file immagine (tieni premuto **Ctrl** per selezionare più file)
+4. Fai clic su **&quot;Apri&quot;** per importare i file selezionati
 
-### Metodo 2: aggiunta di cartelle
+### Metodo 2: aggiungi cartella
 
-Utilizzare questa opzione per importare tutte le immagini da una cartella contemporaneamente.
+Utilizza questa opzione per importare tutte le immagini da una cartella contemporaneamente.
 
-1. Fare clic sul pulsante **&quot;Aggiungi cartella&quot;** nella parte superiore del pannello File Browser.
-2. Individuare e selezionare la cartella contenente le immagini della sessione di acquisizione.
-3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate da quella cartella.
-
-***
+1. Fare clic sul pulsante **&quot;Aggiungi cartella&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> nella parte superiore del pannello File Browser
+2. Individuare e selezionare la cartella contenente le immagini della sessione di acquisizione
+3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate da quella cartella***
 
 ## Informazioni sulla tabella File Browser
 
 Una volta importate, le immagini vengono visualizzate in una tabella con le seguenti colonne:
 
-### Miniatura
-
-* Piccola anteprima di ciascuna immagine
-* Fare clic sulla miniatura per visualizzare l&#x27;immagine completa nell&#x27;area di anteprima principale
-
 ### Nome file
 
-* Nome file originale della fotocamera
+* Nome file originale dalla fotocamera
 * Mantiene la convenzione di denominazione della fotocamera (ad esempio, IMG\_0001.RAW)
 
-### Data e ora
+### Timestamp
 
-* Data e ora di acquisizione dell&#x27;immagine
+* Data e ora in cui l&#x27;immagine è stata acquisita
 * Estratto dai metadati EXIF dell&#x27;immagine
 * Utilizzato per la sincronizzazione PPK e il rilevamento del target di calibrazione
 
-### Modello della fotocamera
+### Modello fotocamera
 
 * Configurazione della fotocamera e del filtro rilevata automaticamente
 * Esempi: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
@@ -66,8 +59,8 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 ### Colonna bersaglio (casella di controllo)
 
 * Selezionare questa casella per le immagini che contengono bersagli di calibrazione
-* Velocizza notevolmente il rilevamento dei bersagli durante l&#x27;elaborazione
-* Per ulteriori dettagli, consultare [Scelta delle immagini bersaglio](choosing-target-images.md)
+* Velocizza notevolmente il rilevamento dei target durante l&#x27;elaborazione
+* Per ulteriori dettagli, consultare [Scelta delle immagini target](choosing-target-images.md)
 
 ***
 
@@ -78,35 +71,31 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 Per rimuovere le immagini indesiderate dal progetto:
 
 1. Selezionare una o più immagini nella tabella del browser dei file
-2. Fare clic sul pulsante **&quot;Rimuovi selezionati&quot;**
-3. Confermare la rimozione (i file non vengono eliminati dal disco, ma solo rimossi dal progetto)
+2. Fare clic sul pulsante **&quot;Rimuovi selezionati&quot;** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> .
+3. Confermare la rimozione (i file non vengono eliminati dal disco, ma solo rimossi dal progetto).
 
 ### Ordinamento e filtraggio
 
-* **Ordina per colonna**: fare clic su qualsiasi intestazione di colonna per ordinare le immagini
-* **Ordinamento per data**: utile per organizzare sequenze di acquisizione cronologiche
-* **Filtro modello fotocamera**: raggruppa le immagini per tipo di fotocamera se si utilizzano più fotocamere
-
-***
+* **Ordina per colonna**: fare clic su qualsiasi intestazione di colonna per ordinare le immagini.
+* **Ordina per data**: utile per organizzare sequenze di acquisizione cronologiche.
+* **Filtro modello fotocamera**: raggruppa le immagini per tipo di fotocamera se si utilizzano più fotocamere***
 
 ## Anteprima immagine
 
 ### Visualizzazione dell&#x27;immagine completa
 
-Fare clic su una miniatura qualsiasi nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
+Fai clic su qualsiasi miniatura dell&#x27;immagine nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
 
-1. L&#x27;immagine viene visualizzata nel pannello di anteprima centrale
-2. Utilizzare i controlli di zoom per esaminare i dettagli dell&#x27;immagine
+1. L&#x27;immagine appare nel pannello di anteprima centrale
+2. Utilizza i controlli di zoom per esaminare i dettagli dell&#x27;immagine
 3. Passa da un&#x27;immagine all&#x27;altra utilizzando i tasti freccia
 
 ### Navigazione rapida
 
-* **Immagine precedente**: clicca sulla freccia sinistra o premi il tasto ←
-* **Immagine successiva**: clicca sulla freccia destra o premi il tasto →
-* **Zoom avanti/indietro**: utilizza la rotellina del mouse o i pulsanti di zoom
-* **Panoramica**: clicca e trascina sull&#x27;immagine quando è ingrandita
-
-***
+* **Immagine precedente**: fare clic sulla freccia sinistra o premere il tasto ←
+* **Immagine successiva**: fare clic sulla freccia destra o premere il tasto →
+* **Zoom avanti/indietro**: utilizzare la rotellina del mouse o i pulsanti di zoom
+* **Panoramica**: fare clic e trascinare sull&#x27;immagine quando è ingrandita***
 
 ## Gestione dei file duplicati
 
@@ -131,9 +120,7 @@ Se il progetto contiene immagini provenienti da più telecamere MAPIR:
 3. Il File Browser visualizza il modello della telecamera nella colonna Camera Model (Modello telecamera)
 4. L&#x27;elaborazione applica le impostazioni corrette per ogni tipo di telecamera
 
-**Esempio di scenario**: Survey3W RGN + Survey3N OCN configurazione a doppia fotocamera
-
-***
+**Esempio di scenario**: Survey3W RGN + Survey3N OCN configurazione a doppia fotocamera***
 
 ## Best practice
 
@@ -187,9 +174,7 @@ Se il progetto contiene immagini provenienti da più telecamere MAPIR:
 * Orologio della fotocamera non impostato correttamente
 * Dati EXIF rimossi da software esterno
 
-**Soluzione**: verificare che le impostazioni dell&#x27;ora della fotocamera fossero corrette durante l&#x27;acquisizione
-
-***
+**Soluzione**: verificare che le impostazioni dell&#x27;ora della fotocamera fossero corrette durante l&#x27;acquisizione***
 
 ## Passaggi successivi
 
@@ -198,7 +183,7 @@ Una volta importati i file:
 1. **Rivedere l&#x27;elenco dei file** - Assicurarsi che tutte le immagini siano state caricate correttamente
 2. **Controllare i modelli di fotocamera** - Verificare il corretto rilevamento della fotocamera
 3. **Contrassegnare le immagini di destinazione** - Vedere [Scelta delle immagini di destinazione](choosing-target-images.md)
-4. **Regolare le impostazioni** - Configurare le opzioni di elaborazione in [Impostazioni progetto](adjusting-project-settings.md)
+4. **Regolare le impostazioni** - Configurare le opzioni di elaborazione in [Impostazioni di progetto](adjusting-project-settings.md)
 5. **Avvia l&#x27;elaborazione** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
 
 Per informazioni dettagliate sulla configurazione del progetto, vedi [Modifica delle impostazioni del progetto](adjusting-project-settings.md).
