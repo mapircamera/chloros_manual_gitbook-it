@@ -88,7 +88,7 @@ La scheda Mappa supporta due fornitori di tessere per le immagini di sfondo dell
 
 È possibile scegliere il tipo di livello della mappa (da sinistra a destra):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terreno
 
 Mostra i profili altimetrici e le tessere della mappa con dettagli (strade, ecc.)
 

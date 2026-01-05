@@ -171,7 +171,7 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 
 {% suggerimento style=&quot;warning&quot; %}
 **Importante**: i pin di esposizione devono essere assegnati correttamente alle rispettive telecamere. Un&#x27;assegnazione errata comporterà dati di geolocalizzazione errati.
-{% fine suggerimento %}
+{% endhint %}
 
 ***
 

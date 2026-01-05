@@ -6,7 +6,7 @@ Il menu <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> consen
 
 Una volta effettuato l&#x27;accesso, verranno visualizzati i dettagli dell&#x27;account:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Login
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>## CLI Login
 
 Accedi con le tue credenziali Chloros+ per abilitare l&#x27;elaborazione CLI.
 
