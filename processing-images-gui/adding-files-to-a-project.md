@@ -1,6 +1,6 @@
 # Aggiunta di file a un progetto
 
-Una volta creato o aperto un progetto in Chloros, il passo successivo consiste nell&#x27;aggiungere le immagini multispettrali per avviare l&#x27;elaborazione. La scheda File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> semplifica l&#x27;importazione delle immagini e la gestione del set di dati.
+Una volta creato o aperto un progetto in Chloros, il passo successivo consiste nell&#x27;aggiungere le immagini multispettrali per avviare l&#x27;elaborazione. La scheda File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> consente di importare facilmente le immagini e gestire il set di dati.
 
 ## Accesso al File Browser
 
@@ -8,7 +8,7 @@ Una volta creato o aperto un progetto in Chloros, il passo successivo consiste n
 2. Fare clic sull&#x27;icona **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> nella barra laterale sinistra
 3. Il pannello File Browser visualizzerà l&#x27;elenco dei file del progetto
 
-{% suggerimento style=&quot;info&quot; %}
+{% hint style="info" %}
 **Tipi di file supportati**: Chloros supporta file immagine RAW+JPG e JPG provenienti da fotocamere MAPIR Survey3W e Survey3N. Si consiglia di utilizzare solo RAW+JPG.
 {% endhint %}
 
@@ -22,7 +22,7 @@ Esistono due modi principali per aggiungere immagini al progetto:
 
 Utilizzare questa opzione per importare singoli file immagine o una piccola selezione di file.
 
-1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> nella parte superiore del pannello File Browser
+1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> nella parte superiore del pannello Esplora file
 2. Passa alla cartella contenente le immagini
 3. Seleziona uno o più file immagine (tieni premuto **Ctrl** per selezionare più file)
 4. Fai clic su **&quot;Apri&quot;** per importare i file selezionati
@@ -33,7 +33,9 @@ Utilizza questa opzione per importare tutte le immagini da una cartella contempo
 
 1. Fare clic sul pulsante **&quot;Aggiungi cartella&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> nella parte superiore del pannello File Browser
 2. Individuare e selezionare la cartella contenente le immagini della sessione di acquisizione
-3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate da quella cartella***
+3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate da quella cartella
+
+***
 
 ## Informazioni sulla tabella File Browser
 
@@ -44,7 +46,7 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 * Nome file originale dalla fotocamera
 * Mantiene la convenzione di denominazione della fotocamera (ad esempio, IMG\_0001.RAW)
 
-### Timestamp
+### Data e ora
 
 * Data e ora in cui l&#x27;immagine è stata acquisita
 * Estratto dai metadati EXIF dell&#x27;immagine
@@ -54,13 +56,19 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 
 * Configurazione della fotocamera e del filtro rilevata automaticamente
 * Esempi: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
-* Utilizzato per applicare i profili di elaborazione corretti
+* Utilizzata per applicare i profili di elaborazione corretti
 
 ### Colonna bersaglio (casella di controllo)
 
-* Selezionare questa casella per le immagini che contengono bersagli di calibrazione
+* Selezionare questa casella per le immagini che contengono target di calibrazione
 * Velocizza notevolmente il rilevamento dei target durante l&#x27;elaborazione
 * Per ulteriori dettagli, consultare [Scelta delle immagini target](choosing-target-images.md)
+
+### Visualizzazione dei metadati delle immagini
+
+Facendo clic sul pulsante di attivazione/disattivazione nell&#x27;angolo in alto a destra sopra la tabella, vengono visualizzati i metadati dell&#x27;immagine selezionata nell&#x27;area della griglia delle immagini.
+
+<figure><img src="../.gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -78,24 +86,28 @@ Per rimuovere le immagini indesiderate dal progetto:
 
 * **Ordina per colonna**: fare clic su qualsiasi intestazione di colonna per ordinare le immagini.
 * **Ordina per data**: utile per organizzare sequenze di acquisizione cronologiche.
-* **Filtro modello fotocamera**: raggruppa le immagini per tipo di fotocamera se si utilizzano più fotocamere***
+* **Filtro modello fotocamera**: raggruppa le immagini per tipo di fotocamera se si utilizzano più fotocamere.
 
-## Anteprima immagine
+***
+
+## Anteprima dell&#x27;immagine
 
 ### Visualizzazione dell&#x27;immagine completa
 
-Fai clic su qualsiasi miniatura dell&#x27;immagine nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
+Fare clic su una qualsiasi delle miniature delle immagini nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
 
 1. L&#x27;immagine appare nel pannello di anteprima centrale
-2. Utilizza i controlli di zoom per esaminare i dettagli dell&#x27;immagine
-3. Passa da un&#x27;immagine all&#x27;altra utilizzando i tasti freccia
+2. Utilizzare i controlli di zoom per esaminare i dettagli dell&#x27;immagine
+3. Passare da un&#x27;immagine all&#x27;altra utilizzando i tasti freccia
 
 ### Navigazione rapida
 
 * **Immagine precedente**: fare clic sulla freccia sinistra o premere il tasto ←
 * **Immagine successiva**: fare clic sulla freccia destra o premere il tasto →
 * **Zoom avanti/indietro**: utilizzare la rotellina del mouse o i pulsanti di zoom
-* **Panoramica**: fare clic e trascinare sull&#x27;immagine quando è ingrandita***
+* **Panoramica**: fare clic e trascinare sull&#x27;immagine quando è ingrandita
+
+***
 
 ## Gestione dei file duplicati
 
@@ -105,34 +117,36 @@ Chloros rileva e ignora automaticamente i file duplicati:
 * Impedisce la doppia elaborazione accidentale
 * Viene visualizzato un messaggio di avviso quando vengono rilevati duplicati
 
-{% hint style=&quot;warning&quot; %}
+{% hint style="warning" %}
 **Importante**: non rinominare o modificare i file immagine originali prima dell&#x27;importazione. Chloros si basa sui nomi dei file originali e sui metadati per una corretta elaborazione.
 {% endhint %}
 
 ***
 
-## Set di dati misti delle telecamere
+## Set di dati misti delle fotocamere
 
-Se il progetto contiene immagini provenienti da più telecamere MAPIR:
+Se il progetto contiene immagini provenienti da più fotocamere MAPIR:
 
-1. Chloros rileva automaticamente ogni modello di telecamera
-2. Ogni tipo di telecamera viene elaborato con il profilo di calibrazione appropriato
-3. Il File Browser visualizza il modello della telecamera nella colonna Camera Model (Modello telecamera)
-4. L&#x27;elaborazione applica le impostazioni corrette per ogni tipo di telecamera
+1. Chloros rileva automaticamente ogni modello di fotocamera
+2. Ogni tipo di fotocamera viene elaborato con il profilo di calibrazione appropriato
+3. Il File Browser visualizza il modello di fotocamera nella colonna Camera Model
+4. L&#x27;elaborazione applica le impostazioni corrette per ogni tipo di fotocamera
 
-**Esempio di scenario**: Survey3W RGN + Survey3N OCN configurazione a doppia fotocamera***
+**Esempio di scenario**: Survey3W RGN + Survey3N OCN configurazione a doppia fotocamera
+
+***
 
 ## Best practice
 
-### Organizza prima dell&#x27;importazione
+### Organizzazione prima dell&#x27;importazione
 
-* Conservare le immagini dei target di calibrazione nella stessa cartella delle immagini del rilievo
-* Mantenere la struttura originale delle cartelle della fotocamera/scheda SD
+* Conservare le immagini target di calibrazione nella stessa cartella delle immagini di rilevamento
+* Mantenere la struttura originale delle cartelle dalla fotocamera/scheda SD
 * Non mescolare set di dati provenienti da sessioni diverse in un unico progetto
 
 ### Denominazione dei file
 
-* Conservare i nomi originali dei file della fotocamera (IMG\_0001.RAW, ecc.)
+* Conservare i nomi dei file originali della fotocamera (IMG\_0001.RAW, ecc.)
 * Non rinominare i file prima dell&#x27;importazione
 * I nomi originali contengono metadati importanti
 
@@ -174,7 +188,9 @@ Se il progetto contiene immagini provenienti da più telecamere MAPIR:
 * Orologio della fotocamera non impostato correttamente
 * Dati EXIF rimossi da software esterno
 
-**Soluzione**: verificare che le impostazioni dell&#x27;ora della fotocamera fossero corrette durante l&#x27;acquisizione***
+**Soluzione**: verificare che le impostazioni dell&#x27;ora della fotocamera fossero corrette durante l&#x27;acquisizione
+
+***
 
 ## Passaggi successivi
 

@@ -2,6 +2,8 @@
 
 La scheda Mappa visualizza le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Ciò fornisce una panoramica geografica della sessione di acquisizione e aiuta a visualizzare la copertura spaziale. È utile anche quando si importano le immagini per la prima volta, per rimuovere rapidamente quelle che non è necessario elaborare.
 
+<figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
+
 ## Accesso alla scheda Mappa
 
 1. Aprire o creare un progetto in Chloros.
@@ -9,19 +11,19 @@ La scheda Mappa visualizza le immagini su una mappa 2D interattiva in base alle 
 3. Fare clic sulla scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella barra laterale sinistra
 4. La mappa mostrerà dei marcatori in corrispondenza della posizione GPS di ciascuna immagine
 
-{% suggerimento style=&quot;info&quot; %}
-**GPS richiesto**: solo le immagini con coordinate GPS incorporate nei metadati EXIF appariranno sulla mappa. Assicurarsi che la fotocamera abbia il GPS abilitato durante la cattura.
+{% hint style="info" %}
+**GPS richiesto**: solo le immagini con coordinate GPS incorporate nei metadati EXIF appariranno sulla mappa. Assicurati che la tua fotocamera abbia il GPS abilitato durante la cattura.
 {% endhint %}
 
 ***
 
 ## Regolazione delle immagini dalla scheda Mappa
 
-La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha le stesse funzioni di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file della scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra anche lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
+La scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha le stesse funzioni di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file della scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra anche lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
 
 ### Nome file
 
-* Nome file originale dalla fotocamera
+* Nome file originale della fotocamera
 * Mantiene la convenzione di denominazione della fotocamera (ad es. IMG\_0001.RAW)
 
 ### Latitudine
@@ -36,7 +38,7 @@ La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size=
 
 * Altitudine dell&#x27;immagine
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 Cliccando sulle intestazioni delle colonne della tabella si ordinano anche i dati delle righe
 {% endhint %}
 
@@ -52,13 +54,13 @@ Ogni immagine con dati GPS è rappresentata da un indicatore sulla mappa:
 * Gli indicatori raggruppati possono essere raggruppati quando si riduce lo zoom
 * Ingrandisci per vedere le posizioni delle singole immagini
 
-{% suggerimento style=&quot;success&quot; %}
-SUPER-ZOOM: quando si raggiunge il livello di zoom massimo dal fornitore di mappe, la mappa viene ingrandita ulteriormente, consentendo di vedere i marcatori vicini tra loro.
+{% hint style="success" %}
+SUPER-ZOOM: quando raggiungi il livello di zoom massimo dal fornitore di mappe, la mappa viene ingrandita ulteriormente, consentendoti di vedere gli indicatori che sono vicini tra loro.
 {% endhint %}
 
 ### Anteprima al passaggio del mouse
 
-* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura dell&#x27;immagine
+* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura dell&#x27;immagine corrispondente
 * Ciò consente una rapida identificazione visiva senza uscire dalla visualizzazione della mappa
 * Utile per individuare immagini specifiche all&#x27;interno di una sessione di acquisizione di grandi dimensioni
 
@@ -66,21 +68,21 @@ SUPER-ZOOM: quando si raggiunge il livello di zoom massimo dal fornitore di mapp
 
 ## Fornitori di mappe
 
-{% hint style=&quot;success&quot; %}
-**Selezione automatica**: Chloros sceglie automaticamente il servizio di tessere che fornisce il miglior livello di zoom per la posizione corrente sulla mappa. Se lo desideri, puoi passare manualmente da un fornitore all&#x27;altro.
+{% hint style="success" %}
+**Selezione automatica**: Chloros sceglie automaticamente il servizio di tessere che fornisce il miglior livello di zoom per la posizione corrente sulla mappa. Se lo si desidera, è possibile passare manualmente da un fornitore all&#x27;altro.
 {% endhint %}
 
 La scheda Mappa supporta due fornitori di tessere per le immagini di sfondo della mappa:
 
 ### Google Maps
 
-* Immagini satellitari e cartografiche standard di Google.
-* Ideale per una copertura generale a livello mondiale.
+* Immagini satellitari e cartografiche standard di Google
+* Ideale per una copertura generale a livello mondiale
 
 ### ESRI
 
-* Immagini satellitari e aeree di ESRI ArcGIS.
-* Spesso fornisce immagini ad alta risoluzione in determinate regioni.
+* Immagini satellitari e aeree di ESRI ArcGIS
+* Spesso fornisce immagini ad alta risoluzione in determinate regioni
 
 ***
 
@@ -115,7 +117,9 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 
 ### Controlli di panoramica
 
-* **Panoramica**: fare clic e trascinare per spostarsi sulla mappa***
+* **Panoramica**: fare clic e trascinare per spostarsi sulla mappa
+
+***
 
 ## Casi d&#x27;uso
 

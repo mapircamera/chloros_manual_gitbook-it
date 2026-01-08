@@ -32,7 +32,7 @@ La parte più grande dello schermo mostra l&#x27;immagine:
 * **Risoluzione completa**: immagini visualizzate alla risoluzione nativa
 * **Zoomabile**: utilizzare i controlli o la rotellina del mouse per ingrandire
 * **Panoramica**: fare clic e trascinare per spostarsi quando si ingrandisce
-* **Proporzioni mantenute**: le immagini vengono ridimensionate in modo proporzionale
+* **Proporzioni mantenute**: le immagini vengono ridimensionate proporzionalmente
 
 ***
 
@@ -64,12 +64,6 @@ Regola l&#x27;ingrandimento per esaminare i dettagli dell&#x27;immagine:
 * Premi il tasto **−** (meno)
 * Scorri la rotellina del mouse **verso il basso**
 
-**Adatta allo schermo:**
-
-* Fare clic sul pulsante **↔** (Adatta)
-* Premere il tasto **0** (Zero)
-* Fare doppio clic sull&#x27;immagine
-
 #### Panoramica durante lo zoom
 
 Quando lo zoom supera le dimensioni dello schermo:
@@ -77,9 +71,9 @@ Quando lo zoom supera le dimensioni dello schermo:
 1. Spostare il cursore del mouse sull&#x27;immagine
 2. Fare clic e **tenere premuto il tasto sinistro del mouse**
 3. **Trascinare** per spostare l&#x27;immagine
-4. Rilasciare per interrompere lo spostamento
+4. Rilasciare per interrompere la panoramica
 
-**Alternativa**: utilizzare i tasti freccia per spostarsi con piccoli incrementi
+**Alternativa**: utilizzare i tasti freccia per eseguire una panoramica a piccoli incrementi
 
 ***
 
@@ -98,26 +92,28 @@ Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel ven
 
 ***
 
-## Tipi di immagini che è possibile visualizzare
+## Tipi di immagini visualizzabili
 
-### Immagini originali (pre-elaborazione)
+### JPG
 
-**Immagini RAW + JPG dalla fotocamera:**
+**Immagini JPG dalla fotocamera:**
 
-* Visualizza i dati RAW come anteprima
-* Mostra i valori originali non corretti
+* Visualizza i dati JPG come anteprima
+* Mostra i valori originali, non corretti
 * Utile per controllare la qualità dell&#x27;immagine prima dell&#x27;elaborazione
 
-### Immagini di riflettanza calibrate
+### RAW (originale)
+
+### RAW (riflettanza)
 
 **Dopo l&#x27;elaborazione:**
 
-* Vignettatura corretta
+* Vignetta corretta
 * Riflettanza calibrata
 * Multibanda TIFF (Red, Green, NIR, ecc.)
 * Dati scientifici pronti per l&#x27;analisi
 
-### Immagini indice
+### RAW (Indice)
 
 **NDVI, NDRE, GNDVI, ecc. (file \_NDVI.tif):**
 
@@ -149,31 +145,19 @@ Per istruzioni dettagliate, consultare [Index/LUT Sandbox](index-lut-sandbox.md)
 * **→** (freccia destra): immagine successiva
 * **←** (freccia sinistra): immagine precedente
 * **Home**: prima immagine dell&#x27;elenco
-* **Fine**: Ultima immagine nell&#x27;elenco
+* **Fine**: ultima immagine nell&#x27;elenco
 
 ### Zoom
 
-* **+** o **=**: Ingrandisci
-* **−**: Riduci
-* **0** (Zero): Adatta allo schermo
-* **Rotellina del mouse**: Ingrandisci/Riduci
-
-### Controlli di visualizzazione
-
-* **P**: Attiva/disattiva la modalità percentuale dei pixel
-* **L**: Attiva/disattiva il pannello dei livelli
-* **Esc**: Chiude la modalità a schermo intero o torna al File Browser
-
-### Altro
-
-* **Ctrl+S**: Salva l&#x27;immagine corrente
-* **F**: Modalità a schermo intero (se disponibile)
+* **+** o **=**: ingrandisci
+* **−**: rimpicciolisci
+* **Rotellina del mouse**: ingrandisci/rimpicciolisci
 
 ***
 
 ### Verifica dei calcoli dell&#x27;indice
 
-Verificare che gli indici siano stati calcolati correttamente:
+Verifica che gli indici siano stati calcolati correttamente:
 
 1. Aprire NDVI o un&#x27;altra immagine dell&#x27;indice
 2. Controllare le aree di vegetazione:
