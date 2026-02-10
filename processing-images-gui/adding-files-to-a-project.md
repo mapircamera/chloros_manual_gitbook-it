@@ -6,10 +6,10 @@ Una volta creato o aperto un progetto in Chloros, il passo successivo consiste n
 
 1. Aprire o creare un progetto in Chloros
 2. Fare clic sull&#x27;icona **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> nella barra laterale sinistra
-3. Il pannello File Browser visualizzerà l&#x27;elenco dei file del progetto
+3. Il pannello File Browser mostrerà l&#x27;elenco dei file del progetto
 
 {% hint style="info" %}
-**Tipi di file supportati**: Chloros supporta file immagine RAW+JPG e JPG provenienti da fotocamere MAPIR Survey3W e Survey3N. Si consiglia di utilizzare solo RAW+JPG.
+**Tipi di file supportati**: Chloros supporta file immagine RAW+JPG e JPG provenienti dalle fotocamere MAPIR Survey3W e Survey3N. Si consiglia di utilizzare solo RAW+JPG.
 {% endhint %}
 
 ***
@@ -22,7 +22,7 @@ Esistono due modi principali per aggiungere immagini al progetto:
 
 Utilizzare questa opzione per importare singoli file immagine o una piccola selezione di file.
 
-1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> nella parte superiore del pannello Esplora file
+1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> nella parte superiore del pannello File Browser
 2. Passa alla cartella contenente le immagini
 3. Seleziona uno o più file immagine (tieni premuto **Ctrl** per selezionare più file)
 4. Fai clic su **&quot;Apri&quot;** per importare i file selezionati
@@ -33,9 +33,7 @@ Utilizza questa opzione per importare tutte le immagini da una cartella contempo
 
 1. Fare clic sul pulsante **&quot;Aggiungi cartella&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> nella parte superiore del pannello File Browser
 2. Individuare e selezionare la cartella contenente le immagini della sessione di acquisizione
-3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate da quella cartella
-
-***
+3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate da quella cartella***
 
 ## Informazioni sulla tabella File Browser
 
@@ -58,7 +56,7 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 * Esempi: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
 * Utilizzata per applicare i profili di elaborazione corretti
 
-### Colonna bersaglio (casella di controllo)
+### Colonna Target (casella di controllo)
 
 * Selezionare questa casella per le immagini che contengono target di calibrazione
 * Velocizza notevolmente il rilevamento dei target durante l&#x27;elaborazione
@@ -86,28 +84,24 @@ Per rimuovere le immagini indesiderate dal progetto:
 
 * **Ordina per colonna**: fare clic su qualsiasi intestazione di colonna per ordinare le immagini.
 * **Ordina per data**: utile per organizzare sequenze di acquisizione cronologiche.
-* **Filtro modello fotocamera**: raggruppa le immagini per tipo di fotocamera se si utilizzano più fotocamere.
-
-***
+* **Filtro modello fotocamera**: raggruppa le immagini per tipo di fotocamera se si utilizzano più fotocamere.***
 
 ## Anteprima dell&#x27;immagine
 
 ### Visualizzazione dell&#x27;immagine completa
 
-Fare clic su una qualsiasi delle miniature delle immagini nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
+Fare clic su qualsiasi miniatura dell&#x27;immagine nel File Browser per visualizzarla nell&#x27;area di anteprima principale:
 
 1. L&#x27;immagine appare nel pannello di anteprima centrale
 2. Utilizzare i controlli di zoom per esaminare i dettagli dell&#x27;immagine
-3. Passare da un&#x27;immagine all&#x27;altra utilizzando i tasti freccia
+3. Navigare tra le immagini utilizzando i tasti freccia
 
 ### Navigazione rapida
 
 * **Immagine precedente**: fare clic sulla freccia sinistra o premere il tasto ←
 * **Immagine successiva**: fare clic sulla freccia destra o premere il tasto →
 * **Zoom avanti/indietro**: utilizzare la rotellina del mouse o i pulsanti di zoom
-* **Panoramica**: fare clic e trascinare sull&#x27;immagine quando è ingrandita
-
-***
+* **Panoramica**: fare clic e trascinare sull&#x27;immagine quando è ingrandita***
 
 ## Gestione dei file duplicati
 
@@ -129,24 +123,22 @@ Se il progetto contiene immagini provenienti da più fotocamere MAPIR:
 
 1. Chloros rileva automaticamente ogni modello di fotocamera
 2. Ogni tipo di fotocamera viene elaborato con il profilo di calibrazione appropriato
-3. Il File Browser visualizza il modello di fotocamera nella colonna Camera Model
-4. L&#x27;elaborazione applica le impostazioni corrette per ogni tipo di fotocamera
+3. Il File Browser visualizza il modello di fotocamera nella colonna Camera Model (Modello fotocamera)
+4. L&#x27;elaborazione applica le impostazioni corrette per ciascun tipo di fotocamera
 
-**Esempio di scenario**: Survey3W RGN + Survey3N OCN configurazione a doppia fotocamera
-
-***
+**Scenario di esempio**: Survey3W RGN + Survey3N OCN configurazione a doppia fotocamera***
 
 ## Best practice
 
 ### Organizzazione prima dell&#x27;importazione
 
 * Conservare le immagini target di calibrazione nella stessa cartella delle immagini di rilevamento
-* Mantenere la struttura originale delle cartelle dalla fotocamera/scheda SD
+* Mantenere la struttura originale delle cartelle della fotocamera/scheda SD
 * Non mescolare set di dati provenienti da sessioni diverse in un unico progetto
 
 ### Denominazione dei file
 
-* Conservare i nomi dei file originali della fotocamera (IMG\_0001.RAW, ecc.)
+* Conservare i nomi originali dei file della fotocamera (IMG\_0001.RAW, ecc.)
 * Non rinominare i file prima dell&#x27;importazione
 * I nomi originali contengono metadati importanti
 
@@ -188,15 +180,13 @@ Se il progetto contiene immagini provenienti da più fotocamere MAPIR:
 * Orologio della fotocamera non impostato correttamente
 * Dati EXIF rimossi da software esterno
 
-**Soluzione**: verificare che le impostazioni dell&#x27;ora della fotocamera fossero corrette durante l&#x27;acquisizione
-
-***
+**Soluzione**: verificare che le impostazioni dell&#x27;ora della fotocamera fossero corrette durante l&#x27;acquisizione***
 
 ## Passaggi successivi
 
 Una volta importati i file:
 
-1. **Rivedere l&#x27;elenco dei file** - Assicurarsi che tutte le immagini siano state caricate correttamente
+1. **Controllare l&#x27;elenco dei file** - Assicurarsi che tutte le immagini siano state caricate correttamente
 2. **Controllare i modelli di fotocamera** - Verificare il corretto rilevamento della fotocamera
 3. **Contrassegnare le immagini di destinazione** - Vedere [Scelta delle immagini di destinazione](choosing-target-images.md)
 4. **Regolare le impostazioni** - Configurare le opzioni di elaborazione in [Impostazioni di progetto](adjusting-project-settings.md)

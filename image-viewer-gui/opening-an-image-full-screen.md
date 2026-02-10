@@ -32,9 +32,7 @@ La parte più grande dello schermo mostra l&#x27;immagine:
 * **Risoluzione completa**: immagini visualizzate alla risoluzione nativa
 * **Zoomabile**: utilizzare i controlli o la rotellina del mouse per ingrandire
 * **Panoramica**: fare clic e trascinare per spostarsi quando si ingrandisce
-* **Proporzioni mantenute**: le immagini vengono ridimensionate proporzionalmente
-
-***
+* **Proporzioni mantenute**: le immagini vengono ridimensionate in modo proporzionale***
 
 ## Opzioni di visualizzazione
 
@@ -44,23 +42,18 @@ La parte più grande dello schermo mostra l&#x27;immagine:
 
 Navigare nella serie di immagini utilizzando le scorciatoie da tastiera o i pulsanti:
 
-* **Immagine successiva**: clicca sul pulsante → o premi il tasto **→** (freccia destra)
-* **Immagine precedente**: clicca sul pulsante ← o premi il tasto **←** (freccia sinistra)
+* **Immagine successiva**: clicca sul pulsante → o premi il tasto**→** (freccia destra)
+* **Immagine precedente**: clicca sul pulsante ← o premi il tasto**←** (freccia sinistra)
 * **Passa a un&#x27;immagine specifica**: torna al File Browser e clicca sulla miniatura desiderata
 
 #### Controlli di zoom
 
 Regola l&#x27;ingrandimento per esaminare i dettagli dell&#x27;immagine:
 
-**Ingrandisci:**
+**Ingrandisci:*** Fai clic sul pulsante **+** (più)
+* Premi il tasto **+**o**=*** Scorri la rotellina del mouse **verso l&#x27;alto**
 
-* Fai clic sul pulsante **+** (più)
-* Premi il tasto **+** o **=**
-* Scorri la rotellina del mouse **verso l&#x27;alto**
-
-**Riduci:**
-
-* Fai clic sul pulsante **−** (meno)
+**Riduci:*** Fai clic sul pulsante **−** (meno)
 * Premi il tasto **−** (meno)
 * Scorri la rotellina del mouse **verso il basso**
 
@@ -70,25 +63,17 @@ Quando lo zoom supera le dimensioni dello schermo:
 
 1. Spostare il cursore del mouse sull&#x27;immagine
 2. Fare clic e **tenere premuto il tasto sinistro del mouse**
-3. **Trascinare** per spostare l&#x27;immagine
+
+3.**Trascinare** per spostare l&#x27;immagine
 4. Rilasciare per interrompere la panoramica
 
-**Alternativa**: utilizzare i tasti freccia per eseguire una panoramica a piccoli incrementi
-
-***
+**Alternativa**: utilizzare i tasti freccia per eseguire una panoramica con piccoli incrementi***
 
 ## Ispezione del valore dei pixel
 
 ### Visualizzazione dei valori dei pixel al cursore
 
-Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel vengono visualizzati in tempo reale:
-
-**Posizione di visualizzazione del valore:**
-
-* **Numero fluttuante e linea rossa nella legenda del gradiente LUT dell&#x27;indice sul lato destro**
-* **Quando si ingrandisce ulteriormente, valore fluttuante vicino al cursore e pixel evidenziato**
-* Mostra i valori dei pixel **sotto il cursore o evidenziati**
-* Si aggiorna mentre si sposta il mouse
+Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel vengono visualizzati in tempo reale:**Posizione di visualizzazione del valore:*** **Numero fluttuante e linea rossa nella legenda del gradiente LUT dell&#x27;indice sul lato destro*** **Quando si ingrandisce ulteriormente, valore fluttuante vicino al cursore e pixel evidenziato*** Mostra i valori dei pixel **sotto il cursore o evidenziati*** Si aggiorna mentre si sposta il mouse
 
 ***
 
@@ -99,7 +84,7 @@ Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel ven
 **Immagini JPG dalla fotocamera:**
 
 * Visualizza i dati JPG come anteprima
-* Mostra i valori originali, non corretti
+* Mostra i valori originali non corretti
 * Utile per controllare la qualità dell&#x27;immagine prima dell&#x27;elaborazione
 
 ### RAW (originale)
@@ -108,7 +93,7 @@ Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel ven
 
 **Dopo l&#x27;elaborazione:**
 
-* Vignetta corretta
+* Vignettatura corretta
 * Riflettanza calibrata
 * Multibanda TIFF (Red, Green, NIR, ecc.)
 * Dati scientifici pronti per l&#x27;analisi
@@ -149,11 +134,9 @@ Per istruzioni dettagliate, consultare [Index/LUT Sandbox](index-lut-sandbox.md)
 
 ### Zoom
 
-* **+** o **=**: ingrandisci
+* **+**o**=**: ingrandisci
 * **−**: rimpicciolisci
-* **Rotellina del mouse**: ingrandisci/rimpicciolisci
-
-***
+* **Rotellina del mouse**: ingrandisci/rimpicciolisci***
 
 ### Verifica dei calcoli dell&#x27;indice
 
@@ -166,9 +149,7 @@ Verifica che gli indici siano stati calcolati correttamente:
    * **GNDVI**: simile a NDVI ma sensibile alla clorofilla
 3. Controllare le aree non vegetate:
    * **Suolo**: vicino a 0 o leggermente negativo
-   * **Acqua**: valori negativi (da -0,5 a 0)
-
-***
+   * **Acqua**: valori negativi (da -0,5 a 0)***
 
 ## Risoluzione dei problemi di visualizzazione
 

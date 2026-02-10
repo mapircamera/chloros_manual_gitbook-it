@@ -1,14 +1,14 @@
-# Regolazione delle impostazioni del progetto
+# Regolazione delle impostazioni di progetto
 
-Prima di elaborare le immagini, è importante configurare le impostazioni del progetto in modo che corrispondano ai requisiti del flusso di lavoro. Il pannello Impostazioni progetto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> offre un controllo completo su calibrazione, opzioni di elaborazione, indici multispettrali e formati di esportazione.
+Prima di elaborare le immagini, è importante configurare le impostazioni di progetto in modo che corrispondano ai requisiti del flusso di lavoro. Il pannello Impostazioni di progetto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> offre un controllo completo su calibrazione, opzioni di elaborazione, indici multispettrali e formati di esportazione.
 
 ## Accesso alle impostazioni del progetto
 
 1. Aprire il progetto in Chloros
 2. Fare clic sull&#x27;icona **Impostazioni del progetto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> nella barra laterale sinistra
-3. Il pannello Impostazioni del progetto mostra tutte le opzioni di configurazione
+3. Il pannello Impostazioni del progetto visualizza tutte le opzioni di configurazione
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **Le impostazioni vengono salvate automaticamente** con il progetto. Quando si riapre un progetto, tutte le impostazioni vengono ripristinate.
 {% endhint %}
 
@@ -18,11 +18,11 @@ Prima di elaborare le immagini, è importante configurare le impostazioni del pr
 
 ### Impostazioni predefinite (consigliate per la maggior parte degli utenti)
 
-Per i flussi di lavoro tipici della fotocamera MAPIR Survey3, le impostazioni predefinite funzionano bene:
+Per i flussi di lavoro tipici delle fotocamere MAPIR Survey3, le impostazioni predefinite funzionano bene:
 
 * ✅ **Correzione vignettatura**: Abilitata
-* ✅ **Calibrazione riflettanza**: Abilitata (richiede immagini di bersagli MAPIR)
-* ✅ **Metodo Debayer**: Alta qualità (più veloce)
+* ✅ **Calibrazione riflettanza**: Abilitata (richiede immagini di target MAPIR)
+* ✅ **Metodo Debayer**: Standard (veloce, qualità media)
 * ✅ **Formato di esportazione**: TIFF (16 bit)
 
 È sufficiente importare le immagini e avviare l&#x27;elaborazione con queste impostazioni predefinite.
@@ -31,63 +31,62 @@ Per i flussi di lavoro tipici della fotocamera MAPIR Survey3, le impostazioni pr
 
 ## Panoramica delle impostazioni di progetto
 
-Il pannello Impostazioni progetto è organizzato in diverse categorie. Di seguito è riportato un riepilogo di ciascuna sezione. Per la documentazione completa, vedere [Impostazioni progetto](../project-settings/project-settings.md).
+Il pannello Impostazioni di progetto è organizzato in diverse categorie. Di seguito è riportato un riepilogo di ciascuna sezione. Per la documentazione completa, vedere [Impostazioni di progetto](../project-settings/project-settings.md).
 
 ### Rilevamento target
 
 Controlla il modo in cui Chloros identifica i target di calibrazione nelle immagini.
 
-**Impostazioni chiave:**
-
-* **Area minima del campione di calibrazione**: soglia di dimensione per il rilevamento dei target (impostazione predefinita: 25 pixel)
-* **Clustering minimo dei target**: soglia di similarità per il raggruppamento delle regioni target (impostazione predefinita: 60)
-
-**Quando regolare:**
+**Impostazioni chiave:*** **Area minima del campione di calibrazione**: soglia di dimensione per il rilevamento dei target (impostazione predefinita: 25 pixel)
+* **Clustering minimo dei target**: soglia di similarità per il raggruppamento delle regioni target (impostazione predefinita: 60)**Quando regolare:**
 
 * Aumentare l&#x27;area del campione se si ottengono rilevamenti falsi
 * Diminuire se i target non vengono rilevati
-* Regolare il clustering se i target vengono suddivisi in più rilevamenti
+* Regolare il raggruppamento se i target vengono suddivisi in più rilevamenti
 
 ### Elaborazione
 
 Opzioni principali di elaborazione delle immagini e calibrazione.
 
-**Impostazioni chiave:**
-
-* **Correzione vignettatura**: compensa l&#x27;oscuramento dell&#x27;obiettivo ai bordi ✅ Consigliato
+**Impostazioni chiave:*** **Correzione vignettatura**: compensa l&#x27;oscuramento dell&#x27;obiettivo ai bordi ✅ Consigliato
 * **Calibrazione riflettanza**: normalizza i valori utilizzando i target di calibrazione ✅ Consigliato
 * **Metodo Debayer**: algoritmo per la conversione da RAW a multispettrale a 3 canali
-* **Intervallo minimo di ricalibrazione**: tempo tra l&#x27;utilizzo dei target di calibrazione (0 = usa tutti)
-
-**Impostazioni avanzate:**
-
-* **Offset fuso orario sensore di luce**: per la sincronizzazione temporale PPK (impostazione predefinita: 0)
+* **Intervallo minimo di ricalibrazione**: tempo tra l&#x27;utilizzo dei target di calibrazione (0 = utilizzare tutti)**Impostazioni avanzate:*** **Offset fuso orario sensore di luce**: per la sincronizzazione temporale PPK (impostazione predefinita: 0)
 * **Applica correzioni PPK**: utilizza i dati GPS/pin di esposizione dai file .daq
 * **Pin di esposizione 1/2**: assegna le fotocamere ai pin di esposizione per configurazioni a doppia fotocamera
 
+### Metodo Debayer
+
+Attualmente offriamo 2 metodi di debayering in Chloros:
+
+#### Standard (veloce, qualità media)
+
+Il debayer standard è veloce ma mostra rumore cromatico, con immagini meno accurate e più rumorose.
+
+#### Texture Aware (lento, massima qualità) \[Solo Chloros+]
+
+Texture Aware utilizza un debayer di alta qualità sensibile ai bordi combinato con un modello di denoising AI/ML che rimuove quasi tutto il rumore del debayer. Il modello Texture Aware richiede memoria GPU (VRAM) per funzionare. Si consiglia di utilizzarlo quando si dispone di &gt;4 GB di VRAM per un&#x27;elaborazione più veloce.
+
 ### Indice (indici multispettrali)
 
-Configura quali indici di vegetazione calcolare ed esportare.
+Configurare quali indici di vegetazione calcolare ed esportare.
 
 **Come aggiungere indici:**
 
-1. Fai clic sul pulsante **&quot;Aggiungi indice&quot;**
-2. Selezionare un indice dal menu a discesa (NDVI, NDRE, GNDVI, ecc.)
+1. Fare clic sul pulsante**&quot;Aggiungi indice&quot;**
+
+2. Selezionare un indice dal menu a tendina (NDVI, NDRE, GNDVI, ecc.)
 3. Configurare le impostazioni di visualizzazione (colori LUT, intervalli di valori)
 4. Aggiungere più indici secondo necessità
 
-**Indici popolari:**
-
-* **NDVI**: Stato di salute generale della vegetazione (il più comune)
+**Indici popolari:*** **NDVI**: Stato di salute generale della vegetazione (il più comune)
 * **NDRE**: Rilevamento precoce dello stress con RedEdge
 * **GNDVI**: Sensibile alla concentrazione di clorofilla
 * **OSAVI**: Funziona bene con il suolo visibile
-* **EVI**: Regioni con indice di area fogliare elevato (LAI)
-
-**Formule personalizzate (solo Chloros+):**
+* **EVI**: Regioni con indice di area fogliare elevato (LAI)**Formule personalizzate (solo Chloros+):**
 
 * Creazione di formule personalizzate per indici multispettrali
-* Utilizzo di calcoli matematici su tutte le bande dell&#x27;immagine
+* Utilizzo di calcoli matematici su banda con tutti i canali dell&#x27;immagine
 * Salvataggio di formule personalizzate per il riutilizzo
 
 Per tutti gli indici e le formule disponibili, vedere [Formule per indici multispettrali](../project-settings/multispectral-index-formulas.md).
@@ -96,14 +95,10 @@ Per tutti gli indici e le formule disponibili, vedere [Formule per indici multis
 
 Controlla il formato e la qualità del file di output.
 
-**Formati disponibili:**
-
-* **TIFF (16 bit)**: consigliato per GIS e analisi scientifiche (intervallo 0-65.535)
+**Formati disponibili:*** **TIFF (16 bit)**: consigliato per GIS e analisi scientifiche (intervallo 0-65.535)
 * **TIFF (32 bit, percentuale)**: valori di riflettanza in virgola mobile (intervallo 0,0-1,0)
 * **PNG (8 bit)**: compressione senza perdita di dati per la visualizzazione (intervallo 0-255)
-* **JPG (8 bit)**: file più piccoli, compressione con perdita di dati (intervallo 0-255)
-
-***
+* **JPG (8 bit)**: file più piccoli, compressione con perdita di dati (intervallo 0-255)***
 
 ## Salvataggio e caricamento delle impostazioni
 
@@ -128,6 +123,7 @@ Quando si crea un nuovo progetto:
 
 1. Selezionare **&quot;Nuovo progetto&quot;** dal menu principale
 2. Scegliere l&#x27;opzione **&quot;Carica da modello&quot;**
+
 3. Selezionare il modello salvato
 4. Tutte le impostazioni vengono applicate automaticamente
 
@@ -140,7 +136,7 @@ L&#x27;impostazione **&quot;Salva cartella progetto&quot;** specifica dove vengo
 * **Quando modificare**:
   * Unità di rete per la collaborazione in team
   * Unità diversa con più spazio di archiviazione
-  * Struttura di cartelle organizzata per anno/cliente
+  * Struttura delle cartelle organizzata per anno/cliente
 
 ***
 
@@ -150,7 +146,7 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 
 ### Prerequisiti
 
-* DAQ MAPIR con modulo GPS (GNSS)
+* MAPIR DAQ con modulo GPS (GNSS)
 * File di log .daq con voci dei pin di esposizione
 * Fotocamera collegata ai pin di esposizione DAQ durante la sessione di acquisizione
 
@@ -158,19 +154,16 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 
 1. Posizionare il file di log .daq nella cartella del progetto
 2. In Impostazioni progetto, abilitare la casella di controllo **&quot;Applica correzioni PPK&quot;**
-3. Impostare **&quot;Offset fuso orario sensore di luce&quot;** se necessario (impostazione predefinita: 0 per UTC)
+
+3. Impostare**&quot;Offset fuso orario sensore di luce&quot;** se necessario (impostazione predefinita: 0 per UTC)
 4. Assegnare le fotocamere ai pin di esposizione:
-   * **Fotocamera singola**: Assegnata automaticamente al pin 1
-   * **Doppia fotocamera**: assegnare manualmente ciascuna fotocamera al pin corretto
-
-**Assegnazione dei pin di esposizione:**
-
-* **Pin di esposizione 1**: selezionare il modello di fotocamera dal menu a tendina
+   * **Fotocamera singola**: assegnata automaticamente al pin 1
+   * **Fotocamere doppie**: assegnare manualmente ciascuna fotocamera al pin corretto**Assegnazione pin di esposizione:*** **Pin di esposizione 1**: selezionare il modello di fotocamera dal menu a tendina
 * **Pin di esposizione 2**: selezionare la seconda fotocamera o &quot;Non utilizzare&quot;
 * La stessa fotocamera non può essere assegnata a entrambi i pin
 
-{% suggerimento style=&quot;warning&quot; %}
-**Importante**: i pin di esposizione devono essere assegnati correttamente alle rispettive telecamere. Un&#x27;assegnazione errata comporterà dati di geolocalizzazione errati.
+{% hint style="warning" %}
+**Importante**: i pin di esposizione devono essere assegnati correttamente alle rispettive fotocamere. Un&#x27;assegnazione errata comporterà dati di geolocalizzazione errati.
 {% endhint %}
 
 ***
@@ -181,9 +174,9 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 
 Quando si elaborano immagini provenienti da più fotocamere MAPIR in un unico progetto:
 
-1. Chloros rileva automaticamente il modello di ciascuna fotocamera
-2. A ciascuna fotocamera viene assegnato il profilo di elaborazione appropriato
-3. PPK: assegnare manualmente a ciascuna fotocamera il pin di esposizione corretto
+1. Chloros rileva automaticamente ogni modello di fotocamera
+2. Ogni fotocamera ottiene il profilo di elaborazione appropriato
+3. PPK: assegnare manualmente ciascuna fotocamera al pin di esposizione corretto
 4. Tutte le fotocamere utilizzano lo stesso formato di esportazione e gli stessi indici
 
 **Esempio**: Survey3W RGN + Survey3N OCN doppio supporto per fotocamera
@@ -213,7 +206,7 @@ Per progetti con molte immagini (oltre 500):
 
 Prima di iniziare l&#x27;elaborazione, controlla queste impostazioni chiave:
 
-* [ ] Modello di fotocamera rilevato correttamente nel File Browser
+* [ ] Modello della fotocamera rilevato correttamente nel File Browser
 * [ ] Correzione vignetta abilitata
 * [ ] Calibrazione riflettanza abilitata
 * [ ] Importata almeno un&#x27;immagine target di calibrazione

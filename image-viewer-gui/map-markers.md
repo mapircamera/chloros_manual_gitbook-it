@@ -6,20 +6,20 @@ La scheda Mappa visualizza le immagini su una mappa 2D interattiva in base alle 
 
 ## Accesso alla scheda Mappa
 
-1. Aprire o creare un progetto in Chloros.
-2. Importare le immagini che contengono metadati GPS.
+1. Aprire o creare un progetto in Chloros
+2. Importare le immagini che contengono metadati GPS
 3. Fare clic sulla scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella barra laterale sinistra
 4. La mappa mostrerà dei marcatori in corrispondenza della posizione GPS di ciascuna immagine
 
 {% hint style="info" %}
-**GPS richiesto**: solo le immagini con coordinate GPS incorporate nei metadati EXIF appariranno sulla mappa. Assicurati che la tua fotocamera abbia il GPS abilitato durante la cattura.
+**GPS richiesto**: sulla mappa appariranno solo le immagini con coordinate GPS incorporate nei metadati EXIF. Assicurarsi che la fotocamera abbia il GPS abilitato durante la cattura.
 {% endhint %}
 
 ***
 
 ## Regolazione delle immagini dalla scheda Mappa
 
-La scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha le stesse funzioni di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file della scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra anche lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
+La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha le stesse funzioni di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file della scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra anche lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
 
 ### Nome file
 
@@ -60,7 +60,7 @@ SUPER-ZOOM: quando raggiungi il livello di zoom massimo dal fornitore di mappe, 
 
 ### Anteprima al passaggio del mouse
 
-* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura dell&#x27;immagine corrispondente
+* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura dell&#x27;immagine
 * Ciò consente una rapida identificazione visiva senza uscire dalla visualizzazione della mappa
 * Utile per individuare immagini specifiche all&#x27;interno di una sessione di acquisizione di grandi dimensioni
 
@@ -86,11 +86,11 @@ La scheda Mappa supporta due fornitori di tessere per le immagini di sfondo dell
 
 ***
 
-## Tipi di tessere della mappa
+## Tipi di tessere cartografiche
 
 È possibile scegliere il tipo di livello della mappa (da sinistra a destra):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terreno
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
 
 Mostra i profili altimetrici e le tessere della mappa con dettagli (strade, ecc.)
 
@@ -117,9 +117,7 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 
 ### Controlli di panoramica
 
-* **Panoramica**: fare clic e trascinare per spostarsi sulla mappa
-
-***
+* **Panoramica**: fare clic e trascinare per spostarsi sulla mappa***
 
 ## Casi d&#x27;uso
 
@@ -160,6 +158,6 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 **Possibili cause:**
 
 * Il GPS della fotocamera aveva una scarsa ricezione satellitare
-* Deriva del GPS durante l&#x27;acquisizione
+* Deriva GPS durante l&#x27;acquisizione
 
 **Soluzione**: si tratta in genere di un problema legato al momento dell&#x27;acquisizione; valutare l&#x27;utilizzo del GPS PPK/RTK per applicazioni di precisione

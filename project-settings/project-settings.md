@@ -46,23 +46,24 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 
 * **Tipo**: Casella di controllo
 * **Impostazione predefinita**: Abilitata (selezionata)
-* **Descrizione**: Applica la correzione della vignettatura per compensare l&#x27;oscuramento dell&#x27;obiettivo ai bordi delle immagini. La vignettatura è un fenomeno ottico comune in cui gli angoli e i bordi di un&#x27;immagine appaiono più scuri rispetto al centro a causa delle caratteristiche dell&#x27;obiettivo.
-* **Quando disabilitare**: disabilitare solo se la combinazione fotocamera/obiettivo ha già applicato la correzione della vignettatura o se si desidera correggere manualmente la vignettatura in post-elaborazione.
+* **Descrizione**: applica la correzione della vignettatura per compensare l&#x27;oscuramento dell&#x27;obiettivo ai bordi delle immagini. La vignettatura è un fenomeno ottico comune in cui gli angoli e i bordi di un&#x27;immagine appaiono più scuri rispetto al centro a causa delle caratteristiche dell&#x27;obiettivo.
+* **Quando disattivare**: disattivare solo se la combinazione fotocamera/obiettivo ha già applicato la correzione della vignettatura o se si desidera correggere manualmente la vignettatura in post-elaborazione.
 
 ### Calibrazione della riflettanza / bilanciamento del bianco
 
-* **Tipo**: casella di controllo
-* **Impostazione predefinita**: Abilitato (selezionato)
-* **Descrizione**: abilita la calibrazione automatica della riflettanza utilizzando i target di calibrazione rilevati nelle immagini. Questo normalizza i valori di riflettanza in tutto il set di dati e garantisce misurazioni coerenti indipendentemente dalle condizioni di illuminazione.
-* **Quando disabilitare**: disabilitare solo se si desidera elaborare immagini raw non calibrate o se si utilizza un flusso di lavoro di calibrazione diverso.
+* **Tipo**: Casella di controllo
+* **Impostazione predefinita**: Abilitata (selezionata)
+* **Descrizione**: Abilita la calibrazione automatica della riflettanza utilizzando i target di calibrazione rilevati nelle immagini. Questo normalizza i valori di riflettanza in tutto il set di dati e garantisce misurazioni coerenti indipendentemente dalle condizioni di illuminazione.
+* **Quando disattivare**: disattivare solo se si desidera elaborare immagini raw non calibrate o se si utilizza un flusso di lavoro di calibrazione diverso.
 
 ### Metodo Debayer
 
 * **Tipo**: selezione a discesa
 * **Opzioni**:
-  * Alta qualità (più veloce) - Attualmente l&#x27;unica opzione disponibile
-* **Impostazione predefinita**: Alta qualità (più veloce)
-* **Descrizione**: Seleziona l&#x27;algoritmo di demosaicing utilizzato per convertire i dati grezzi del sensore con pattern Bayer in immagini a colori. Il metodo &quot;Alta qualità (più veloce)&quot; offre un equilibrio ottimale tra velocità di elaborazione e qualità dell&#x27;immagine.
+* Standard (veloce, qualità media)
+  * Texture Aware (Lento, massima qualità) \[Chloros+]
+* **Predefinito**: Standard (veloce, qualità media)
+* **Descrizione**: Seleziona l&#x27;algoritmo di demosaicing utilizzato per convertire i dati grezzi del sensore con pattern Bayer in immagini a colori. Il metodo &quot;Standard (veloce, qualità media)&quot; offre un equilibrio ottimale tra velocità di elaborazione e qualità dell&#x27;immagine. Il metodo &quot;Sensibile alla trama (lento, massima qualità)&quot; \[Chloros+] utilizza un debayer sensibile ai bordi di alta qualità combinato con un modello di denoising AI/ML che rimuove quasi tutto il rumore di debayering. Il modello sensibile alla trama richiede memoria GPU (VRAM) per funzionare. Si consiglia di utilizzarlo quando si dispone di &gt;4 GB di VRAM per un&#x27;elaborazione più veloce.
 * **Nota**: nelle versioni future di Chloros potrebbero essere aggiunti ulteriori metodi di debayer.
 
 ### Intervallo minimo di ricalibrazione
@@ -90,7 +91,7 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 
 * **Tipo**: Casella di controllo
 * **Impostazione predefinita**: Disabilitato (deselezionato)
-* **Descrizione**: Abilita l&#x27;uso delle correzioni cinematiche post-elaborate (PPK) dai registratori DAQ MAPIR contenenti un GPS (GNSS). Quando è abilitato, Chloros utilizzerà tutti i file di log .daq contenenti dati relativi ai pin di esposizione nella directory del progetto e applicherà correzioni di geolocalizzazione precise alle immagini.
+* **Descrizione**: Abilita l&#x27;uso delle correzioni cinematiche post-elaborate (PPK) dai registratori DAQ MAPIR contenenti un GPS (GNSS). Quando è abilitato, Chloros utilizzerà tutti i file di log .daq contenenti dati sui pin di esposizione nella directory del progetto e applicherà correzioni di geolocalizzazione precise alle immagini.
 * **Requisiti**: nella directory del progetto deve essere presente un file di log .daq con voci relative ai pin di esposizione
 * **Quando abilitare**: si consiglia di abilitare sempre la correzione PPK se nel file di log .daq sono presenti voci relative al feedback di esposizione.
 
@@ -102,10 +103,10 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
   * Nomi dei modelli di fotocamera rilevati nel progetto
   * &quot;Non utilizzare&quot; - Ignora questo pin di esposizione
 * **Impostazione predefinita**: selezionato automaticamente in base alla configurazione del progetto
-* **Descrizione**: assegna una fotocamera specifica al Pin di esposizione 1 per la sincronizzazione temporale PPK. Il pin di esposizione registra il momento esatto in cui viene attivato l&#x27;otturatore della fotocamera, fondamentale per una geolocalizzazione PPK accurata.
+* **Descrizione**: assegna una fotocamera specifica al pin di esposizione 1 per la sincronizzazione temporale PPK. Il pin di esposizione registra il momento esatto in cui viene attivato l&#x27;otturatore della fotocamera, fondamentale per una geolocalizzazione PPK accurata.
 * **Comportamento di selezione automatica**:
   * Fotocamera singola + pin singolo: seleziona automaticamente la fotocamera
-  * Fotocamera singola + due pin: il Pin 1 viene assegnato automaticamente alla fotocamera
+  * Fotocamera singola + due pin: il pin 1 viene assegnato automaticamente alla fotocamera
   * Telecamere multiple: selezione manuale richiesta
 
 ### Pin di esposizione 2
@@ -115,15 +116,13 @@ Queste impostazioni controllano il modo in cui Chloros elabora e calibra le imma
 * **Opzioni**:
   * Nomi dei modelli di telecamera rilevati nel progetto
   * &quot;Non utilizzare&quot; - Ignora questo pin di esposizione
-* **Predefinito**: selezionato automaticamente in base alla configurazione del progetto
-* **Descrizione**: assegna una fotocamera specifica al Pin di esposizione 2 per la sincronizzazione temporale PPK quando si utilizza una configurazione a doppia fotocamera.
+* **Impostazione predefinita**: selezionata automaticamente in base alla configurazione del progetto
+* **Descrizione**: assegna una fotocamera specifica al pin di esposizione 2 per la sincronizzazione temporale PPK quando si utilizza una configurazione a doppia fotocamera.
 * **Comportamento di selezione automatica**:
-  * Fotocamera singola + pin singolo: il Pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
+  * Fotocamera singola + pin singolo: il pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
   * Fotocamera singola + due pin: il pin 2 viene automaticamente impostato su &quot;Non utilizzare&quot;
   * Fotocamere multiple: è necessaria la selezione manuale
-* **Nota**: la stessa fotocamera non può essere assegnata contemporaneamente al pin 1 e al pin 2.
-
-***
+* **Nota**: la stessa fotocamera non può essere assegnata contemporaneamente al pin 1 e al pin 2.***
 
 ## Indice
 
@@ -131,21 +130,21 @@ Queste impostazioni consentono di configurare gli indici multispettrali per l&#x
 
 ### Aggiungi indice
 
-* **Tipo**: pannello di configurazione indici speciali
+* **Tipo**: pannello di configurazione indice speciale
 * **Descrizione**: apre un pannello interattivo in cui è possibile selezionare e configurare gli indici multispettrali della vegetazione (NDVI, NDRE, EVI, ecc.) da calcolare durante l&#x27;elaborazione delle immagini. È possibile aggiungere più indici, ciascuno con le proprie impostazioni di visualizzazione.
 * **Indici disponibili**: il sistema include oltre 30 indici multispettrali predefiniti, tra cui:
   * NDVI (Indice di vegetazione normalizzato)
   * NDRE (Differenza normalizzata RedEdge)
   * EVI (Indice di vegetazione potenziato)
   * GNDVI, SAVI, OSAVI, MSAVI2
-  * E molti altri (vedere [Formule indice multispettrale](multispectral-index-formulas.md) per l&#x27;elenco completo)
+  * E molti altri (vedere [Formule indici multispettrali](multispectral-index-formulas.md) per l&#x27;elenco completo)
 * **Caratteristiche**:
-  * Selezionare tra formule indice predefinite
-  * Configurare gradienti di colore di visualizzazione (LUT - Look-Up Tables)
-  * Impostare valori soglia per l&#x27;analisi
-  * Creare formule indice personalizzate
+  * Seleziona tra formule di indice predefinite
+  * Configura le sfumature di colore della visualizzazione (LUT - Look-Up Tables)
+  * Imposta i valori di soglia per l&#x27;analisi
+  * Crea formule di indice personalizzate
 
-### Formule personalizzate (funzionalità Chloros+)
+### Formule personalizzate (Funzionalità Chloros+)
 
 * **Tipo**: Matrice di definizioni di formule personalizzate
 * **Descrizione**: Consente di creare e salvare formule di indici multispettrali personalizzate utilizzando la matematica delle bande. Le formule personalizzate vengono salvate con le impostazioni del progetto e possono essere utilizzate proprio come gli indici integrati.
@@ -175,12 +174,10 @@ Queste impostazioni controllano il formato e la qualità delle immagini elaborat
 * **Predefinito**: TIFF (16 bit)
 * **Descrizione**: seleziona il formato file per il salvataggio delle immagini elaborate e calibrate.
 * **Formati consigliati**:
-  * **TIFF (16 bit)**: consigliato per analisi scientifiche e flussi di lavoro professionali. Conserva la massima qualità dei dati senza artefatti di compressione. Ideale per analisi multispettrali e ulteriori elaborazioni in software GIS.
-  * **TIFF (32 bit, percentuale)**: ideale per flussi di lavoro che richiedono valori di riflettanza in percentuale (0-100%). Offre la massima precisione per le misurazioni radiometriche.
-  * **PNG (8 bit)**: ideale per la visualizzazione sul web e la visualizzazione generale. File di dimensioni inferiori con compressione senza perdita di dati, ma con una gamma dinamica ridotta.
-  * **JPG (8 bit)**: file di dimensioni minime, ideale solo per anteprime e visualizzazione sul web. Utilizza una compressione con perdita di dati che non è adatta all&#x27;analisi scientifica.
-
-***
+  * **TIFF (16 bit)**: Consigliato per analisi scientifiche e flussi di lavoro professionali. Preserva la massima qualità dei dati senza artefatti di compressione. Ideale per analisi multispettrali e ulteriori elaborazioni in software GIS.
+  * **TIFF (32 bit, percentuale)**: Ideale per flussi di lavoro che richiedono valori di riflettanza in percentuale (0-100%). Offre la massima precisione per le misurazioni radiometriche.
+  * **PNG (8 bit)**: Adatto per la visualizzazione sul web e la visualizzazione generale. File di dimensioni inferiori con compressione senza perdita di dati, ma gamma dinamica ridotta.
+  * **JPG (8 bit)**: File di dimensioni minime, ideale solo per anteprime e visualizzazione sul web. Utilizza una compressione con perdita di dati che non è adatta all&#x27;analisi scientifica.***
 
 ## Salva modello di progetto
 
@@ -192,7 +189,7 @@ Questa funzione consente di salvare le impostazioni del progetto corrente come m
   * Creare modelli per diversi sistemi di telecamere (RGB, multispettrale, NIR)
   * Salvare configurazioni standard per tipi di colture specifici o flussi di lavoro di analisi
   * Condividere impostazioni coerenti all&#x27;interno di un team
-* **Come si usa**:
+* **Come utilizzare**:
   1. Configurare tutte le impostazioni desiderate per il progetto
   2. Inserire un nome per il modello (ad esempio, &quot;RedEdge Survey3 NDVI Standard&quot;)
   3. Fare clic sull&#x27;icona di salvataggio
@@ -211,13 +208,11 @@ Questa impostazione specifica dove vengono salvati i nuovi progetti per impostaz
   * Impostare su un&#x27;unità di rete per la collaborazione in team
   * Passare a un&#x27;unità con più spazio di archiviazione per set di dati di grandi dimensioni
   * Organizzare i progetti per anno, cliente o tipo di progetto in cartelle diverse
-* **Nota**: la modifica di questa impostazione ha effetto solo sui NUOVI progetti. I progetti esistenti rimangono nella loro posizione originale.
-
-***
+* **Nota**: la modifica di questa impostazione ha effetto solo sui NUOVI progetti. I progetti esistenti rimangono nella loro posizione originale.***
 
 ## Persistenza delle impostazioni
 
-Tutte le impostazioni del progetto vengono salvate automaticamente con il file di progetto (formato di progetto `.mapir`). Quando riapri un progetto, tutte le impostazioni vengono ripristinate esattamente come le hai lasciate.
+Tutte le impostazioni del progetto vengono salvate automaticamente con il file di progetto (formato di progetto `.mapir`). Quando si riapre un progetto, tutte le impostazioni vengono ripristinate esattamente come erano state lasciate.
 
 ### Gerarchia delle impostazioni
 
@@ -230,7 +225,7 @@ Le impostazioni vengono applicate nel seguente ordine:
 
 ### Impostazioni ed elaborazione delle immagini
 
-La maggior parte delle modifiche alle impostazioni (in particolare nelle categorie Elaborazione ed Esportazione) attiverà una rielaborazione delle immagini per riflettere le nuove impostazioni. Tuttavia, alcune impostazioni sono &quot;solo per l&#x27;esportazione&quot; e non richiedono una rielaborazione immediata:
+La maggior parte delle modifiche alle impostazioni (in particolare nelle categorie Elaborazione ed Esportazione) attiverà una rielaborazione delle immagini per riflettere le nuove impostazioni. Tuttavia, alcune impostazioni sono &quot;solo esportazione&quot; e non richiedono una rielaborazione immediata:
 
 * Salva modello di progetto
 * Directory di lavoro
