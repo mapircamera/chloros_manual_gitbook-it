@@ -1,25 +1,25 @@
 # Indicatori sulla mappa
 
-La scheda Mappa visualizza le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Ciò fornisce una panoramica geografica della sessione di acquisizione e aiuta a visualizzare la copertura spaziale. È utile anche quando si importano le immagini per la prima volta, per rimuovere rapidamente quelle che non è necessario elaborare.
+La scheda Mappa visualizza le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Ciò fornisce una panoramica geografica della sessione di acquisizione e aiuta a visualizzare la copertura spaziale. È utile anche al momento della prima importazione delle immagini per eliminare rapidamente quelle che non è necessario elaborare.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
-## Accesso alla scheda Mappa
+## Come accedere alla scheda Mappa
 
-1. Aprire o creare un progetto in Chloros
-2. Importare le immagini che contengono metadati GPS
-3. Fare clic sulla scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella barra laterale sinistra
-4. La mappa mostrerà dei marcatori in corrispondenza della posizione GPS di ciascuna immagine
+1. Apri o crea un progetto in Chloros
+2. Importa le immagini che contengono metadati GPS
+3. Clicca sulla scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella barra laterale sinistra
+4. La mappa mostrerà degli indicatori in corrispondenza della posizione GPS di ciascuna immagine
 
 {% hint style="info" %}
-**GPS richiesto**: sulla mappa appariranno solo le immagini con coordinate GPS incorporate nei metadati EXIF. Assicurarsi che la fotocamera abbia il GPS abilitato durante la cattura.
+**GPS richiesto**: sulla mappa appariranno solo le immagini con coordinate GPS incorporate nei metadati EXIF. Assicurati che la tua fotocamera abbia il GPS abilitato durante l&#x27;acquisizione.
 {% endhint %}
 
 ***
 
 ## Regolazione delle immagini dalla scheda Mappa
 
-La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha le stesse funzioni di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file della scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra anche lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
+La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha lo stesso pulsante di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  come la scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra inoltre lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
 
 ### Nome file
 
@@ -36,7 +36,7 @@ La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size=
 
 ### Altitudine
 
-* Altitudine dell&#x27;immagine
+* L&#x27;altitudine dell&#x27;immagine
 
 {% hint style="info" %}
 Cliccando sulle intestazioni delle colonne della tabella si ordinano anche i dati delle righe
@@ -50,26 +50,26 @@ Ogni immagine con dati GPS è rappresentata da un indicatore sulla mappa:
 
 ### Visualizzazione degli indicatori
 
-* Gli indicatori indicano le coordinate GPS esatte in cui è stata scattata ciascuna immagine
-* Gli indicatori raggruppati possono essere raggruppati quando si riduce lo zoom
+* I marcatori indicano le coordinate GPS esatte in cui è stata scattata ciascuna immagine
+* I marcatori raggruppati possono unirsi quando si riduce lo zoom
 * Ingrandisci per vedere le posizioni delle singole immagini
 
 {% hint style="success" %}
-SUPER-ZOOM: quando raggiungi il livello di zoom massimo dal fornitore di mappe, la mappa viene ingrandita ulteriormente, consentendoti di vedere gli indicatori che sono vicini tra loro.
+SUPER-ZOOM: Quando raggiungi il livello massimo di zoom dal fornitore di tessere della mappa, la tessera viene ingrandita ulteriormente, permettendoti di vedere i marcatori che sono vicini tra loro.
 {% endhint %}
 
 ### Anteprima al passaggio del mouse
 
-* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura dell&#x27;immagine
-* Ciò consente una rapida identificazione visiva senza uscire dalla visualizzazione della mappa
+* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura di quell&#x27;immagine
+* Ciò consente una rapida identificazione visiva senza uscire dalla vista della mappa
 * Utile per individuare immagini specifiche all&#x27;interno di una sessione di acquisizione di grandi dimensioni
 
 ***
 
-## Fornitori di mappe
+## Fornitori di tessere cartografiche
 
 {% hint style="success" %}
-**Selezione automatica**: Chloros sceglie automaticamente il servizio di tessere che fornisce il miglior livello di zoom per la posizione corrente sulla mappa. Se lo si desidera, è possibile passare manualmente da un fornitore all&#x27;altro.
+**Selezione automatica**: Chloros sceglie automaticamente il servizio di tessere che fornisce il miglior livello di zoom per la posizione corrente sulla mappa. Se lo desideri, puoi passare manualmente da un fornitore all&#x27;altro.
 {% endhint %}
 
 La scheda Mappa supporta due fornitori di tessere per le immagini di sfondo della mappa:
@@ -77,30 +77,30 @@ La scheda Mappa supporta due fornitori di tessere per le immagini di sfondo dell
 ### Google Maps
 
 * Immagini satellitari e cartografiche standard di Google
-* Ideale per una copertura generale a livello mondiale
+* Ideale per una copertura globale generale
 
 ### ESRI
 
 * Immagini satellitari e aeree di ESRI ArcGIS
-* Spesso fornisce immagini ad alta risoluzione in determinate regioni
+* Spesso fornisce immagini a risoluzione più elevata in determinate regioni
 
 ***
 
 ## Tipi di tessere cartografiche
 
-È possibile scegliere il tipo di livello della mappa (da sinistra a destra):
+È possibile scegliere il tipo di livello cartografico (da sinistra a destra):
 
  <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
 
-Mostra i profili altimetrici e le tessere della mappa con dettagli (strade, ecc.)
+Mostra i profili altimetrici e le tessere della mappa con i dettagli (strade, ecc.)
 
 ### Mappa
 
-Mostra tessere della mappa standard (banda larga inferiore) con dettagli (strade, ecc.)
+Mostra tessere della mappa standard (a larghezza di banda ridotta) con i dettagli (strade, ecc.)
 
 ### Satellite
 
-Mostra tessere della mappa satellitare dettagliate (banda larga superiore)
+Mostra tessere della mappa satellitare dettagliate (a larghezza di banda maggiore)
 
 ### Ibrido
 
@@ -108,7 +108,7 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 
 ***
 
-## Navigazione della mappa
+## Navigazione sulla mappa
 
 ### Controlli di zoom
 
@@ -117,7 +117,7 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 
 ### Controlli di panoramica
 
-* **Panoramica**: fare clic e trascinare per spostarsi sulla mappa***
+* **Panoramica**: cliccare e trascinare per spostarsi sulla mappa***
 
 ## Casi d&#x27;uso
 
@@ -130,13 +130,13 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 ### Revisione del rilevamento a terra
 
 * Visualizza la distribuzione spaziale delle acquisizioni a terra
-* Individua le immagini di calibrazione relative all&#x27;area di rilevamento
+* Individua le immagini dei target di calibrazione rispetto all&#x27;area di rilevamento
 * Pianifica ulteriori posizioni di acquisizione
 
 ### Controllo qualità
 
 * Identifica rapidamente le immagini acquisite in posizioni inaspettate
-* Verifica la precisione del GPS in tutto il set di dati
+* Verifica la precisione del GPS nell&#x27;intero set di dati
 * Incrocia le posizioni delle immagini con le note sul campo
 
 ***
@@ -148,7 +148,7 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 **Possibili cause:**
 
 * Le immagini non contengono metadati GPS
-* Il GPS era disattivato sulla fotocamera durante l&#x27;acquisizione
+* Il GPS era disabilitato sulla fotocamera durante l&#x27;acquisizione
 * I dati EXIF sono stati rimossi da un software esterno
 
 **Soluzione**: verificare che il GPS sia abilitato sulla fotocamera e reimportare i file originali
@@ -158,6 +158,6 @@ Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
 **Possibili cause:**
 
 * Il GPS della fotocamera aveva una scarsa ricezione satellitare
-* Deriva GPS durante l&#x27;acquisizione
+* Deriva del GPS durante l&#x27;acquisizione
 
-**Soluzione**: si tratta in genere di un problema legato al momento dell&#x27;acquisizione; valutare l&#x27;utilizzo del GPS PPK/RTK per applicazioni di precisione
+**Soluzione**: si tratta in genere di un problema legato al momento dell&#x27;acquisizione; considerare l&#x27;utilizzo di GPS PPK/RTK per applicazioni di precisione

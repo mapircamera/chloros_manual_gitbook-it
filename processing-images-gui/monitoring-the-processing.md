@@ -1,10 +1,10 @@
 # Monitoraggio dell&#x27;elaborazione
 
-Una volta avviata l&#x27;elaborazione, Chloros offre diversi modi per monitorare lo stato di avanzamento, verificare la presenza di eventuali problemi e comprendere cosa sta succedendo con il proprio set di dati. Questa pagina spiega come monitorare l&#x27;elaborazione e interpretare le informazioni fornite da Chloros.
+Una volta avviata l&#x27;elaborazione, Chloros offre diversi modi per monitorare lo stato di avanzamento, verificare la presenza di eventuali problemi e comprendere cosa sta accadendo con il proprio set di dati. Questa pagina spiega come monitorare l&#x27;elaborazione e interpretare le informazioni fornite da Chloros.
 
 ## Panoramica della barra di avanzamento
 
-La barra di avanzamento nell&#x27;intestazione superiore mostra lo stato di elaborazione in tempo reale e la percentuale di completamento.
+La barra di avanzamento nell&#x27;intestazione superiore mostra lo stato dell&#x27;elaborazione in tempo reale e la percentuale di completamento.
 
 ### Barra di avanzamento in modalità gratuita
 
@@ -12,45 +12,43 @@ Per gli utenti senza licenza Chloros+:
 
 **Visualizzazione dell&#x27;avanzamento in 2 fasi:**
 
-1. **Rilevamento del target** - Ricerca dei target di calibrazione nelle immagini
-2. **Elaborazione** - Applicazione delle correzioni ed esportazione
+1.**Rilevamento dei target** - Ricerca dei target di calibrazione nelle immagini
+2. **Elaborazione** - Applicazione delle correzioni ed esportazione**La barra di avanzamento mostra:**
 
-**La barra di avanzamento mostra:**
-
-* Percentuale di completamento complessiva (0-100%)
+* Percentuale complessiva di completamento (0-100%)
 * Nome della fase corrente
-* Semplice visualizzazione con barra orizzontale
+* Semplice visualizzazione a barra orizzontale
 
-### Barra di avanzamento Chloros+
+### Barra di avanzamento di Chloros+
 
 Per gli utenti con licenza Chloros+:
 
-**Visualizzazione dell&#x27;avanzamento in 4 fasi:**
+**Visualizzazione dello stato di avanzamento in 4 fasi:**
 
-1. **Rilevamento** - Ricerca dei target di calibrazione
+1.**Rilevamento** - Ricerca dei target di calibrazione
 2. **Analisi** - Esame delle immagini e preparazione della pipeline
 3. **Calibrazione** - Applicazione delle correzioni di vignettatura e riflettanza
-4. **Esportazione** - Salvataggio dei file elaborati
-
-**Funzionalità interattive:**
-
-* **Passa con il mouse** sulla barra di avanzamento per visualizzare il pannello espanso a 4 fasi
-* **Fare clic** sulla barra di avanzamento per bloccare/fissare il pannello espanso
-* **Fare nuovamente clic** per sbloccare e nascondere automaticamente all&#x27;uscita del mouse
+4. **Esportazione** - Salvataggio dei file elaborati**Funzionalità interattive:*** **Passa il mouse** sulla barra di avanzamento per visualizzare il pannello espanso a 4 fasi
+* **Clicca** sulla barra di avanzamento per bloccare/fissare il pannello espanso
+* **Clicca di nuovo** per sbloccarlo e nasconderlo automaticamente all&#x27;allontanamento del mouse
 * Ogni fase mostra l&#x27;avanzamento individuale (0-100%)
 
 ***
 
-## Comprensione di ogni fase di elaborazione
+## Comprensione di ciascuna fase di elaborazione
 
-### Fase 1: Rilevamento (rilevamento del target)
+{% hint style="info" %}
+**Architettura della pipeline**: Queste 4 fasi della GUI corrispondono alla [pipeline di elaborazione a 4 thread](../processing-architecture/processing-pipeline.md). Sui sistemi con accelerazione GPU, il Thread 3 (Calibrazione) beneficia del [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md) che ottimizza l&#x27;elaborazione per il tuo hardware specifico.
+{% endhint %}
+
+### Fase 1: Rilevamento (Rilevamento dei target)
 
 **Cosa succede:**
 
 * Chloros esegue la scansione delle immagini contrassegnate con la casella di controllo Target
 * Gli algoritmi di visione artificiale identificano i 4 pannelli di calibrazione
 * Valori di riflettanza estratti da ciascun pannello
-* Registrazione dei timestamp dei target per una corretta pianificazione della calibrazione
+* Timestamp dei target registrati per una corretta pianificazione della calibrazione
 
 **Durata:**
 
@@ -67,56 +65,46 @@ Per gli utenti con licenza Chloros+:
 
 * Dovrebbe completarsi rapidamente se i target sono contrassegnati correttamente
 * Se richiede troppo tempo, i target potrebbero non essere contrassegnati
-* Controllare il log di debug per i messaggi &quot;Target trovato&quot;
+* Controllare il registro di debug per i messaggi &quot;Target trovato&quot;
 
 ### Fase 2: Analisi
 
 **Cosa sta succedendo:**
 
-* Lettura dei metadati EXIF delle immagini (timestamp, impostazioni di esposizione)
-* Determinazione della strategia di calibrazione in base ai timestamp degli obiettivi
+* Lettura dei metadati EXIF dell&#x27;immagine (timestamp, impostazioni di esposizione)
+* Determinazione della strategia di calibrazione in base ai timestamp dei target
 * Organizzazione della coda di elaborazione delle immagini
 * Preparazione dei worker di elaborazione parallela (solo Chloros+)
 
-**Durata:** 5-30 secondi
-
-**Indicatore di avanzamento:**
+**Durata:** 5-30 secondi**Indicatore di avanzamento:**
 
 * Analisi: 0% → 100%
-* Fase veloce, di solito completa rapidamente
+* Fase veloce, solitamente si completa rapidamente
 
 **Cosa tenere d&#x27;occhio:**
 
 * Dovrebbe procedere in modo costante senza pause
-* Gli avvisi relativi ai metadati mancanti appariranno nel registro di debug
+* Nel registro di debug appariranno avvisi relativi a metadati mancanti
 
 ### Fase 3: Calibrazione
 
-**Cosa sta succedendo:**
-
-* **Debayering**: Conversione del pattern Bayer RAW in 3 canali
-* **Correzione vignettatura**: rimozione dell&#x27;oscuramento dei bordi dell&#x27;obiettivo
-* **Calibrazione riflettanza**: normalizzazione con valori target
-* **Calcolo indice**: calcolo indici multispettrali
+**Cosa sta succedendo:*** **Debayering**: Conversione del pattern RAW Bayer in 3 canali
+* **Correzione della vignettatura**: rimozione dell&#x27;oscuramento ai bordi dell&#x27;obiettivo
+* **Calibrazione della riflettanza**: normalizzazione con i valori target
+* **Calcolo dell&#x27;indice**: calcolo degli indici multispettrali
 * Elaborazione di ciascuna immagine attraverso l&#x27;intera pipeline
 
-**Durata:** la maggior parte del tempo di elaborazione totale (60-80%)
-
-**Indicatore di avanzamento:**
+**Durata:** la maggior parte del tempo di elaborazione totale (60-80%)**Indicatore di avanzamento:**
 
 * Calibrazione: 0% → 100%
-* Immagine corrente in elaborazione
-* Immagini completate / Immagini totali
+* Immagine attualmente in elaborazione
+* Immagini completate / Totale immagini
 
-**Comportamento dell&#x27;elaborazione:**
+**Comportamento di elaborazione:*** **Modalità libera**: Elabora una immagine alla volta in sequenza
+* **Modalità Chloros+**: Elabora fino a 16 immagini contemporaneamente
+* **Accelerazione GPU**: accelera significativamente questa fase**Cosa tenere d&#x27;occhio:**
 
-* **Modalità libera**: elabora un&#x27;immagine alla volta in sequenza
-* **Modalità Chloros+**: elabora fino a 16 immagini contemporaneamente
-* **Accelerazione GPU**: accelera notevolmente questa fase
-
-**Cosa tenere d&#x27;occhio:**
-
-* Avanzamento costante attraverso il conteggio delle immagini
+* Avanzamento costante nel conteggio delle immagini
 * Controllare il registro di debug per i messaggi di completamento per ogni immagine
 * Avvisi relativi alla qualità dell&#x27;immagine o a problemi di calibrazione
 
@@ -125,13 +113,11 @@ Per gli utenti con licenza Chloros+:
 **Cosa sta succedendo:**
 
 * Scrittura delle immagini calibrate su disco nel formato selezionato
-* Esportazione delle immagini dell&#x27;indice multispettrale con colori LUT
-* Creazione di sottocartelle del modello di fotocamera
+* Esportazione di immagini indice multispettrali con colori LUT
+* Creazione di sottocartelle relative ai modelli di fotocamera
 * Conservazione dei nomi dei file originali con suffissi appropriati
 
-**Durata:** 10-20% del tempo totale di elaborazione
-
-**Indicatore di avanzamento:**
+**Durata:** 10-20% del tempo di elaborazione totale**Indicatore di avanzamento:**
 
 * Esportazione: 0% → 100%
 * File in fase di scrittura
@@ -147,13 +133,13 @@ Per gli utenti con licenza Chloros+:
 
 ## Scheda Registro di debug
 
-Il Registro di debug fornisce informazioni dettagliate sullo stato di avanzamento dell&#x27;elaborazione e su eventuali problemi riscontrati.
+Il Registro di debug fornisce informazioni dettagliate sull&#x27;avanzamento dell&#x27;elaborazione e su eventuali problemi riscontrati.
 
 ### Accesso al Registro di debug
 
 1. Fare clic sull&#x27;icona **Registro di debug** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> nella barra laterale sinistra
 2. Si apre il pannello del log che mostra i messaggi di elaborazione in tempo reale
-3. Scorre automaticamente per mostrare i messaggi più recenti
+3. Scorrimento automatico per mostrare i messaggi più recenti
 
 ### Comprensione dei messaggi di log
 
@@ -179,11 +165,11 @@ Problemi non critici che non interrompono l&#x27;elaborazione:
 [WARN] Low contrast in calibration panel - results may vary
 ```
 
-**Azione:** rivedere gli avvisi dopo l&#x27;elaborazione, ma non interrompere
+**Azione:** Esaminare gli avvisi dopo l&#x27;elaborazione, ma non interrompere
 
 #### Messaggi di errore (Red)
 
-Problemi critici che possono causare il fallimento dell&#x27;elaborazione:
+Problemi critici che potrebbero causare il fallimento dell&#x27;elaborazione:
 
 ```
 [ERROR] Cannot write file - disk full
@@ -191,27 +177,27 @@ Problemi critici che possono causare il fallimento dell&#x27;elaborazione:
 [ERROR] No targets detected - enable reflectance calibration or mark target images
 ```
 
-**Azione:** Interrompere l&#x27;elaborazione, risolvere l&#x27;errore, riavviare.
+**Azione:** Interrompere l&#x27;elaborazione, risolvere l&#x27;errore, riavviare
 
 ### Messaggi di log comuni
 
 | Messaggio                          | Significato                                | Azione richiesta                                         |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| &quot;Target rilevato in \[nome file]&quot; | Target di calibrazione trovato con successo  | Nessuna - normale                                         |
+| &quot;Target rilevato in \[nomefile]&quot; | Target di calibrazione trovato con successo  | Nessuna - normale                                         |
 | &quot;Elaborazione immagine X di Y&quot;        | Aggiornamento sullo stato di avanzamento                | Nessuna - normale                                         |
 | &quot;Nessun target trovato&quot;               | Nessun target di calibrazione rilevato        | Contrassegnare le immagini target o disabilitare la calibrazione della riflettanza |
 | &quot;Spazio su disco insufficiente&quot;        | Spazio di archiviazione insufficiente per l&#x27;output          | Liberare spazio su disco                                    |
-| &quot;Salto del file danneggiato&quot;        | Il file immagine è danneggiato                  | Copiare nuovamente il file dalla scheda SD                             |
-| &quot;Dati PPK applicati&quot;               | Correzioni GPS dal file .daq applicate | Nessuna - normale                                         |
+| &quot;File danneggiato saltato&quot;        | Il file immagine è danneggiato                  | Ricopiare il file dalla scheda SD                             |
+| &quot;Dati PPK applicati&quot;               | Correzioni GPS dal file .daq applicate | Nessuno - normale                                         |
 
-### Copia dei dati di registro
+### Copia dei dati di log
 
-Per copiare il registro per la risoluzione dei problemi o l&#x27;assistenza:
+Per copiare il log a scopo di risoluzione dei problemi o assistenza:
 
-1. Aprire il pannello Registro di debug
-2. Fare clic sul pulsante **&quot;Copia registro&quot;** (o fare clic con il pulsante destro del mouse → Seleziona tutto)
+1. Aprire il pannello Log di debug
+2. Fare clic sul pulsante **&quot;Copia log&quot;** (oppure cliccare con il tasto destro → Seleziona tutto)
 3. Incollare in un file di testo o in un&#x27;e-mail
-4. Se necessario, inviare all&#x27;assistenza MAPIR
+4. Inviare all&#x27;assistenza MAPIR se necessario
 
 ***
 
@@ -219,17 +205,17 @@ Per copiare il registro per la risoluzione dei problemi o l&#x27;assistenza:
 
 ### Utilizzo della CPU
 
-**Modalità libera:**
+**Modalità Free:**
 
-* 1 core della CPU a \~100%
+* 1 core della CPU a ~100%
 * Altri core inattivi o disponibili
 * Il sistema rimane reattivo
 
-**Chloros+ Modalità parallela:**
+**Modalità parallela Chloros+:**
 
 * Più core all&#x27;80-100% (fino a 16 core)
 * Elevato utilizzo complessivo della CPU
-* Il sistema potrebbe risultare meno reattivo
+* Il sistema potrebbe sembrare meno reattivo
 
 **Per monitorare:**
 
@@ -244,12 +230,12 @@ Per copiare il registro per la risoluzione dei problemi o l&#x27;assistenza:
 * Progetti di piccole dimensioni (&lt; 100 immagini): 2-4 GB
 * Progetti di medie dimensioni (100-500 immagini): 4-8 GB
 * Progetti di grandi dimensioni (oltre 500 immagini): 8-16 GB
-* La modalità parallela Chloros+ utilizza più RAM
+* La modalità parallela di Chloros+ utilizza più RAM
 
 **Se la memoria è insufficiente:**
 
 * Elaborare batch più piccoli
-* Chiudere altre applicazioni
+* Chiudere le altre applicazioni
 * Aumentare la RAM se si elaborano regolarmente grandi set di dati
 
 ### Utilizzo della GPU (Chloros+ con CUDA)
@@ -260,7 +246,7 @@ Quando l&#x27;accelerazione GPU è abilitata:
 * L&#x27;utilizzo della VRAM aumenta (richiede 4 GB+ di VRAM)
 * La fase di calibrazione è significativamente più veloce
 
-**Per monitorare:**
+**Da monitorare:**
 
 * Icona NVIDIA nella barra delle applicazioni
 * Task Manager → Prestazioni → GPU
@@ -272,36 +258,36 @@ Quando l&#x27;accelerazione GPU è abilitata:
 
 * Elevata lettura del disco durante la fase di analisi
 * Elevata scrittura del disco durante la fase di esportazione
-* SSD significativamente più veloce dell&#x27;HDD
+* SSD significativamente più veloce rispetto all&#x27;HDD
 
-**Suggerimento sulle prestazioni:**
+**Suggerimento per le prestazioni:**
 
-* Utilizzare SSD per la cartella del progetto, quando possibile
-* Evitare unità di rete per set di dati di grandi dimensioni
+* Utilizzare un SSD per la cartella del progetto, quando possibile
+* Evitare le unità di rete per set di dati di grandi dimensioni
 * Assicurarsi che il disco non sia quasi pieno (influisce sulla velocità di scrittura)
 
 ***
 
-## Rilevamento di problemi durante l&#x27;elaborazione
+## Rilevamento dei problemi durante l&#x27;elaborazione
 
 ### Segnali di avvertimento
 
-**Progresso bloccato (nessuna modifica per più di 5 minuti):**
+**Blocco dell&#x27;avanzamento (nessun cambiamento per più di 5 minuti):**
 
-* Controllare il log di debug per eventuali errori
-* Verificare lo spazio disponibile sul disco
+* Controllare il registro di debug per eventuali errori
+* Verificare lo spazio disponibile su disco
 * Controllare Task Manager per assicurarsi che Chloros sia in esecuzione
 
 **Messaggi di errore frequenti:**
 
-* Interrompere l&#x27;elaborazione e controllare gli errori
+* Interrompere l&#x27;elaborazione e esaminare gli errori
 * Cause comuni: spazio su disco, file danneggiati, problemi di memoria
 * Vedere la sezione Risoluzione dei problemi di seguito
 
 **Il sistema non risponde:**
 
-* Chloros+ in modalità parallela utilizza troppe risorse
-* Valutare la possibilità di ridurre le attività simultanee o aggiornare l&#x27;hardware
+* La modalità parallela di Chloros+ utilizza troppe risorse
+* Valutare la possibilità di ridurre le attività in esecuzione o di aggiornare l&#x27;hardware
 * La modalità libera richiede meno risorse
 
 ### Quando interrompere l&#x27;elaborazione
@@ -309,16 +295,16 @@ Quando l&#x27;accelerazione GPU è abilitata:
 Interrompere l&#x27;elaborazione se si verificano:
 
 * ❌ Errori &quot;Disco pieno&quot; o &quot;Impossibile scrivere il file&quot;
-* ❌ Errori ripetuti di danneggiamento dei file immagine
+* ❌ Errori ripetuti di file immagine danneggiati
 * ❌ Sistema completamente bloccato (non risponde)
-* ❌ Configurazione errata delle impostazioni
-* ❌ Importazione di immagini errate
+* ❌ Ci si è resi conto che sono state configurate impostazioni errate
+* ❌ Immagini importate errate
 
 **Come interrompere:**
 
-1. Fare clic sul pulsante **Stop/Cancel** (sostituisce il pulsante Start)
+1. Fare clic sul**pulsante Stop/Annulla** (sostituisce il pulsante Avvia)
 2. L&#x27;elaborazione si interrompe, i progressi vengono persi
-3. Risolvere i problemi e ricominciare dall&#x27;inizio
+3. Risolvi i problemi e ricomincia dall&#x27;inizio
 
 ***
 
@@ -329,58 +315,58 @@ Interrompere l&#x27;elaborazione se si verificano:
 **Possibili cause:**
 
 * Immagini di destinazione non contrassegnate (scansione di tutte le immagini)
-* Archiviazione su HDD invece che su SSD
+* Utilizzo di un HDD invece di un SSD
 * Risorse di sistema insufficienti
-* Molti indici configurati
-* Accesso all&#x27;unità di rete
+* Numero elevato di indici configurati
+* Accesso a un&#x27;unità di rete
 
 **Soluzioni:**
 
-1. Se appena avviato e in fase di rilevamento: annullare, contrassegnare gli obiettivi, riavviare
-2. Per il futuro: utilizzare SSD, ridurre gli indici, aggiornare l&#x27;hardware
-3. Considerare CLI per l&#x27;elaborazione in batch di grandi set di dati
+1. Se appena avviata e in fase di rilevamento: Annulla, contrassegna i target, riavvia
+2. Per il futuro: Usa SSD, riduci gli indici, aggiorna l&#x27;hardware
+3. Considera CLI per l&#x27;elaborazione in batch di grandi set di dati
 
 ### Avvisi &quot;Spazio su disco&quot;
 
 **Soluzioni:**
 
-1. Liberare immediatamente spazio su disco
-2. Spostare il progetto su un&#x27;unità con più spazio
+1. Libera immediatamente spazio su disco
+2. Sposta il progetto su un&#x27;unità con più spazio
 3. Ridurre il numero di indici da esportare
 4. Utilizzare il formato JPG invece di TIFF (file più piccoli)
 
-### Messaggi frequenti di &quot;file danneggiato&quot;
+### Messaggi frequenti di &quot;File danneggiato&quot;
 
 **Soluzioni:**
 
-1. Copiare nuovamente le immagini dalla scheda SD per garantirne l&#x27;integrità
-2. Verificare la presenza di errori nella scheda SD
+1. Ricopiare le immagini dalla scheda SD per garantirne l&#x27;integrità
+2. Verificare la scheda SD per individuare eventuali errori
 3. Rimuovere i file danneggiati dal progetto
 4. Continuare l&#x27;elaborazione delle immagini rimanenti
 
-### Surriscaldamento/riduzione della velocità del sistema
+### Surriscaldamento del sistema / Throttling
 
 **Soluzioni:**
 
 1. Assicurarsi che la ventilazione sia adeguata
 2. Pulire la polvere dalle prese d&#x27;aria del computer
 3. Ridurre il carico di elaborazione (utilizzare la modalità Free invece di Chloros+)
-4. Eseguire l&#x27;elaborazione nelle ore più fresche della giornata
+4. Eseguire l&#x27;elaborazione durante le ore più fresche della giornata
 
 ***
 
-## Notifica di completamento dell&#x27;elaborazione
+## Notifica di elaborazione completata
 
 Al termine dell&#x27;elaborazione:
 
 * La barra di avanzamento raggiunge il 100%
-* Il messaggio **&quot;Elaborazione completata&quot;** viene visualizzato nel registro di debug
-* Il pulsante Avvia viene nuovamente abilitato
-* Tutti i file di output si trovano nella sottocartella del modello di fotocamera
+* Il messaggio **&quot;Elaborazione completata&quot;** appare nel registro di debug
+* Il pulsante Start torna attivo
+* Tutti i file di output si trovano nella sottocartella del modello della fotocamera
 
 ***
 
-## Passaggi successivi
+## Passi successivi
 
 Una volta completata l&#x27;elaborazione:
 
@@ -389,4 +375,4 @@ Una volta completata l&#x27;elaborazione:
 3. **Esaminare il registro di debug** - Verificare la presenza di eventuali avvisi o errori
 4. **Visualizzare in anteprima le immagini elaborate** - Utilizzare Image Viewer o un software esterno
 
-Per informazioni sulla revisione e l&#x27;utilizzo dei risultati elaborati, vedere [Completamento dell&#x27;elaborazione](finishing-the-processing.md).
+Per informazioni sulla revisione e l&#x27;utilizzo dei risultati elaborati, consultare [Completamento dell&#x27;elaborazione](finishing-the-processing.md).

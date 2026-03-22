@@ -1,65 +1,64 @@
 ---
-description: This page lists some multispectral indices that Chloros uses.
+description: This page lists some multispectral indices that Chloros uses
 metaLinks:
   alternates:
     - >-
       https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/multispectral-index-formulas
 ---
-# Formule dell&#x27;indice multispettrale
 
-Le formule dell&#x27;indice riportate di seguito utilizzano una combinazione degli intervalli di trasmissione media del filtro Survey3:
+# Formule degli indici multispettrali
 
-<table><thead><tr><th align="center">Survey3 Colore del filtro</th><th width="196.199951171875" align="center">Survey3 Nome del filtro</th><th width="159.800048828125" align="center">Intervallo di trasmissione (FWHM)</th><th align="center">Trasmissione media</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 nm</td><td align="center">850 nm</td></tr></tbody></table>
+Le formule degli indici riportate di seguito utilizzano una combinazione degli intervalli di trasmissione media del filtro Survey3:
 
-Quando si utilizzano queste formule, il nome può terminare con &quot;\_1&quot; o &quot;\_2&quot;, che corrisponde al filtro NIR utilizzato, ovvero NIR1 o NIR2.
+<table><thead><tr><th align="center">Colore del filtro Survey3</th><th width="196.199951171875" align="center">Survey3 Nome del filtro</th><th width="159.800048828125" align="center">Intervallo di trasmissione (FWHM)</th><th align="center">Trasmissione media</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 nm</td><td align="center">850 nm</td></tr></tbody></table>Quando si utilizzano queste formule, il nome può terminare con &quot;\_1&quot; o &quot;\_2&quot;, a seconda del filtro NIR utilizzato, ovvero NIR1 o NIR2.
 
 ***
 
 ## EVI - Indice di vegetazione potenziato
 
-Questo indice è stato originariamente sviluppato per essere utilizzato con i dati MODIS come miglioramento rispetto a NDVI, ottimizzando il segnale di vegetazione in aree con un elevato indice di area fogliare (LAI). È particolarmente utile nelle regioni con LAI elevato, dove NDVI potrebbe saturarsi. Utilizza la regione di riflettanza blu per correggere i segnali di fondo del suolo e ridurre le influenze atmosferiche, compresa la dispersione degli aerosol.
+Questo indice è stato originariamente sviluppato per l&#x27;uso con i dati MODIS come miglioramento rispetto a NDVI, ottimizzando il segnale di vegetazione nelle aree ad alto indice di area fogliare (LAI). È particolarmente utile nelle regioni con valori elevati di LAI, dove NDVI potrebbe saturarsi. Utilizza la regione di riflettanza blu per correggere i segnali di fondo del suolo e per ridurre le influenze atmosferiche, compresa la dispersione degli aerosol.
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-I valori EVI dovrebbero essere compresi tra 0 e 1 per i pixel della vegetazione. Caratteristiche luminose come nuvole ed edifici bianchi, insieme a caratteristiche scure come l&#x27;acqua, possono causare valori anomali dei pixel in un&#x27;immagine EVI. Prima di creare un&#x27;immagine EVI, è necessario mascherare le nuvole e gli elementi luminosi dall&#x27;immagine di riflettanza e, facoltativamente, impostare una soglia per i valori dei pixel da 0 a 1.
+I valori di EVI dovrebbero variare da 0 a 1 per i pixel di vegetazione. Elementi luminosi come nuvole ed edifici bianchi, insieme a elementi scuri come l&#x27;acqua, possono causare valori anomali dei pixel in un&#x27;immagine EVI. Prima di creare un&#x27;immagine EVI, è necessario mascherare le nuvole e gli elementi luminosi dall&#x27;immagine di riflettanza e, facoltativamente, applicare una soglia ai valori dei pixel da 0 a 1.
 
-_Riferimento: Huete, A., et al. &quot;Panoramica delle prestazioni radiometriche e biofisiche degli indici di vegetazione MODIS&quot;. Remote Sensing of Environment 83 (2002):195–213._
+_Riferimento: Huete, A., et al. &quot;Panoramica delle prestazioni radiometriche e biofisiche degli indici di vegetazione MODIS.&quot; Remote Sensing of Environment 83 (2002):195–213._
 
 ***
 
 ## FCI1 - Indice di copertura forestale 1
 
-Questo indice distingue le chiome delle foreste da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che includono una banda di bordo rosso.
+Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che includono una banda di bordo rosso.
 
 $$
 FCI1 = Red * RedEdge
 $$
 
-Le aree boschive avranno valori FCI1 inferiori a causa della minore riflettanza degli alberi e della presenza di ombre all&#x27;interno della chioma.
+Le aree boschive presenteranno valori FCI1 inferiori a causa della minore riflettanza degli alberi e della presenza di ombre all&#x27;interno della chioma.
 
-_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indici robusti di copertura forestale per immagini multispettrali&quot;. Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indici robusti di copertura forestale per immagini multispettrali.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
 ## FCI2 - Indice di copertura forestale 2
 
-Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che non includono una banda rossa.
+Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che non includono una banda di bordo rosso.
 
 $$
 FCI2 = Red * NIR
 $$
 
-Le aree boschive avranno valori FCI2 inferiori a causa della minore riflettanza degli alberi e della presenza di ombre all&#x27;interno della chioma.
+Le aree boschive presenteranno valori FCI2 inferiori a causa della minore riflettanza degli alberi e della presenza di ombre all&#x27;interno della chioma.
 
-_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indici robusti di copertura forestale per immagini multispettrali&quot;. Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indici robusti di copertura forestale per immagini multispettrali.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
 ## GEMI - Indice di monitoraggio ambientale globale
 
-Questo indice di vegetazione non lineare viene utilizzato per il monitoraggio ambientale globale dalle immagini satellitari e cerca di correggere gli effetti atmosferici. È simile a NDVI, ma è meno sensibile agli effetti atmosferici. È influenzato dal suolo nudo; pertanto, se ne sconsiglia l&#x27;uso in aree con vegetazione rada o moderatamente densa.
+Questo indice di vegetazione non lineare viene utilizzato per il monitoraggio ambientale globale da immagini satellitari e cerca di correggere gli effetti atmosferici. È simile a NDVI ma è meno sensibile agli effetti atmosferici. È influenzato dal suolo nudo; pertanto, non è raccomandato per l&#x27;uso in aree con vegetazione rada o moderatamente densa.
 
 $$
 GEMI = eta (1 - 0.25 * eta) - {Red - 0.125 \over 1 - Red}
@@ -71,13 +70,13 @@ $$
 eta = {2(NIR^{2}-Red^{2}) + 1.5 * NIR + 0.5 *  Red \over NIR + Red + 0.5}
 $$
 
-_Riferimento: Pinty, B. e M. Verstraete. GEMI: un indice non lineare per monitorare la vegetazione globale dai satelliti. Vegetation 101 (1992): 15-20._
+_Riferimento: Pinty, B., e M. Verstraete. GEMI: un indice non lineare per monitorare la vegetazione globale dai satelliti. Vegetation 101 (1992): 15-20._
 
 ***
 
-## GARI - Green Indice resistente all&#x27;atmosfera
+## GARI - Green Indice resistente agli effetti atmosferici
 
-Questo indice è più sensibile a un&#x27;ampia gamma di concentrazioni di clorofilla e meno sensibile agli effetti atmosferici rispetto a NDVI.
+Questo indice è più sensibile a un ampio intervallo di concentrazioni di clorofilla e meno sensibile agli effetti atmosferici rispetto a NDVI.
 
 $$
 GARI = {NIR - [Green - \gamma(Blue - Red)] \over NIR + [Green - \gamma(Blue - Red)]   }
@@ -91,29 +90,29 @@ _Riferimento: Gitelson, A., Y. Kaufman e M. Merzylak. &quot;Use of a Green Chann
 
 ## GCI - Green Indice di clorofilla
 
-Questo indice viene utilizzato per stimare il contenuto di clorofilla delle foglie in un&#x27;ampia gamma di specie vegetali.
+Questo indice viene utilizzato per stimare il contenuto di clorofilla fogliare in un&#x27;ampia gamma di specie vegetali.
 
 $$
 GCI = {NIR \over Green} - 1
 $$
 
-L&#x27;ampiezza delle lunghezze d&#x27;onda NIR e verde consente una migliore previsione del contenuto di clorofilla, garantendo al contempo una maggiore sensibilità e un rapporto segnale/rumore più elevato.
+La disponibilità di ampie lunghezze d&#x27;onda NIR e verdi fornisce una migliore previsione del contenuto di clorofilla, consentendo al contempo una maggiore sensibilità e un rapporto segnale-rumore più elevato.
 
-_Riferimento: Gitelson, A., Y. Gritz e M. Merzlyak. &quot;Relazioni tra il contenuto di clorofilla nelle foglie e la riflettanza spettrale e algoritmi per la valutazione non distruttiva della clorofilla nelle foglie delle piante superiori&quot;. Journal of Plant Physiology 160 (2003): 271-282._
+_Riferimento: Gitelson, A., Y. Gritz e M. Merzlyak. &quot;Relazioni tra il contenuto di clorofilla fogliare e la riflettanza spettrale e algoritmi per la valutazione non distruttiva della clorofilla nelle foglie delle piante superiori.&quot; Journal of Plant Physiology 160 (2003): 271-282._
 
 ***
 
-## GLI - Green Indice fogliare
+## Indice fogliare GLI - Green
 
-Questo indice è stato originariamente progettato per essere utilizzato con una fotocamera digitale RGB per misurare la copertura del grano, dove i numeri digitali (DN) rosso, verde e blu vanno da 0 a 255.
+Questo indice è stato originariamente progettato per l&#x27;uso con una fotocamera digitale RGB per misurare la copertura del grano, dove i numeri digitali (DN) rosso, verde e blu vanno da 0 a 255.
 
 $$
 GLI = {(Green - Red) + (Green - Blue)  \over (2 * Green) + Red + Blue }
 $$
 
-I valori GLI variano da -1 a +1. I valori negativi rappresentano il suolo e le caratteristiche non viventi, mentre i valori positivi rappresentano le foglie e gli steli verdi.
+I valori di GLI variano da -1 a +1. I valori negativi rappresentano il suolo e gli elementi non viventi, mentre i valori positivi rappresentano foglie e steli verdi.
 
-_Riferimento: Louhaichi, M., M. Borman e D. Johnson. &quot;Piattaforma localizzata spazialmente e fotografia aerea per la documentazione degli impatti del pascolo sul grano&quot;. Geocarto International 16, n. 1 (2001): 65-70._
+_Riferimento: Louhaichi, M., M. Borman e D. Johnson. &quot;Spatially Located Platform and Aerial Photography for Documentation of Grazing Impacts on Wheat.&quot; Geocarto International 16, n. 1 (2001): 65-70._
 
 ***
 
@@ -125,43 +124,43 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Riferimento: Gitelson, A. e M. Merzlyak. &quot;Telerilevamento della concentrazione di clorofilla nelle foglie delle piante superiori&quot;. Advances in Space Research 22 (1998): 689-692._
+_Riferimento: Gitelson, A., e M. Merzlyak. &quot;Remote Sensing of Chlorophyll Concentration in Higher Plant Leaves.&quot; Advances in Space Research 22 (1998): 689-692._
 
 ***
 
-## GOSAVI - Green Indice di vegetazione ottimizzato e corretto in base al suolo
+## GOSAVI - Green Indice di vegetazione ottimizzato e corretto per il suolo
 
-Questo indice è stato originariamente progettato con la fotografia a infrarossi a colori per prevedere il fabbisogno di azoto del mais. È simile a OSAVI, ma sostituisce la banda verde con quella rossa.
+Questo indice è stato originariamente progettato con la fotografia a colori-infrarosso per prevedere il fabbisogno di azoto del mais. È simile a OSAVI, ma sostituisce la banda verde con quella rossa.
 
 $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Riferimento: Sripada, R., et al. &quot;Determinazione del fabbisogno stagionale di azoto per il mais utilizzando la fotografia aerea a infrarossi a colori&quot;. Tesi di dottorato, North Carolina State University, 2005._
+_Riferimento: Sripada, R., et al. &quot;Determinazione del fabbisogno di azoto durante la stagione per il mais utilizzando la fotografia aerea a colori e infrarossi.&quot; Tesi di dottorato, North Carolina State University, 2005._
 
 ***
 
-## GRVI - Green Indice di vegetazione del rapporto
+## GRVI - Indice di vegetazione basato sul rapporto Green
 
-Questo indice è sensibile ai tassi di fotosintesi nelle chiome delle foreste, poiché le riflettanze del verde e del rosso sono fortemente influenzate dai cambiamenti nei pigmenti fogliari.
+Questo indice è sensibile ai tassi di fotosintesi nelle chiome forestali, poiché le riflettanze del verde e del rosso sono fortemente influenzate dai cambiamenti nei pigmenti fogliari.
 
 $$
 GRVI = {NIR \over Green }
 $$
 
-_Riferimento: Sripada, R., et al. &quot;Aerial Color Infrared Photography for Determining Early In-season Nitrogen Requirements in Corn.&quot; Agronomy Journal 98 (2006): 968-977._
+_Riferimento: Sripada, R., et al. &quot;Fotografia aerea a colori e infrarossi per determinare il fabbisogno di azoto all&#x27;inizio della stagione nel mais.&quot; Agronomy Journal 98 (2006): 968-977._
 
 ***
 
 ## GSAVI - Green Indice di vegetazione corretto per il suolo
 
-Questo indice è stato originariamente progettato con la fotografia a infrarossi a colori per prevedere il fabbisogno di azoto del mais. È simile a SAVI, ma sostituisce la banda verde con quella rossa.
+Questo indice è stato originariamente progettato con la fotografia a colori e infrarossi per prevedere il fabbisogno di azoto del mais. È simile a SAVI, ma sostituisce la banda verde con quella rossa.
 
 $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_Riferimento: Sripada, R., et al. &quot;Determinazione del fabbisogno stagionale di azoto per il mais utilizzando la fotografia aerea a infrarossi a colori&quot;. Tesi di dottorato, North Carolina State University, 2005._
+_Riferimento: Sripada, R., et al. &quot;Determinazione del fabbisogno di azoto durante la stagione per il mais utilizzando la fotografia aerea a colori e infrarossi.&quot; Tesi di dottorato, North Carolina State University, 2005._
 
 ***
 
@@ -179,21 +178,21 @@ $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-I valori elevati di LAI variano in genere da circa 0 a 3,5. Tuttavia, quando la scena contiene nuvole e altri elementi luminosi che producono pixel saturi, i valori di LAI possono superare 3,5. Idealmente, è opportuno mascherare le nuvole e gli elementi luminosi dalla scena prima di creare un&#x27;immagine LAI.
+I valori elevati di LAI variano tipicamente da circa 0 a 3,5. Tuttavia, quando la scena contiene nuvole e altre caratteristiche luminose che producono pixel saturi, i valori di LAI possono superare 3,5. Idealmente, si dovrebbero mascherare le nuvole e gli elementi luminosi dalla scena prima di creare un&#x27;immagine LAI.
 
-_Riferimento: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde e A. Thomsen. &quot;Dati multispettrali aerei per quantificare l&#x27;indice di area fogliare, la concentrazione di azoto e l&#x27;efficienza fotosintetica in agricoltura&quot;. Remote Sensing of Environment 81, n. 2-3 (2002): 179-193._
+_Riferimento: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde e A. Thomsen. &quot;Dati multispettrali aerei per la quantificazione dell&#x27;indice di area fogliare, della concentrazione di azoto e dell&#x27;efficienza fotosintetica in agricoltura.&quot; Remote Sensing of Environment 81, n. 2-3 (2002): 179-193._
 
 ***
 
 ## LCI - Indice di clorofilla fogliare
 
-Questo indice viene utilizzato per stimare il contenuto di clorofilla nelle piante superiori, sensibili alle variazioni di riflettanza causate dall&#x27;assorbimento della clorofilla.
+Questo indice viene utilizzato per stimare il contenuto di clorofilla nelle piante superiori ed è sensibile alle variazioni di riflettanza causate dall&#x27;assorbimento della clorofilla.
 
 $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Riferimento: Datt, B. &quot;Telerilevamento del contenuto d&#x27;acqua nelle foglie di eucalipto&quot;. Journal of Plant Physiology 154, n. 1 (1999): 30-36._
+_Riferimento: Datt, B. &quot;Telerilevamento del contenuto d&#x27;acqua nelle foglie di eucalipto.&quot; Journal of Plant Physiology 154, n. 1 (1999): 30-36._
 
 ***
 
@@ -205,13 +204,13 @@ $$
 MNLI = {(NIR^{2} - Red) * (1 + L) \over (NIR^{2} + Red + L)  }
 $$
 
-_Riferimento: Yang, Z., P. Willis e R. Mueller. &quot;Impatto dell&#x27;immagine AWIFS potenziata con rapporto di banda sulla precisione della classificazione delle colture&quot;. Atti del Simposio sul telerilevamento Pecora 17 (2008), Denver, CO._
+_Riferimento: Yang, Z., P. Willis e R. Mueller. &quot;Impact of Band-Ratio Enhanced AWIFS Image to Crop Classification Accuracy.&quot; Atti del Pecora 17 Remote Sensing Symposium (2008), Denver, CO._
 
 ***
 
-## MSAVI2 - Indice di vegetazione modificato e corretto in base al suolo 2
+## MSAVI2 - Indice di vegetazione corretto per il suolo modificato 2
 
-Questo indice è una versione semplificata dell&#x27;indice MSAVI proposto da Qi, et al (1994), che migliora l&#x27;indice di vegetazione corretto in base al suolo (SAVI). Riduce il rumore del suolo e aumenta la gamma dinamica del segnale della vegetazione. MSAVI2 si basa su un metodo induttivo che non utilizza un valore _L_ costante (come nel caso di SAVI) per evidenziare la vegetazione sana.
+Questo indice è una versione semplificata dell&#x27;indice MSAVI proposto da Qi et al. (1994), che migliora l&#x27;Indice di vegetazione corretto per il suolo (SAVI). Riduce il rumore del suolo e aumenta la gamma dinamica del segnale della vegetazione. MSAVI2 si basa su un metodo induttivo che non utilizza un valore _L_ costante (come nel caso di SAVI) per evidenziare la vegetazione sana.
 
 $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
@@ -221,9 +220,9 @@ _Riferimento: Qi, J., A. Chehbouni, A. Huete, Y. Kerr e S. Sorooshian. &quot;A M
 
 ***
 
-## NDRE- Differenza normalizzata RedEdge
+## NDRE - Differenza normalizzata RedEdge
 
-Questo indice è simile a NDVI, ma confronta il contrasto tra NIR e RedEdge invece che con Red, che spesso rileva prima lo stress della vegetazione.
+Questo indice è simile a NDVI ma confronta il contrasto tra NIR e RedEdge invece che con Red, il che spesso consente di rilevare prima lo stress della vegetazione.
 
 $$
 NDRE = {NIR - RedEdge \over NIR + RedEdge  }
@@ -231,9 +230,9 @@ $$
 
 ***
 
-## NDVI - Indice di vegetazione normalizzato differenziale
+## NDVI - Indice di vegetazione a differenza normalizzata
 
-Questo indice è una misura della vegetazione sana e verde. La combinazione della sua formulazione normalizzata differenziale e l&#x27;uso delle regioni di assorbimento e riflettanza più elevate della clorofilla lo rendono robusto in un&#x27;ampia gamma di condizioni. Tuttavia, può saturarsi in condizioni di vegetazione densa quando LAI diventa elevato.
+Questo indice è una misura della vegetazione verde e sana. La combinazione della sua formulazione a differenza normalizzata e l&#x27;uso delle regioni di assorbimento e riflettanza più elevate della clorofilla lo rendono robusto in un&#x27;ampia gamma di condizioni. Può tuttavia saturarsi in condizioni di vegetazione densa quando LAI diventa elevato.
 
 $$
 NDVI = {NIR - Red \over NIR + Red  }
@@ -241,31 +240,31 @@ $$
 
 Il valore di questo indice varia da -1 a 1. L&#x27;intervallo comune per la vegetazione verde è compreso tra 0,2 e 0,8.
 
-_Riferimento: Rouse, J., R. Haas, J. Schell e D. Deering. Monitoraggio dei sistemi di vegetazione nelle Grandi Pianure con ERTS. Terzo Simposio ERTS, NASA (1973): 309-317._
+_Riferimento: Rouse, J., R. Haas, J. Schell e D. Deering. Monitoraggio dei sistemi vegetazionali nelle Grandi Pianure con ERTS. Terzo Simposio ERTS, NASA (1973): 309-317._
 
 ***
 
 ## NLI - Indice non lineare
 
-Questo indice presuppone che la relazione tra molti indici di vegetazione e i parametri biofisici superficiali sia non lineare. Linearizza le relazioni con i parametri superficiali che tendono ad essere non lineari.
+Questo indice presuppone che la relazione tra molti indici di vegetazione e i parametri biofisici di superficie sia non lineare. Linearizza le relazioni con i parametri di superficie che tendono ad essere non lineari.
 
 $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Riferimento: Goel, N. e W. Qin. &quot;Influenze dell&#x27;architettura della chioma sulle relazioni tra vari indici di vegetazione e LAI e Fpar: una simulazione al computer&quot;. Remote Sensing Reviews 10 (1994): 309-347._
+_Riferimento: Goel, N., e W. Qin. &quot;Influenze dell&#x27;architettura della chioma sulle relazioni tra vari indici di vegetazione e LAI e Fpar: una simulazione al computer.&quot; Remote Sensing Reviews 10 (1994): 309-347._
 
 ***
 
-## OSAVI - Indice di vegetazione ottimizzato e corretto in base al suolo
+## OSAVI - Indice di vegetazione ottimizzato e corretto per il suolo
 
-Questo indice si basa sull&#x27;indice di vegetazione corretto in base al suolo (SAVI). Utilizza un valore standard di 0,16 per il fattore di correzione dello sfondo della chioma. Rondeaux (1996) ha stabilito che questo valore fornisce una maggiore variazione del suolo rispetto a SAVI per una copertura vegetale bassa, dimostrando al contempo una maggiore sensibilità alla copertura vegetale superiore al 50%. Questo indice è particolarmente indicato per aree con vegetazione relativamente rada, dove il suolo è visibile attraverso la copertura vegetale.
+Questo indice si basa sull&#x27;Indice di vegetazione corretto per il suolo (SAVI). Utilizza un valore standard di 0,16 per il fattore di correzione dello sfondo della chioma. Rondeaux (1996) ha determinato che questo valore fornisce una maggiore variazione del suolo rispetto a SAVI per una copertura vegetale bassa, dimostrando al contempo una maggiore sensibilità a una copertura vegetale superiore al 50%. Questo indice è più indicato per aree con vegetazione relativamente rada dove il suolo è visibile attraverso la chioma.
 
 $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Riferimento: Rondeaux, G., M. Steven e F. Baret. &quot;Ottimizzazione degli indici di vegetazione corretti per il suolo&quot;. Remote Sensing of Environment 55 (1996): 95-107._
+_Riferimento: Rondeaux, G., M. Steven e F. Baret. &quot;Optimization of Soil-Adjusted Vegetation Indices.&quot; Remote Sensing of Environment 55 (1996): 95-107._
 
 ***
 
@@ -277,13 +276,13 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Riferimento: Roujean, J. e F. Breon. &quot;Stima della PAR assorbita dalla vegetazione da misurazioni di riflettanza bidirezionale&quot;. Remote Sensing of Environment 51 (1995): 375-384._
+_Riferimento: Roujean, J., e F. Breon. &quot;Stima del PAR assorbito dalla vegetazione a partire da misurazioni di riflettanza bidirezionale.&quot; Remote Sensing of Environment 51 (1995): 375-384._
 
 ***
 
 ## SAVI - Indice di vegetazione corretto per il suolo
 
-Questo indice è simile a NDVI, ma sopprime gli effetti dei pixel del suolo. Utilizza un fattore di aggiustamento dello sfondo della chioma, _L_, che è una funzione della densità della vegetazione e spesso richiede una conoscenza preliminare della quantità di vegetazione. Huete (1988) suggerisce un valore ottimale di _L_=0,5 per tenere conto delle variazioni di primo ordine dello sfondo del suolo. Questo indice è più adatto alle aree con vegetazione relativamente rada, dove il suolo è visibile attraverso la copertura vegetale.
+Questo indice è simile a NDVI, ma sopprime gli effetti dei pixel del suolo. Utilizza un fattore di correzione dello sfondo della copertura arborea, _L_, che è una funzione della densità della vegetazione e spesso richiede una conoscenza preliminare della quantità di vegetazione. Huete (1988) suggerisce un valore ottimale di _L_=0,5 per tenere conto delle variazioni di primo ordine dello sfondo del suolo. Questo indice è più indicato in aree con vegetazione relativamente rada dove il suolo è visibile attraverso la chioma.
 
 $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
@@ -293,19 +292,19 @@ _Riferimento: Huete, A. &quot;A Soil-Adjusted Vegetation Index (SAVI).&quot; Rem
 
 ***
 
-## TDVI - Indice di vegetazione trasformato
+## TDVI - Indice di vegetazione a differenza trasformata
 
-Questo indice è utile per monitorare la copertura vegetale in ambienti urbani. Non si satura come NDVI e SAVI.
+Questo indice è utile per il monitoraggio della copertura vegetale in ambienti urbani. Non va in saturazione come NDVI e SAVI.
 
 $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Riferimento: Bannari, A., H. Asalhi e P. Teillet. &quot;Transformed Difference Vegetation Index (TDVI) for Vegetation Cover Mapping&quot; In Proceedings of the Geoscience and Remote Sensing Symposium, IGARSS &#x27;02, IEEE International, Volume 5 (2002)._
+_Riferimento: Bannari, A., H. Asalhi e P. Teillet. &quot;Indice di vegetazione a differenza trasformata (TDVI) per la mappatura della copertura vegetale&quot; In Atti del Simposio di Geoscienze e Telerilevamento, IGARSS &#x27;02, IEEE International, Volume 5 (2002)._
 
 ***
 
-## VARI - Indice visibile resistente all&#x27;atmosfera
+## VARI - Indice visibile resistente agli effetti atmosferici
 
 Questo indice si basa sull&#x27;ARVI e viene utilizzato per stimare la frazione di vegetazione in una scena con bassa sensibilità agli effetti atmosferici.
 
@@ -313,22 +312,22 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Riferimento: Gitelson, A., et al. &quot;Linee di vegetazione e suolo nello spazio spettrale visibile: un concetto e una tecnica per la stima remota della frazione di vegetazione. International Journal of Remote Sensing 23 (2002): 2537−2562._
+_Riferimento: Gitelson, A., et al. &quot;Vegetation and Soil Lines in Visible Spectral Space: A Concept and Technique for Remote Estimation of Vegetation Fraction. International Journal of Remote Sensing 23 (2002): 2537−2562._
 
 ***
 
 ## WDRVI - Indice di vegetazione ad ampio intervallo dinamico
 
-Questo indice è simile a NDVI, ma utilizza un coefficiente di ponderazione (_a_) per ridurre la disparità tra i contributi dei segnali nel vicino infrarosso e nel rosso a NDVI. L&#x27;WDRVI è particolarmente efficace in scene con densità di vegetazione da moderata ad alta quando l&#x27;NDVI supera 0,6. NDVI tende a stabilizzarsi quando la frazione di vegetazione e l&#x27;indice di area fogliare (LAI) aumentano, mentre WDRVI è più sensibile a una gamma più ampia di frazioni di vegetazione e alle variazioni di LAI.
+Questo indice è simile a NDVI, ma utilizza un coefficiente di ponderazione (_a_) per ridurre la disparità tra i contributi dei segnali nel vicino infrarosso e nel rosso all&#x27;NDVI. L&#x27;WDRVI è particolarmente efficace in scene con densità di vegetazione da moderata ad alta quando l&#x27;NDVI supera 0,6. NDVI tende a stabilizzarsi quando la frazione di vegetazione e l&#x27;indice di area fogliare (LAI) aumentano, mentre l&#x27;WDRVI è più sensibile a un intervallo più ampio di frazioni di vegetazione e alle variazioni di LAI.
 
 $$
 WDRVI = {(\alpha * NIR- Red) \over (\alpha * NIR + Red)}
 $$
 
-Il coefficiente di ponderazione (_a_) può variare da 0,1 a 0,2. Henebry, Viña e Gitelson (2004) raccomandano un valore di 0,2.
+Il coefficiente di ponderazione (_a_) può variare da 0,1 a 0,2. Un valore di 0,2 è raccomandato da Henebry, Viña e Gitelson (2004).
 
 _Riferimenti_
 
-_Gitelson, A. &quot;Indice di vegetazione ad ampio intervallo dinamico per la quantificazione remota delle caratteristiche biofisiche della vegetazione&quot;. Journal of Plant Physiology 161, n. 2 (2004): 165-173._
+_Gitelson, A. &quot;Wide Dynamic Range Vegetation Index for Remote Quantification of Biophysical Characteristics of Vegetation.&quot; Journal of Plant Physiology 161, n. 2 (2004): 165-173._
 
 _Henebry, G., A. Viña e A. Gitelson. &quot;The Wide Dynamic Range Vegetation Index and its Potential Utility for Gap Analysis.&quot; Gap Analysis Bulletin 12: 50-56._

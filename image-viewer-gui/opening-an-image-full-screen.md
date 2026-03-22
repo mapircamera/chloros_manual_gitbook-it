@@ -1,25 +1,25 @@
-# Apertura di un&#x27;immagine a schermo intero
+# Aprire un&#x27;immagine a schermo intero
 
 Il visualizzatore di immagini Chloros offre un&#x27;interfaccia dedicata a schermo intero per la visualizzazione, l&#x27;analisi e la manipolazione delle immagini multispettrali. Sia che si tratti di immagini originali o di risultati elaborati, il visualizzatore di immagini offre potenti strumenti per l&#x27;ispezione e l&#x27;analisi.
 
-## Accesso all&#x27;Image Viewer
+## Accesso al visualizzatore di immagini
 
 ### Dal File Browser
 
-Il modo più comune per aprire un&#x27;immagine nell&#x27;Image Viewer:
+Il modo più comune per aprire un&#x27;immagine nel visualizzatore di immagini:
 
-1. Assicurarsi di essere nella scheda **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Fare clic su una qualsiasi delle **miniature delle immagini** nella griglia delle immagini
+1. Assicurarsi di trovarsi nella scheda **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Fare clic su una qualsiasi **miniatura** nella griglia delle immagini
 3. L&#x27;immagine si apre nell&#x27;**area di anteprima principale** (al centro dello schermo)
 4. L&#x27;immagine è ora caricata e pronta per la visualizzazione a schermo intero
 
-### Apertura della scheda Visualizzatore immagini
+### Apertura della scheda Image Viewer
 
 Una volta caricata un&#x27;immagine nell&#x27;area di anteprima:
 
-1. Fare clic sull&#x27;icona **Visualizzatore immagini** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> nella barra laterale sinistra
-2. Si aprirà la scheda Visualizzatore immagini, che mostrerà l&#x27;immagine selezionata a schermo intero
-3. Nella barra laterale sinistra saranno disponibili strumenti avanzati di visualizzazione e analisi
+1. Fare clic sull&#x27;icona **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> nella barra laterale sinistra
+2. Si apre la scheda Visualizzatore immagini, che mostra l&#x27;immagine selezionata a schermo intero
+3. Nella barra laterale sinistra diventano disponibili strumenti avanzati di visualizzazione e analisi
 
 ***
 
@@ -27,11 +27,11 @@ Una volta caricata un&#x27;immagine nell&#x27;area di anteprima:
 
 ### Area di visualizzazione principale
 
-La parte più grande dello schermo mostra l&#x27;immagine:
+La parte più ampia dello schermo mostra l&#x27;immagine:
 
 * **Risoluzione completa**: immagini visualizzate alla risoluzione nativa
-* **Zoomabile**: utilizzare i controlli o la rotellina del mouse per ingrandire
-* **Panoramica**: fare clic e trascinare per spostarsi quando si ingrandisce
+* **Zoomabile**: utilizzare i controlli o la rotellina del mouse per lo zoom
+* **Panoramica**: cliccare e trascinare per spostarsi quando si è in zoom
 * **Proporzioni mantenute**: le immagini vengono ridimensionate in modo proporzionale***
 
 ## Opzioni di visualizzazione
@@ -40,24 +40,24 @@ La parte più grande dello schermo mostra l&#x27;immagine:
 
 #### Sfogliare le immagini
 
-Navigare nella serie di immagini utilizzando le scorciatoie da tastiera o i pulsanti:
+Navigare attraverso il set di immagini utilizzando le scorciatoie da tastiera o i pulsanti:
 
 * **Immagine successiva**: clicca sul pulsante → o premi il tasto**→** (freccia destra)
 * **Immagine precedente**: clicca sul pulsante ← o premi il tasto**←** (freccia sinistra)
-* **Passa a un&#x27;immagine specifica**: torna al File Browser e clicca sulla miniatura desiderata
+* **Vai a un&#x27;immagine specifica**: torna al File Browser e clicca sulla miniatura desiderata
 
 #### Controlli di zoom
 
 Regola l&#x27;ingrandimento per esaminare i dettagli dell&#x27;immagine:
 
-**Ingrandisci:*** Fai clic sul pulsante **+** (più)
+**Ingrandisci:*** Clicca sul pulsante **+** (più)
 * Premi il tasto **+**o**=*** Scorri la rotellina del mouse **verso l&#x27;alto**
 
-**Riduci:*** Fai clic sul pulsante **−** (meno)
+**Riduci:*** Clicca sul pulsante **−** (meno)
 * Premi il tasto **−** (meno)
 * Scorri la rotellina del mouse **verso il basso**
 
-#### Panoramica durante lo zoom
+#### Panoramica con lo zoom
 
 Quando lo zoom supera le dimensioni dello schermo:
 
@@ -67,13 +67,13 @@ Quando lo zoom supera le dimensioni dello schermo:
 3.**Trascinare** per spostare l&#x27;immagine
 4. Rilasciare per interrompere la panoramica
 
-**Alternativa**: utilizzare i tasti freccia per eseguire una panoramica con piccoli incrementi***
+**Alternativa**: utilizzare i tasti freccia per eseguire una panoramica a piccoli incrementi***
 
-## Ispezione del valore dei pixel
+## Ispezione dei valori dei pixel
 
-### Visualizzazione dei valori dei pixel al cursore
+### Visualizzazione dei valori dei pixel sul cursore
 
-Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel vengono visualizzati in tempo reale:**Posizione di visualizzazione del valore:*** **Numero fluttuante e linea rossa nella legenda del gradiente LUT dell&#x27;indice sul lato destro*** **Quando si ingrandisce ulteriormente, valore fluttuante vicino al cursore e pixel evidenziato*** Mostra i valori dei pixel **sotto il cursore o evidenziati*** Si aggiorna mentre si sposta il mouse
+Mentre si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel vengono visualizzati in tempo reale:**Posizione di visualizzazione dei valori:*** **Numero mobile e linea rossa nella legenda del gradiente LUT dell&#x27;indice sul lato destro*** **Quando si ingrandisce ulteriormente, valore mobile vicino al cursore e al pixel evidenziato*** Mostra i valori per il pixel **sotto il cursore o evidenziato*** Si aggiorna mentre si sposta il mouse
 
 ***
 
@@ -83,13 +83,13 @@ Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel ven
 
 **Immagini JPG dalla fotocamera:**
 
-* Visualizza i dati JPG come anteprima
-* Mostra i valori originali non corretti
-* Utile per controllare la qualità dell&#x27;immagine prima dell&#x27;elaborazione
+* Visualizza i dati JPG come in anteprima
+* Mostra i valori originali, non corretti
+* Utile per verificare la qualità dell&#x27;immagine prima dell&#x27;elaborazione
 
-### RAW (originale)
+### RAW (Originale)
 
-### RAW (riflettanza)
+### RAW (Riflettanza)
 
 **Dopo l&#x27;elaborazione:**
 
@@ -111,15 +111,15 @@ Quando si sposta il cursore del mouse sull&#x27;immagine, i valori dei pixel ven
 
 ## Applicazione di indici e LUT
 
-Applicare indici multispettrali e tabelle di ricerca dei colori:
+Applicare indici multispettrali e tabelle di ricerca (LUT) dei colori:
 
-1. Individuare **Index/LUT Sandbox** nella <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra laterale
+1. Individuare **Index/LUT Sandbox**in**Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra laterale
 2. Selezionare l&#x27;indice di vegetazione (NDVI, NDRE, ecc.)
-3. Selezionare la formula multispettrale o crearne una personalizzata (solo Chloros+)
-4. Applicare il gradiente LUT a colori per la visualizzazione
+3. Selezionare una formula multispettrale o crearne una personalizzata (solo Chloros+)
+4. Applicare un gradiente LUT a colori per la visualizzazione
 5. Regolare gli intervalli di valori e le soglie
 
-Per istruzioni dettagliate, consultare [Index/LUT Sandbox](index-lut-sandbox.md).
+Vedere [Index/LUT Sandbox](index-lut-sandbox.md) per istruzioni dettagliate.
 
 ***
 
@@ -127,29 +127,29 @@ Per istruzioni dettagliate, consultare [Index/LUT Sandbox](index-lut-sandbox.md)
 
 ### Navigazione
 
-* **→** (freccia destra): immagine successiva
-* **←** (freccia sinistra): immagine precedente
-* **Home**: prima immagine dell&#x27;elenco
-* **Fine**: ultima immagine nell&#x27;elenco
+* **→** (Freccia destra): Immagine successiva
+* **←** (Freccia sinistra): Immagine precedente
+* **Home**: Prima immagine dell&#x27;elenco
+* **Fine**: Ultima immagine nell&#x27;elenco
 
 ### Zoom
 
-* **+**o**=**: ingrandisci
-* **−**: rimpicciolisci
-* **Rotellina del mouse**: ingrandisci/rimpicciolisci***
+* **+**o**=**: Ingrandisci
+* **−**: Riduci
+* **Rotellina del mouse**: Ingrandisci/riduci***
 
-### Verifica dei calcoli dell&#x27;indice
+### Verifica dei calcoli degli indici
 
 Verifica che gli indici siano stati calcolati correttamente:
 
 1. Aprire NDVI o un&#x27;altra immagine dell&#x27;indice
 2. Controllare le aree di vegetazione:
-   * **NDVI**: dovrebbe mostrare 0,4-0,9 per le piante sane
-   * **NDRE**: valori più alti per una crescita vigorosa
-   * **GNDVI**: simile a NDVI ma sensibile alla clorofilla
+   * **NDVI**: dovrebbe mostrare un valore compreso tra 0,4 e 0,9 per le piante sane
+   * **NDRE**: valori più elevati per una crescita vigorosa
+   * **GNDVI**: Simile a NDVI ma sensibile alla clorofilla
 3. Controllare le aree non vegetate:
-   * **Suolo**: vicino a 0 o leggermente negativo
-   * **Acqua**: valori negativi (da -0,5 a 0)***
+   * **Suolo**: Vicino a 0 o leggermente negativo
+   * **Acqua**: Valori negativi (da -0,5 a 0)***
 
 ## Risoluzione dei problemi di visualizzazione
 
@@ -163,50 +163,50 @@ Verifica che gli indici siano stati calcolati correttamente:
 
 **Soluzioni:**
 
-1. Provare ad aprire il file in un visualizzatore esterno per verificare l&#x27;integrità del file
+1. Provare ad aprire il file in un visualizzatore esterno per verificarne l&#x27;integrità
 2. Verificare che il formato del file corrisponda al tipo previsto
 3. Chiudere le altre applicazioni per liberare memoria
-4. Provare con un&#x27;immagine più piccola/diversa
+4. Provare con un&#x27;immagine più piccola o diversa
 
-### Visualizzazione dell&#x27;immagine in bianco e nero
+### Visualizzazione dell&#x27;immagine in bianco o nero
 
 **Possibili cause:**
 
-* Intervallo di valori al di fuori delle capacità di visualizzazione
-* Immagine a 32 bit con valori insoliti
+* Intervallo di valori al di fuori della capacità di visualizzazione
+* Immagine a 32 bit in virgola mobile con valori insoliti
 * Errore di calcolo dell&#x27;indice
 
 **Soluzioni:**
 
-1. Controllare i valori dei pixel: se sono tutti molto bassi o molto alti, regolare l&#x27;intervallo di visualizzazione
-2. Provare ad aprire in QGIS o simili con regolazione automatica dell&#x27;intervallo
-3. Controllare il log di debug dall&#x27;elaborazione per eventuali errori
+1. Controlla i valori dei pixel: se sono tutti molto bassi o molto alti, regola l&#x27;intervallo di visualizzazione
+2. Prova ad aprire il file in QGIS o in un programma simile con regolazione automatica dell&#x27;intervallo
+3. Controlla il registro di debug dell&#x27;elaborazione per individuare eventuali errori
 
 ### I valori dei pixel sembrano errati
 
 **Possibili cause:**
 
-* Visualizzazione di un&#x27;immagine errata (originale vs elaborata)
+* Visualizzazione dell&#x27;immagine sbagliata (originale vs elaborata)
 * La calibrazione non è stata applicata correttamente
 * I dati del sensore di luce non sono stati inclusi nell&#x27;input
 * La modalità percentuale è stata attivata in modo errato
 
 **Soluzioni:**
 
-1. Verificare di stare visualizzando l&#x27;output elaborato (controllare il suffisso del nome del file)
-2. Controllare lo stato del pulsante della modalità percentuale
-3. Confrontare con immagini note come corrette provenienti dallo stesso set di dati
+1. Verifica di stare visualizzando l&#x27;output elaborato (controlla il suffisso del nome del file)
+2. Controlla lo stato del pulsante della modalità percentuale
+3. Confronta con immagini note e corrette dello stesso dataset
 
 ***
 
-## Passaggi successivi
+## Passi successivi
 
 Ora che è possibile visualizzare le immagini a schermo intero:
 
 * [**Livelli immagine**](image-layers.md) - Informazioni sulla visualizzazione multibanda
-* [**Sandbox indice/LUT**](index-lut-sandbox.md) - Applicazione di indici personalizzati e mappatura dei colori
-* [**Formule indice multispettrale**](../project-settings/multispectral-index-formulas.md) - Comprendi gli indici disponibili
+* [**Sandbox indici/LUT**](index-lut-sandbox.md) - Applicare indici personalizzati e mappatura dei colori
+* [**Formule degli indici multispettrali**](../project-settings/multispectral-index-formulas.md) - Comprendi gli indici disponibili
 
-Per il flusso di lavoro di elaborazione, vedi:
+Per il flusso di lavoro di elaborazione, consulta:
 
 * [**Elaborazione delle immagini (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Guida completa all&#x27;elaborazione

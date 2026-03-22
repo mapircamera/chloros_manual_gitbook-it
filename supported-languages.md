@@ -6,7 +6,7 @@ Chloros supporta le seguenti lingue:
 
 | # | Lingua | Nome nativo | Codice CLI |
 |---|----------|-------------|----------|
-| 1 | 🇺🇸 Inglese | Inglese | `en` |
+| 1 | 🇺🇸 Inglese | English | `en` |
 | 2 | 🇪🇸 Spagnolo | Español | `es` |
 | 3 | 🇵🇹 Portoghese | Português | `pt` |
 | 4 | 🇫🇷 Francese | Français | `fr` |
@@ -24,7 +24,7 @@ Chloros supporta le seguenti lingue:
 | 16 | 🇮🇳 Hindi | हिंदी | `hi` |
 | 17 | 🇮🇩 Indonesiano | Bahasa Indonesia | `id` |
 | 18 | 🇻🇳 Vietnamita | Tiếng Việt | `vi` |
-| 19 | 🇹🇭 Thailandese | ไทย | `th` |
+| 19 | 🇹🇭 Tailandese | ไทย | `th` |
 | 20 | 🇸🇪 Svedese | Svenska | `sv` |
 | 21 | 🇩🇰 Danese | Dansk | `da` |
 | 22 | 🇳🇴 Norvegese | Norsk | `no` |
@@ -47,14 +47,14 @@ Chloros supporta le seguenti lingue:
 
 ## Come cambiare la lingua
 
-### In Chloros Desktop/Browser
+### Su Chloros Desktop/Browser
 
-1. Apri le impostazioni dell&#x27;applicazione.
-2. Vai al menu di selezione della lingua.
-3. Scegli la lingua che preferisci dall&#x27;elenco.
-4. L&#x27;interfaccia si aggiornerà immediatamente.
+1. Apri le impostazioni dell&#x27;applicazione
+2. Vai al menu di selezione della lingua
+3. Scegli la lingua preferita dall&#x27;elenco
+4. L&#x27;interfaccia si aggiornerà immediatamente
 
-### In Chloros CLI
+### Su Chloros CLI
 
 Utilizza il comando `language` per visualizzare o modificare la lingua dell&#x27;interfaccia CLI:
 
@@ -79,15 +79,15 @@ Per ulteriori dettagli, consulta la [documentazione CLI](CLI.md).
 
 ### In Chloros Python SDK
 
-Impostare il parametro della lingua durante l&#x27;inizializzazione di SDK per ricevere messaggi e output nella lingua preferita.
+Imposta il parametro della lingua durante l&#x27;inizializzazione di SDK per ricevere messaggi e output nella lingua preferita.
 
 ## Copertura
 
-Tutte le 38 lingue sono completamente supportate su:
+Tutte le 38 lingue sono pienamente supportate in:
 
 * **Chloros Desktop** - Traduzione completa dell&#x27;interfaccia grafica
 * **Chloros Browser** - Interfaccia web in tutte le lingue
 * **Chloros CLI** - Interfaccia a riga di comando e messaggi di output
-* **Chloros Python SDK** - Messaggi e documentazione API
+* **Chloros Python SDK** - Messaggi e documentazione
 
 Il supporto linguistico garantisce che gli utenti di tutto il mondo possano lavorare in modo efficiente nella loro lingua madre senza barriere.
