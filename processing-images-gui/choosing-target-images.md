@@ -1,154 +1,176 @@
-# Selezione delle immagini target
+# Selezione delle immagini con bersagli
 
-Contrassegnare le immagini che contengono target di calibrazione è un passaggio fondamentale che accelera notevolmente la pipeline di elaborazione di Chloros. Preselezionando le immagini target, si evita che Chloros debba scansionare ogni singola immagine del set di dati alla ricerca di target di calibrazione.
+Contrassegnando le immagini che contengono bersagli di calibrazione, si indica a Chloros esattamente dove cercarli. Quando nella colonna “Target” è selezionata almeno un’immagine, Chloros esegue la scansione **solo delle immagini selezionate**: in questo modo, contrassegnare i bersagli permette sia di velocizzare l’elaborazione sia di evitare che le immagini del rilevamento vengano scambiate per un bersaglio.
 
-## Perché contrassegnare le immagini target?
+<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
-### Velocità di elaborazione
+## Perché contrassegnare le immagini bersaglio?
 
-Senza contrassegnare le immagini target, Chloros deve:
+### Il contrassegno controlla la scansione
 
-* Scansionare ogni singola immagine del progetto
-* Eseguire algoritmi di rilevamento dei target su ciascuna immagine
-* Controllare inutilmente centinaia o migliaia di immagini
+Quando si selezionano immagini specifiche nella colonna &quot;Target&quot;:
 
-**Risultato**: l&#x27;elaborazione può richiedere molto più tempo, specialmente per set di dati di grandi dimensioni.
+* Chloros esegue la scansione alla ricerca di bersagli solo sulle immagini selezionate
+* Il rilevamento dei bersagli viene completato molto più rapidamente
+* Le immagini di rilevamento non possono generare falsi positivi nel rilevamento dei bersagli
 
-### Con immagini target contrassegnate
+Se **nessuna** immagine è selezionata, Chloros ricorre alla scansione di tutte le immagini del progetto:
 
-Quando si seleziona la colonna Target per immagini specifiche:
-
-* Chloros scansiona solo le immagini selezionate alla ricerca di target
-* Il rilevamento dei target viene completato molto più velocemente
-* Il tempo di elaborazione complessivo si riduce notevolmente
+* Gli algoritmi di rilevamento dei bersagli vengono eseguiti su ogni immagine
+* Centinaia o migliaia di immagini vengono controllate inutilmente
+* L’elaborazione richiede molto più tempo, specialmente per set di dati di grandi dimensioni
 
 {% hint style="success" %}
-**Miglioramento della velocità**: contrassegnare 2-3 immagini target in un set di dati di 500 immagini può ridurre il tempo di rilevamento dei target da oltre 30 minuti a meno di 1 minuto.
+**Miglioramento della velocità**: contrassegnare 2-3 immagini di bersaglio in un set di dati da 500 immagini può ridurre il tempo di rilevamento dei bersagli da oltre 30 minuti a meno di 1 minuto.
 {% endhint %}
 
 ***
 
-## Come contrassegnare le immagini dei target
+## Come contrassegnare le immagini dei bersagli
 
-### Passaggio 1: Identificare le immagini dei target
+### Passo 1: Identificare le immagini dei bersagli
 
-Esaminare le immagini importate nel File Browser e identificare quali immagini contengono target di calibrazione.
+Esaminare le immagini importate nel File Browser e identificare quali immagini contengono i bersagli di calibrazione.
 
-**Scenari comuni:*** **Target pre-acquisizione**: acquisito prima di iniziare la sessione
-* **Target post-acquisizione**: acquisito dopo aver completato la sessione
-* **Target sul campo**: target posizionati all&#x27;interno dell&#x27;area di acquisizione
-* **Target multipli**: 2-3 immagini target per sessione (consigliato)
+**Scenari comuni:*** **Bersaglio pre-acquisizione**: Acquisito prima dell’inizio della sessione
+* **Target post-acquisizione**: acquisito dopo il completamento della sessione
+* **Target sul campo**: target posizionati all’interno dell’area di acquisizione
+* **Target multipli**: 2-3 immagini di target per sessione (consigliato)
 
-### Passaggio 2: Controlla la colonna Target
+### Passaggio 2: Controllare la colonna **Target** <img src="../.gitbook/assets/image (33).png" alt="" data-size="original">
 
-Per ogni immagine contenente un target di calibrazione:
+Per ogni immagine contenente un bersaglio di calibrazione:
 
-1. Individua l&#x27;immagine nella tabella del File Browser
-2. Trova la colonna **Target** (colonna più a destra)
-3. Fai clic sulla casella di controllo nella colonna Target per quell&#x27;immagine
-4. Ripeti l&#x27;operazione per tutte le immagini contenenti target
+1. Individuare l’immagine nella tabella del File Browser
+2. Individuare la colonna **Target** (colonna più a destra)
+3. Fare clic sulla casella di controllo nella colonna **Target** relativa a quell’immagine
+4. Ripetere l’operazione per tutte le immagini contenenti bersagli
 
-### Passaggio 3: Verifica la tua selezione
+### Passaggio 3: Verificare la selezione
 
-Prima dell&#x27;elaborazione, ricontrolla:
+Prima dell’elaborazione, ricontrollare che:
 
-* [ ] Tutte le immagini con target di calibrazione sono selezionate
-* [ ] Nessuna immagine non target è stata selezionata accidentalmente
-* [ ] I target sono chiaramente visibili nelle immagini selezionate
+* [ ] Tutte le immagini con bersagli di calibrazione siano selezionate
+* [ ] Nessuna immagine non contenente bersagli sia stata selezionata accidentalmente
+* [ ] I bersagli siano chiaramente visibili nelle immagini selezionate
 
 ***
 
-## Best practice per le immagini target
+## LATTICE: i target sono opzionali quando un DAQ sta registrando
 
-### Linee guida per l&#x27;acquisizione dei target
+Per le telecamere multispettrali LATTICE, un target di calibrazione all’interno dell’inquadratura è **uno dei due** possibili riferimenti di riflettanza:
+
+* **Target all’interno dell’inquadratura**: quando un’immagine di target contrassegnata supera i controlli di qualità (QA) di Chloros, il target diventa il**riferimento di riflettanza assoluto** per le immagini circostanti.
+* **Irradianza discendente del DAQ**: quando non è presente alcun bersaglio (o il controllo di qualità non viene superato), Chloros calcola invece la riflettanza a partire dall’irradianza discendente del sensore di luce del DAQ (ρ = π·L/E). Se una registrazione `.daq` o DAQ-M `.csv` copre le vostre acquisizioni, otterrete una riflettanza calibrata**senza alcuna immagine di riferimento**.
+
+Questo comportamento automatico è l’impostazione predefinita. In CLI / SDK corrisponde a `--reflectance-source auto`; è anche possibile forzare `target` (rigoroso — nessuna sostituzione DAQ) o `daq` (autorevole DAQ). Consultare il [CLI Riferimento](../reference/cli-reference.md#per-product-export-toggles-lattice-multispectral).
+
+**Geometrie dei target LATTICE**: oltre al classico rilevamento a pannello utilizzato per Survey3, l’elaborazione LATTICE supporta**target contrassegnati con ArUco**,**target con ROI fissa**e**target a striscia**, configurati per ogni progetto. Le scansioni della riflettanza dei target**misurate** per singola unità possono essere fornite tramite numero di serie (CLI: `--target-reflectance-dir`, uno `<serial>.csv` per ogni unità target), con gli spettri nominali T3/T4P come alternativa.
+
+{% hint style="info" %}
+**Modulo F988**: la riflettanza dell’F988 viene calibrata utilizzando un pannello di riflettanza in scena: poiché la banda si trova al di fuori dell’intervallo calibrato del sensore di luce DAQ, Chloros applica l’ultima acquisizione del pannello effettuata e la mantiene tra una rilevazione e l’altra. Se un modulo F988 viene elaborato solo con il DAQ, Chloros rifiuta la riflettanza basata sul DAQ per quella banda (motivo di esclusione `dls-uncalibrated-band-988`): il flusso di lavoro con il pannello è l’approccio supportato.
+{% endhint %}
+
+***
+
+## Best practice per le immagini del bersaglio
+
+### Linee guida per l’acquisizione del bersaglio
 
 **Tempistica:**
 
-* Acquisisci le immagini target immediatamente prima e durante la sessione di acquisizione
+* Acquisire le immagini del bersaglio immediatamente prima e durante tutta la sessione di acquisizione
 * Nelle stesse condizioni di illuminazione del sensore di luce DAQ
-* Idealmente, acquisisci le immagini dei target il più spesso possibile per ottenere i migliori risultati. In caso contrario, i dati del sensore di luce verranno utilizzati per regolare la calibrazione nel tempo.
+* Idealmente, acquisire le immagini del bersaglio il più spesso possibile per ottenere i migliori risultati. In caso contrario, i dati del sensore di luce del DAQ verranno utilizzati per regolare la calibrazione nel tempo.
 
 **Posizione della fotocamera:**
 
-* Tieni la fotocamera sopra il target in modo che sia centrato e occupi circa il 40-60% del centro dell&#x27;immagine.
-* Mantieni la fotocamera parallela/nadir alla superficie del target
+* Tenere la fotocamera sopra il bersaglio in modo che sia centrato e occupi circa il 40-60% del centro dell’immagine.
+* Mantenere la fotocamera parallela o in posizione nadir rispetto alla superficie del bersaglio
 
 **Illuminazione:**
 
-* Stessa illuminazione ambientale del sensore di luce DAQ
+* Stessa illuminazione ambientale del sensore di luce del DAQ
 * Evitare ombre sulle superfici del bersaglio
-* Non ostruire la fonte di luce con il proprio corpo, veicoli o vegetazione
-* Le condizioni di cielo coperto forniscono i risultati più costanti
+* Non ostruire la fonte di luce con il proprio corpo, un veicolo o la vegetazione
+* Le condizioni di cielo coperto garantiscono risultati più costanti
 
 **Condizioni del bersaglio:**
 
 * Mantenere i pannelli del bersaglio puliti e asciutti
-* Tutti e 4 i pannelli devono essere chiaramente visibili e senza ostacoli
-* Se possibile, posizionare i bersagli perpendicolarmente/nadir alla fonte di luce
+* Tutti i pannelli del bersaglio (ad es. tutti e 4 su un T4) devono essere chiaramente visibili e liberi da ostacoli
+* Se possibile, posizionare i bersagli perpendicolarmente o in posizione nadir rispetto alla fonte di luce
 
 ### Quante immagini del bersaglio?
 
-**Minimo:**1 immagine del bersaglio per sessione.**Consigliato:** 3-5 immagini del bersaglio per sessione.**Programma ottimale:**
+**Minimo:**1 immagine del bersaglio per sessione.**Consigliato:** 3-5 immagini del bersaglio per sessione.**Programma consigliato:**
 
-* 3-5 immagini acquisite poco dopo l&#x27;avvio della registrazione del sensore di luce
-* Ruotare la fotocamera tra un&#x27;acquisizione e l&#x27;altra per ottenere i migliori risultati
-* Opzionale: periodicamente a metà sessione se le condizioni di illuminazione cambiano costantemente
+* 3-5 immagini acquisite poco dopo l’avvio della registrazione del sensore di luce
+* Ruotare la fotocamera tra un’acquisizione e l’altra per ottenere i migliori risultati
+* Facoltativo: periodicamente a metà sessione se le condizioni di illuminazione cambiano costantemente
 
 ***
 
-## Utilizzo di più fotocamere
+## Utilizzo di più telecamere
 
-### Configurazioni a doppia fotocamera
+### Configurazioni a doppia telecamera
 
-Se si utilizzano due fotocamere MAPIR contemporaneamente (ad es., Survey3W RGN + Survey3N OCN):
+Se si utilizzano contemporaneamente due telecamere MAPIR (ad es., Survey3W RGN + Survey3N OCN):
 
 1. Acquisire le immagini del bersaglio con **entrambe le telecamere** contemporaneamente
 2. Utilizzare lo **stesso bersaglio fisico** per entrambe le telecamere
-3. Contrassegnare le immagini del bersaglio per **entrambi i tipi di telecamera** nel File Browser
+3. Contrassegnare le immagini dei bersagli per **entrambi i tipi di telecamera** nel File Browser
 4. Chloros utilizzerà i bersagli appropriati per la calibrazione di ciascuna telecamera
 
-### Colonna Modello di fotocamera
+### Colonna “Modello della telecamera”
 
-La colonna **Modello di fotocamera** aiuta a identificare quali immagini provengono da quale fotocamera:
+La colonna **“Modello della telecamera”** aiuta a identificare quali immagini provengono da quale telecamera:
 
 * Survey3W\_RGN
 * Survey3N\_OCN
-* Survey3W\_RGB
+* LATT-M3M-L41-F550
+* LATT-M3C-L87-FRGN
 * ecc.
 
-Utilizza questa colonna per verificare di aver contrassegnato i target per ciascun tipo di telecamera nel tuo progetto.
+Utilizza questa colonna per verificare di aver contrassegnato i bersagli per ciascun tipo di telecamera nel tuo progetto.
 
 ***
 
-## Impostazioni di rilevamento dei target
+## Impostazioni di rilevamento dei bersagli
 
 ### Regolazione della sensibilità di rilevamento
 
-Se Chloros non rileva correttamente i tuoi target, modifica queste impostazioni in [Impostazioni del progetto](adjusting-project-settings.md):**Area minima del campione di calibrazione:*** **Impostazione predefinita**: 25 pixel
-* **Aumentare** se si ottengono rilevamenti errati su piccoli artefatti
-* **Diminuire** se i target non vengono rilevati**Raggruppamento minimo dei target:*** **Impostazione predefinita**: 60
-* **Aumentare** se i target vengono suddivisi in più rilevamenti
-* **Ridurre** se i target con variazioni di colore non vengono rilevati completamente***
+Se Chloros non rileva correttamente i bersagli, regolare queste impostazioni in [Impostazioni del progetto](adjusting-project-settings.md):**Area minima del campione di calibrazione (px):*** **Impostazione predefinita**: 25 pixel
+* **Aumentare** se si verificano falsi rilevamenti su piccoli artefatti
+* **Diminuire** se i bersagli non vengono rilevati**Raggruppamento minimo dei bersagli (0-100):*** **Impostazione predefinita**: 60
+* **Aumenta** se i target vengono suddivisi in più rilevamenti
+* **Riduci** se i target con variazioni di colore non vengono rilevati completamente
 
-## Problemi comuni relativi alle immagini dei target
+{% hint style="info" %}
+**Suggerimento per CLI**: `chloros-cli process` accetta gli stessi parametri (`--min-target-size`, `--target-clustering`), e il suo flag `--target`/`--targets` contrassegna un&#x27;intera cartella di input come &quot;solo pannello dei target&quot;. Vedi la [Guida di riferimento di CLI](../reference/cli-reference.md).
+{% endhint %}
 
-### Problema: Nessun target rilevato
+***
+
+## Problemi comuni relativi alle immagini bersaglio
+
+### Problema: Nessun bersaglio rilevato
 
 **Possibili cause:**
 
-* Immagini dei target non contrassegnate nel File Browser
-* Target troppo piccolo nell&#x27;inquadratura (&lt; 30% dell&#x27;immagine)
-* Illuminazione scadente (ombre, riflessi)
-* Impostazioni di rilevamento dei target troppo rigide
+* Immagini di riferimento non contrassegnate nel File Browser
+* Obiettivo troppo piccolo nell’inquadratura (&lt; 30% dell’immagine)
+* Illuminazione inadeguata (ombre, riflessi)
+* Impostazioni di rilevamento degli obiettivi troppo rigide
 
 **Soluzioni:**
 
-1. Verificare che la colonna &quot;Target&quot; sia selezionata per le immagini corrette
-2. Controllare la qualità dell&#x27;immagine del target nell&#x27;anteprima
+1. Verificare che la colonna “Obiettivo” sia selezionata per le immagini corrette
+2. Verificare la qualità delle immagini dei target nell’anteprima
 3. Riprendere i target se la qualità è scarsa
-4. Regolare le impostazioni di rilevamento dei target se necessario
+4. Regolare le impostazioni di rilevamento dei target, se necessario
 
-### Problema: Rilevamenti di falsi target
+### Problema: Rilevamenti errati dei target
 
 **Possibili cause:**
 
@@ -158,50 +180,59 @@ Se Chloros non rileva correttamente i tuoi target, modifica queste impostazioni 
 
 **Soluzioni:**
 
-1. Contrassegnare solo le immagini dei bersagli effettivi per limitare l&#x27;ambito di rilevamento
-2. Aumentare l&#x27;area minima del campione di calibrazione
+1. Contrassegnare solo le immagini dei bersagli effettivi: verranno scansionate solo le immagini selezionate
+2. Aumentare l’area minima del campione di calibrazione
 3. Aumentare il valore minimo di raggruppamento dei bersagli
-4. Assicurarsi che le immagini dei bersagli mostrino solo il bersaglio (minimo ingombro dello sfondo)
+4. Assicurarsi che le immagini dei bersagli mostrino solo il bersaglio (con il minimo disturbo di sfondo)
 
 ***
 
 ## Lista di controllo per la verifica
 
-Prima di iniziare l&#x27;elaborazione, verificare la selezione delle immagini dei bersagli:
+Prima di avviare l’elaborazione, verificare la selezione delle immagini dei bersagli:
 
-* [ ] Almeno 1 immagine di bersaglio contrassegnata per sessione
-* [ ] Le caselle di controllo della colonna &quot;Target&quot; sono selezionate per tutte le immagini dei target
-* [ ] Immagini dei target acquisite nello stesso periodo di tempo del rilevamento
-* [ ] Target chiaramente visibili nell&#x27;anteprima quando cliccati
-* [ ] Tutti e 4 i pannelli di calibrazione visibili in ciascuna immagine del target
-* [ ] Nessuna ombra o ostruzione sui target
-* [ ] Per doppia fotocamera: Target contrassegnati per entrambi i tipi di fotocamera
+* [ ] Almeno 1 immagine di bersaglio contrassegnata per sessione (oppure, per LATTICE, una registrazione `.daq`/`.csv` che copra la sessione)
+* [ ] Le caselle di controllo della colonna «bersaglio» sono spuntate per tutte le immagini dei bersagli
+* [ ] Le immagini dei bersagli sono state acquisite nello stesso arco di tempo dell’indagine
+* [ ] I bersagli sono chiaramente visibili nell’anteprima quando cliccati
+* [ ] Tutti i pannelli di calibrazione sono visibili in ciascuna immagine del bersaglio
+* [ ] Non sono presenti ombre o ostacoli sui bersagli
+* [ ] Per configurazione a doppia fotocamera: i bersagli sono contrassegnati per entrambi i tipi di fotocamera
 
 ***
 
-## Elaborazione senza target
+## Elaborazione senza bersagli
 
-### Elaborazione senza bersagli di calibrazione
+### LATTICE: con una registrazione DAQ
 
-Sebbene non sia raccomandato per lavori scientifici, è possibile eseguire l&#x27;elaborazione senza bersagli:
+Se un sensore di luce DAQ ha registrato l’irraggiamento discendente durante le acquisizioni LATTICE, non è necessario alcun bersaglio:
 
-1. Lasciare deselezionate tutte le caselle di controllo della colonna &quot;Bersaglio&quot;
-2. **Disattivare** &quot;Calibrazione della riflettanza&quot; nelle Impostazioni del progetto
+1. Importare il file `.daq` (o DAQ-M `.csv`) contenente le immagini
+2. Lasciare deselezionata la colonna “Target”
+3. La riflettanza viene calcolata automaticamente dal riferimento di irraggiamento discendente del DAQ
+4. La radianza non richiede mai un target né un DAQ: deriva esclusivamente dalla calibrazione radiometrica di fabbrica della fotocamera
+
+### Elaborazione senza alcun riferimento
+
+È anche possibile eseguire l’elaborazione senza target e senza un DAQ:
+
+1. Lasciare deselezionate tutte le caselle di controllo della colonna &quot;Target&quot;
+2. **Disattivare** «Calibrazione della riflettanza / bilanciamento del bianco» nelle Impostazioni del progetto: il rilevamento dei target verrà così completamente saltato
 3. La correzione della vignettatura verrà comunque applicata
-4. L&#x27;output non sarà calibrato per la riflettanza assoluta
+4. L’output non sarà calibrato per la riflettanza assoluta (LATTICE multispettrale esporta comunque prodotti debayered, di anteprima e di radianza)
 
 {% hint style="warning" %}
-**Non raccomandato**: senza la calibrazione della riflettanza, i valori dei pixel rappresentano solo la luminosità relativa, non misurazioni scientifiche della riflettanza. Utilizzare i target di calibrazione per ottenere risultati accurati e ripetibili.
+**Non raccomandato per attività scientifiche Survey3**: senza calibrazione della riflettanza, i valori dei pixel dell’Survey3e rappresentano solo la luminosità relativa, non misurazioni scientifiche della riflettanza. Utilizzate i target di calibrazione (o, per LATTICE, un sensore di luce DAQ) per ottenere risultati accurati e ripetibili.
 {% endhint %}
 
 ***
 
-## Passaggi successivi
+## Passi successivi
 
-Una volta contrassegnate le immagini target:
+Una volta contrassegnate le immagini di riferimento:
 
-1. **Controlla le impostazioni** - Vedi [Regolazione delle impostazioni del progetto](adjusting-project-settings.md)
-2. **Avvia l&#x27;elaborazione** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
-3. **Monitorare lo stato di avanzamento** - Vedi [Monitoraggio dell&#x27;elaborazione](monitoring-the-processing.md)
+1. **Verifica le impostazioni** - Vedi [Regolazione delle impostazioni del progetto](adjusting-project-settings.md)
+2. **Avvia l’elaborazione** - Vedi [Avvio dell’elaborazione](starting-the-processing.md)
+3. **Monitorare lo stato di avanzamento** - Vedi [Monitoraggio dell’elaborazione](monitoring-the-processing.md)
 
-Per ulteriori informazioni sui target di calibrazione, vedi [Target di calibrazione](../calibration-targets.md).
+Per ulteriori informazioni sui target di calibrazione stessi, vedi [Target di calibrazione](../calibration-targets.md).

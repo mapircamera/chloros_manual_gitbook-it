@@ -1,163 +1,150 @@
 # Indicatori sulla mappa
 
-La scheda Mappa visualizza le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Ciò fornisce una panoramica geografica della sessione di acquisizione e aiuta a visualizzare la copertura spaziale. È utile anche al momento della prima importazione delle immagini per eliminare rapidamente quelle che non è necessario elaborare.
+La scheda &quot;Mappa&quot; traccia le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Offre una panoramica geografica di una sessione di acquisizione ed è il modo più rapido, subito dopo l&#x27;importazione, per eliminare le immagini che non si desidera elaborare.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
-## Come accedere alla scheda Mappa
+## Come accedere alla scheda &quot;Mappa&quot;
 
 1. Apri o crea un progetto in Chloros
 2. Importa le immagini che contengono metadati GPS
-3. Clicca sulla scheda **Mappa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella barra laterale sinistra
-4. La mappa mostrerà degli indicatori in corrispondenza della posizione GPS di ciascuna immagine
+3. Fai clic sulla scheda **Mappa** <img src="../.gitbook/assets/image (3) (1).png" alt="" data-size="line"> nella barra laterale sinistra
+4. La mappa visualizza un indicatore in corrispondenza della posizione GPS di ciascuna immagine
 
 {% hint style="info" %}
-**GPS richiesto**: sulla mappa appariranno solo le immagini con coordinate GPS incorporate nei metadati EXIF. Assicurati che la tua fotocamera abbia il GPS abilitato durante l&#x27;acquisizione.
+**GPS richiesto**: sulla mappa compaiono solo le immagini con coordinate GPS nei metadati EXIF. Un’immagine priva di coordinate rimane comunque nel progetto e viene elaborata normalmente; semplicemente non presenta alcun indicatore.
 {% endhint %}
 
 ***
 
-## Regolazione delle immagini dalla scheda Mappa
+## Modifica delle immagini dalla scheda &quot;Mappa&quot;
 
-La scheda **Mappa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ha lo stesso pulsante di aggiunta  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e rimuovi  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  come la scheda [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Mostra inoltre lo stesso elenco di file di progetto, ma con intestazioni di colonna diverse:
+La scheda **Mappa**<img src="../.gitbook/assets/image (3) (1).png" alt="" data-size="line"> presenta gli stessi pulsanti per l’aggiunta <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> e la rimozione <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line"> dei file presenti nella scheda [**Esplora file**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">. Mostra lo stesso elenco di file di progetto, con colonne geografiche:
 
-### Nome file
-
-* Nome file originale della fotocamera
-* Mantiene la convenzione di denominazione della fotocamera (ad es. IMG\_0001.RAW)
-
-### Latitudine
-
-* Latitudine dell&#x27;immagine
-
-### Longitudine
-
-* Longitudine dell&#x27;immagine
-
-### Altitudine
-
-* L&#x27;altitudine dell&#x27;immagine
+| Colonna        | Contenuto                                                           |
+| ------------- | ------------------------------------------------------------------ |
+| **Nome**      | Il nome del file così come è stato salvato dalla fotocamera                             |
+| **Latitudine**  | Gradi decimali, sei cifre decimali                                |
+| **Longitudine** | Gradi decimali, sei cifre decimali                                |
+| **Altitudine**  | Metri, una cifra decimale — `-` quando l’immagine non riporta l’altitudine |
 
 {% hint style="info" %}
-Cliccando sulle intestazioni delle colonne della tabella si ordinano anche i dati delle righe
+Clicca su qualsiasi intestazione di colonna per ordinare i dati in base a quella; clicca di nuovo per invertire l&#x27;ordine.
+{% endhint %}
+
+{% hint style="warning" %}
+**L’altitudine è l’altezza sul livello del mare, non l’altezza dal suolo.** Il valore proviene dal tag EXIF `GPSAltitude` dell’immagine, che fa riferimento al livello medio del mare. Non si tratta dell&#x27;altezza di volo rispetto al terreno, e Chloros non ne ricaverà la distanza campionaria al suolo (GSD): su un campo a 300 m sul livello del mare, un drone a 100 m AGL registrerà qui circa 400 m. Utilizza questa colonna per individuare valori anomali e confermare la coerenza dell’altitudine di volo, non come misura AGL.
 {% endhint %}
 
 ***
 
 ## Indicatori delle immagini
 
-Ogni immagine con dati GPS è rappresentata da un indicatore sulla mappa:
+Ogni immagine con dati GPS riceve un indicatore alle proprie coordinate.
 
-### Visualizzazione degli indicatori
+### Visualizzazione dei marcatori
 
-* I marcatori indicano le coordinate GPS esatte in cui è stata scattata ciascuna immagine
-* I marcatori raggruppati possono unirsi quando si riduce lo zoom
-* Ingrandisci per vedere le posizioni delle singole immagini
-
-{% hint style="success" %}
-SUPER-ZOOM: Quando raggiungi il livello massimo di zoom dal fornitore di tessere della mappa, la tessera viene ingrandita ulteriormente, permettendoti di vedere i marcatori che sono vicini tra loro.
-{% endhint %}
+* I marcatori si trovano alle coordinate esatte registrate per ogni acquisizione
+* I marcatori vicini tra loro possono sovrapporsi visivamente quando si riduce lo zoom: ingrandisci l’immagine per distinguerli
+* I marcatori selezionati ed evidenziati vengono visualizzati sopra gli altri
 
 ### Anteprima al passaggio del mouse
 
-* **Passa il mouse** su qualsiasi indicatore per visualizzare un&#x27;anteprima in miniatura di quell&#x27;immagine
-* Ciò consente una rapida identificazione visiva senza uscire dalla vista della mappa
-* Utile per individuare immagini specifiche all&#x27;interno di una sessione di acquisizione di grandi dimensioni
+* **Passa il mouse** su un indicatore per visualizzare una miniatura dell’immagine corrispondente con il nome del file
+* **Fai clic**su un indicatore per selezionare l’immagine e**fissare** la finestra a comparsa aperta: rimarrà visibile finché non farai clic altrove. Mentre la finestra a comparsa è fissata, passando con il mouse su altri indicatori non verrà nascosta
+* Questo è il modo più veloce per trovare un fotogramma specifico in una sessione di grandi dimensioni senza uscire dalla mappa
+
+<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption><p>La scheda «Mappa» riporta tutte le immagini geotaggate presenti nel progetto</p></figcaption></figure>### Super-zoom
+
+{% hint style="success" %}
+**SUPER-ZOOM**: quando raggiungi lo zoom massimo per cui il fornitore di tessere dispone di immagini, un ulteriore ingrandimento aumenta le dimensioni delle tessere invece di fermarsi, così puoi distinguere i marcatori che si trovano quasi uno sopra l’altro.
+{% endhint %}
+
+* Il super-zoom si attiva solo quando ci si trova **al** livello massimo di zoom del fornitore per quella posizione e il caricamento delle tessere è terminato. Al di sotto di tale livello, lo zoom funziona normalmente
+* L’intervallo va da **1× a 32×** oltre il massimo del fornitore stesso
+* Un indicatore nell’angolo mostra il super-zoom corrente in percentuale, mentre un pulsante **×** accanto ad esso riporta allo zoom normale con un solo clic
+* Lo zoom indietro passa sempre attraverso la mappa stessa, quindi non è mai possibile rimanere bloccati nel super-zoom
+* Lo zoom e la panoramica mentre si è in super-zoom trasferiscono lo spostamento risultante alla mappa, in modo che l’area decentrata in cui ci si è spostati continui a richiedere le tessere invece di rimanere vuota
+* I marcatori sono disegnati come elementi vettoriali anziché rasterizzati, quindi rimangono nitidi a ogni livello di super-zoom
 
 ***
 
 ## Fornitori di tessere cartografiche
 
 {% hint style="success" %}
-**Selezione automatica**: Chloros sceglie automaticamente il servizio di tessere che fornisce il miglior livello di zoom per la posizione corrente sulla mappa. Se lo desideri, puoi passare manualmente da un fornitore all&#x27;altro.
+**Selezione automatica**: Chloros sceglie il servizio di tessere che offre il miglior livello di zoom per la posizione delle immagini. È possibile cambiare manualmente in qualsiasi momento.
 {% endhint %}
 
-La scheda Mappa supporta due fornitori di tessere per le immagini di sfondo della mappa:
-
-### Google Maps
-
-* Immagini satellitari e cartografiche standard di Google
-* Ideale per una copertura globale generale
-
-### ESRI
-
-* Immagini satellitari e aeree di ESRI ArcGIS
-* Spesso fornisce immagini a risoluzione più elevata in determinate regioni
-
-***
+| Fornitore        | Note                                                                                                                                                             |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Google Maps** | Ampia copertura mondiale; supporta tutti e quattro i tipi di tile                                                                                                            |
+| **Esri ArcGIS**| Immagini aeree spesso a risoluzione più elevata in determinate regioni. Il tipo di tile**Terrain** non è disponibile per Esri e il relativo pulsante è disabilitato quando è selezionato Esri |***
 
 ## Tipi di tessere cartografiche
 
-È possibile scegliere il tipo di livello cartografico (da sinistra a destra):
+Scegli il tipo di livello cartografico utilizzando i pulsanti (da sinistra a destra):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
+![](&lt;../.gitbook/assets/image (14).png&gt;)
 
-Mostra i profili altimetrici e le tessere della mappa con i dettagli (strade, ecc.)
+| Tipo                 | Mostra                                                                |
+| -------------------- | -------------------------------------------------------------------- |
+| **Terreno**          | Ombreggiatura altimetrica con dettagli cartografici (strade, etichette). Solo Google       |
+| **Mappa**              | Tessere standard della mappa stradale — l’opzione con la larghezza di banda più bassa              |
+| **Satellite**        | Immagini satellitari dettagliate, senza etichette — l’opzione che richiede la larghezza di banda più elevata |
+| **Ibrido** (predefinito) | Immagini satellitari con strade ed etichette sovrapposte                |
 
-### Mappa
-
-Mostra tessere della mappa standard (a larghezza di banda ridotta) con i dettagli (strade, ecc.)
-
-### Satellite
-
-Mostra tessere della mappa satellitare dettagliate (a larghezza di banda maggiore)
-
-### Ibrido
-
-Mostra tessere della mappa satellitare con dettagli aggiuntivi (strade, ecc.)
-
-***
+La scheda Mappa si apre su **Ibrido**. La scelta effettuata si applica anche al cambio di provider, laddove quest’ultimo lo supporti.***
 
 ## Navigazione sulla mappa
 
-### Controlli di zoom
-
-* **Zoom avanti/indietro**: utilizzare la rotellina del mouse o i pulsanti di zoom
-* **Schermo intero**: visualizza la mappa a schermo intero
-
-### Controlli di panoramica
-
-* **Panoramica**: cliccare e trascinare per spostarsi sulla mappa***
+* **Zoom**: rotellina del mouse o pulsanti di zoom sulla mappa
+* **Panoramica**: clicca e trascina
+* **Schermo intero**: il comando &quot;Schermo intero&quot; espande la mappa a tutta la finestra***
 
 ## Casi d&#x27;uso
 
-### Visualizzazione della traiettoria di volo
+### Revisione della traiettoria di volo
 
-* Visualizza l&#x27;area di copertura delle sessioni di acquisizione con drone
-* Identifica le lacune nella copertura delle immagini
-* Verifica l&#x27;esecuzione della traiettoria di volo
+* Visualizza a colpo d’occhio l’area di copertura di una sessione con il drone
+* Individua le lacune dove è stato saltato un passaggio
+* Verifica che il volo abbia seguito il percorso pianificato
 
 ### Revisione del rilevamento a terra
 
-* Visualizza la distribuzione spaziale delle acquisizioni a terra
-* Individua le immagini dei target di calibrazione rispetto all&#x27;area di rilevamento
-* Pianifica ulteriori posizioni di acquisizione
+* Visualizza la distribuzione delle acquisizioni da terra
+* Individua i fotogrammi dei target di calibrazione rispetto all’area di rilevamento
+* Decidi dove sono necessarie ulteriori acquisizioni
 
 ### Controllo qualità
 
-* Identifica rapidamente le immagini acquisite in posizioni inaspettate
-* Verifica la precisione del GPS nell&#x27;intero set di dati
-* Incrocia le posizioni delle immagini con le note sul campo
+* Individuare le immagini acquisite in punti inaspettati e rimuoverle prima dell’elaborazione
+* Ordinare per altitudine per individuare un fotogramma acquisito all’altezza sbagliata o in cui la posizione GPS era imprecisa
+* Confrontare le posizioni delle immagini con le note sul campo
 
 ***
 
 ## Risoluzione dei problemi
 
-### Nessun indicatore visualizzato
+### Non vengono visualizzati i marcatori
 
-**Possibili cause:**
+**Possibili cause**
 
 * Le immagini non contengono metadati GPS
-* Il GPS era disabilitato sulla fotocamera durante l&#x27;acquisizione
-* I dati EXIF sono stati rimossi da un software esterno
+* Il GPS era disattivato sulla fotocamera durante l’acquisizione
+* I dati EXIF sono stati rimossi da un altro software prima dell’importazione
 
-**Soluzione**: verificare che il GPS sia abilitato sulla fotocamera e reimportare i file originali
+**Cosa fare**: verificare che il GPS sia abilitato sulla fotocamera e reimportare i file originali. È possibile verificare se un file specifico possiede coordinate cercandolo nella tabella dei file della scheda Mappa: un’immagine senza coordinate non avrà alcuna riga in quella tabella.
 
-### Indicatori in posizione errata
+### I marcatori sono nella posizione sbagliata
 
-**Possibili cause:**
+**Possibili cause**: una cattiva acquisizione del segnale satellitare al momento dell’acquisizione o una deriva del GPS durante la sessione.**Cosa fare**: si tratta di un problema relativo al momento dell’acquisizione, non di qualcosa che Chloros possa correggere a posteriori. Per lavori di precisione, utilizzare un flusso di lavoro GPS PPK/RTK — consultare l’impostazione**Applica correzioni PPK** in [Impostazioni progetto](../project-settings/project-settings.md).
 
-* Il GPS della fotocamera aveva una scarsa ricezione satellitare
-* Deriva del GPS durante l&#x27;acquisizione
+### La mappa è vuota o il caricamento delle tessere si interrompe
 
-**Soluzione**: si tratta in genere di un problema legato al momento dell&#x27;acquisizione; considerare l&#x27;utilizzo di GPS PPK/RTK per applicazioni di precisione
+I fornitori di tessere sono servizi online. Se le tessere smettono di arrivare, controlla la connessione di rete del dispositivo, quindi prova a cambiare fornitore. Se avevi effettuato uno zoom estremo, premi il pulsante di ripristino **×** per tornare a un livello di zoom normale e consentire alla mappa di richiedere nuovamente le tessere.***
+
+## Pagine correlate
+
+* [**Griglia immagini**](image-grid.md) — lo stesso set di immagini utilizzato come miniature
+* [**Aprire un’immagine a schermo intero**](opening-an-image-full-screen.md) — esaminare un’immagine in dettaglio
+* [**Aggiunta di file a un progetto**](../processing-images-gui/adding-files-to-a-project.md) — i pulsanti di aggiunta/rimozione file presenti in questa scheda
