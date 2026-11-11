@@ -1,6 +1,6 @@
 # Installazione su Linux
 
-Chloros è distribuito per Linux sotto forma di pacchetti `.deb` che installano l&#x27;interfaccia CLI, il server backend e l&#x27;SDK Python per Python (per il sistema `python3`, oltre a un file wheel compatibile con la versione per gli ambienti virtualenvs).
+Chloros è distribuito per Linux sotto forma di pacchetti `.deb` che installano l'interfaccia CLI, il server backend e l'SDK Python per Python (per il sistema `python3`, oltre a un file wheel compatibile con la versione per gli ambienti virtualenvs).
 
 I nomi dei file dei pacchetti indicano la versione e l’architettura: `chloros_1.3.0_amd64.deb` per x86_64, e `chloros_1.3.0_arm64_jp6.deb` per arm64 (NVIDIA Jetson, JetPack 6). Sostituire il file effettivamente scaricato nei comandi riportati di seguito.
 
@@ -67,7 +67,7 @@ sudo apt install ./chloros_1.3.0_arm64_jp6.deb
 chloros-cli --version
 ```
 
-Stesso layout dell’amd64 `.deb` (Python SDK, buffer di ricezione e servizi backend inclusi), per Jetson Orin / Orin NX / Orin Nano su **JetPack 6** (L4T R36). Il suo PyTorch è la build CUDA di JetPack 6 per Orin, quindi l’elaborazione GPU, compreso il debayer Texture Aware, viene eseguita sulla GPU del Jetson. Il pacchetto non include CUDA in sé: utilizza le librerie CUDA e cuDNN installate da JetPack 6 (`sudo apt install nvidia-jetpack` su un&#x27;immagine che ne è sprovvista). Laddove non sia disponibile una GPU CUDA, l’elaborazione viene eseguita sulla CPU e `--debayer texture-aware` utilizza il debayer Standard (il backend registra una riga `[DEBAYER] … needs a CUDA GPU …` che ne spiega il motivo). Per informazioni sul comportamento di Jetson in termini di memoria, temperatura e implementazione sul campo, consultare la [Guida NVIDIA Jetson](nvidia-jetson-guide.md).***
+Stesso layout dell’amd64 `.deb` (Python SDK, buffer di ricezione e servizi backend inclusi), per Jetson Orin / Orin NX / Orin Nano su **JetPack 6** (L4T R36). Il suo PyTorch è la build CUDA di JetPack 6 per Orin, quindi l’elaborazione GPU, compreso il debayer Texture Aware, viene eseguita sulla GPU del Jetson. Il pacchetto non include CUDA in sé: utilizza le librerie CUDA e cuDNN installate da JetPack 6 (`sudo apt install nvidia-jetpack` su un'immagine che ne è sprovvista). Laddove non sia disponibile una GPU CUDA, l’elaborazione viene eseguita sulla CPU e `--debayer texture-aware` utilizza il debayer Standard (il backend registra una riga `[DEBAYER] … needs a CUDA GPU …` che ne spiega il motivo). Per informazioni sul comportamento di Jetson in termini di memoria, temperatura e implementazione sul campo, consultare la [Guida NVIDIA Jetson](nvidia-jetson-guide.md).***
 
 ## Installazione dell’Python SDK (tutte le distribuzioni Linux)**`.deb` installa automaticamente l’SDK.** Entrambi i pacchetti (amd64 e Jetson) lo installano per il sistema `python3`, quindi `import chloros_sdk` funziona subito dopo l’installazione, senza bisogno di pip né di connessione di rete. I suoi pacchetti (`chloros_sdk`, `lattice_sdk`, `lattice_cam`, `arena_api` e i caricatori di progetto) vengono inseriti in `/usr/lib/python3/dist-packages`, di proprietà del pacchetto: un aggiornamento li sostituisce, mentre la rimozione del pacchetto li elimina. La versione corrisponde sempre alla CLI e al backend che avete installato.
 
@@ -83,7 +83,7 @@ pip install /usr/lib/chloros/sdk/chloros_sdk-*.whl
 pip install chloros-sdk
 ```
 
-Componenti aggiuntivi opzionali, per un&#x27;installazione tramite pip (in un virtualenv o da PyPI):
+Componenti aggiuntivi opzionali, per un'installazione tramite pip (in un virtualenv o da PyPI):
 
 | Componente | Comando | Aggiunge |
 | --- | --- | --- |
@@ -106,7 +106,7 @@ L’SDK Python comunica con il backend che `.deb` installa tramite un’HTTP API
 
 ### 1. Accedi
 
-L&#x27;accesso alla CLI e all&#x27;SDK richiede un piano a pagamento Chloros+ (**Copper** o superiore), applicato a livello di server: un chiamante disconnesso riceve `401 AUTH_REQUIRED`, mentre un chiamante con piano gratuito (Iron) riceve `403 PLAN_UPGRADE_REQUIRED`.
+L'accesso alla CLI e all'SDK richiede un piano a pagamento Chloros+ (**Copper** o superiore), applicato a livello di server: un chiamante disconnesso riceve `401 AUTH_REQUIRED`, mentre un chiamante con piano gratuito (Iron) riceve `403 PLAN_UPGRADE_REQUIRED`.
 
 ```bash
 chloros-cli login your@email.com 'your-password'
@@ -115,7 +115,7 @@ chloros-cli login your@email.com 'your-password'
 Le credenziali vengono memorizzate nella cache in `~/.chloros/user_session.json`.
 
 {% hint style="info" %}
-**Gli aggiornamenti mantengono i dati di accesso; la disinstallazione li cancella.** L’installazione di una versione più recente di `.deb` su un’installazione esistente (anche tramite `chloros-cli update`) mantiene `~/.chloros/user_session.json` e la licenza memorizzata nella cache, quindi i processi CLI/SDK senza interfaccia grafica continuano a funzionare. La rimozione del pacchetto (`sudo apt remove chloros`) cancella i dati di accesso salvati e la cache della licenza per ogni utente sul computer, pertanto un&#x27;installazione ex novo richiede nuovamente `chloros-cli login`.
+**Gli aggiornamenti mantengono i dati di accesso; la disinstallazione li cancella.** L’installazione di una versione più recente di `.deb` su un’installazione esistente (anche tramite `chloros-cli update`) mantiene `~/.chloros/user_session.json` e la licenza memorizzata nella cache, quindi i processi CLI/SDK senza interfaccia grafica continuano a funzionare. La rimozione del pacchetto (`sudo apt remove chloros`) cancella i dati di accesso salvati e la cache della licenza per ogni utente sul computer, pertanto un'installazione ex novo richiede nuovamente `chloros-cli login`.
 {% endhint %}
 
 ### 2. Verifica lo stato della tua licenza
@@ -144,7 +144,7 @@ Vengono eseguiti sette controlli in sequenza e il comando restituisce un codice 
 | 6 | **Modelli del denoiser** | Trova i modelli `*.pth.enc` (su Linux: `/usr/lib/chloros/models`). |
 | 7 | **CUDA + Denoiser**| Texture Aware è effettivamente utilizzabile — richiede CUDA**e** almeno un file di modello. |
 
-L&#x27;esecuzione termina con `N/7 checks passed`, elencando eventuali errori per nome.
+L'esecuzione termina con `N/7 checks passed`, elencando eventuali errori per nome.
 
 ### 4. Elabora il tuo primo set di dati
 
@@ -165,9 +165,9 @@ Chloros conserva le proprie credenziali e la configurazione della CLI in un’un
 | `~/.chloros/user_session.json` | Cache della sessione di accesso creata da `chloros-cli login` (mantenuta durante gli aggiornamenti del pacchetto; cancellata quando il pacchetto viene rimosso) |
 | `~/.chloros/working_directory.txt` | Sovrascrittura della cartella di progetto predefinita (`chloros-cli set-project-folder` / `get-project-folder` / `reset-project-folder`) |
 | `~/.chloros/cli_language.json` | Preferenza di lingua della CLI (`chloros-cli language <code>`) |
-| `~/.chloros/user.json` | Impostazione della lingua condivisa con l&#x27;interfaccia grafica di Windows: un valore `language` qui ha la priorità su `cli_language.json` |
-| `~/.chloros/update_cache.json` | Cache di un&#x27;ora per il controllo degli aggiornamenti all&#x27;avvio di Linux/Jetson |
-| `~/.chloros/backend.log` | Log del backend quando quest&#x27;ultimo è stato avviato dalla CLI |
+| `~/.chloros/user.json` | Impostazione della lingua condivisa con l'interfaccia grafica di Windows: un valore `language` qui ha la priorità su `cli_language.json` |
+| `~/.chloros/update_cache.json` | Cache di un'ora per il controllo degli aggiornamenti all'avvio di Linux/Jetson |
+| `~/.chloros/backend.log` | Log del backend quando quest'ultimo è stato avviato dalla CLI |
 | `~/.chloros/camera_cal/<serial>/<bundle_sha>/` | Pacchetti di calibrazione LATTICE per singola telecamera memorizzati nella cache, identificati dal numero di serie e dall’hash del bundle |
 | `~/.chloros/daq_cap_profiles/<u\|m\|e>/<cap_id>.json` | Sovrascritture opzionali da parte dell’utente per i profili di correzione del cap DAQ |
 | `~/.config/chloros/system_config.json` | Profilo hardware memorizzato nella cache da Dynamic Compute Adaptation — eliminarlo per forzare un nuovo rilevamento dell’hardware |
@@ -184,8 +184,8 @@ Chloros conserva le proprie credenziali e la configurazione della CLI in un’un
 | `/usr/lib/chloros/chloros-cli`, `/usr/lib/chloros/chloros-backend` | Script di avvio di due righe che lanciano i programmi effettivi sopra indicati — mantenuti in questi percorsi perché l’SDK, la CLI e gli script precedenti li cercano qui |
 | `/usr/lib/chloros/arena_runtime/` | Runtime dell’SDK di Arena richiesto dalle telecamere LATTICE |
 | `/usr/lib/chloros/models/*.pth.enc` | Modelli di denoising crittografati utilizzati dal debayer Texture Aware |
-| `/usr/lib/python3/dist-packages/chloros_sdk/` (e `lattice_sdk`, `lattice_cam`, `arena_api`, i caricatori di progetto) | L&#x27;SDK Python, installato per il sistema `python3` e di proprietà del pacchetto |
-| `/usr/lib/chloros/sdk/chloros_sdk-*.whl` | Wheel dell&#x27;Python SDK corrispondente esattamente a questa build, per un virtualenv |
+| `/usr/lib/python3/dist-packages/chloros_sdk/` (e `lattice_sdk`, `lattice_cam`, `arena_api`, i caricatori di progetto) | L'SDK Python, installato per il sistema `python3` e di proprietà del pacchetto |
+| `/usr/lib/chloros/sdk/chloros_sdk-*.whl` | Wheel dell'Python SDK corrispondente esattamente a questa build, per un virtualenv |
 | `/usr/lib/chloros/exiftool` | Il programma di avvio ExifTool integrato (collegato tramite collegamento simbolico a `/usr/local/bin/exiftool` solo se non esiste un exiftool di sistema). A partire dalla versione 1.3.0, lo script ExifTool viene fornito con la propria libreria Perl in `/usr/lib/chloros/exiftool-dist/`, quindi funziona senza il pacchetto di sistema `libimage-exiftool-perl` |
 | `/etc/chloros/update.conf` | Configurazione del canale di aggiornamento letta da `chloros-cli update` |
 | `/etc/sysctl.d/60-chloros-ptp.conf` | Imposta `net.ipv4.ip_unprivileged_port_start = 319` in modo che il backend possa associare le porte PTP senza privilegi di root |
@@ -279,7 +279,7 @@ sudo systemctl enable --now chloros-backend@$USER.service
 ## Esempi di script Bash
 
 {% hint style="info" %}
-**Codici di uscita compatibili con gli script.**`chloros-cli process` restituisce `0` in caso di successo e**un valore diverso da zero in caso di errore — inclusa un&#x27;esecuzione che ha richiesto prodotti immagine ma non ne ha generati** (visualizza `Processing finished but wrote no image products.` e indica il nome della cartella del progetto e le cause più comuni). Le esecuzioni riuscite segnalano quanti prodotti immagine sono stati generati (`Image products written: N`, più `(plus M clamp masks)` quando sono state generate delle maschere). Codici di uscita: `0` successo, `1` errore, `2` errore di argomento, `130` interruzione.
+**Codici di uscita compatibili con gli script.**`chloros-cli process` restituisce `0` in caso di successo e**un valore diverso da zero in caso di errore — inclusa un'esecuzione che ha richiesto prodotti immagine ma non ne ha generati** (visualizza `Processing finished but wrote no image products.` e indica il nome della cartella del progetto e le cause più comuni). Le esecuzioni riuscite segnalano quanti prodotti immagine sono stati generati (`Image products written: N`, più `(plus M clamp masks)` quando sono state generate delle maschere). Codici di uscita: `0` successo, `1` errore, `2` errore di argomento, `130` interruzione.
 {% endhint %}
 
 ### Elaborazione di più set di dati
@@ -389,7 +389,7 @@ chloros-cli time-sync status
 chloros-cli time-sync peers
 ```
 
-### I comandi `lattice` falliscono con il messaggio &quot;Driver della telecamera LATTICE non trovati&quot;
+### I comandi `lattice` falliscono con il messaggio "Driver della telecamera LATTICE non trovati"
 
 Il backend non è riuscito a caricare il runtime della telecamera LATTICE con cui è stato installato. Ogni comando `lattice` viene eseguito sul backend; la CLI stessa non contiene driver per telecamere. Reinstallare Chloros (`sudo apt install --reinstall ./chloros_1.3.0_<arch>.deb`): il comando `.deb` installa il runtime accanto al backend, in `/usr/lib/chloros/arena_runtime`, e lo registra con il caricatore dinamico. Per verificare tale registrazione:
 

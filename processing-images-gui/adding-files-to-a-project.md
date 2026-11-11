@@ -26,18 +26,18 @@ Esistono due modi principali per aggiungere immagini al progetto:
 
 Utilizzare questa opzione per importare singoli file immagine o una piccola selezione di file.
 
-1. Fare clic sul pulsante **&quot;Aggiungi file&quot;** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella parte superiore del pannello Esplora file
+1. Fare clic sul pulsante **"Aggiungi file"** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> nella parte superiore del pannello Esplora file
 2. Accedere alla cartella contenente le immagini
 3. Selezionare uno o più file immagine (tenere premuto **Ctrl** per selezionare più file)
-4. Fare clic su **&quot;Apri&quot;** per importare i file selezionati
+4. Fare clic su **"Apri"** per importare i file selezionati
 
 ### Metodo 2: Aggiungi cartella
 
-Utilizza questa opzione per importare tutte le immagini da una cartella in una sola volta. Puoi selezionare **più cartelle** in un&#x27;unica finestra di dialogo.
+Utilizza questa opzione per importare tutte le immagini da una cartella in una sola volta. Puoi selezionare **più cartelle** in un'unica finestra di dialogo.
 
-1. Fare clic sul pulsante **&quot;Aggiungi cartella&quot;** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> nella parte superiore del pannello Esplora file
+1. Fare clic sul pulsante **"Aggiungi cartella"** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> nella parte superiore del pannello Esplora file
 2. Accedere alle cartelle contenenti le immagini della sessione di acquisizione e selezionarle
-3. Fare clic su **&quot;Seleziona cartella&quot;** per importare tutte le immagini supportate
+3. Fare clic su **"Seleziona cartella"** per importare tutte le immagini supportate
 
 {% hint style="info" %}
 **I file che non riescono a caricarsi vengono segnalati.** Se una cartella contiene file che Chloros riconosce ma non riesce a caricare, un avviso ti avvisa: le immagini non scompaiono silenziosamente dalla griglia.
@@ -86,10 +86,10 @@ Una volta importate, le immagini vengono visualizzate in una tabella con le segu
 * Esempi LATTICE: LATT-M3M-L41-F550, LATT-M3C-L87-FRGN
 * Utilizzato per applicare i profili di elaborazione corretti
 
-### Colonna &quot;Target&quot; (casella di selezione)
+### Colonna "Target" (casella di selezione)
 
 * Selezionare questa casella per le immagini che contengono target di calibrazione
-* Quando è selezionata almeno un&#x27;immagine, **solo le immagini selezionate vengono analizzate** alla ricerca di target
+* Quando è selezionata almeno un'immagine, **solo le immagini selezionate vengono analizzate** alla ricerca di target
 * Per ulteriori dettagli, consultare [Scelta delle immagini target](choosing-target-images.md)
 
 ### Visualizzazione dei metadati delle immagini
@@ -113,7 +113,7 @@ Facendo clic sul pulsante di attivazione/disattivazione nell’angolo in alto a 
 Per rimuovere le immagini indesiderate dal progetto:
 
 1. Selezionare una o più immagini nella tabella del Browser dei file
-2. Fare clic sul pulsante **&quot;Rimuovi selezionati&quot;** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
+2. Fare clic sul pulsante **"Rimuovi selezionati"** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 3. Confermare la rimozione (i file non vengono eliminati dal disco, ma solo rimossi dal progetto)
 
 ### Ordinamento e filtraggio
@@ -231,6 +231,6 @@ Una volta importati i file:
 2. **Controlla i modelli di fotocamera** - Verifica che il rilevamento delle fotocamere sia corretto
 3. **Contrassegnare le immagini di destinazione** - Vedere [Scelta delle immagini di destinazione](choosing-target-images.md)
 4. **Modificare le impostazioni** - Configurare le opzioni di elaborazione in [Impostazioni del progetto](adjusting-project-settings.md)
-5. **Avvia l&#x27;elaborazione** - Vedi [Avvio dell&#x27;elaborazione](starting-the-processing.md)
+5. **Avvia l'elaborazione** - Vedi [Avvio dell'elaborazione](starting-the-processing.md)
 
 Per informazioni dettagliate sulla configurazione del progetto, consulta [Modifica delle impostazioni del progetto](adjusting-project-settings.md).

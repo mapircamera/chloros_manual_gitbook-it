@@ -1,6 +1,6 @@
 # Area di prova Index/LUT
 
-La Sandbox Indice/LUT è l&#x27;area di lavoro interattiva presente nella barra laterale del visualizzatore di immagini Chloros. È possibile selezionare una formula, associarvi i canali della fotocamera, colorarla con una sfumatura e regolare l&#x27;intervallo dei valori: l&#x27;immagine si aggiorna in tempo reale man mano che si effettuano le modifiche. A partire dalla versione 1.2.0 è anche possibile **salvare ciò che si è creato**, per una singola immagine o per l’intero progetto, senza bisogno di rielaborare i dati.
+La Sandbox Indice/LUT è l'area di lavoro interattiva presente nella barra laterale del visualizzatore di immagini Chloros. È possibile selezionare una formula, associarvi i canali della fotocamera, colorarla con una sfumatura e regolare l'intervallo dei valori: l'immagine si aggiorna in tempo reale man mano che si effettuano le modifiche. A partire dalla versione 1.2.0 è anche possibile **salvare ciò che si è creato**, per una singola immagine o per l’intero progetto, senza bisogno di rielaborare i dati.
 
 ## A cosa serve la Sandbox
 
@@ -32,7 +32,7 @@ La barra laterale mostra, dall’alto verso il basso:
 * il pannello **Valori del cursore** con la lettura, l’istogramma e il controllo GSD
 
 {% hint style="warning" %}
-**Non disponibile per le fotocamere monocromatiche.** Su un’immagine LATTICE M3M a banda singola entrambe le caselle di controllo sono disabilitate, con il suggerimento _&quot;Non disponibile per sensori monocromatici (M3M)&quot;_ — un indice multibanda non è definito su una singola banda. Per calcolare gli indici dalle telecamere M3M, combinare due o più immagini in uno stack multibanda allineato e utilizzare il motore di indici LATTICE.
+**Non disponibile per le fotocamere monocromatiche.** Su un’immagine LATTICE M3M a banda singola entrambe le caselle di controllo sono disabilitate, con il suggerimento _"Non disponibile per sensori monocromatici (M3M)"_ — un indice multibanda non è definito su una singola banda. Per calcolare gli indici dalle telecamere M3M, combinare due o più immagini in uno stack multibanda allineato e utilizzare il motore di indici LATTICE.
 {% endhint %}
 
 ***
@@ -79,7 +79,7 @@ Una **tabella di consultazione** associa i valori dell’indice ai colori: in in
 
 ### Aggiunta di una LUT
 
-1. Clicca sul pulsante **&quot;+ Aggiungi LUT&quot;** <img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line"> sotto la formula
+1. Clicca sul pulsante **"+ Aggiungi LUT"** <img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line"> sotto la formula
 2. Scegli una sfumatura di colore
 3. Imposta il minimo e il massimo di clipping
 4. Scegli una modalità di clipping
@@ -101,7 +101,7 @@ Passa il mouse sulla **barra della sfumatura**per aprire l’elenco delle impost
 | 6 | Viola → Blue → Green → Giallo      | Sequenziale, dal più scuro al più chiaro                                           |
 | 7 | Orange → Bianco → Viola             | Divergente attorno a un punto medio chiaro                                   |
 
-Un gradiente **divergente**posiziona un colore neutro al centro della finestra, il che risulta efficace quando il punto medio ha un significato specifico (una soglia, una data di riferimento). Un gradiente**sequenziale** varia in modo monotono dal più scuro al più chiaro, il che risulta efficace per una quantità che presenta solo i valori &quot;più&quot; e &quot;meno&quot;.
+Un gradiente **divergente**posiziona un colore neutro al centro della finestra, il che risulta efficace quando il punto medio ha un significato specifico (una soglia, una data di riferimento). Un gradiente**sequenziale** varia in modo monotono dal più scuro al più chiaro, il che risulta efficace per una quantità che presenta solo i valori "più" e "meno".
 
 Ogni preimpostazione ha sette punti di colore. Clicca su una preimpostazione e l’immagine si aggiorna immediatamente (quando la casella LUT è spuntata).
 
@@ -189,7 +189,7 @@ Tutto quanto sopra è un’anteprima in tempo reale finché non si salva. Il pul
 
 | Opzione                          | Effetto                                                                                                                                            |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Applica all&#x27;immagine corrente**      | Salva esattamente l&#x27;immagine visualizzata, con queste impostazioni                                                                                                |
+| **Applica all'immagine corrente**      | Salva esattamente l'immagine visualizzata, con queste impostazioni                                                                                                |
 | **Applica a tutte le immagini del progetto** | Riesegue la stessa configurazione su ogni immagine del progetto. Le immagini prive delle bande richieste da questo indice vengono ignorate, non considerate come errori |
 | **Barra di gradiente indice/LUT**      | Scrive anche un’immagine di legenda separata per ogni esportazione, con l’intervallo di valori etichettato                                                                     |
 | **Istogramma indice**             | Scrive anche un’immagine di istogramma separata per ogni esportazione, mostrando i valori minimi/massimi dei dati e le soglie di clipping                                               |
@@ -214,7 +214,7 @@ All’interno della cartella, per ogni immagine:
 | `<source name>_<IndexName>_<Index\|LUT>_legend.png`    | Il file sidecar della barra del gradiente, se richiesto                     |
 | `<source name>_<IndexName>_<Index\|LUT>_histogram.png` | Il file sidecar dell’istogramma degli indici, se richiesto                  |
 
-I due file di accompagnamento vengono sempre scritti a **risoluzione piena**, anche quando l&#x27;immagine principale è mediata per blocchi: la dimensione di un blocco corrisponde alla risoluzione di visualizzazione ed entrambi i file di accompagnamento riportano i valori reali dell&#x27;indice per ogni singolo pixel. Inoltre, riportano più informazioni rispetto alle versioni visualizzate sullo schermo: entrambi indicano la finestra di allungamento _e_ i valori minimi e massimi reali dei dati, in modo che una legenda salvata sia ancora leggibile mesi dopo senza dover aprire il progetto.
+I due file di accompagnamento vengono sempre scritti a **risoluzione piena**, anche quando l'immagine principale è mediata per blocchi: la dimensione di un blocco corrisponde alla risoluzione di visualizzazione ed entrambi i file di accompagnamento riportano i valori reali dell'indice per ogni singolo pixel. Inoltre, riportano più informazioni rispetto alle versioni visualizzate sullo schermo: entrambi indicano la finestra di allungamento _e_ i valori minimi e massimi reali dei dati, in modo che una legenda salvata sia ancora leggibile mesi dopo senza dover aprire il progetto.
 
 ### Avanzamento e risultati
 
@@ -222,7 +222,7 @@ L’esportazione dell’intero progetto richiede pochi minuti, quindi l’esecuz
 
 * Una barra di avanzamento mostra `current / total` e il file in fase di scrittura
 * Al termine, il riquadro riporta quante immagini sono state esportate, quante sono state saltate e il percorso della cartella di output
-* Le immagini saltate sono elencate con il motivo (ne vengono mostrate fino a cinque, poi una riga &quot;+N altre&quot;). Il motivo più comune è un livello che non dispone dei canali necessari a questo indice
+* Le immagini saltate sono elencate con il motivo (ne vengono mostrate fino a cinque, poi una riga "+N altre"). Il motivo più comune è un livello che non dispone dei canali necessari a questo indice
 * Se **nessuna** immagine del progetto può utilizzare l’indice, l’esecuzione segnala un errore anziché lasciare una cartella vuota
 
 È possibile eseguire una sola esportazione in sandbox alla volta. L’avvio di una seconda esportazione mentre una è in corso viene rifiutato con un messaggio chiaro, per evitare che due operazioni entrino in conflitto sullo stesso file di progetto.
@@ -286,6 +286,6 @@ Dovrebbero — il percorso di esportazione rispecchia fedelmente l’anteprima i
 ## Passi successivi
 
 * [**Livelli dell’immagine**](image-layers.md) — su quale livello eseguire un indice e cosa significano i suoi valori
-* [**Apertura di un&#x27;immagine a schermo intero**](opening-an-image-full-screen.md) — la lettura del cursore, l’istogramma e il controllo del GSD in dettaglio
+* [**Apertura di un'immagine a schermo intero**](opening-an-image-full-screen.md) — la lettura del cursore, l’istogramma e il controllo del GSD in dettaglio
 * [**Formule degli indici multispettrali**](../project-settings/multispectral-index-formulas.md) — ogni preimpostazione, su ogni superficie
 * [**Impostazioni del progetto**](../project-settings/project-settings.md) — integrazione delle impostazioni individuate in una sessione di elaborazione

@@ -6,7 +6,7 @@ metaLinks:
 
 # Formati immagine di output
 
-Chloros esporta i prodotti elaborati in quattro formati di file. Selezionare il formato nelle Impostazioni del progetto (GUI), con `--format` (CLI) o con `export_format` (SDK). La CLI e l&#x27;SDK accettano le stringhe esatte riportate di seguito.
+Chloros esporta i prodotti elaborati in quattro formati di file. Selezionare il formato nelle Impostazioni del progetto (GUI), con `--format` (CLI) o con `export_format` (SDK). La CLI e l'SDK accettano le stringhe esatte riportate di seguito.
 
 | Stringa di formato | Estensione | Tipo di pixel | Intervallo di pixel | Note |
 | --- | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ Novità della versione 1.3.0: un prodotto di indice descrive **se stesso** anzic
 | `Chloros:IlluminationInvariant` | `True` per un indice calcolato dalla riflettanza, `False` dalla radianza o dai valori del sensore |
 | `Chloros:ChlorosPipelineVersion` | la versione di Chloros che ha generato l’indice |
 
-`Chloros:PixelScale` è stato rimosso dai prodotti dell’indice — utilizzare `IndexMin` / `IndexMax` sopra indicati. La procedura completa di lettura è disponibile nella sezione &quot;Un raster con indice intero è un&#x27;estensione del contrasto per singola immagine&quot; nella [Guida di riferimento CLI](reference/cli-reference.md).
+`Chloros:PixelScale` è stato rimosso dai prodotti dell’indice — utilizzare `IndexMin` / `IndexMax` sopra indicati. La procedura completa di lettura è disponibile nella sezione "Un raster con indice intero è un'estensione del contrasto per singola immagine" nella [Guida di riferimento CLI](reference/cli-reference.md).
 
 ## Lettura dei valori di riflettanza dei pixel
 
@@ -94,4 +94,4 @@ La riflettanza è memorizzata come numero digitale intero (DN) e **il DN che cor
 **Acquisizioni a 8 bit.** Le esportazioni di un’acquisizione a 8 bit sono a 8 bit. La sua riflettanza viene ridimensionata e contrassegnata con `Chloros:PixelScale=32768`, in modo che la scala rimanga invariata; i prodotti DN a 8 bit e i file di riflettanza scritti prima della versione 1.3.0 vengono limitati a 0–255 e non riportano alcun tag di scala. Se il tag è assente in un file di riflettanza LATTICE, non dare per scontata l’esistenza di una scala; riesportare invece a 16 bit o 32 bit.
 {% endhint %}
 
-Per le regole complete (compresi i tag compatibili con MicaSense), consultare **&quot;Lettura dei pixel di riflettanza&quot;** nella [Guida di riferimento CLI](reference/cli-reference.md).
+Per le regole complete (compresi i tag compatibili con MicaSense), consultare **"Lettura dei pixel di riflettanza"** nella [Guida di riferimento CLI](reference/cli-reference.md).

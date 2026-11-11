@@ -8,7 +8,7 @@ Contrassegnando le immagini che contengono bersagli di calibrazione, si indica a
 
 ### Il contrassegno controlla la scansione
 
-Quando si selezionano immagini specifiche nella colonna &quot;Target&quot;:
+Quando si selezionano immagini specifiche nella colonna "Target":
 
 * Chloros esegue la scansione alla ricerca di bersagli solo sulle immagini selezionate
 * Il rilevamento dei bersagli viene completato molto più rapidamente
@@ -147,7 +147,7 @@ Se Chloros non rileva correttamente i bersagli, regolare queste impostazioni in 
 * **Riduci** se i target con variazioni di colore non vengono rilevati completamente
 
 {% hint style="info" %}
-**Suggerimento per CLI**: `chloros-cli process` accetta gli stessi parametri (`--min-target-size`, `--target-clustering`), e il suo flag `--target`/`--targets` contrassegna un&#x27;intera cartella di input come &quot;solo pannello dei target&quot;. Vedi la [Guida di riferimento di CLI](../reference/cli-reference.md).
+**Suggerimento per CLI**: `chloros-cli process` accetta gli stessi parametri (`--min-target-size`, `--target-clustering`), e il suo flag `--target`/`--targets` contrassegna un'intera cartella di input come "solo pannello dei target". Vedi la [Guida di riferimento di CLI](../reference/cli-reference.md).
 {% endhint %}
 
 ***
@@ -159,7 +159,7 @@ Se Chloros non rileva correttamente i bersagli, regolare queste impostazioni in 
 **Possibili cause:**
 
 * Immagini di riferimento non contrassegnate nel File Browser
-* Obiettivo troppo piccolo nell’inquadratura (&lt; 30% dell’immagine)
+* Obiettivo troppo piccolo nell’inquadratura (< 30% dell’immagine)
 * Illuminazione inadeguata (ombre, riflessi)
 * Impostazioni di rilevamento degli obiettivi troppo rigide
 
@@ -216,7 +216,7 @@ Se un sensore di luce DAQ ha registrato l’irraggiamento discendente durante le
 
 È anche possibile eseguire l’elaborazione senza target e senza un DAQ:
 
-1. Lasciare deselezionate tutte le caselle di controllo della colonna &quot;Target&quot;
+1. Lasciare deselezionate tutte le caselle di controllo della colonna "Target"
 2. **Disattivare** «Calibrazione della riflettanza / bilanciamento del bianco» nelle Impostazioni del progetto: il rilevamento dei target verrà così completamente saltato
 3. La correzione della vignettatura verrà comunque applicata
 4. L’output non sarà calibrato per la riflettanza assoluta (LATTICE multispettrale esporta comunque prodotti debayered, di anteprima e di radianza)

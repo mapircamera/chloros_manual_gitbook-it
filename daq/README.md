@@ -1,6 +1,6 @@
 # Sensori di luce DAQ
 
-> **Cerchi informazioni sull&#x27;hardware?**I sensori stessi — modelli, montaggio, cappucci, porte, alimentazione e l&#x27;app SCANNER — sono descritti nel**[manuale utente DAQ](https://mapir.gitbook.io/daq)**. Questo capitolo illustra come utilizzarli da Chloros. I sensori di luce**DAQ** di
+> **Cerchi informazioni sull'hardware?**I sensori stessi — modelli, montaggio, cappucci, porte, alimentazione e l'app SCANNER — sono descritti nel**[manuale utente DAQ](https://mapir.gitbook.io/daq)**. Questo capitolo illustra come utilizzarli da Chloros. I sensori di luce**DAQ** di
 
 MAPIR misurano la luce ambientale sotto forma di spettri calibrati radiometricamente. In Chloros svolgono due ruoli:
 
@@ -51,10 +51,10 @@ Ogni DAQ riporta un ID sensore stabile. La sua struttura varia a seconda del mod
 | DAQ-M | 5 ottetti con trattini | `CB-74-02-30-6B` |
 | DAQ-E | `daq-e-<6 hex digits>` | `daq-e-def330` |
 
-L&#x27;ID del sensore è:
+L'ID del sensore è:
 
 * impresso in ogni file `.daq` che registra,
-* la chiave che Chloros utilizza per recuperare il pacchetto di calibrazione di fabbrica di quell&#x27;unità,
+* la chiave che Chloros utilizza per recuperare il pacchetto di calibrazione di fabbrica di quell'unità,
 * il valore che si passa a `--sensor-id` nei comandi CLI, e
 * per il DAQ-E, anche il suo nome host mDNS (`daq-e-def330.local`) — il valore che `--eth-host` accetta.
 

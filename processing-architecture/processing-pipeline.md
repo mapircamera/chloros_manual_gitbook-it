@@ -134,10 +134,10 @@ status = chloros.get_status()
 print(f"Export: {status['export']['percent']}% - Phase: {status['export']['phase']}")
 ```
 
-L&#x27;elaborazione è completata quando il thread 4 raggiunge il 100%.
+L'elaborazione è completata quando il thread 4 raggiunge il 100%.
 
 {% hint style="info" %}
-**Un&#x27;esecuzione che non scrive alcuna immagine è considerata un errore.**In caso di esito positivo, `chloros-cli process` riporta il numero di prodotti immagine scritti (`Image products written: N`). Se sono stati richiesti prodotti e**nessuno**è stato scritto — solo `project.json` e `calibration_data.json` — l’CLI stampa `Processing finished but wrote no image products.` e**termina con un valore diverso da zero**, indicando il nome della cartella del progetto e le cause più comuni (la cartella di input non è stata riconosciuta come acquisizione — controllare il layout e `--input-level` — oppure tutti i prodotti richiesti non erano applicabili a quelle telecamere). Gli script possono fare affidamento sul codice di uscita.
+**Un'esecuzione che non scrive alcuna immagine è considerata un errore.**In caso di esito positivo, `chloros-cli process` riporta il numero di prodotti immagine scritti (`Image products written: N`). Se sono stati richiesti prodotti e**nessuno**è stato scritto — solo `project.json` e `calibration_data.json` — l’CLI stampa `Processing finished but wrote no image products.` e**termina con un valore diverso da zero**, indicando il nome della cartella del progetto e le cause più comuni (la cartella di input non è stata riconosciuta come acquisizione — controllare il layout e `--input-level` — oppure tutti i prodotti richiesti non erano applicabili a quelle telecamere). Gli script possono fare affidamento sul codice di uscita.
 {% endhint %}
 
 ***
@@ -159,4 +159,4 @@ L’allocazione di memoria GPU del thread 3 aumenta anche man mano che i thread 
 * [Adattamento dinamico dell’elaborazione](dynamic-compute-adaptation.md) — Come Chloros seleziona la strategia ottimale per il tuo hardware
 * [Guida NVIDIA Jetson](../linux/nvidia-jetson-guide.md) — Comportamento della pipeline specifico per la piattaforma su Jetson
 * [Monitoraggio dell’elaborazione](../processing-images-gui/monitoring-the-processing.md) — Monitoraggio dello stato di avanzamento tramite interfaccia grafica
-* [Riferimento CLI](../reference/cli-reference.md) — `process`, `export-status`, codici di uscita e struttura dell&#x27;output
+* [Riferimento CLI](../reference/cli-reference.md) — `process`, `export-status`, codici di uscita e struttura dell'output

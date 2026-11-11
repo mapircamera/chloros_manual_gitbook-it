@@ -1,10 +1,10 @@
 # Indicatori sulla mappa
 
-La scheda &quot;Mappa&quot; traccia le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Offre una panoramica geografica di una sessione di acquisizione ed è il modo più rapido, subito dopo l&#x27;importazione, per eliminare le immagini che non si desidera elaborare.
+La scheda "Mappa" traccia le immagini su una mappa 2D interattiva in base alle loro coordinate GPS. Offre una panoramica geografica di una sessione di acquisizione ed è il modo più rapido, subito dopo l'importazione, per eliminare le immagini che non si desidera elaborare.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
-## Come accedere alla scheda &quot;Mappa&quot;
+## Come accedere alla scheda "Mappa"
 
 1. Apri o crea un progetto in Chloros
 2. Importa le immagini che contengono metadati GPS
@@ -17,7 +17,7 @@ La scheda &quot;Mappa&quot; traccia le immagini su una mappa 2D interattiva in b
 
 ***
 
-## Modifica delle immagini dalla scheda &quot;Mappa&quot;
+## Modifica delle immagini dalla scheda "Mappa"
 
 La scheda **Mappa**<img src="../.gitbook/assets/image (3) (1).png" alt="" data-size="line"> presenta gli stessi pulsanti per l’aggiunta <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> e la rimozione <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line"> dei file presenti nella scheda [**Esplora file**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">. Mostra lo stesso elenco di file di progetto, con colonne geografiche:
 
@@ -29,11 +29,11 @@ La scheda **Mappa**<img src="../.gitbook/assets/image (3) (1).png" alt="" data-s
 | **Altitudine**  | Metri, una cifra decimale — `-` quando l’immagine non riporta l’altitudine |
 
 {% hint style="info" %}
-Clicca su qualsiasi intestazione di colonna per ordinare i dati in base a quella; clicca di nuovo per invertire l&#x27;ordine.
+Clicca su qualsiasi intestazione di colonna per ordinare i dati in base a quella; clicca di nuovo per invertire l'ordine.
 {% endhint %}
 
 {% hint style="warning" %}
-**L’altitudine è l’altezza sul livello del mare, non l’altezza dal suolo.** Il valore proviene dal tag EXIF `GPSAltitude` dell’immagine, che fa riferimento al livello medio del mare. Non si tratta dell&#x27;altezza di volo rispetto al terreno, e Chloros non ne ricaverà la distanza campionaria al suolo (GSD): su un campo a 300 m sul livello del mare, un drone a 100 m AGL registrerà qui circa 400 m. Utilizza questa colonna per individuare valori anomali e confermare la coerenza dell’altitudine di volo, non come misura AGL.
+**L’altitudine è l’altezza sul livello del mare, non l’altezza dal suolo.** Il valore proviene dal tag EXIF `GPSAltitude` dell’immagine, che fa riferimento al livello medio del mare. Non si tratta dell'altezza di volo rispetto al terreno, e Chloros non ne ricaverà la distanza campionaria al suolo (GSD): su un campo a 300 m sul livello del mare, un drone a 100 m AGL registrerà qui circa 400 m. Utilizza questa colonna per individuare valori anomali e confermare la coerenza dell’altitudine di volo, non come misura AGL.
 {% endhint %}
 
 ***
@@ -84,7 +84,7 @@ Ogni immagine con dati GPS riceve un indicatore alle proprie coordinate.
 
 Scegli il tipo di livello cartografico utilizzando i pulsanti (da sinistra a destra):
 
-![](&lt;../.gitbook/assets/image (14).png&gt;)
+![](<../.gitbook/assets/image (14).png>)
 
 | Tipo                 | Mostra                                                                |
 | -------------------- | -------------------------------------------------------------------- |
@@ -99,9 +99,9 @@ La scheda Mappa si apre su **Ibrido**. La scelta effettuata si applica anche al 
 
 * **Zoom**: rotellina del mouse o pulsanti di zoom sulla mappa
 * **Panoramica**: clicca e trascina
-* **Schermo intero**: il comando &quot;Schermo intero&quot; espande la mappa a tutta la finestra***
+* **Schermo intero**: il comando "Schermo intero" espande la mappa a tutta la finestra***
 
-## Casi d&#x27;uso
+## Casi d'uso
 
 ### Revisione della traiettoria di volo
 

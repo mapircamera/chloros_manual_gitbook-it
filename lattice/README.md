@@ -1,6 +1,6 @@
 # Telecamere LATTICE
 
-LATTICE è il sistema modulare di telecamere multispettrali di MAPIR per l&#x27;imaging agricolo e scientifico. Ogni telecamera LATTICE è basata sul sensore global-shutter Sony IMX265 (**3,1 MP, pixel da 3,45 µm**) e si collega tramite Ethernet come dispositivo**GigE Vision**.
+LATTICE è il sistema modulare di telecamere multispettrali di MAPIR per l'imaging agricolo e scientifico. Ogni telecamera LATTICE è basata sul sensore global-shutter Sony IMX265 (**3,1 MP, pixel da 3,45 µm**) e si collega tramite Ethernet come dispositivo**GigE Vision**.
 
 Chloros 1.3.0 controlla le telecamere LATTICE in tempo reale — individuazione, anteprima live, acquisizione e array multitelecamera sincronizzati — da tre interfacce:
 

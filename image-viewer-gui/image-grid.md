@@ -7,7 +7,7 @@ Dopo aver importato le immagini in un progetto, le vedrai disposte in una grigli
 Utilizza il cursore di zoom in alto a destra per regolare la dimensione delle miniature delle immagini. Il cursore va da **64 px a 1200 px**.
 
 * Anche **Ctrl + rotellina del mouse** consente di ridimensionare le miniature.
-* **Ctrl + `+`**/**Ctrl + `=`**e**Ctrl + `−`** aumentano o diminuiscono la dimensione di 4 px per ogni pressione. L&#x27;intervallo di regolazione tramite tastiera termina a 64 px nella dimensione minima e, nella dimensione massima, a qualsiasi dimensione che permetta di inserire esattamente due miniature per riga nella finestra corrente.
+* **Ctrl + `+`**/**Ctrl + `=`**e**Ctrl + `−`** aumentano o diminuiscono la dimensione di 4 px per ogni pressione. L'intervallo di regolazione tramite tastiera termina a 64 px nella dimensione minima e, nella dimensione massima, a qualsiasi dimensione che permetta di inserire esattamente due miniature per riga nella finestra corrente.
 * La dimensione scelta viene salvata insieme al progetto (`UI → Grid thumbnail size` in `project.json`, valore predefinito `160`), quindi riaprendo il progetto verrà ripristinata.
 
 <figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>La *risoluzione* delle miniature è un’impostazione distinta dalla *dimensione* delle miniature: vedi **Visualizza → Risoluzione miniature immagini** in [Impostazioni progetto](../project-settings/project-settings.md) (impostazione predefinita 512 px sul lato più lungo). La dimensione indica quanto è grande il riquadro disegnato; la risoluzione indica la quantità di dettagli recuperati per riempirlo.***
@@ -20,7 +20,7 @@ La fila di pulsanti sopra la griglia presenta fino a tre gruppi, da sinistra a d
 2. **Pulsanti filtro telecamera** — uno per ogni telecamera LATTICE. Appare solo in modalità Per telecamera.
 3. **Pulsanti modalità esportazione/visualizzazione** — quale prodotto viene mostrato da ciascuna miniatura.
 
-Quando la finestra è troppo stretta per contenerli tutti, i gruppi si comprimono da destra a sinistra in menu a tendina che si aprono al passaggio del mouse: prima si comprimono i pulsanti di esportazione/visualizzazione, poi quelli delle telecamere. Il gruppo compresso lascia visibile un unico pulsante contrassegnato dall’opzione attualmente attiva; passandoci sopra con il mouse, si fa scorrere verso il basso l’intera serie. **I pulsanti &quot;Per trigger&quot; e &quot;Per telecamera&quot; non si comprimono mai.
+Quando la finestra è troppo stretta per contenerli tutti, i gruppi si comprimono da destra a sinistra in menu a tendina che si aprono al passaggio del mouse: prima si comprimono i pulsanti di esportazione/visualizzazione, poi quelli delle telecamere. Il gruppo compresso lascia visibile un unico pulsante contrassegnato dall’opzione attualmente attiva; passandoci sopra con il mouse, si fa scorrere verso il basso l’intera serie. **I pulsanti "Per trigger" e "Per telecamera" non si comprimono mai.
 
 <!-- SCREENSHOT-NEEDED: Image grid toolbar of a LATTICE array project at full width, showing all three button groups inline: Per Trigger / Per Camera, three camera filter buttons labelled "LATT-M3M (serial)", and the export/view buttons including TIFF, RAW (Original), RAW (Radiance), RAW (Reflectance). -->
 
@@ -46,13 +46,13 @@ In un progetto misto, l’etichetta segue l’estensione utilizzata dalla maggio
 
 | Pulsante | Mostra | Quando appare |
 | --- | --- | --- |
-| **Obiettivi** | Immagini con un obiettivo di calibrazione rilevato | Dopo un&#x27;esecuzione che ha rilevato degli obiettivi |
+| **Obiettivi** | Immagini con un obiettivo di calibrazione rilevato | Dopo un'esecuzione che ha rilevato degli obiettivi |
 | **Riflettanza** | Immagini di riflettanza calibrate | Solo nei progetti Survey3 — I progetti LATTICE utilizzano invece `RAW (Reflectance)`, quindi la griglia non mostra mai due pulsanti di riflettanza |
 | **Bilanciamento del bianco** | Il prodotto con bilanciamento del bianco (telecamere RGB) | Dopo l’elaborazione |
-| **Correzione della vignettatura** | Il valore di ripiego non calibrato con correzione della vignettatura | Dopo un&#x27;esecuzione in cui non è stato possibile applicare la calibrazione della riflettanza e la *correzione della vignettatura* era attiva |
-| **Risposta del sensore** | L&#x27;opzione di riserva non calibrata con risposta del sensore | Lo stesso, ma con la *correzione della vignettatura* disattivata |
+| **Correzione della vignettatura** | Il valore di ripiego non calibrato con correzione della vignettatura | Dopo un'esecuzione in cui non è stato possibile applicare la calibrazione della riflettanza e la *correzione della vignettatura* era attiva |
+| **Risposta del sensore** | L'opzione di riserva non calibrata con risposta del sensore | Lo stesso, ma con la *correzione della vignettatura* disattivata |
 | **`RAW (<INDEX> Index)`** | Un pulsante per ogni indice calcolato | Dopo un ciclo con indici configurati |
-| **`<INDEX> LUT`** | Un pulsante per ogni indice con mappatura cromatica | Dopo un&#x27;esecuzione con una LUT configurata |
+| **`<INDEX> LUT`** | Un pulsante per ogni indice con mappatura cromatica | Dopo un'esecuzione con una LUT configurata |
 | **`<Index> <Index\|LUT> <NNN>`** | Un pulsante per ogni esecuzione di esportazione [Index/LUT Sandbox](index-lut-sandbox.md) | Nel momento in cui termina un’esportazione sandbox |
 
 ### Pulsanti di livello LATTICE
@@ -70,7 +70,7 @@ I progetti contenenti acquisizioni LATTICE aggiungono questi pulsanti, etichetta
 Le esportazioni a due livelli Chloros **non dispongono di un proprio pulsante di griglia**:
 
 * **Debayered** — la vista `RAW (Original)` viene già visualizzata senza debayering, quindi un secondo pulsante su un’immagine visivamente identica sarebbe superfluo. Il prodotto `RAW (Debayered)` viene comunque salvato su disco ed è ancora selezionabile dal menu a tendina dei livelli a schermo intero.
-* **Anteprima** — sulle telecamere RGB l&#x27;anteprima è registrata come livello `White Balanced`, che dispone invece di un pulsante. Sulle telecamere multispettrali è registrato come `RAW (Preview)` ed è accessibile dal menu a tendina dei livelli a schermo intero.
+* **Anteprima** — sulle telecamere RGB l'anteprima è registrata come livello `White Balanced`, che dispone invece di un pulsante. Sulle telecamere multispettrali è registrato come `RAW (Preview)` ed è accessibile dal menu a tendina dei livelli a schermo intero.
 
 {% hint style="info" %}
 Questi pulsanti di livello vengono visualizzati solo per i progetti che contengono effettivamente fotogrammi LATTICE. I progetti Survey3 registrano alcuni degli stessi nomi di livelli interni, e i pulsanti vengono filtrati per essi, in modo che una griglia Survey3 mantenga il suo familiare set `JPG / Targets / Reflectance`.
@@ -104,7 +104,7 @@ Le immagini non LATTICE in un progetto misto non vengono raggruppate — vengono
 
 ## Le miniature della griglia seguono la dimensione del blocco GSD
 
-Se hai impostato una dimensione del blocco **GSD (px)** nella barra laterale della scheda &quot;Immagine&quot;, le miniature della griglia vengono visualizzate con quella stessa risoluzione al suolo — non solo nella vista a schermo intero. Una dimensione del blocco pari a 8 significa che ogni pixel visualizzato è la media di un blocco di 8 × 8 pixel sorgente, in ogni punto dell’app in cui viene mostrata l’immagine.
+Se hai impostato una dimensione del blocco **GSD (px)** nella barra laterale della scheda "Immagine", le miniature della griglia vengono visualizzate con quella stessa risoluzione al suolo — non solo nella vista a schermo intero. Una dimensione del blocco pari a 8 significa che ogni pixel visualizzato è la media di un blocco di 8 × 8 pixel sorgente, in ogni punto dell’app in cui viene mostrata l’immagine.
 
 Poiché una tessera ha una larghezza iniziale di solo un paio di centinaia di pixel, le dimensioni dei blocchi grossolane smettono di fare una differenza visibile sulla griglia ben prima che ciò avvenga nella visualizzazione a schermo intero: un fotogramma da 4000 px disegnato in una tessera da 160 px ha già circa 25 pixel sorgente per ogni pixel visualizzato. Vedi [Apertura di un’immagine a schermo intero](opening-an-image-full-screen.md#gsd-block-size) per il controllo stesso.
 
@@ -113,6 +113,6 @@ Poiché una tessera ha una larghezza iniziale di solo un paio di centinaia di pi
 ## Pagine correlate
 
 * [**Aprire un’immagine a schermo intero**](opening-an-image-full-screen.md) — il visualizzatore a schermo intero, i valori del cursore e l’istogramma
-* [**Livelli dell&#x27;immagine**](image-layers.md) — il menu a tendina dei livelli all’interno del visualizzatore a schermo intero
+* [**Livelli dell'immagine**](image-layers.md) — il menu a tendina dei livelli all’interno del visualizzatore a schermo intero
 * [**Sandbox Indice/LUT**](index-lut-sandbox.md) — creazione ed esportazione di visualizzazioni dell’indice
 * [**Impostazioni del progetto**](../project-settings/project-settings.md) — i pulsanti di esportazione che determinano quali prodotti sono effettivamente disponibili

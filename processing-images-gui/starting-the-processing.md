@@ -1,14 +1,14 @@
-# Avvio dell&#x27;elaborazione
+# Avvio dell'elaborazione
 
-Una volta importate le immagini, contrassegnati i target di calibrazione e configurate le impostazioni del progetto, sei pronto per iniziare l&#x27;elaborazione. Questa pagina ti guida nell&#x27;avvio della pipeline di elaborazione di Chloros.
+Una volta importate le immagini, contrassegnati i target di calibrazione e configurate le impostazioni del progetto, sei pronto per iniziare l'elaborazione. Questa pagina ti guida nell'avvio della pipeline di elaborazione di Chloros.
 
 ## Lista di controllo pre-elaborazione
 
 Prima di fare clic sul pulsante Avvia, verifica che tutto sia pronto:
 
 * [ ] **File importati** - Tutte le immagini sono visibili nel File Browser
-* [ ] **Immagini di riferimento contrassegnate** - Colonna &quot;Target&quot; spuntata per le immagini di calibrazione (oppure una registrazione `.daq` importata per LATTICE)
-* [ ] **Modelli di fotocamera rilevati** - La colonna &quot;Modello fotocamera&quot; mostra le fotocamere corrette
+* [ ] **Immagini di riferimento contrassegnate** - Colonna "Target" spuntata per le immagini di calibrazione (oppure una registrazione `.daq` importata per LATTICE)
+* [ ] **Modelli di fotocamera rilevati** - La colonna "Modello fotocamera" mostra le fotocamere corrette
 * [ ] **Impostazioni configurate** - Impostazioni del progetto riviste e modificate
 * [ ] **Indici selezionati** - Indici multispettrali desiderati aggiunti (se necessario)
 * [ ] **Formato di esportazione scelto** - Formato di output adeguato al proprio flusso di lavoro
@@ -63,7 +63,7 @@ Chloros opera in due diverse modalità di elaborazione a seconda della licenza:
 2. **Elaborazione** - Applicazione della calibrazione ed esportazione delle immagini**Tempo di elaborazione:**
 
 * Molto più lento rispetto alla modalità parallela di Chloros+
-* Adatto a set di dati di piccole e medie dimensioni (&lt; 200 immagini)
+* Adatto a set di dati di piccole e medie dimensioni (< 200 immagini)
 
 ### Modalità Chloros+ (elaborazione parallela)
 
@@ -203,7 +203,7 @@ Se è necessario interrompere l’elaborazione:
 ### Come interrompere
 
 1. Individuare il **pulsante Stop** (sostituisce il pulsante Avvia durante l’elaborazione)
-2. Fare clic una volta: la barra mostra **&quot;Arresto in corso...&quot;** mentre l’immagine in elaborazione viene completata
+2. Fare clic una volta: la barra mostra **"Arresto in corso..."** mentre l’immagine in elaborazione viene completata
 3. L’esecuzione termina in uno stato di arresto definitivo e il registro riporta un resoconto dettagliato `[RUN-SUMMARY]` di ciò che è stato completato
 
 ### Quando interrompere
@@ -286,9 +286,9 @@ Il tempo di elaborazione effettivo varia notevolmente in base a:
 3. Provare a elaborare un sottoinsieme più piccolo di immagini
 4. Verificare che le immagini non siano danneggiate
 
-### L&#x27;esecuzione termina ma non scrive alcuna immagine
+### L'esecuzione termina ma non scrive alcuna immagine
 
-Un&#x27;esecuzione che ha richiesto prodotti immagine ma non ne ha scritto alcuno viene considerata un **fallimento, non un successo** — Chloros lo segnala in modo evidente:
+Un'esecuzione che ha richiesto prodotti immagine ma non ne ha scritto alcuno viene considerata un **fallimento, non un successo** — Chloros lo segnala in modo evidente:
 
 * Il log dell’interfaccia grafica visualizza i messaggi `[RUN-SUMMARY]` che indicano la causa probabile: nessuna immagine importata, nessun bersaglio rilevato oppure tutti i prodotti richiesti ignorati in quanto non applicabili (ad esempio, richiesta di radianza/riflettanza da telecamere solo RGB)
 * L’equivalente nell’CLI (`chloros-cli process`) visualizza il messaggio `Processing finished but wrote no image products.` e **termina con un valore diverso da zero**, in modo che gli script possano rilevarlo
@@ -306,7 +306,7 @@ Consultare [il Riferimento CLI](../reference/cli-reference.md#a-run-that-writes-
 **Soluzioni:**
 
 1. Conservare i progetti in una cartella con nome più breve — modificare la**Directory di lavoro** in [Impostazioni progetto](../project-settings/project-settings.md) e ricreare il progetto, oppure
-2. Abilitare i percorsi lunghi di Windows e riavviare Chloros: rieseguire il programma di installazione di Chloros con l’opzione **Abilita percorsi lunghi di Windows** selezionata (è selezionata per impostazione predefinita), oppure utilizzare i Criteri di gruppo: *Configurazione computer &gt; Modelli amministrativi &gt; Sistema &gt; File system &gt; Abilita percorsi lunghi Win32*.
+2. Abilitare i percorsi lunghi di Windows e riavviare Chloros: rieseguire il programma di installazione di Chloros con l’opzione **Abilita percorsi lunghi di Windows** selezionata (è selezionata per impostazione predefinita), oppure utilizzare i Criteri di gruppo: *Configurazione computer > Modelli amministrativi > Sistema > File system > Abilita percorsi lunghi Win32*.
 
 ### Avviso «Nessun bersaglio rilevato»
 
@@ -319,13 +319,13 @@ Consultare [il Riferimento CLI](../reference/cli-reference.md#a-run-that-writes-
 **Soluzioni:**
 
 1. Consultare [Scelta delle immagini bersaglio](choosing-target-images.md)
-2. Contrassegnare le immagini appropriate nella colonna &quot;Target&quot;
+2. Contrassegnare le immagini appropriate nella colonna "Target"
 3. Verificare che i target siano visibili nelle immagini contrassegnate
 4. Modificare le impostazioni di rilevamento dei target, se necessario
 
 ***
 
-## Suggerimenti per un&#x27;elaborazione corretta
+## Suggerimenti per un'elaborazione corretta
 
 ### Prima di iniziare
 

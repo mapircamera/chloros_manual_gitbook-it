@@ -1,7 +1,7 @@
 # API: SDK per Python
 
 {% hint style="info" %}
-**Cerchi l&#x27;API completa?** Questa pagina è un tutorial pratico. Tutte le classi pubbliche, i metodi, le firme esatte e gli esempi copiabili e incollabili si trovano nella [Guida di riferimento SDK](reference/sdk-reference.md), ottimizzata per gli assistenti AI.**Lavori con un assistente AI?** Incolla questo URL nella chat in modo che disponga dell’API completa e aggiornata di Chloros 1.3.0:
+**Cerchi l'API completa?** Questa pagina è un tutorial pratico. Tutte le classi pubbliche, i metodi, le firme esatte e gli esempi copiabili e incollabili si trovano nella [Guida di riferimento SDK](reference/sdk-reference.md), ottimizzata per gli assistenti AI.**Lavori con un assistente AI?** Incolla questo URL nella chat in modo che disponga dell’API completa e aggiornata di Chloros 1.3.0:
 
 `https://mapir.gitbook.io/chloros/reference/sdk-reference.md`
 
@@ -135,7 +135,7 @@ with chloros_sdk.ChlorosLocal() as cl:
 
 ### Lettura del riepilogo post-esecuzione — e individuazione delle esecuzioni vuote
 
-Al termine, `process()` allega il riepilogo di elaborazione del backend come `result["summary"]`. Ogni voce in `summary["hints"]` è una frase completa che spiega qualsiasi aspetto degno di nota — ad esempio, perché un&#x27;esecuzione non ha prodotto alcun risultato — e ogni suggerimento viene inoltre riproposto come `UserWarning` in Python, quindi le esecuzioni vuote si autodiagnosticano anche se non si ispeziona mai il dizionario:
+Al termine, `process()` allega il riepilogo di elaborazione del backend come `result["summary"]`. Ogni voce in `summary["hints"]` è una frase completa che spiega qualsiasi aspetto degno di nota — ad esempio, perché un'esecuzione non ha prodotto alcun risultato — e ogni suggerimento viene inoltre riproposto come `UserWarning` in Python, quindi le esecuzioni vuote si autodiagnosticano anche se non si ispeziona mai il dizionario:
 
 ```python
 result = cl.process()
@@ -146,7 +146,7 @@ for hint in result.get("summary", {}).get("hints", []):
 ```
 
 {% hint style="warning" %}
-**`process()` non genera un&#x27;eccezione quando un&#x27;esecuzione non produce immagini.** Questo è l&#x27;unico punto in cui l&#x27;SDK e la CLI differiscono deliberatamente: `chloros-cli process` considera &quot;i prodotti sono stati richiesti, ma nessuno è stato scritto&quot; come un errore e termina con un codice di uscita diverso da zero, mentre l’SDK torna normalmente e segnala la condizione tramite `summary` / suggerimenti. Se la tua pipeline deve interrompersi in caso di esecuzione vuota, verifica tu stesso la situazione — controlla `summary` (o conta i file nella cartella del progetto) anziché fare affidamento su un&#x27;eccezione.
+**`process()` non genera un'eccezione quando un'esecuzione non produce immagini.** Questo è l'unico punto in cui l'SDK e la CLI differiscono deliberatamente: `chloros-cli process` considera "i prodotti sono stati richiesti, ma nessuno è stato scritto" come un errore e termina con un codice di uscita diverso da zero, mentre l’SDK torna normalmente e segnala la condizione tramite `summary` / suggerimenti. Se la tua pipeline deve interrompersi in caso di esecuzione vuota, verifica tu stesso la situazione — controlla `summary` (o conta i file nella cartella del progetto) anziché fare affidamento su un'eccezione.
 {% endhint %}
 
 ## Smart Connect — hardware attivo
@@ -165,7 +165,7 @@ with chloros_sdk.connect_camera("213800234") as cam:
 ```
 
 {% hint style="info" %}
-**I percorsi relativi puntano alla directory in cui viene eseguito lo script (modificato nella versione 1.3.0).** Con un backend locale, un percorso relativo `output_dir` (incluso quello predefinito `"output"`) — e gli altri percorsi che il backend apre (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — vengono risolti in base alla directory di lavoro dello script, quindi `cam.capture("output/")` scrive in `<current folder>/output/`. Nella versione 1.2.0 un backend installato li risolvava nella propria cartella di installazione e generava un errore con il messaggio &quot;Accesso negato&quot;. Con un backend remoto, i percorsi vengono inviati così come digitati.
+**I percorsi relativi puntano alla directory in cui viene eseguito lo script (modificato nella versione 1.3.0).** Con un backend locale, un percorso relativo `output_dir` (incluso quello predefinito `"output"`) — e gli altri percorsi che il backend apre (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — vengono risolti in base alla directory di lavoro dello script, quindi `cam.capture("output/")` scrive in `<current folder>/output/`. Nella versione 1.2.0 un backend installato li risolvava nella propria cartella di installazione e generava un errore con il messaggio "Accesso negato". Con un backend remoto, i percorsi vengono inviati così come digitati.
 {% endhint %}
 
 ### Array sincronizzato — `connect_array`
@@ -248,7 +248,7 @@ L’utilizzo offline funziona entro il periodo di tolleranza del piano: il livel
 
 ## Eccezioni
 
-Intercetta la classe base per gestire &quot;qualsiasi problema con Chloros&quot;:
+Intercetta la classe base per gestire "qualsiasi problema con Chloros":
 
 ```python
 import chloros_sdk

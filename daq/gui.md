@@ -21,7 +21,7 @@ Fare clic su **Collega sensore** nella parte superiore della barra laterale. La 
 | **↻ Aggiorna** | Esegue immediatamente una nuova scansione del protocollo selezionato (disabilitato durante la scansione BLE/Ethernet). |
 | **Connetti sensore** | Si attiva una volta selezionato un dispositivo; cambia l’etichetta in `Connecting...` mentre viene stabilita la connessione. |
 
-La ricerca viene eseguita solo **mentre la finestra di dialogo di connessione è visualizzata sullo schermo** e si ripete ogni 15 secondi solo per il trasporto selezionato — la semplice apertura della scheda non avvia la scansione. In caso di errore, la finestra di dialogo mostra: *&quot;Connessione fallita. Prova a scollegare e ricollegare il sensore, quindi fai nuovamente clic su Connetti.&quot;*
+La ricerca viene eseguita solo **mentre la finestra di dialogo di connessione è visualizzata sullo schermo** e si ripete ogni 15 secondi solo per il trasporto selezionato — la semplice apertura della scheda non avvia la scansione. In caso di errore, la finestra di dialogo mostra: *"Connessione fallita. Prova a scollegare e ricollegare il sensore, quindi fai nuovamente clic su Connetti."*
 
 La barra laterale si apre automaticamente quando si connette il primo sensore.
 
@@ -43,9 +43,7 @@ A ogni sensore collegato viene assegnata una riga (più una riga per ogni gruppo
 | Icona di trasporto | `DAQ-U` / `DAQ-M` / `DAQ-E`, oppure un badge verde `REF` per un gruppo di riflettanza Ambient+Oggetto. |
 | Nome del dispositivo | Per impostazione predefinita corrisponde al numero di serie del sensore (la sua identità stabile per la calibrazione, i nomi dei file `.daq` e la corrispondenza durante l’importazione); i nomi personalizzati vengono mantenuti per ogni progetto. |
 | Icona **Calibrato** (verde) | Visualizzata quando è caricato il pacchetto di calibrazione di fabbrica del sensore, ovvero quando gli spettri sono espressi in W/m²/nm. |
-| Icona **Aggiornamento disponibile** (ambra, solo DAQ-E) | Il firmware in esecuzione è più vecchio dell’immagine inclusa in questa build di Chloros
-
-. Durante un aggiornamento mostra l’avanzamento in tempo reale (`Flashing… N%`, `Restarting sensor…`, poi `Updated X → Y` o `Failed`). |
+| Icona **Aggiornamento disponibile** (ambra, solo DAQ-E) | Il firmware in esecuzione è più vecchio dell’immagine inclusa in questa build di Chloros. Durante un aggiornamento mostra l’avanzamento in tempo reale (`Flashing… N%`, `Restarting sensor…`, poi `Updated X → Y` o `Failed`). |
 | Occhio | Attiva/disattiva la visibilità di questo sensore sul grafico. |
 | Ingranaggio | Apre la finestra modale delle impostazioni per singolo sensore (sotto). |
 | ✕ (rosso) | Disconnette il sensore o rimuove un gruppo Ambiente+Oggetto. |
@@ -84,15 +82,9 @@ Si apre con l’icona a forma di ingranaggio su una riga del sensore. Contenuti 
 
 pulsante</version\>
 
-**Aggiorna a \<version\>** appare quando questa build di Chloros
-
-include un&#x27;immagine del firmware DAQ-E più recente. L&#x27;aggiornamento viene installato in rete in circa 30 secondi; il sensore si riavvia e si riconnette automaticamente, e un trasferimento interrotto lascia intatto il firmware corrente. Lo stato di avanzamento viene trasmesso in tempo reale (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`) e la cella riporta `Up to date` quando è aggiornato.
-* **Sincronizzazione PTP** — lo stato PTP in tempo reale (ricade su `unknown`). Il firmware DAQ-E v1.2.0+ partecipa allo standard IEEE 1588 PTPv2 come clock esclusivamente slave; il backend dell’host Chloros
-
-è il grandmaster PTP, e ogni DAQ-E e ogni telecamera LATTICE sulla LAN gli fanno da slave nel dominio 0, mantenendo i timestamp entro circa 1 ms.
-* **Rete**— l’indirizzo con cui opera l’unità e come lo ha ottenuto (DHCP, link-local o statico), oltre a un’impostazione salvata che viene applicata dopo un riavvio.**Modifica…**apre un modulo:**Automatico (DHCP)**o**IP statico**con un indirizzo IP, una subnet mask e un gateway opzionale.**Applica e riavvia** salva le impostazioni, riavvia il sensore e lo ricollega. Un indirizzo statico al di fuori della rete di questo computer viene rifiutato, poiché Chloros
-
-non riuscirebbe a raggiungere il sensore dopo il riavvio; viene quindi visualizzata una finestra di dialogo per consentirlo comunque, nel caso di un computer che verrà reindirizzato o instradato verso quella rete. **Trasmissione all’accensione**stabilisce se il sensore inizi a trasmettere non appena viene alimentato, prima che qualsiasi software si connetta.**Riavvia sensore** lo riavvia e lo ricollega con le impostazioni correnti. Il riavvio viene negato mentre il sensore sta registrando. Novità della versione 1.3.0.
+**Aggiorna a \<version\>** appare quando questa build di Chloros include un'immagine del firmware DAQ-E più recente. L'aggiornamento viene installato in rete in circa 30 secondi; il sensore si riavvia e si riconnette automaticamente, e un trasferimento interrotto lascia intatto il firmware corrente. Lo stato di avanzamento viene trasmesso in tempo reale (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`) e la cella riporta `Up to date` quando è aggiornato.
+* **Sincronizzazione PTP** — lo stato PTP in tempo reale (ricade su `unknown`). Il firmware DAQ-E v1.2.0+ partecipa allo standard IEEE 1588 PTPv2 come clock esclusivamente slave; il backend dell’host Chloros è il grandmaster PTP, e ogni DAQ-E e ogni telecamera LATTICE sulla LAN gli fanno da slave nel dominio 0, mantenendo i timestamp entro circa 1 ms.
+* **Rete**— l’indirizzo con cui opera l’unità e come lo ha ottenuto (DHCP, link-local o statico), oltre a un’impostazione salvata che viene applicata dopo un riavvio.**Modifica…**apre un modulo:**Automatico (DHCP)**o**IP statico**con un indirizzo IP, una subnet mask e un gateway opzionale.**Applica e riavvia** salva le impostazioni, riavvia il sensore e lo ricollega. Un indirizzo statico al di fuori della rete di questo computer viene rifiutato, poiché Chloros non riuscirebbe a raggiungere il sensore dopo il riavvio; viene quindi visualizzata una finestra di dialogo per consentirlo comunque, nel caso di un computer che verrà reindirizzato o instradato verso quella rete. **Trasmissione all’accensione**stabilisce se il sensore inizi a trasmettere non appena viene alimentato, prima che qualsiasi software si connetta.**Riavvia sensore** lo riavvia e lo ricollega con le impostazioni correnti. Il riavvio viene negato mentre il sensore sta registrando. Novità della versione 1.3.0.
 
 Per un gruppo Ambient+Object, la finestra modale a forma di ingranaggio mostra solo i sensori sorgente del gruppo, il nome del dispositivo e il colore della linea del grafico.
 
@@ -102,9 +94,7 @@ Per un gruppo Ambient+Object, la finestra modale a forma di ingranaggio mostra s
 
 ### Selezione del cappuccio
 
-Il menu a tendina **Cap** indica a Chloros
-
-quale cappuccio fisico è montato sul diffusore del sensore e applica a ogni spettro il profilo di correzione misurato in fabbrica per quel cappuccio. Le opzioni disponibili dipendono dal modello:
+Il menu a tendina **Cap** indica a Chloros quale cappuccio fisico è montato sul diffusore del sensore e applica a ogni spettro il profilo di correzione misurato in fabbrica per quel cappuccio. Le opzioni disponibili dipendono dal modello:
 
 | Modello | Opzioni cappuccio |
 | --- | --- |
@@ -112,9 +102,7 @@ quale cappuccio fisico è montato sul diffusore del sensore e applica a ogni spe
 | DAQ-M | Nessuno (sensore nudo), Sunshine (correttore coseno) |
 | DAQ-E | Nessuno (sensore nudo), FOV 15°, FOV 45°, FOV 90°, Sunshine (correttore coseno) |
 
-**L’impostazione predefinita per ogni modello è Sunshine (correttore del coseno)** — MAPIR
-
-fornisce ogni DAQ con il cappuccio Sunshine già installato, e questa è la configurazione standard per l’uso all’aperto: una visione emisferica a 180° con errore di coseno ≤ ±4 % fino a 60° e ≤ ±4,5 % fino a 70° (sconsigliata al di sotto di ~15° di elevazione solare), con attenuazione prevista dal design (~12×). La selezione effettuata rimane valida nel progetto.
+**L’impostazione predefinita per ogni modello è Sunshine (correttore del coseno)** — MAPIR fornisce ogni DAQ con il cappuccio Sunshine già installato, e questa è la configurazione standard per l’uso all’aperto: una visione emisferica a 180° con errore di coseno ≤ ±4 % fino a 60° e ≤ ±4,5 % fino a 70° (sconsigliata al di sotto di ~15° di elevazione solare), con attenuazione prevista dal design (~12×). La selezione effettuata rimane valida nel progetto.
 
 {% hint style="warning" %}
 **La selezione del cappuccio deve corrispondere al cappuccio fisicamente montato.**Né il sensore né il software sono in grado di rilevare quale cappuccio sia montato. La selezione determina sia la correzione in tempo reale sia il timbro scritto in ogni file `.daq` — con l’attenuazione di circa 12× del cappuccio Sunshine, un cambio di cappuccio non dichiarato corregge erroneamente gli spettri approssimativamente di quel fattore. (Rimuovere e rimontare lo stesso cappuccio ripete l’errore all’incirca all’1,5%.) Scegliere**Nessuno (sensore nudo)** solo quando il cappuccio è fisicamente rimosso; su un DAQ-E, l’opzione “Nessuno” applica comunque un profilo geometrico di fabbrica per il suo diffusore in vetro incassato — non è un’operazione nulla — e un DAQ-E senza diffusore rappresenta una configurazione da banco, non una configurazione da campo supportata.
@@ -152,13 +140,7 @@ La **saturazione** non è indicata sul grafico stesso: un sensore saturo mostra 
 Sotto il grafico, in vista elenco, aggiornata ogni 500 ms:
 
 * **Tutti i modelli**: Campione di colore della luce (sRGB da CIE XYZ), Saturato (Sì/No), CIE 1931 X/Y/Z, Cromaticità x/y, CIE u′/v′, CCT (K), CRI (Ra), Lunghezza d’onda dominante (nm), Lunghezza d’onda di picco (nm), Purezza di eccitazione, Duv, CIE L\*/a\*/b\* e Munsell H/V/C.
-* **Solo sensori calibrati**(qualsiasi modello tra DAQ-U / DAQ-M / DAQ-E una volta caricato il pacchetto di calibrazione di fabbrica — il badge verde**Calibrato** sulla riga del sensore ne è l’indicazione): Potenza totale (W/m²), Lux fotopico (lx), Lux scotopico (lx), rapporto S/P, PPFD più PPFD Red
-
-/Green
-
-/Blue
-
-(µmol/m²/s) e le irradianze opiche — cono S, melanopico, rodopico, cono M, cono L (tutte in W/m²).
+* **Solo sensori calibrati**(qualsiasi modello tra DAQ-U / DAQ-M / DAQ-E una volta caricato il pacchetto di calibrazione di fabbrica — il badge verde**Calibrato** sulla riga del sensore ne è l’indicazione): Potenza totale (W/m²), Lux fotopico (lx), Lux scotopico (lx), rapporto S/P, PPFD più PPFD Red /Green /Blue (µmol/m²/s) e le irradianze opiche — cono S, melanopico, rodopico, cono M, cono L (tutte in W/m²).
 
 <!-- SCREENSHOT-NEEDED: list view live data table for a DAQ-E showing both the colorimetric rows and the power-calibrated rows (Total Power, Photopic/Scotopic Lux, PPFD, opic irradiances) -->
 
@@ -171,12 +153,10 @@ Due sensori collegati possono essere combinati per ottenere una visualizzazione 
 1. Nella vista a griglia, clicca su **+**su una casella del grafico e scegli**Combina Ambiente + Oggetto**.
 2. Selezionare un sensore **Fonte di luce ambientale**e un sensore**Scanner oggetto**(due sensori distinti), quindi**Crea**.
 
-Chloros
+Chloros a calcola R(λ) = oggetto(λ) / ambiente(λ) per ciascuna lunghezza d’onda dai due flussi in tempo reale (0 se ambiente ≤ 0). L’etichetta del gruppo dipende dalla classe di calibrazione dei sensori:
 
-a calcola R(λ) = oggetto(λ) / ambiente(λ) per ciascuna lunghezza d’onda dai due flussi in tempo reale (0 se ambiente ≤ 0). L’etichetta del gruppo dipende dalla classe di calibrazione dei sensori:
-
-* Entrambi i sensori calibrati (pacchetto caricato) → **&quot;Riflettanza apparente&quot;**.
-* Uno dei due sensori non calibrato → **&quot;Riflettanza relativa&quot;**.
+* Entrambi i sensori calibrati (pacchetto caricato) → **"Riflettanza apparente"**.
+* Uno dei due sensori non calibrato → **"Riflettanza relativa"**.
 
 Il gruppo appare come una riga verde `REF` nella barra laterale e con un proprio grafico (riempimento arcobaleno, valori al passaggio del mouse con 4 decimali, zoom tramite trascinamento).
 
@@ -188,34 +168,10 @@ Il menu **+**offre anche l’opzione**Aggiungi nuovo sensore** con tre posizioni
 
 ### Tabella degli indici di vegetazione
 
-Nella vista elenco, sotto il grafico di un gruppo di riflettanza è presente una tabella degli indici di vegetazione, calcolati dalla riflettanza in tempo reale ai centri di banda **blu 450 / verde 550 / rosso 670 / NIR
+Nella vista elenco, sotto il grafico di un gruppo di riflettanza è presente una tabella degli indici di vegetazione, calcolati dalla riflettanza in tempo reale ai centri di banda **blu 450 / verde 550 / rosso 670 / NIR 800 nm** (valori con 4 decimali, `---` quando non calcolabili; passare il mouse sul nome di un indice per visualizzarne il nome completo):
 
-800 nm** (valori con 4 decimali, `---` quando non calcolabili; passare il mouse sul nome di un indice per visualizzarne il nome completo):
-
-* **Sempre visualizzati** (invarianti di scala, qualsiasi combinazione di sensori): NDVI
-
-, GNDVI
-
-, ENDVI, WDRVI
-
-, GRVI
-
-, CVI
-
-, GCI
-
-, MSR.
-* **Solo quando entrambi i sensori sono calibrati in potenza** (entrambi i pacchetti caricati): EVI
-
-, SAVI
-
-, OSAVI
-
-, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI
-
-, NLI, MNLI, FCI, GEMI
-
-.
+* **Sempre visualizzati** (invarianti di scala, qualsiasi combinazione di sensori): NDVI, GNDVI, ENDVI, WDRVI, GRVI, CVI, GCI, MSR.
+* **Solo quando entrambi i sensori sono calibrati in potenza** (entrambi i pacchetti caricati): EVI, SAVI, OSAVI, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI, NLI, MNLI, FCI, GEMI.
 
 <!-- SCREENSHOT-NEEDED: an Ambient+Object reflectance group in list view — reflectance chart labeled "Apparent Reflectance" with the vegetation index table below it showing live NDVI etc. -->
 
@@ -239,13 +195,9 @@ Per ottenere valori quantitativi di irradianza, calcolare la media su almeno 15 
 ## Layout multisensore e persistenza del progetto
 
 * È possibile combinare più sensori su un unico grafico (assi condivisi), mantenere grafici separati (layout a griglia automatico), spostare i sensori tra i grafici, riordinare le righe/i riquadri trascinandoli e nascondere singoli sensori tramite l’icona a forma di occhio.
-* Per ogni progetto, Chloros
-
-conserva: nomi dei dispositivi, colori dei grafici, dimensioni dei grafici, modalità di visualizzazione e impostazioni di ciascun sensore (tempo di integrazione, media dei fotogrammi, stato AE, selezione del cappuccio).
+* Per ogni progetto, Chloros conserva: nomi dei dispositivi, colori dei grafici, dimensioni dei grafici, modalità di visualizzazione e impostazioni di ciascun sensore (tempo di integrazione, media dei fotogrammi, stato AE, selezione del cappuccio).
 * **Riaprendo un progetto, i sensori si riconnettono automaticamente** in base all’indirizzo — porta COM per DAQ-U, dispositivo BLE per DAQ-M, nome host mDNS per DAQ-E (risolto anche se l’IP dell’unità è cambiato) — e riapplica il profilo del cappuccio salvato, la media dei fotogrammi, lo stato AE e il tempo di integrazione manuale di ciascun sensore.***
 
 ## Accoppiamento della telecamera (DLS)
 
-Non c’è nulla da accoppiare. A differenza dei flussi di lavoro DLS dei droni che associano in anticipo un sensore di luce a una fotocamera, Chloros
-
-abbina i dati DAQ alle immagini a valle: al momento dell’importazione/elaborazione, le letture `.daq` vengono interpolate in base al timestamp di esposizione di ciascuna acquisizione. Effettua la registrazione con qualsiasi sensore collegato (il valore `.daq` viene inserito automaticamente nel progetto) e l’elaborazione della riflettanza individua le letture corrette in base al tempo — consulta [Sensori di luce DAQ](README.md) per capire come vengono utilizzati i dati di irraggiamento verso il basso. Per le acquisizioni LATTICE **in tempo reale**, selezionare invece il sensore dal menu a tendina**Sensore di luce** nella scheda Telecamere; ogni acquisizione salverà quindi il valore utilizzato, abbinato esclusivamente alle telecamere di quella specifica acquisizione (vedere [Flussi di lavoro di riflettanza](reflectance.md)).</version\>
+Non c’è nulla da accoppiare. A differenza dei flussi di lavoro DLS dei droni che associano in anticipo un sensore di luce a una fotocamera, Chloros abbina i dati DAQ alle immagini a valle: al momento dell’importazione/elaborazione, le letture `.daq` vengono interpolate in base al timestamp di esposizione di ciascuna acquisizione. Effettua la registrazione con qualsiasi sensore collegato (il valore `.daq` viene inserito automaticamente nel progetto) e l’elaborazione della riflettanza individua le letture corrette in base al tempo — consulta [Sensori di luce DAQ](README.md) per capire come vengono utilizzati i dati di irraggiamento verso il basso. Per le acquisizioni LATTICE **in tempo reale**, selezionare invece il sensore dal menu a tendina**Sensore di luce** nella scheda Telecamere; ogni acquisizione salverà quindi il valore utilizzato, abbinato esclusivamente alle telecamere di quella specifica acquisizione (vedere [Flussi di lavoro di riflettanza](reflectance.md)).</version\>

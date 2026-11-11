@@ -1,6 +1,6 @@
 # Lingue supportate
 
-Chloros offre un supporto completo dell&#x27;interfaccia in **38 lingue in tutto il mondo**, rendendolo accessibile agli utenti di ogni parte del globo. È possibile cambiare lingua istantaneamente sia nell&#x27;interfaccia grafica desktop che in CLI.
+Chloros offre un supporto completo dell'interfaccia in **38 lingue in tutto il mondo**, rendendolo accessibile agli utenti di ogni parte del globo. È possibile cambiare lingua istantaneamente sia nell'interfaccia grafica desktop che in CLI.
 
 Chloros supporta le seguenti lingue:
 
@@ -56,7 +56,7 @@ Chloros supporta le seguenti lingue:
 
 ### In Chloros CLI
 
-Utilizza il comando `language` per visualizzare o modificare la lingua dell&#x27;interfaccia CLI:
+Utilizza il comando `language` per visualizzare o modificare la lingua dell'interfaccia CLI:
 
 ```bash
 # View current language
@@ -81,7 +81,7 @@ Per ulteriori dettagli, consulta la [documentazione di CLI](CLI.md).
 
 Tutte le 38 lingue sono pienamente supportate in:
 
-* **Chloros Desktop** - Traduzione completa dell&#x27;interfaccia grafica
+* **Chloros Desktop** - Traduzione completa dell'interfaccia grafica
 * **Chloros CLI** - Interfaccia a riga di comando e messaggi di output
 
 Python SDK API e la relativa [documentazione di riferimento](reference/sdk-reference.md) sono disponibili in inglese.

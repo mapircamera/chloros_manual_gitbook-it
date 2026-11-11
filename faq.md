@@ -27,15 +27,9 @@ Sì. Chloros 1.3.0 supporta i moduli fotografici LATTICE M3C e M3M end-to-end: *
 
 <summary>Posso calibrare le mie immagini per la riflettanza senza un bersaglio di calibrazione?</summary>
 
-**Survey3
+**Survey3:** No. Senza un’immagine del bersaglio di calibrazione acquisita contemporaneamente alle immagini non relative al bersaglio, non sarà possibile correlare i valori dei pixel dell’immagine a una percentuale di riflettanza nota. Se inoltre non si include il registro di un sensore di luce MAPIR, lo spettro della luce ambientale non verrà misurato e i risultati di riflettanza non saranno accurati.
 
-:** No. Senza un’immagine del bersaglio di calibrazione acquisita contemporaneamente alle immagini non relative al bersaglio, non sarà possibile correlare i valori dei pixel dell’immagine a una percentuale di riflettanza nota. Se inoltre non si include il registro di un sensore di luce MAPIR
-
-, lo spettro della luce ambientale non verrà misurato e i risultati di riflettanza non saranno accurati.
-
-**LATTICE:** Sì. La riflettanza può essere riferita all’irraggianza discendente misurata da un sensore di luce DAQ anziché da un pannello (ρ = π·L/E). Quando *è* presente un bersaglio all’interno dell’inquadratura che ha superato il controllo di qualità (QA), esso diventa il riferimento assoluto per impostazione predefinita (`--reflectance-source auto`), a meno che non superi il controllo con un flag, nel qual caso il bersaglio e le catene DAQ competono sul punteggio misurato. Un’eccezione: «La riflettanza F988 viene calibrata utilizzando un pannello di riflettanza presente nella scena: la banda si trova al di fuori dell’intervallo calibrato del sensore di luce DAQ, quindi Chloros
-
-a applica l’ultima acquisizione del pannello e la mantiene tra un rilevamento e l’altro». Vedi [Bersagli di calibrazione](calibration-targets.md).
+**LATTICE:** Sì. La riflettanza può essere riferita all’irraggianza discendente misurata da un sensore di luce DAQ anziché da un pannello (ρ = π·L/E). Quando *è* presente un bersaglio all’interno dell’inquadratura che ha superato il controllo di qualità (QA), esso diventa il riferimento assoluto per impostazione predefinita (`--reflectance-source auto`), a meno che non superi il controllo con un flag, nel qual caso il bersaglio e le catene DAQ competono sul punteggio misurato. Un’eccezione: «La riflettanza F988 viene calibrata utilizzando un pannello di riflettanza presente nella scena: la banda si trova al di fuori dell’intervallo calibrato del sensore di luce DAQ, quindi Chloros a applica l’ultima acquisizione del pannello e la mantiene tra un rilevamento e l’altro». Vedi [Bersagli di calibrazione](calibration-targets.md).
 
 </details>
 
@@ -43,9 +37,7 @@ a applica l’ultima acquisizione del pannello e la mantiene tra un rilevamento 
 
 <summary>È necessario un sensore di luce DAQ?</summary>
 
-Non per la radianza: le esportazioni di radianza LATTICE derivano dalla calibrazione radiometrica di fabbrica di ciascuna telecamera e non richiedono né un sensore DAQ né un target. Per la **riflettanza**è necessario un riferimento per la luce ambientale — ovvero una misurazione della luce in discesa da un sensore di luce DAQ o un target di calibrazione all’interno dell’inquadratura. Un sensore DAQ consente di ottenere valori di riflettanza calibrati**senza posizionare alcun pannello nella scena**. I file `.daq` registrati vengono abbinati automaticamente alle immagini in base al timestamp. Vedi [Target di calibrazione](calibration-targets.md) e la [Guida di riferimento CLI
-
-](reference/cli-reference.md).
+Non per la radianza: le esportazioni di radianza LATTICE derivano dalla calibrazione radiometrica di fabbrica di ciascuna telecamera e non richiedono né un sensore DAQ né un target. Per la **riflettanza**è necessario un riferimento per la luce ambientale — ovvero una misurazione della luce in discesa da un sensore di luce DAQ o un target di calibrazione all’interno dell’inquadratura. Un sensore DAQ consente di ottenere valori di riflettanza calibrati**senza posizionare alcun pannello nella scena**. I file `.daq` registrati vengono abbinati automaticamente alle immagini in base al timestamp. Vedi [Target di calibrazione](calibration-targets.md) e la [Guida di riferimento CLI](reference/cli-reference.md).
 
 </details>
 
@@ -76,7 +68,7 @@ I prodotti vengono salvati nella cartella del progetto, raggruppati per fotocame
 * **cartella-fotocamera** — `LATT-<sensor>-<lens>-F<filter>` per LATTICE, `<model>_<filter>` (ad es. `Survey3N_RGN`) per Survey3
 * **cartella-formato** — `tiff16`, `tiff8`, `png8`, `jpg8` o `tiff32`
 * **cartelle dei prodotti** — `Reflectance_Calibrated_Images/`, `Debayered_Images/`, `Preview_Images/`, `Radiance_Images/` (sempre sotto `tiff32`), `<INDEX>_Index_Images/`
-* **`clamp_masks/`** — Solo multispettrale LATTICE: maschere per pixel accanto alle cartelle dei prodotti, vedi sotto**I file esportati mantengono il nome del file di origine — è la cartella a identificare il prodotto, non un suffisso del nome del file.**Con l’CLI, la cartella del progetto viene creata all’interno della cartella predefinita dei progetti (`Documents/MAPIR/Chloros Projects`, a meno che non sia stata modificata), a meno che non si passi `-o`; un percorso relativo `-o` viene interpretato come relativo alla cartella da cui si esegue il comando. Si noti che un&#x27;esecuzione di `chloros-cli process` che ha richiesto prodotti ma non ne ha scritto nessuno stampa `Processing finished but wrote no image products.` e**termina con un valore diverso da zero**, in modo che gli script possano rilevarla. Vedere [Formati delle immagini di output](output-image-formats.md) e la [Guida di riferimento CLI](reference/cli-reference.md).
+* **`clamp_masks/`** — Solo multispettrale LATTICE: maschere per pixel accanto alle cartelle dei prodotti, vedi sotto**I file esportati mantengono il nome del file di origine — è la cartella a identificare il prodotto, non un suffisso del nome del file.**Con l’CLI, la cartella del progetto viene creata all’interno della cartella predefinita dei progetti (`Documents/MAPIR/Chloros Projects`, a meno che non sia stata modificata), a meno che non si passi `-o`; un percorso relativo `-o` viene interpretato come relativo alla cartella da cui si esegue il comando. Si noti che un'esecuzione di `chloros-cli process` che ha richiesto prodotti ma non ne ha scritto nessuno stampa `Processing finished but wrote no image products.` e**termina con un valore diverso da zero**, in modo che gli script possano rilevarla. Vedere [Formati delle immagini di output](output-image-formats.md) e la [Guida di riferimento CLI](reference/cli-reference.md).
 
 </details>
 
@@ -92,7 +84,7 @@ Non si tratta di immagini della scena: l’importazione di Chloros le ignora e, 
 
 <details>
 
-<summary>Perché Chloros segnala &quot;La cartella del progetto è troppo profonda per questo computer&quot;?</summary>
+<summary>Perché Chloros segnala "La cartella del progetto è troppo profonda per questo computer"?</summary>
 
 Questo vale solo per Windows. Windows viene fornito con i percorsi lunghi disattivati, quindi nessun percorso di file può superare i 260 caratteri. I prodotti Chloros si trovano fino a circa 130 caratteri al di sotto della cartella del progetto, quindi Chloros rifiuta una cartella del progetto più profonda prima dell’elaborazione — anziché avviarsi e non scrivere nulla, come poteva accadere prima della versione 1.3.0. Il messaggio indica la cartella del progetto più lunga che risulta valida.
 
@@ -115,7 +107,7 @@ No. Chloros presuppone che i dati di input non siano stati modificati. Non modif
 
 <details>
 
-<summary>Posso impostare le mie fotocamere MAPIR Survey3 sull&#x27;esposizione automatica ed elaborare le immagini in Chloros?</summary>
+<summary>Posso impostare le mie fotocamere MAPIR Survey3 sull'esposizione automatica ed elaborare le immagini in Chloros?</summary>
 
 No. I set di dati delle immagini Survey3 devono avere un’esposizione fissa/bloccata, quindi non è consentita né la velocità dell’otturatore automatica né l’ISO automatico. Tutte le immagini dello stesso modello di fotocamera devono avere velocità dell’otturatore e ISO (esposizione) identici.
 
@@ -143,9 +135,7 @@ Nella tabella del browser dei file, preselezionando le immagini di riferimento n
 
 <summary>Se intendo caricare le mie immagini su <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> devo elaborarle in Chloros prima del caricamento?</summary>
 
-Se prevedi di caricare le immagini sulla nostra piattaforma di elaborazione online [MAPIR
-
-Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), non modificarle prima del caricamento. Il Cloud eseguirà tutte le stesse elaborazioni e molto altro ancora.
+Se prevedi di caricare le immagini sulla nostra piattaforma di elaborazione online [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), non modificarle prima del caricamento. Il Cloud eseguirà tutte le stesse elaborazioni e molto altro ancora.
 
 </details>
 
@@ -185,9 +175,7 @@ Sì! Chloros include il [Dynamic Compute Adaptation](processing-architecture/dyn
 
 <summary>Che cos’è la pipeline di elaborazione a 4 thread?</summary>
 
-Chloros
-utilizza un’architettura a pipeline a 4 thread per gli utenti di Chloros
-+: Il thread 1 (Rilevamento) carica le immagini e rileva i target di calibrazione, il thread 2 (Calibrazione) calcola la calibrazione della riflettanza, il thread 3 (Elaborazione) esegue il debayering accelerato dalla GPU e il calcolo dell’indice, mentre il thread 4 (Esportazione) scrive i file di output. È possibile elaborare più immagini contemporaneamente in thread diversi per ottenere la massima produttività. Per ulteriori dettagli, consultare [Pipeline di elaborazione](processing-architecture/processing-pipeline.md).
+Chloros utilizza un’architettura a pipeline a 4 thread per gli utenti di Chloros+: Il thread 1 (Rilevamento) carica le immagini e rileva i target di calibrazione, il thread 2 (Calibrazione) calcola la calibrazione della riflettanza, il thread 3 (Elaborazione) esegue il debayering accelerato dalla GPU e il calcolo dell’indice, mentre il thread 4 (Esportazione) scrive i file di output. È possibile elaborare più immagini contemporaneamente in thread diversi per ottenere la massima produttività. Per ulteriori dettagli, consultare [Pipeline di elaborazione](processing-architecture/processing-pipeline.md).
 
 </details>
 
@@ -195,7 +183,7 @@ utilizza un’architettura a pipeline a 4 thread per gli utenti di Chloros
 
 <summary>Come posso eseguire la diagnostica sulla mia installazione di Chloros?</summary>
 
-Utilizzare il comando `selftest` per eseguire uno &quot;smoke test&quot; in 7 fasi: versione, disponibilità delle porte, avvio del backend, connettività API (`/api/test`), informazioni di sistema (`/api/system-info` — GPU/CUDA/PyTorch), presenza del modello di denoising e prontezza di CUDA e del denoising:
+Utilizzare il comando `selftest` per eseguire uno "smoke test" in 7 fasi: versione, disponibilità delle porte, avvio del backend, connettività API (`/api/test`), informazioni di sistema (`/api/system-info` — GPU/CUDA/PyTorch), presenza del modello di denoising e prontezza di CUDA e del denoising:
 
 ```bash
 chloros-cli selftest

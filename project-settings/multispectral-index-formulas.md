@@ -12,7 +12,7 @@ Le formule degli indici riportate di seguito utilizzano una combinazione degli i
 
 <table><thead><tr><th align="center">Colore del filtro Survey3</th><th width="196.199951171875" align="center">Nome del filtro Survey3</th><th width="159.800048828125" align="center">Intervallo di trasmissione (FWHM)</th><th align="center">Trasmissione media</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re-RedEdge</td><td align="center">712-735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 nm</td><td align="center">850 nm</td></tr></tbody></table>
 
-Quando si utilizzano queste formule, il nome può terminare con &quot;\_1&quot; o &quot;\_2&quot;, a seconda del filtro NIR utilizzato, ovvero NIR1 o NIR2.
+Quando si utilizzano queste formule, il nome può terminare con "\_1" o "\_2", a seconda del filtro NIR utilizzato, ovvero NIR1 o NIR2.
 
 Per le telecamere LATTICE M3C (triplo passabanda Bayer), lo stesso motore di indicizzazione utilizza le bande del filtro M3C:
 
@@ -38,9 +38,9 @@ Il Chloros ha **tre** superfici di indice e i relativi elenchi predefiniti non s
 | `chloros-cli process --indices NDVI,NDRE` | Superficie 2 | 22 |
 | SDK `process_folder(indices=[...])` | Superficie 2 | 22 |
 | `chloros-cli lattice index --preset` | Superficie 3 | 22 (un 22 diverso) |
-| Scheda &quot;Telecamere&quot; - Calcolatore dell&#x27;indice in tempo reale | Superficie 3 | 22 (un 22 diverso) |
+| Scheda "Telecamere" - Calcolatore dell'indice in tempo reale | Superficie 3 | 22 (un 22 diverso) |
 
-Surface 1 e 2 funzionano su **un&#x27;immagine alla volta proveniente da una singola telecamera**, utilizzando gli slot dei simboli `x`/`y`/`z`(/`a`) associati ai canali di filtro di quella telecamera. La superficie 3 opera su uno**stack multibanda allineato** — diverse telecamere LATTICE co-registrate in un unico cubo — e fa riferimento ai canali tramite nomi in minuscolo.
+Surface 1 e 2 funzionano su **un'immagine alla volta proveniente da una singola telecamera**, utilizzando gli slot dei simboli `x`/`y`/`z`(/`a`) associati ai canali di filtro di quella telecamera. La superficie 3 opera su uno**stack multibanda allineato** — diverse telecamere LATTICE co-registrate in un unico cubo — e fa riferimento ai canali tramite nomi in minuscolo.
 
 ### 1. Impostazioni progetto GUI / Menu a tendina della sandbox del visualizzatore di immagini — 27 formule
 
@@ -118,7 +118,7 @@ Quando si inserisce un nome semplice come `NDVI`, Chloros deve decidere quale ca
 | RE | RE 0 |
 | NIR | NIR 0 |
 
-Il **filtro predefinito** del preset (la colonna &quot;Filtro predefinito&quot; sopra) viene utilizzato quando il progetto contiene immagini con quel filtro. In caso contrario, Chloros analizza i filtri effettivamente presenti nel progetto nell’ordine `RGN, OCN, NGB, RGB, RE, NIR` e seleziona il primo in grado di fornire tutti i canali richiesti dal preset. Se nessuno di essi è in grado di farlo, il preset viene scartato per quella sessione. Questo è il motivo per cui `NDVI`, richiesto su un set di dati composto esclusivamente da OCN, produce comunque un risultato sensato: si associa alle posizioni Orange e NIR di OCN.
+Il **filtro predefinito** del preset (la colonna "Filtro predefinito" sopra) viene utilizzato quando il progetto contiene immagini con quel filtro. In caso contrario, Chloros analizza i filtri effettivamente presenti nel progetto nell’ordine `RGN, OCN, NGB, RGB, RE, NIR` e seleziona il primo in grado di fornire tutti i canali richiesti dal preset. Se nessuno di essi è in grado di farlo, il preset viene scartato per quella sessione. Questo è il motivo per cui `NDVI`, richiesto su un set di dati composto esclusivamente da OCN, produce comunque un risultato sensato: si associa alle posizioni Orange e NIR di OCN.
 
 Le stringhe del modello LATTICE M3C contengono il filtro con il prefisso `F` (`LATT-M3C-L41-FRGN`), ma il prefisso viene omesso quando il codice del filtro viene letto dall’immagine; pertanto, una telecamera FRGN risolve tramite la riga `RGN` sopra indicata e non necessita di alcuna gestione speciale.
 
@@ -165,7 +165,7 @@ $$
 
 Nell’interfaccia grafica (GUI) e nell’elenco delle impostazioni predefinite CLI/SDK, la formula del simbolo è `(z/y)*(x/y)` con x=Red, y=Green, z=NIR (le bande di una telecamera RGN); l’impostazione predefinita del motore di indici LATTICE è `nir * red / green**2`. Ogni superficie calcola lo stesso indice.
 
-_Riferimento: Vincini, M., E. Frazzi e P. D&#x27;Alessio. &quot;A Broad-Band Leaf Chlorophyll Vegetation Index at the Canopy Scale.&quot; Precision Agriculture 9 (2008): 303-319._
+_Riferimento: Vincini, M., E. Frazzi e P. D'Alessio. "A Broad-Band Leaf Chlorophyll Vegetation Index at the Canopy Scale." Precision Agriculture 9 (2008): 303-319._
 
 ***
 
@@ -191,7 +191,7 @@ $$
 
 I valori EVI dovrebbero variare da 0 a 1 per i pixel di vegetazione. Elementi luminosi come nuvole ed edifici bianchi, insieme a elementi scuri come l’acqua, possono causare valori anomali dei pixel in un’immagine EVI. Prima di creare un’immagine EVI, è opportuno mascherare le nuvole e gli elementi luminosi dall’immagine di riflettanza e, facoltativamente, applicare una soglia ai valori dei pixel da 0 a 1.
 
-_Riferimento: Huete, A., et al. &quot;Panoramica delle prestazioni radiometriche e biofisiche degli indici di vegetazione MODIS.&quot; Remote Sensing of Environment 83 (2002):195–213._
+_Riferimento: Huete, A., et al. "Panoramica delle prestazioni radiometriche e biofisiche degli indici di vegetazione MODIS." Remote Sensing of Environment 83 (2002):195–213._
 
 ***
 
@@ -199,7 +199,7 @@ _Riferimento: Huete, A., et al. &quot;Panoramica delle prestazioni radiometriche
 
 _Solo GUI — non disponibile come preimpostazione CLI/SDK `--indices`._
 
-Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che includono una banda &quot;red edge&quot;.
+Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che includono una banda "red edge".
 
 $$
 FCI1 = Red * RedEdge
@@ -207,7 +207,7 @@ $$
 
 Le aree boschive presenteranno valori FCI1 inferiori a causa della minore riflettanza degli alberi e della presenza di ombre all’interno della chioma.
 
-_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indici robusti di copertura forestale per immagini multispettrali.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. "Indici robusti di copertura forestale per immagini multispettrali." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -215,7 +215,7 @@ _Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. &quot;Indi
 
 _Solo GUI — non disponibile come preimpostazione CLI/SDK `--indices`._
 
-Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che non includono una banda &quot;red edge&quot;.
+Questo indice distingue le chiome forestali da altri tipi di vegetazione utilizzando immagini di riflettanza multispettrale che non includono una banda "red edge".
 
 $$
 FCI2 = Red * NIR
@@ -223,7 +223,7 @@ $$
 
 Le aree boschive presenteranno valori FCI2 inferiori a causa della minore riflettanza degli alberi e della presenza di ombre all’interno della chioma.
 
-_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. «Indici robusti di copertura forestale per immagini multispettrali». Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Riferimento: Becker, Sarah J., Craig S.T. Daughtry e Andrew L. Russ. «Indici robusti di copertura forestale per immagini multispettrali». Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -273,7 +273,7 @@ $$
 
 La disponibilità di ampie lunghezze d’onda nel NIR e nel verde consente una migliore previsione del contenuto di clorofilla, garantendo al contempo una maggiore sensibilità e un rapporto segnale-rumore più elevato.
 
-_Riferimento: Gitelson, A., Y. Gritz e M. Merzlyak. &quot;Relazioni tra il contenuto di clorofilla fogliare e la riflettanza spettrale e algoritmi per la valutazione non distruttiva della clorofilla nelle foglie delle piante superiori&quot;. Journal of Plant Physiology 160 (2003): 271-282._
+_Riferimento: Gitelson, A., Y. Gritz e M. Merzlyak. "Relazioni tra il contenuto di clorofilla fogliare e la riflettanza spettrale e algoritmi per la valutazione non distruttiva della clorofilla nelle foglie delle piante superiori". Journal of Plant Physiology 160 (2003): 271-282._
 
 ***
 
@@ -299,7 +299,7 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Riferimento: Gitelson, A. e M. Merzlyak. &quot;Telerilevamento della concentrazione di clorofilla nelle foglie delle piante superiori&quot;. Advances in Space Research 22 (1998): 689-692._
+_Riferimento: Gitelson, A. e M. Merzlyak. "Telerilevamento della concentrazione di clorofilla nelle foglie delle piante superiori". Advances in Space Research 22 (1998): 689-692._
 
 ***
 
@@ -323,7 +323,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Riferimento: Sripada, R., et al. &quot;Fotografia aerea a colori e infrarossi per la determinazione del fabbisogno di azoto nelle prime fasi della stagione nel mais&quot;. Agronomy Journal 98 (2006): 968-977._
+_Riferimento: Sripada, R., et al. "Fotografia aerea a colori e infrarossi per la determinazione del fabbisogno di azoto nelle prime fasi della stagione nel mais". Agronomy Journal 98 (2006): 968-977._
 
 ***
 
@@ -369,7 +369,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Riferimento: Datt, B. &quot;Remote Sensing of Water Content in Eucalyptus Leaves.&quot; Journal of Plant Physiology 154, n. 1 (1999): 30-36._
+_Riferimento: Datt, B. "Remote Sensing of Water Content in Eucalyptus Leaves." Journal of Plant Physiology 154, n. 1 (1999): 30-36._
 
 ***
 
@@ -465,7 +465,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Riferimento: Roujean, J. e F. Breon. &quot;Stima della PAR assorbita dalla vegetazione a partire da misurazioni di riflettanza bidirezionale&quot;. Remote Sensing of Environment 51 (1995): 375-384._
+_Riferimento: Roujean, J. e F. Breon. "Stima della PAR assorbita dalla vegetazione a partire da misurazioni di riflettanza bidirezionale". Remote Sensing of Environment 51 (1995): 375-384._
 
 ***
 
@@ -489,7 +489,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Riferimento: Bannari, A., H. Asalhi e P. Teillet. «Indice di vegetazione a differenza trasformata (TDVI) per la mappatura della copertura vegetale» in Atti del Simposio sulle geoscienze e il telerilevamento, IGARSS &#x27;02, IEEE International, Volume 5 (2002)._
+_Riferimento: Bannari, A., H. Asalhi e P. Teillet. «Indice di vegetazione a differenza trasformata (TDVI) per la mappatura della copertura vegetale» in Atti del Simposio sulle geoscienze e il telerilevamento, IGARSS '02, IEEE International, Volume 5 (2002)._
 
 ***
 
@@ -517,6 +517,6 @@ Il coefficiente di ponderazione (_a_) può variare da 0,1 a 0,2. Henebry, Viña 
 
 _Riferimenti_
 
-_Gitelson, A. &quot;Indice di vegetazione ad ampio intervallo dinamico per la quantificazione da remoto delle caratteristiche biofisiche della vegetazione.&quot; Journal of Plant Physiology 161, n. 2 (2004): 165-173._
+_Gitelson, A. "Indice di vegetazione ad ampio intervallo dinamico per la quantificazione da remoto delle caratteristiche biofisiche della vegetazione." Journal of Plant Physiology 161, n. 2 (2004): 165-173._
 
 _Henebry, G., A. Viña e A. Gitelson. «L’indice di vegetazione ad ampio intervallo dinamico e la sua potenziale utilità per l’analisi delle lacune». Gap Analysis Bulletin 12: 50-56._

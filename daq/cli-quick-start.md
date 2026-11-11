@@ -9,7 +9,7 @@ Il driver `chloros-cli` in dotazione gestisce i sensori DAQ tramite la famiglia 
 ## Prerequisiti
 
 * **Il backend Chloros deve essere in esecuzione** — i comandi `pool-*` sono client HTTP, non driver hardware. Su Windows, avviare l’app desktop Chloros (che avvia il backend). Su Linux/Jetson senza interfaccia grafica, abilitare il servizio come utente corrente: `sudo systemctl enable --now chloros-backend@$USER.service` (vedere [Installazione su Linux](../linux/linux-installation.md#always-on-ptp-for-headless-hosts)).
-* **Accesso a Chloros+ (livello a pagamento)**: eseguire prima `chloros-cli login`. L&#x27;applicazione delle regole avviene lato server: senza accesso, i comandi falliscono con `401 AUTH_REQUIRED`; nel piano gratuito (Iron) falliscono con `403 PLAN_UPGRADE_REQUIRED`.
+* **Accesso a Chloros+ (livello a pagamento)**: eseguire prima `chloros-cli login`. L'applicazione delle regole avviene lato server: senza accesso, i comandi falliscono con `401 AUTH_REQUIRED`; nel piano gratuito (Iron) falliscono con `403 PLAN_UPGRADE_REQUIRED`.
 * I comandi hanno come destinazione predefinita `http://127.0.0.1:5000`; la famiglia `daq pool-*` rispetta la variabile d’ambiente `CHLOROS_BACKEND_URL` se il backend è in esecuzione altrove.
 
 ***
@@ -57,14 +57,14 @@ Flag di ottimizzazione, tutti opzionali:
 | --- | --- |
 | `--integration-time MS` / `-t MS` | Tempo di integrazione manuale in millisecondi. |
 | `--frame-avg N` / `-f N` | Numero medio di fotogrammi per spettro riportato. |
-| `--no-ae` | Disattiva l&#x27;esposizione automatica (AE è attiva per impostazione predefinita). |
+| `--no-ae` | Disattiva l'esposizione automatica (AE è attiva per impostazione predefinita). |
 | `--no-stream` | Connettiti senza avviare lo streaming (riprendi in seguito con `pool-stream --start`). |
-| `--cap-id CAP` | Profilo di correzione Cap; l&#x27;impostazione predefinita del backend è `sunshine_cosine`. Vedi [`pool-set-cap`](#pool-set-cap-declare-the-fitted-cap). |
+| `--cap-id CAP` | Profilo di correzione Cap; l'impostazione predefinita del backend è `sunshine_cosine`. Vedi [`pool-set-cap`](#pool-set-cap-declare-the-fitted-cap). |
 
 Il collegamento di un DAQ-E già presente nel pool con un altro dei suoi indirizzi — il suo nome host `daq-e-<id>.local` o il suo IP — restituisce la voce esistente nel pool invece di aprire l’unità una seconda volta.
 
 {% hint style="warning" %}
-**Avvertenza sul rilevamento automatico di `--eth`.** Su un host multi-homed (con più di un&#x27;interfaccia di rete attiva), il *primo* `pool-connect --eth` dopo l’avvio potrebbe risultare vuoto anche se il sensore è funzionante: la scansione di rilevamento potrebbe non individuare l’interfaccia del sensore mentre la cache ARP è fredda. Se `--eth` non trova nulla, riprovare oppure saltare completamente il rilevamento utilizzando `--eth-host <ip-or-hostname>`, che rappresenta il percorso affidabile su macchine multi-homed. Il nome host del DAQ-E è `daq-e-<id>.local` (ad es. `daq-e-def330.local`); funziona anche il suo indirizzo IP semplice.
+**Avvertenza sul rilevamento automatico di `--eth`.** Su un host multi-homed (con più di un'interfaccia di rete attiva), il *primo* `pool-connect --eth` dopo l’avvio potrebbe risultare vuoto anche se il sensore è funzionante: la scansione di rilevamento potrebbe non individuare l’interfaccia del sensore mentre la cache ARP è fredda. Se `--eth` non trova nulla, riprovare oppure saltare completamente il rilevamento utilizzando `--eth-host <ip-or-hostname>`, che rappresenta il percorso affidabile su macchine multi-homed. Il nome host del DAQ-E è `daq-e-<id>.local` (ad es. `daq-e-def330.local`); funziona anche il suo indirizzo IP semplice.
 {% endhint %}
 
 ## `pool-discover` — scansione senza connessione
@@ -113,7 +113,7 @@ chloros-cli daq pool-record --sensor-id daq-e-def330 --stop
 
 | Flag | Predefinito | Significato |
 | --- | --- | --- |
-| `--duration SEC` / `-d SEC` | `0` | Durata della registrazione in secondi; `0` indica di continuare l&#x27;esecuzione fino all&#x27;emissione di `--stop`. |
+| `--duration SEC` / `-d SEC` | `0` | Durata della registrazione in secondi; `0` indica di continuare l'esecuzione fino all'emissione di `--stop`. |
 | `--output DIR` / `-o DIR` | `~/Documents/DAQ Live View/` | Directory di output. Con il backend su questo computer, un percorso relativo viene risolto rispetto alla cartella in cui è stato eseguito il comando; con un backend remoto, il percorso viene risolto **sul computer su cui è in esecuzione il backend**. |
 | `--device-name NAME` | — | Etichetta memorizzata con la registrazione. |
 | `--stop` | — | Interrompe una registrazione in corso. |
@@ -182,10 +182,10 @@ chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 | `daq pool-latest --sensor-id ID [--recent N] [--json]` | Gli ultimi N frame di spettro calibrati. |
 | `daq pool-stream --sensor-id ID [--start \| --stop]` | Riprende/mette in pausa lo streaming. |
 | `daq pool-record --sensor-id ID [-d SEC] [-o DIR] [--device-name NAME] [--confirm-after SEC] [--heartbeat SEC] [--stop]` | Avvia/interrompe una registrazione `.daq` (lato backend). |
-| `daq pool-set-cap --sensor-id ID --cap-id CAP` | Sostituisci il profilo di correzione del limite massimo durante l&#x27;esecuzione. |
+| `daq pool-set-cap --sensor-id ID --cap-id CAP` | Sostituisci il profilo di correzione del limite massimo durante l'esecuzione. |
 | `daq pool-disconnect --sensor-id ID [--all]` | Rilascia un sensore o tutti i sensori. |
 | `daq pool-enable-ptp --sensor-id ID` | Riattiva il PTP per un DAQ-E il cui PTP è disattivato. |
-| `daq pool-info --sensor-id ID [--json]` | Firmware, indirizzo, impostazioni di rete salvate, streaming all&#x27;accensione e PTP di un DAQ-E. |
+| `daq pool-info --sensor-id ID [--json]` | Firmware, indirizzo, impostazioni di rete salvate, streaming all'accensione e PTP di un DAQ-E. |
 | `daq pool-set-network --sensor-id ID (--auto \| --static IP [--mask M] [--gateway G]) [--no-reboot] [--force]` | DHCP o indirizzo statico; riavvia e ricollega il sensore. |
 | `daq pool-set-auto-stream --sensor-id ID (--on \| --off)` | Streaming all’accensione. |
 | `daq pool-reboot --sensor-id ID` | Riavvia un DAQ-E e riconnettilo. |

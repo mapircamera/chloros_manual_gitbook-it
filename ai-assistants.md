@@ -1,6 +1,6 @@
 # Utilizzo di Chloros con gli assistenti AI
 
-Questo manuale è rivolto a due tipi di pubblico: gli esseri umani e gli assistenti IA con cui gli esseri umani interagiscono sempre più spesso. Ogni pagina riporta valori esatti, impostazioni predefinite e comandi copiabili e incollabili, in modo che un assistente (Claude, ChatGPT, Copilot, un agente di programmazione, …) possa scrivere un&#x27;automazione Chloros funzionante al primo tentativo.
+Questo manuale è rivolto a due tipi di pubblico: gli esseri umani e gli assistenti IA con cui gli esseri umani interagiscono sempre più spesso. Ogni pagina riporta valori esatti, impostazioni predefinite e comandi copiabili e incollabili, in modo che un assistente (Claude, ChatGPT, Copilot, un agente di programmazione, …) possa scrivere un'automazione Chloros funzionante al primo tentativo.
 
 Versione di Chloros: **
 
@@ -43,7 +43,7 @@ Gli strumenti del server coprono le funzionalità dell’[Python SDK](api-python
 claude mcp add chloros -- chloros-mcp
 ```
 
-**Claude Desktop:**aggiungi questo a `claude_desktop_config.json` (si apre da**Impostazioni &gt; Sviluppatore &gt; Modifica configurazione**), quindi riavvia Claude Desktop.**Cursore** richiede la stessa voce in `~/.cursor/mcp.json`.
+**Claude Desktop:**aggiungi questo a `claude_desktop_config.json` (si apre da**Impostazioni > Sviluppatore > Modifica configurazione**), quindi riavvia Claude Desktop.**Cursore** richiede la stessa voce in `~/.cursor/mcp.json`.
 
 ```json
 {
@@ -58,7 +58,7 @@ Se il client segnala che il server non è riuscito ad avviarsi, probabilmente `c
 È necessario che Chloros sia installato sullo stesso computer e che vi sia un accesso effettuato su quel computer, nell’app o tramite `chloros-cli login`, su un piano a pagamento Chloros+ (Copper o superiore). Il server non può effettuare l’accesso al posto tuo.
 
 {% hint style="info" %}
-Configurazione client per ogni app, opzioni, ogni strumento e comportamento di un&#x27;esecuzione: [MCP Server (Assistenti AI)](reference/sdk-reference.md#mcp-server-ai-assistants) nella Documentazione di riferimento dell&#x27;SDK.
+Configurazione client per ogni app, opzioni, ogni strumento e comportamento di un'esecuzione: [MCP Server (Assistenti AI)](reference/sdk-reference.md#mcp-server-ai-assistants) nella Documentazione di riferimento dell'SDK.
 {% endhint %}
 
 ## Ricette per i prompt
@@ -122,7 +122,7 @@ Ciascuno di questi è un comportamento reale e verificato di Chloros 1.3.0: elim
 
 * **Nessuna procedura di configurazione complessa.**Gli helper smart-connect dell’SDK (`connect_camera`, `connect_array`, `connect_daq_sensor`) e i punti di ingresso di elaborazione (`ChlorosLocal`, `process_folder`)**avviano automaticamente il backend locale**. Uno script generato non richiede l’apertura dell’interfaccia grafica né l’avvio manuale di un server: è sufficiente che sia installato il pacchetto desktop o CLI.
 * **L’intera pipeline è costituita da un’unica chiamata.** `chloros_sdk.process_folder("path", indices=["NDVI"])` esegue in sequenza: importazione → calibrazione → riflettanza → esportazione dell’indice. Meno aree di superficie, meno punti in cui uno script generato può andare in errore.
-* **Le esecuzioni senza output si autodiagnosticano.** Dopo `process()`, il riepilogo dell’esecuzione viene allegato al risultato e ogni indicazione relativa all’elaborazione (ad es. *perché* un&#x27;esecuzione non ha prodotto alcun output) viene riemesso come Python `UserWarning` — in modo che anche uno script che non ispeziona mai il dizionario dei risultati mostri la diagnosi.
+* **Le esecuzioni senza output si autodiagnosticano.** Dopo `process()`, il riepilogo dell’esecuzione viene allegato al risultato e ogni indicazione relativa all’elaborazione (ad es. *perché* un'esecuzione non ha prodotto alcun output) viene riemesso come Python `UserWarning` — in modo che anche uno script che non ispeziona mai il dizionario dei risultati mostri la diagnosi.
 * **L’CLI fallisce in modo evidente.**Un’esecuzione `chloros-cli process` che ha richiesto prodotti ma non ne ha scritti alcuni stampa `Processing finished but wrote no image products.` e**termina con un codice di uscita diverso da zero**, quindi gli script della shell e la CI lo rilevano con un semplice controllo del codice di uscita. Le esecuzioni riuscite riportano il codice `Image products written: N`, oltre a `(plus M clamp masks)` quando sono state scritte le maschere. Allo stesso modo, i comandi di acquisizione indicano ogni file che non sono riusciti a scrivere e terminano con il codice `1`.
 * **I percorsi relativi hanno il significato previsto dallo script.** Con un backend locale, un percorso di output relativo (`-o out/` nella CLI, `output_dir="out/"` nell’SDK) viene risolto rispetto alla cartella da cui viene eseguito il comando o lo script.
 
@@ -132,5 +132,5 @@ Un’asimmetria che un assistente dovrebbe conoscere: `process()` dell’SDK **n
 
 * **È richiesto l’accesso a Chloros+.**La CLI e l’SDK richiedono un piano**a pagamento** di Chloros+, con verifica lato server: le richieste falliscono con l’errore `401 AUTH_REQUIRED` se non si è effettuato l’accesso e con l’errore `403 PLAN_UPGRADE_REQUIRED` se si utilizza il piano gratuito. Eseguire `chloros-cli login` una volta per ogni macchina prima di eseguire gli script generati. Vedere [Accesso a Chloros+](chloros+-login.md).
 * **I comandi di acquisizione controllano l’hardware fisico.** `lattice` / `daq` / `project`, gli oggetti di sessione dell’SDK e gli strumenti di `chloros-mcp` si connettono, trasmettono in streaming e attivano telecamere e sensori fisici. Esaminare uno script generato prima della sua prima esecuzione ed eseguirlo in presenza dell’hardware.
-* **Controllare a campione i risultati.** Verificare le cartelle dei prodotti e alcuni valori dei pixel prima di pubblicare i risultati. In particolare, i file TIFF di riflettanza vengono ridimensionati in base alla sorgente: consultare il tag XMP di `Chloros:PixelScale` (i file LATTICE lo contengono: 32768 = 1,0 di riflettanza; i file Survey3 no, e utilizzano 65535 = 1,0) invece di ipotizzare un divisore. Entrambe le pagine di riferimento documentano questo aspetto nella sezione &quot;Lettura dei pixel di riflettanza&quot;.
+* **Controllare a campione i risultati.** Verificare le cartelle dei prodotti e alcuni valori dei pixel prima di pubblicare i risultati. In particolare, i file TIFF di riflettanza vengono ridimensionati in base alla sorgente: consultare il tag XMP di `Chloros:PixelScale` (i file LATTICE lo contengono: 32768 = 1,0 di riflettanza; i file Survey3 no, e utilizzano 65535 = 1,0) invece di ipotizzare un divisore. Entrambe le pagine di riferimento documentano questo aspetto nella sezione "Lettura dei pixel di riflettanza".
 * **Piccole insidie che causano errori nel codice generato:**`pool-record` scrive sul filesystem dell’**host di backend** (impostazione predefinita `~/Documents/DAQ Live View/`); su macchine con più interfacce di rete, è preferibile utilizzare `daq pool-connect --eth-host <ip-or-hostname>` anziché il rilevamento automatico; utilizzare `http://127.0.0.1:5000` (mai `localhost`) ovunque compaia un URL del backend; uno script che percorre l’albero di output di un progetto dovrebbe saltare le cartelle `clamp_masks/` (i loro file `*_clampmask.tif` sono maschere, non immagini — vedi [Formati delle immagini di output](output-image-formats.md#clamp-masks)); e su Windows, con i percorsi lunghi disattivati, mantenere brevi le cartelle dei progetti — una cartella di progetto con un nome più lungo di circa 130 caratteri viene rifiutata prima dell’avvio dell’elaborazione.

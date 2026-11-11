@@ -17,13 +17,13 @@ A meno che non venga modificata nelle [Impostazioni del progetto](project-settin
 
 ## Nuovo progetto
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>Seleziona &quot;Nuovo progetto&quot; dal menu principale e inserisci un nome univoco per il tuo progetto.
+<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>Seleziona "Nuovo progetto" dal menu principale e inserisci un nome univoco per il tuo progetto.
 
-Se hai salvato dei modelli di progetto, sotto il campo del nome apparirà un menu a tendina **Seleziona modello**: scegliendone uno, il nuovo progetto verrà avviato con le impostazioni di quel modello. I modelli vengono salvati da [Impostazioni progetto](project-settings/project-settings.md): inserisci un nome nel campo &quot;Salva nome modello di progetto&quot; e fai clic sull&#x27;icona di salvataggio.
+Se hai salvato dei modelli di progetto, sotto il campo del nome apparirà un menu a tendina **Seleziona modello**: scegliendone uno, il nuovo progetto verrà avviato con le impostazioni di quel modello. I modelli vengono salvati da [Impostazioni progetto](project-settings/project-settings.md): inserisci un nome nel campo "Salva nome modello di progetto" e fai clic sull'icona di salvataggio.
 
 ## Apri progetto
 
-<figure><img src=".gitbook/assets/v120-open-project.jpg" alt=""><figcaption><p>La sezione &quot;Apri progetto&quot; elenca tutti i progetti presenti nella cartella dei progetti, con l’opzione <strong>Apri cartella dei progetti</strong> in fondo alla pagina</p></figcaption></figure>
+<figure><img src=".gitbook/assets/v120-open-project.jpg" alt=""><figcaption><p>La sezione "Apri progetto" elenca tutti i progetti presenti nella cartella dei progetti, con l’opzione <strong>Apri cartella dei progetti</strong> in fondo alla pagina</p></figcaption></figure>
 
 Selezionare “Apri progetto” per visualizzare un elenco dei progetti esistenti nella cartella dei progetti. Se non sono presenti progetti, il menu laterale secondario non si aprirà. Nella foto sopra sono riportati alcuni progetti creati tramite l’interfaccia grafica (t1, t2, t3). I progetti DATE\_TIME sono stati creati dall’CLI utilizzando lo schema di denominazione predefinito. Facendo clic su qualsiasi nome di progetto, questo verrà aperto.
 
@@ -33,7 +33,7 @@ Se uno qualsiasi dei file immagine sorgente del progetto è stato spostato o eli
 
 ## Duplica progetto
 
-Opzione disponibile una volta aperto il progetto. Selezionare &quot;Duplica progetto&quot; per copiare il progetto corrente con un nuovo nome — Chloros suggerisce il prossimo nome disponibile (ad es. &quot;Il mio progetto (2)&quot;) — e il duplicato viene aperto immediatamente.
+Opzione disponibile una volta aperto il progetto. Selezionare "Duplica progetto" per copiare il progetto corrente con un nuovo nome — Chloros suggerisce il prossimo nome disponibile (ad es. "Il mio progetto (2)") — e il duplicato viene aperto immediatamente.
 
 ## Aggiungi file
 
@@ -41,7 +41,7 @@ Dopo aver aperto un progetto, seleziona “Aggiungi file” dal menu principale 
 
 ## Aggiungi cartella
 
-Una volta aperto un progetto, seleziona &quot;Aggiungi cartella&quot; dal menu principale per aggiungere cartelle di immagini al progetto corrente. È possibile selezionare più cartelle in un&#x27;unica operazione. I file duplicati vengono ignorati.
+Una volta aperto un progetto, seleziona "Aggiungi cartella" dal menu principale per aggiungere cartelle di immagini al progetto corrente. È possibile selezionare più cartelle in un'unica operazione. I file duplicati vengono ignorati.
 
 ## Avvia / Interrompi elaborazione
 

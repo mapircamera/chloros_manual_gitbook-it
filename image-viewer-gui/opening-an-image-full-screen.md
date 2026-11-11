@@ -1,8 +1,8 @@
-# Aprire un&#x27;immagine a schermo intero
+# Aprire un'immagine a schermo intero
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Un&#x27;immagine aperta a schermo intero, con il selettore dei livelli in alto a destra</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Un'immagine aperta a schermo intero, con il selettore dei livelli in alto a destra</p></figcaption></figure>
 
-Il visualizzatore di immagini Chloros è l&#x27;interfaccia a schermo intero per la visualizzazione, l&#x27;ispezione e la misurazione delle immagini. È qui che è possibile leggere i **valori reali dei pixel** — DN per canale, percentuale di riflettanza o radianza in W/m²/sr/nm — anziché l’anteprima allungata visualizzata sullo schermo.
+Il visualizzatore di immagini Chloros è l'interfaccia a schermo intero per la visualizzazione, l'ispezione e la misurazione delle immagini. È qui che è possibile leggere i **valori reali dei pixel** — DN per canale, percentuale di riflettanza o radianza in W/m²/sr/nm — anziché l’anteprima allungata visualizzata sullo schermo.
 
 ## Come accedere al Visualizzatore di immagini
 
@@ -64,7 +64,7 @@ L’ingrandimento “effettivo” tiene conto della dimensione del blocco GSD: c
 Spostando il cursore sull’immagine, il pannello **Valori del cursore** riporta il valore di ogni canale sottostante.
 
 {% hint style="success" %}
-**Questi sono i valori reali del file.** L&#x27;area di lavoro sullo schermo è un&#x27;anteprima allungata a 8 bit e non può fornirli, quindi Chloros campiona il file del prodotto effettivo per la lettura. Ecco perché un fotogramma raw a 12 bit riporta valori superiori a 255 e perché un livello di radianza float32 riporta unità fisiche.
+**Questi sono i valori reali del file.** L'area di lavoro sullo schermo è un'anteprima allungata a 8 bit e non può fornirli, quindi Chloros campiona il file del prodotto effettivo per la lettura. Ecco perché un fotogramma raw a 12 bit riporta valori superiori a 255 e perché un livello di radianza float32 riporta unità fisiche.
 {% endhint %}
 
 ### Significato delle colonne
