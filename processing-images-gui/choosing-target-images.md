@@ -32,7 +32,9 @@ Se **nessuna** immagine è selezionata, Chloros ricorre alla scansione di tutte 
 
 Esaminare le immagini importate nel File Browser e identificare quali immagini contengono i bersagli di calibrazione.
 
-**Scenari comuni:*** **Bersaglio pre-acquisizione**: Acquisito prima dell’inizio della sessione
+**Scenari comuni:**
+
+* **Bersaglio pre-acquisizione**: Acquisito prima dell’inizio della sessione
 * **Target post-acquisizione**: acquisito dopo il completamento della sessione
 * **Target sul campo**: target posizionati all’interno dell’area di acquisizione
 * **Target multipli**: 2-3 immagini di target per sessione (consigliato)
@@ -140,9 +142,17 @@ Utilizza questa colonna per verificare di aver contrassegnato i bersagli per cia
 
 ### Regolazione della sensibilità di rilevamento
 
-Se Chloros non rileva correttamente i bersagli, regolare queste impostazioni in [Impostazioni del progetto](adjusting-project-settings.md):**Area minima del campione di calibrazione (px):*** **Impostazione predefinita**: 25 pixel
+Se Chloros non rileva correttamente i bersagli, regolare queste impostazioni in [Impostazioni del progetto](adjusting-project-settings.md):
+
+**Area minima del campione di calibrazione (px):**
+
+* **Impostazione predefinita**: 25 pixel
 * **Aumentare** se si verificano falsi rilevamenti su piccoli artefatti
-* **Diminuire** se i bersagli non vengono rilevati**Raggruppamento minimo dei bersagli (0-100):*** **Impostazione predefinita**: 60
+* **Diminuire** se i bersagli non vengono rilevati
+
+**Raggruppamento minimo dei bersagli (0-100):**
+
+* **Impostazione predefinita**: 60
 * **Aumenta** se i target vengono suddivisi in più rilevamenti
 * **Riduci** se i target con variazioni di colore non vengono rilevati completamente
 

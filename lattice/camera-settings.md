@@ -377,7 +377,7 @@ Un pannello di sola lettura aggiornato ogni 5 s:
 
 * **Etichetta livello**: "Acquisizione simultanea" (verde) · "Acquisizione simultanea (emissione sfalsata FTD)" (verde) · "Acquisizione sfalsata (deriva di 100 ms)" (ambra) · "Configurazione troppo grande" (rosso).
 * **Stato del frame**: "x,xx % incompleto" — verde se inferiore all’1 %, giallo se inferiore al 5 %, rosso al 5 % o più.
-* ****Linea di collegamento**: "NIC {mbps} Mbps - sostenuta {MB/s} MB/s".
+* **Linea di collegamento**: "NIC {mbps} Mbps - sostenuta {MB/s} MB/s".
 
 Questo rappresenta il budget di larghezza di banda in tempo reale dell’array. Per i valori fps sottostanti e il modello di rete — e cosa modificare quando il livello diventa giallo o rosso — consultare [Array multicamera](arrays.md) e il [Riferimento CLI](../reference/cli-reference.md).
 
@@ -403,7 +403,7 @@ Riferimento rapido su cosa si trova dove quando una telecamera è membro di un a
 Altri comportamenti trasversali:
 
 * **Visualizzazione combinata vs separata** viene scelta al momento della connessione dell’array: combinata = un’unica tessera composita allineata (i feed dei singoli elementi sono visibili solo tramite Split View); separata = ogni elemento rende la propria tessera sincronizzata. Una telecamera non mostra mai contemporaneamente un feed autonomo e una tessera dell’array.
-* ****Riconnessione automatica**: l’apertura di un progetto salvato ripristina le telecamere e gli array e riapplica tutte le impostazioni salvate al backend prima che i flussi riprendano.
+* **Riconnessione automatica**: l’apertura di un progetto salvato ripristina le telecamere e gli array e riapplica tutte le impostazioni salvate al backend prima che i flussi riprendano.
 * **Gating di acquisizione**: le telecamere nascoste o in pausa sono escluse da “Acquisisci tutto”; un array viene completamente bloccato solo quando TUTTI i membri sono nascosti/in pausa. Vedi [Impostazioni e modalità di acquisizione](capture.md).
 
 ## Come vengono mantenute le impostazioni

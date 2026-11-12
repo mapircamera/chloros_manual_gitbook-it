@@ -44,7 +44,9 @@ Il pannello Impostazioni di progetto è organizzato nelle sezioni riportate di s
 
 Controlla il modo in cui Chloros identifica i bersagli di calibrazione nelle immagini.
 
-**Impostazioni chiave:*** **Area minima del campione di calibrazione (px)**: Soglia dimensionale per il rilevamento dei bersagli (predefinito:**25**, intervallo 0–10000)
+**Impostazioni chiave:**
+
+* **Area minima del campione di calibrazione (px)**: Soglia dimensionale per il rilevamento dei bersagli (predefinito:**25**, intervallo 0–10000)
 * **Raggruppamento minimo dei bersagli (0-100)**: soglia di somiglianza per il raggruppamento delle regioni dei bersagli (impostazione predefinita:**60**)**Quando regolare:**
 
 * Aumentare l’area di campionamento se si ottengono rilevamenti errati
@@ -59,19 +61,26 @@ Queste impostazioni sono disattivate quando **Calibrazione della riflettanza / b
 
 Opzioni principali di elaborazione delle immagini e calibrazione.
 
-**Impostazioni chiave:*** **Correzione della vignettatura**: compensa l’oscuramento dell’obiettivo ai bordi ✅ Consigliata
+**Impostazioni chiave:**
+
+* **Correzione della vignettatura**: compensa l’oscuramento dell’obiettivo ai bordi ✅ Consigliata
 * **Calibrazione della riflettanza / bilanciamento del bianco**: calibra le immagini utilizzando i bersagli rilevati (Survey3) e/o i dati del sensore di luce DAQ (LATTICE) ✅ Consigliata
 * **Metodo di debayering**: algoritmo per la conversione da RAW a multispettrale a 3 canali
 * **Intervallo minimo di ricalibrazione**: tempo minimo in secondi tra un utilizzo e l’altro dei target di calibrazione (impostazione predefinita:**0** = usa tutti, intervallo 0–3600)**Prodotti di riserva non calibrati:**Quando non è possibile eseguire la calibrazione della riflettanza di un fotogramma (nessun bersaglio disponibile o calibrazione disabilitata), questo viene esportato come uno dei due prodotti di riserva —**esiste esattamente uno dei due per ogni esecuzione**, scelto dall’opzione di correzione della vignettatura:
 
-* **Esporta risposta del sensore**: scrive `Sensor_Response_Images` — utilizzato quando la correzione della vignettatura è**disattivata*** **Esporta con correzione della vignettatura**: scrive `Vignette_Corrected_Images` — utilizzato quando la correzione della vignettatura è**attiva**La casella di controllo non attiva è disattivata. Deselezionando quella attiva si impedisce del tutto la scrittura di quel file.**Prodotti di esportazione LATTICE** (visualizzati per ogni progetto; si applicano alle acquisizioni LATTICE):
+* **Esporta risposta del sensore**: scrive `Sensor_Response_Images` — utilizzato quando la correzione della vignettatura è**disattivata**
+* **Esporta con correzione della vignettatura**: scrive `Vignette_Corrected_Images` — utilizzato quando la correzione della vignettatura è**attiva**La casella di controllo non attiva è disattivata. Deselezionando quella attiva si impedisce del tutto la scrittura di quel file.**Prodotti di esportazione LATTICE** (visualizzati per ogni progetto; si applicano alle acquisizioni LATTICE):
 
 * **Esporta senza demosaicizzazione**: l’immagine lineare debayered (`Debayered_Images`): l’offset di scuro del pacchetto di calibrazione viene rimosso, quindi viene eseguito il demosaicing, senza flat field né unmix — lo stesso file che un’acquisizione salva al suo livello debayered — nell’orientamento nativo del sensore. Si applica ai moduli RGB e multispettrali.
 * **Esporta anteprima**: l’anteprima visualizzata (`Preview_Images`). RGB = bilanciamento del bianco (illuminante DAQ se disponibile, altrimenti “gray-world”) + gamma; multispettrale = estensione a falsi colori.
 * **Esportazione della radianza**: radianza spettrale float32 (`Radiance_Images`, W/m²/sr/nm). Solo moduli multispettrali — non applicabile ai master RGB.
 * **Esporta riflettanza**: riflettanza uint16 (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1,0) quando una lettura in direzione discendente `.daq` o un bersaglio all’interno del fotogramma copre il fotogramma. Solo moduli multispettrali.
 
-Tutte e quattro sono **attivate per impostazione predefinita**: un singolo fotogramma grezzo LATTICE importato viene distribuito a tutti i prodotti abilitati e applicabili in un unico ciclo di elaborazione. La casella di controllo**Esporta riflettanza** è disattivata quando la calibrazione della riflettanza è disattivata. Le impostazioni il cui interruttore principale ne impedisce l’attivazione sono sempre disattivate con un suggerimento che indica l’interruttore da modificare.**Impostazioni avanzate:*** **Offset del fuso orario del sensore di luce**: Ore rispetto all’UTC per la sincronizzazione dell’ora del sensore di luce (impostazione predefinita: 0, intervallo da −12 a +12)
+Tutte e quattro sono **attivate per impostazione predefinita**: un singolo fotogramma grezzo LATTICE importato viene distribuito a tutti i prodotti abilitati e applicabili in un unico ciclo di elaborazione. La casella di controllo**Esporta riflettanza** è disattivata quando la calibrazione della riflettanza è disattivata. Le impostazioni il cui interruttore principale ne impedisce l’attivazione sono sempre disattivate con un suggerimento che indica l’interruttore da modificare.
+
+**Impostazioni avanzate:**
+
+* **Offset del fuso orario del sensore di luce**: Ore rispetto all’UTC per la sincronizzazione dell’ora del sensore di luce (impostazione predefinita: 0, intervallo da −12 a +12)
 * **Applica correzioni PPK**: utilizza i dati GPS/pin di esposizione dai file `.daq` (impostazione predefinita: disattivata)
 * **Pin di esposizione 1/2**: assegna le telecamere ai pin di esposizione per configurazioni a doppia telecamera
 
@@ -105,7 +114,9 @@ Configurare quali indici di vegetazione calcolare ed esportare. Il menu a tendin
 3. Configurare le impostazioni di visualizzazione (colori LUT, intervalli di valori)
 4. Aggiungere più indici secondo necessità
 
-**Indici più diffusi:*** **NDVI**: Stato di salute generale della vegetazione (il più comune)
+**Indici più diffusi:**
+
+* **NDVI**: Stato di salute generale della vegetazione (il più comune)
 * **NDRE**: Rilevamento precoce dello stress con RedEdge
 * **GNDVI**: Sensibile alla concentrazione di clorofilla
 * **OSAVI**: Funziona bene con il suolo visibile
@@ -215,7 +226,11 @@ Se si utilizzano registratori DAQ MAPIR con GPS per una geolocalizzazione precis
 3. Impostare**"Offset fuso orario sensore di luce"** se necessario (impostazione predefinita: 0 per UTC)
 4. Assegnare le fotocamere ai pin di esposizione:
    * **Fotocamera singola**: assegnata automaticamente al Pin 1
-   * **Doppia fotocamera**: assegnare manualmente ciascuna fotocamera al pin corretto**Assegnazione dei pin di esposizione:*** **Pin di esposizione 1**: selezionare il modello di telecamera dal menu a tendina
+   * **Doppia fotocamera**: assegnare manualmente ciascuna fotocamera al pin corretto
+
+**Assegnazione dei pin di esposizione:**
+
+* **Pin di esposizione 1**: selezionare il modello di telecamera dal menu a tendina
 * **Pin di esposizione 2**: selezionare la seconda telecamera o “Non utilizzare”
 * Non è possibile assegnare la stessa telecamera a entrambi i pin
 

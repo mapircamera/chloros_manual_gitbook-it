@@ -82,7 +82,9 @@ Non basarsi su una formula: il numero di file di output dipende dai prodotti abi
 
 ### Anteprima in visualizzatori di immagini esterni
 
-**Visualizzatori consigliati:*** **QGIS** - Software GIS gratuito (ideale per l’analisi multispettrale georeferenziata)
+**Visualizzatori consigliati:**
+
+* **QGIS** - Software GIS gratuito (ideale per l’analisi multispettrale georeferenziata)
 * **IrfanView** - Visualizzatore di immagini veloce e leggero (supporta il formato TIFF)
 * **Adobe Photoshop** - Editing professionale (supporta il formato TIFF)
 * **GIMP** - Alternativa gratuita a Photoshop
@@ -224,7 +226,9 @@ Per segnalare un problema direttamente a MAPIR, utilizzare l’icona del bug (**
 
 ### Problema: i valori NDVI sembrano errati
 
-**Intervalli NDVI previsti:*** **Acqua, rocce, suolo**: da -0,1 a 0,2
+**Intervalli NDVI previsti:**
+
+* **Acqua, rocce, suolo**: da -0,1 a 0,2
 * **Vegetazione rada/malata**: da 0,2 a 0,4
 * **Vegetazione moderata**: da 0,4 a 0,6
 * **Vegetazione sana e fitta**: da 0,6 a 0,9**Se i valori esulano da questi intervalli:**
@@ -278,12 +282,18 @@ Per segnalare un problema direttamente a MAPIR, utilizzare l’icona del bug (**
 
 ### Strategia di backup consigliata
 
-**Cosa salvare:*** ✅ **Immagini RAW/JPG originali o acquisizioni raw LATTICE** - Archiviare su un’unità separata o sul cloud; i file raw costituiscono la fonte della pipeline e tutto il resto può essere rigenerato a partire da essi
+**Cosa salvare:**
+
+* ✅ **Immagini RAW/JPG originali o acquisizioni raw LATTICE** - Archiviare su un’unità separata o sul cloud; i file raw costituiscono la fonte della pipeline e tutto il resto può essere rigenerato a partire da essi
 * ✅ **File dei sensori di luce `.daq` / `.csv`** - Necessari per ricavare nuovamente la riflettanza in un secondo momento
 * ✅ **Risultati elaborati** - Conservare le immagini calibrate e gli indici
 * ✅ **Cartella del progetto** (`project.json` e file correlati) - Contiene tutte le impostazioni per un'eventuale rielaborazione
 * ✅ **Log di debug** - Documenta i dettagli dell'elaborazione
-* ✅ **Immagini di riferimento per la calibrazione** - Per la verifica e la rielaborazione**Raccomandazioni per l’archiviazione:*** **Backup immediato**: disco rigido esterno
+* ✅ **Immagini di riferimento per la calibrazione** - Per la verifica e la rielaborazione
+
+**Raccomandazioni per l’archiviazione:**
+
+* **Backup immediato**: disco rigido esterno
 * **Archivio a lungo termine**: archiviazione su cloud (Google Drive, Dropbox, ecc.)
 * **Dati critici**: conservare 2-3 copie in luoghi diversi***
 

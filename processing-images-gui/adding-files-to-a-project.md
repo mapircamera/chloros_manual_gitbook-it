@@ -57,7 +57,11 @@ output/
 └── *.daq          the downwelling reading matched to the capture
 ```
 
-**Indicare la cartella nella directory principale delle acquisizioni** (`output/` sopra). Quando la cartella selezionata non contiene immagini ma presenta sottocartelle, Chloros le esplora automaticamente: le sottocartelle di livello e la cartella principale `.daq` vengono acquisite tutte in un’unica operazione.**Come avviene l’importazione delle acquisizioni:*** Ogni acquisizione viene importata come **singola immagine**, raggruppata per acquisizione (non una voce per ogni livello). Gli altri livelli della stessa acquisizione appaiono come modalità di visualizzazione di quell’unica immagine.
+**Indicare la cartella nella directory principale delle acquisizioni** (`output/` sopra). Quando la cartella selezionata non contiene immagini ma presenta sottocartelle, Chloros le esplora automaticamente: le sottocartelle di livello e la cartella principale `.daq` vengono acquisite tutte in un’unica operazione.
+
+**Come avviene l’importazione delle acquisizioni:**
+
+* Ogni acquisizione viene importata come **singola immagine**, raggruppata per acquisizione (non una voce per ogni livello). Gli altri livelli della stessa acquisizione appaiono come modalità di visualizzazione di quell’unica immagine.
 * **L’elaborazione parte sempre dal fotogramma grezzo.** Gli altri livelli sono visualizzabili, ma solo `raw` viene mai inserito nella pipeline: rielaborare un prodotto già elaborato comporterebbe l’applicazione doppia delle correzioni, quindi Chlorose lo rifiuta. Un’esportazione reimportata non può mai occupare lo slot grezzo di una cattura.
 * Una cartella di cattura salvata **senza** file grezzi viene importata e visualizzata normalmente, ma l’elaborazione la salta e lo segnala nel log. (Il flag CLI `--input-level` può forzare un punto di ingresso in questo caso — vedi [il riferimento CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * A partire dalla versione 1.3.0, una cartella di acquisizioni può contenere anche una cartella `clamp_masks/` (maschere per pixel per i livelli di radianza e riflettanza — vedi [Formati delle immagini di output](../output-image-formats.md#clamp-masks)). Le maschere non sono immagini della scena e Chloros le ignora durante l’importazione, ovunque si trovino.

@@ -79,7 +79,11 @@ Chloros opera in due diverse modalità di elaborazione a seconda della licenza:
 1. **Rilevamento** (Thread 1) - Individuazione dei target di calibrazione
 2. **Analisi** (thread 2) - Esame dei metadati dell’immagine e calcolo della calibrazione
 3. **Calibrazione** (thread 3) - Debayering, correzione della vignettatura, calibrazione, calcolo dell’indice
-4. **Esportazione** (thread 4) - Salvataggio delle immagini elaborate e degli indici**Interazione con la barra di avanzamento:*** **Passare il mouse** sulla barra per visualizzare il pannello a tendina dettagliato delle 4 fasi
+4. **Esportazione** (thread 4) - Salvataggio delle immagini elaborate e degli indici
+
+**Interazione con la barra di avanzamento:**
+
+* **Passare il mouse** sulla barra per visualizzare il pannello a tendina dettagliato delle 4 fasi
 * **Fare clic** sulla barra di avanzamento per bloccare il pannello a tendina in posizione
 * **Fare nuovamente clic** per sbloccare e nascondere il pannello**Tempo di elaborazione:**
 
@@ -117,7 +121,9 @@ Chloros opera in due diverse modalità di elaborazione a seconda della licenza:
 
 ### Fase 3: Calibrazione
 
-**Cosa fa Chloros:*** **Correzione della vignettatura**: rimuove l’oscuramento dei bordi causato dall’obiettivo
+**Cosa fa Chloros:**
+
+* **Correzione della vignettatura**: rimuove l’oscuramento dei bordi causato dall’obiettivo
 * **Calibrazione della riflettanza**: normalizza utilizzando i valori di riflettanza di riferimento e/o i dati di irraggiamento discendente del DAQ
 * Applica le correzioni su tutte le bande/canali
 * Utilizza un riferimento di calibrazione appropriato per ciascuna immagine in base al timestamp

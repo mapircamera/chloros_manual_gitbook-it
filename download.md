@@ -258,10 +258,15 @@ Chloros verifica la presenza di aggiornamenti, avvisa quando è disponibile una 
 
 **Data di rilascio: 10 febbraio 2026**
 
-**Nuove funzionalità*** **Metodo di debayering "Texture Aware" \[Solo Chloros+] -** "Texture Aware" utilizza un debayering di alta qualità sensibile ai bordi, combinato con un modello di denoising basato su IA/ML che rimuove quasi tutto il rumore del debayering.
-* **Supporto per i target di calibrazione T4P*** **Elaborazione GPU più veloce in Chloros+, migliore gestione della memoria**
+**Nuove funzionalità**
 
-**Correzioni di bug*** Interfaccia utente (GUI) completamente rinnovata, ora dovrebbe funzionare su tutti i computer Windows.
+* **Metodo di debayering "Texture Aware" \[Solo Chloros+] -** "Texture Aware" utilizza un debayering di alta qualità sensibile ai bordi, combinato con un modello di denoising basato su IA/ML che rimuove quasi tutto il rumore del debayering.
+* **Supporto per i target di calibrazione T4P**
+* **Elaborazione GPU più veloce in Chloros+, migliore gestione della memoria**
+
+**Correzioni di bug**
+
+* Interfaccia utente (GUI) completamente rinnovata, ora dovrebbe funzionare su tutti i computer Windows.
 
 </details>
 
@@ -271,14 +276,18 @@ Chloros verifica la presenza di aggiornamenti, avvisa quando è disponibile una 
 
 **Data di rilascio: 5 gennaio 2026**
 
-**Nuove funzionalità*** **Opzione "Immagine/Metadati"**: Aggiunta un'opzione nel File Browser per visualizzare i metadati dell'immagine selezionata in una tabella anziché nella griglia delle immagini
+**Nuove funzionalità**
+
+* **Opzione "Immagine/Metadati"**: Aggiunta un'opzione nel File Browser per visualizzare i metadati dell'immagine selezionata in una tabella anziché nella griglia delle immagini
 * **Cursore di zoom della griglia delle immagini**: Nuovo cursore nell'interfaccia utente per regolare le dimensioni delle miniature (supporta anche CTRL + rotellina del mouse)
 * **Pulsanti di esportazione della griglia di immagini**: pulsanti nella riga superiore per passare dalle miniature in formato JPG alle esportazioni elaborate (Targets, Reflectance, Index, LUT)
 * **Scheda Mappa**: nuova mappa 2D interattiva che mostra i marcatori di posizione GPS delle immagini
   * Supporta Google Maps e le tessere cartografiche ESRI (seleziona automaticamente il miglior servizio di tessere in base alla disponibilità del livello di zoom)
   * Anteprima delle miniature al passaggio del mouse sui marcatori della mappa
 
-**Correzioni di bug*** Migliorato il supporto per l’installazione di Chloros su computer con lingua diversa dall’inglese
+**Correzioni di bug**
+
+* Migliorato il supporto per l’installazione di Chloros su computer con lingua diversa dall’inglese
 
 </details>
 
@@ -288,13 +297,21 @@ Chloros verifica la presenza di aggiornamenti, avvisa quando è disponibile una 
 
 **Data di rilascio: 20 dicembre 2025**
 
-**Nuove funzionalità*** Lancio iniziale
+**Nuove funzionalità**
 
-**Miglioramenti*** Lancio iniziale
+* Lancio iniziale
 
-**Correzioni di bug*** Lancio iniziale
+**Miglioramenti**
 
-**Problemi noti*** Lancio iniziale
+* Lancio iniziale
+
+**Correzioni di bug**
+
+* Lancio iniziale
+
+**Problemi noti**
+
+* Lancio iniziale
 
 </details>
 
