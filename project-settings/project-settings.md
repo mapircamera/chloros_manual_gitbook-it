@@ -34,7 +34,9 @@ nella barra laterale sinistra
 * **Opzioni**: `Default (512 px)`, `1024 px`, `2048 px`, `Full resolution`
 * **Impostazione predefinita**: Predefinita (512 px)
 * **Descrizione**: Risoluzione (lato più lungo, in pixel) alla quale vengono renderizzate le miniature della griglia di immagini. Valori più elevati garantiscono una maggiore nitidezza quando si ingrandisce l’immagine, ma rallentano il caricamento e consumano più memoria. La risoluzione completa corrisponde alle dimensioni dell’immagine originale.
-* **Nota**: Solo a scopo di visualizzazione — non influisce mai sull’elaborazione o sui file esportati.***
+* **Nota**: Solo a scopo di visualizzazione — non influisce mai sull’elaborazione o sui file esportati.
+
+***
 
 ## Rilevamento dei target
 
@@ -186,7 +188,9 @@ Le scansioni dei target **misurati** per unità vengono ricercate in base al num
   * Singola fotocamera + singolo pin: il Pin 2 viene automaticamente impostato su "Non utilizzare"
   * Singola fotocamera + due pin: il Pin 2 viene automaticamente impostato su "Non utilizzare"
   * Fotocamere multiple: è richiesta la selezione manuale
-* **Nota**: la stessa telecamera non può essere assegnata contemporaneamente sia al pin 1 che al pin 2.***
+* **Nota**: la stessa telecamera non può essere assegnata contemporaneamente sia al pin 1 che al pin 2.
+
+***
 
 ## Sensore di luce DAQ
 
@@ -207,7 +211,9 @@ Ogni riga mostra il file, il modello del sensore e la correzione del cappuccio d
 * **Descrizione**: `Auto` utilizza il cappuccio registrato in ciascun file (se non è stato registrato nulla, si presume il cappuccio Sunshine, ma DAQ-U, DAQ-M e DAQ-E vengono forniti senza cappuccio e Chloros non è in grado di rilevare quale sia montato, quindi l’elaborazione genera un avviso relativo a un limite ipotizzato: scegliere il limite effettivamente montato). La selezione di un limite specifico sovrascrive **tutti** i file downwelling del progetto tranne quelli di un DAQ-E-S, il cui diffusore fa parte della sua calibrazione; un progetto composto esclusivamente da DAQ-E-S non mostra alcun menu a tendina: le registrazioni grezze vengono corrette con esso, mentre le registrazioni che presentano già un cappuccio vengono ricalibrate (la correzione registrata viene annullata e viene applicata quella selezionata).
 * **Importante**: il cappuccio selezionato deve corrispondere a quello fisicamente montato durante la registrazione. Né il sensore né il software sono in grado di rilevare il cappuccio fisico — un ID del cappuccio non corrispondente corregge erroneamente gli spettri.
 
-È presente volutamente **un unico** controllo a livello di progetto anziché menu a tendina per singolo file: l’impostazione si applica a tutte le sorgenti downwelling del progetto.***
+È presente volutamente **un unico** controllo a livello di progetto anziché menu a tendina per singolo file: l’impostazione si applica a tutte le sorgenti downwelling del progetto.
+
+***
 
 ## Allineamento dell’array
 

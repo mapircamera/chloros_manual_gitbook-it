@@ -198,7 +198,9 @@ Tutto in questa sezione riguarda **solo la visualizzazione**— modifica ciò ch
 | **Saturazione** | 0–200 (100 = neutro) | 100 | Solo RGB | Saturazione HSV nell’anteprima in tempo reale. |
 | **Contrasto** | 0–200 (100 = neutro) | 100 | Solo RGB | Contrasto lineare intorno al grigio medio nell’anteprima in tempo reale. |
 | **Rifletti H / Rifletti V** | Caselle di controllo | Disattivato | Tutti | Capovolge l’anteprima orizzontalmente / verticalmente. |
-| **Rotazione**| 0° / 90° / 180° / 270° | 0° | Tutti | Ruota l’anteprima. L’orientamento viene applicato alla fine della catena di anteprima del backend.**Acquisizioni salvate (1.3.0):**i prodotti Anteprima, Radianza, Riflettanza e Indice di una fotocamera autonoma vengono ruotati tramite Specchio/Rotazione, mentre**i file Raw e Debayered mantengono l’orientamento nativo della fotocamera**; ogni file di acquisizione registra l’impostazione nel proprio XMP, quindi l’elaborazione successiva di un file raw la applica allo stesso modo.**I file membri dell’array mantengono l’orientamento nativo** (l’impostazione viene registrata, non applicata) e le viste composite dell’array la ignorano. |**Semantica dei profili colore** (telecamere RGB):
+| **Rotazione**| 0° / 90° / 180° / 270° | 0° | Tutti | Ruota l’anteprima. L’orientamento viene applicato alla fine della catena di anteprima del backend.**Acquisizioni salvate (1.3.0):**i prodotti Anteprima, Radianza, Riflettanza e Indice di una fotocamera autonoma vengono ruotati tramite Specchio/Rotazione, mentre**i file Raw e Debayered mantengono l’orientamento nativo della fotocamera**; ogni file di acquisizione registra l’impostazione nel proprio XMP, quindi l’elaborazione successiva di un file raw la applica allo stesso modo.**I file membri dell’array mantengono l’orientamento nativo** (l’impostazione viene registrata, non applicata) e le viste composite dell’array la ignorano. |
+
+**Semantica dei profili colore** (telecamere RGB):
 
 * **Raw** — bypassa completamente la catena di elaborazione.
 * **Lineare** — segnale scuro + flat field + bilanciamento del bianco; nessuna matrice colore, nessuna gamma.

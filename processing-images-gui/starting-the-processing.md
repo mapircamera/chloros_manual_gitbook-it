@@ -181,7 +181,9 @@ Una volta avviata, l’intera pipeline viene eseguita automaticamente:
 * Un’esecuzione interrotta riporta in modo accurato ciò che è stato completato (vedere le righe `[RUN-SUMMARY]` nel log)
 * Una nuova esecuzione avvia la pipeline dall’inizio
 
-**Suggerimento per la pianificazione:** per progetti di grandi dimensioni, si consiglia di elaborare i dati in batch o di utilizzare l’interfaccia CLI per un maggiore controllo.***
+**Suggerimento per la pianificazione:** per progetti di grandi dimensioni, si consiglia di elaborare i dati in batch o di utilizzare l’interfaccia CLI per un maggiore controllo.
+
+***
 
 ## Monitoraggio dell’elaborazione
 

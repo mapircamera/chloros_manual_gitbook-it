@@ -196,7 +196,9 @@ Per ottenere valori quantitativi di irradianza, calcolare la media su almeno 15 
 
 * È possibile combinare più sensori su un unico grafico (assi condivisi), mantenere grafici separati (layout a griglia automatico), spostare i sensori tra i grafici, riordinare le righe/i riquadri trascinandoli e nascondere singoli sensori tramite l’icona a forma di occhio.
 * Per ogni progetto, Chloros conserva: nomi dei dispositivi, colori dei grafici, dimensioni dei grafici, modalità di visualizzazione e impostazioni di ciascun sensore (tempo di integrazione, media dei fotogrammi, stato AE, selezione del cappuccio).
-* **Riaprendo un progetto, i sensori si riconnettono automaticamente** in base all’indirizzo — porta COM per DAQ-U, dispositivo BLE per DAQ-M, nome host mDNS per DAQ-E (risolto anche se l’IP dell’unità è cambiato) — e riapplica il profilo del cappuccio salvato, la media dei fotogrammi, lo stato AE e il tempo di integrazione manuale di ciascun sensore.***
+* **Riaprendo un progetto, i sensori si riconnettono automaticamente** in base all’indirizzo — porta COM per DAQ-U, dispositivo BLE per DAQ-M, nome host mDNS per DAQ-E (risolto anche se l’IP dell’unità è cambiato) — e riapplica il profilo del cappuccio salvato, la media dei fotogrammi, lo stato AE e il tempo di integrazione manuale di ciascun sensore.
+
+***
 
 ## Accoppiamento della telecamera (DLS)
 

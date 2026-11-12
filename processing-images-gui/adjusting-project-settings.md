@@ -153,7 +153,9 @@ Questa sezione appare **solo** quando almeno un’immagine nel progetto contiene
 
 * **Applica allineamento dell’array** (impostazione predefinita: attiva): deforma ogni prodotto elaborato (debayering / anteprima / radianza / riflettanza / indice) nella geometria di riferimento condivisa dall’array. Disattivata = esportazione nella geometria nativa del sensore.
 * **Ritaglia alla sovrapposizione comune** (impostazione predefinita: attiva): ritaglia le esportazioni allineate alla regione condivisa da tutti i moduli, in modo che ogni banda abbia la stessa impronta. Se disattivata, viene mantenuta l’intera area del sensore (riempimento nero al di fuori della sorgente).
-* **Ricampionamento**:**Bilineare (morbido, predefinito)**,**Più vicino (mantiene i valori esatti)**— nessuna miscelazione tra pixel, per un’analisi radiometrica rigorosa — oppure**Cubico (più nitido)**.***
+* **Ricampionamento**:**Bilineare (morbido, predefinito)**,**Più vicino (mantiene i valori esatti)**— nessuna miscelazione tra pixel, per un’analisi radiometrica rigorosa — oppure**Cubico (più nitido)**.
+
+***
 
 ## Salvataggio e caricamento delle impostazioni
 

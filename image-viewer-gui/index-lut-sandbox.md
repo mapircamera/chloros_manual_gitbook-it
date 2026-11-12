@@ -71,7 +71,9 @@ Per il riferimento completo alle formule — tutti e tre gli elenchi di preimpos
 
 ### Con l’opzione “Indice” selezionata ma senza LUT
 
-L’immagine viene disegnata in **scala di grigi**, estesa tra i due valori di soglia. Si tratta di una scelta deliberata: l’immagine dell’indice è costituita da dati scalari e la scala di grigi ne rappresenta la resa più fedele. Aggiungere una LUT quando si desidera il colore.***
+L’immagine viene disegnata in **scala di grigi**, estesa tra i due valori di soglia. Si tratta di una scelta deliberata: l’immagine dell’indice è costituita da dati scalari e la scala di grigi ne rappresenta la resa più fedele. Aggiungere una LUT quando si desidera il colore.
+
+***
 
 ## Utilizzo delle LUT (tabelle di consultazione)
 
@@ -135,7 +137,9 @@ Esempio di finestre NDVI:
 | Solo vegetazione sana                 | 0,5  | 0,9 |
 | Enfatizza lo stress                        | 0,2  | 0,5 |
 
-Restringere la finestra aumenta il contrasto all’interno dell’area di interesse ed esclude tutto il resto dal range — dove la **Modalità di ritaglio** decide cosa ne sarà di esso.***
+Restringere la finestra aumenta il contrasto all’interno dell’area di interesse ed esclude tutto il resto dal range — dove la **Modalità di ritaglio** decide cosa ne sarà di esso.
+
+***
 
 ## Modalità di ritaglio
 

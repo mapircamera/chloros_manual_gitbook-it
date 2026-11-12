@@ -112,7 +112,9 @@ La riflettanza è memorizzata come valore intero DN, e **il valore DN corrispond
 | LATTICE (M3C/M3M) | **32768** (margine fino a ρ 2,0) | Il tag XMP `Chloros:PixelScale=32768` è inserito nel file |
 | Survey3          | **65535** (tagliato a ρ 1,0)     | Nessun tag `Chloros:PixelScale` — tale assenza è il segnale (i prodotti Survey3 riportano altri tag di elaborazione `Chloros:*`) |
 
-**Leggere il tag `Chloros:PixelScale` e dividere per quel valore** anziché ipotizzare un valore generico di 65535 — dividere la riflettanza LATTICE per 65535 dimezza silenziosamente ogni valore. Un file di riflettanza precedente alla versione 1.3.0 scritto a 8 bit è stato troncato, non riscalato, e non presenta alcun tag di scala: riesportarlo a 16 bit o 32 bit invece di dividerlo. Vedi [Formati immagine di output](../output-image-formats.md) per i dettagli completi.***
+**Leggere il tag `Chloros:PixelScale` e dividere per quel valore** anziché ipotizzare un valore generico di 65535 — dividere la riflettanza LATTICE per 65535 dimezza silenziosamente ogni valore. Un file di riflettanza precedente alla versione 1.3.0 scritto a 8 bit è stato troncato, non riscalato, e non presenta alcun tag di scala: riesportarlo a 16 bit o 32 bit invece di dividerlo. Vedi [Formati immagine di output](../output-image-formats.md) per i dettagli completi.
+
+***
 
 ## Metadati trasferiti nelle esportazioni
 
@@ -167,7 +169,9 @@ Per conservare una traccia dell’elaborazione o per inviarlo all’assistenza M
 3. Allegarlo alla documentazione del progetto
 4. Inviare al supporto MAPIR in caso di problemi riscontrati
 
-Per segnalare un problema direttamente a MAPIR, utilizzare l’icona del bug (**Segnala un bug**) nella parte superiore della scheda Registro di debug — vedere [Segnalazione di un bug dalla scheda Registro](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Per segnalare un problema direttamente a MAPIR, utilizzare l’icona del bug (**Segnala un bug**) nella parte superiore della scheda Registro di debug — vedere [Segnalazione di un bug dalla scheda Registro](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).
+
+***
 
 ## Problemi comuni relativi all’output e relative soluzioni
 

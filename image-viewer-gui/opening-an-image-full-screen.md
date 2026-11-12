@@ -57,7 +57,9 @@ L’ingrandimento “effettivo” tiene conto della dimensione del blocco GSD: c
 | **←**                           | Schermo intero | Immagine precedente                      |
 | **Ctrl + R**                    | Schermo intero | Ripristina l’indice/la sandbox LUT         |
 | **Ctrl + `+`**/**Ctrl + `=`** | Griglia        | Miniature più grandi (4 px per pressione)  |
-| **Ctrl + `−`**                  | Griglia        | Miniature più piccole (4 px per ogni pressione) |***
+| **Ctrl + `−`**                  | Griglia        | Miniature più piccole (4 px per ogni pressione) |
+
+***
 
 ## Valori del cursore
 
@@ -100,7 +102,9 @@ Il visualizzatore, la sandbox dell’indice/LUT e l’esportazione dell’indice
 Due conseguenze da tenere presenti:
 
 * Un **valore percentuale a 32 bit**TIFF memorizza DN/65535 come numero in virgola mobile, mentre un**valore a 8 bit** PNG/JPG memorizza DN × 255/65535 — il visualizzatore converte entrambi prima di visualizzare la percentuale.
-* Un caso non può essere recuperato: un’**esportazione a 8 bit TIFF di un’acquisizione da sorgente a 8 bit** viene troncata a 0–255 anziché riscalata e, deliberatamente, non riporta alcun tag di scala. Per quei file il pannello stampa solo il valore DN, senza la colonna delle percentuali. Questa è la risposta corretta, non si tratta di un bug.***
+* Un caso non può essere recuperato: un’**esportazione a 8 bit TIFF di un’acquisizione da sorgente a 8 bit** viene troncata a 0–255 anziché riscalata e, deliberatamente, non riporta alcun tag di scala. Per quei file il pannello stampa solo il valore DN, senza la colonna delle percentuali. Questa è la risposta corretta, non si tratta di un bug.
+
+***
 
 ## L’istogramma del livello
 
@@ -126,7 +130,9 @@ Sopra l’istogramma sono presenti tre pulsanti:
 | **INDICE**| Attivo      | Appare solo quando è attivo un indice. Commuta l’istogramma dalle bande sorgente alla**distribuzione dei valori dell’indice**, con le due soglie di clip tracciate come linee tratteggiate arancioni e il valore dell’indice del cursore come linea bianca                                                          |
 | **RGB**| Disattivato     | Passa dalla curva combinata alle curve per singolo canale. Su un sensore mono questo pulsante riporta la dicitura**MONO** ed è disabilitato — c’è un solo canale da visualizzare                                                                                                                                  |
 
-L’istogramma viene calcolato sui **blocchi visibili**, non sui pixel sorgente sottostanti: modificando la dimensione del blocco GSD, la distribuzione viene ricalcolata, in modo che l’istogramma, l’indicatore del cursore e l’immagine visualizzata siano sempre allineati.***
+L’istogramma viene calcolato sui **blocchi visibili**, non sui pixel sorgente sottostanti: modificando la dimensione del blocco GSD, la distribuzione viene ricalcolata, in modo che l’istogramma, l’indicatore del cursore e l’immagine visualizzata siano sempre allineati.
+
+***
 
 ## Dimensione del blocco GSD
 
@@ -185,7 +191,9 @@ Applicare indici multispettrali e tabelle di ricerca (LUT) dei colori dalla barr
 
 3. Scegliere il filtro della propria telecamera e una formula di indice, quindi trascinare i cerchi dei canali negli slot della formula
 4. Aggiungi una LUT e seleziona un gradiente, le soglie e una modalità di ritaglio
-5. Leggi i valori in corrispondenza del cursore e salva il risultato con **Esporta/Salva immagini**Consulta [Index/LUT Sandbox](index-lut-sandbox.md) per la guida completa.***
+5. Leggi i valori in corrispondenza del cursore e salva il risultato con **Esporta/Salva immagini**Consulta [Index/LUT Sandbox](index-lut-sandbox.md) per la guida completa.
+
+***
 
 ## Risoluzione dei problemi
 

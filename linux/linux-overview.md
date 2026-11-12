@@ -10,7 +10,8 @@ Chloros 1.3.0 offre supporto nativo per Linux per la **CLI**e il**Python SDK** �
 
 ## Matrice di supporto delle piattaforme
 
-| Funzionalità | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/ --- | --- | --- | --- |
+| Funzionalità | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/SDK) | Linux arm64 / Jetson (CLI/SDK) |
+| --- | --- | --- | --- | --- |
 | **Interfaccia grafica desktop** | Sì | N/A | No | No |
 | **Interfaccia CLI** (`chloros-cli`) | Sì | Sì | Sì | Sì |
 | **Python SDK** (`chloros-sdk`) | Sì | Sì | Sì | Sì |
@@ -22,7 +23,9 @@ Chloros 1.3.0 offre supporto nativo per Linux per la **CLI**e il**Python SDK** �
 | **Debayer Texture Aware** (richiede una GPU CUDA) | Sì (Chloros+) | Sì (Chloros+) | Sì (Chloros+) | Sì (Chloros+) |
 | **Adattamento dinamico del calcolo** | Sì | Sì | Sì | Sì |
 | **Backend come servizio di sistema** (`chloros-backend@<user>.service`) | No | No | Sì (attivabile) | Sì (attivabile) |
-| **Programma di aggiornamento in loco** (`chloros-cli update`) | No (eseguire il programma di installazione) | No (eseguire il programma di installazione) | Sì | Sì |***
+| **Programma di aggiornamento in loco** (`chloros-cli update`) | No (eseguire il programma di installazione) | No (eseguire il programma di installazione) | Sì | Sì |
+
+***
 
 ## Architetture supportate
 
@@ -35,7 +38,9 @@ Chloros 1.3.0 offre supporto nativo per Linux per la **CLI**e il**Python SDK** �
 
 * **Ubuntu 22.04 LTS o versioni successive** (amd64)
 * **Debian 12 o versioni successive** (amd64)
-* **NVIDIA JetPack 6** (arm64 — piattaforme Jetson Orin)***
+* **NVIDIA JetPack 6** (arm64 — piattaforme Jetson Orin)
+
+***
 
 ## Cosa ottengono gli utenti Linux
 
@@ -54,7 +59,9 @@ Chloros 1.3.0 offre supporto nativo per Linux per la **CLI**e il**Python SDK** �
 
 * **Interfaccia grafica desktop** — nessuna interfaccia grafica; tutte le interazioni avvengono tramite CLI o Python SDK
 * **Visualizzatore di immagini** — nessun visualizzatore di immagini interattivo, vista a griglia o indicatori sulla mappa
-* **Gestione visiva dei progetti** — i progetti vengono creati e gestiti tramite comandi CLI e chiamate SDK (l’hardware stesso — telecamere, sensori, acquisizione — rimane completamente controllabile dal terminale)***
+* **Gestione visiva dei progetti** — i progetti vengono creati e gestiti tramite comandi CLI e chiamate SDK (l’hardware stesso — telecamere, sensori, acquisizione — rimane completamente controllabile dal terminale)
+
+***
 
 ## Requisiti di licenza
 

@@ -170,7 +170,9 @@ chloros-cli daq pool-reboot --sensor-id daq-e-def330
 chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 ```
 
-`pool-info` mostra il firmware del sensore (e se questa versione di Chloros ne contiene uno più recente), il suo indirizzo e come lo ha ottenuto, le impostazioni di rete salvate qualora differiscano da quelle correnti, lo streaming all’accensione e il PTP. `pool-set-network` riavvia il sensore per applicare la modifica e lo ricollega con le impostazioni precedenti; `--no-reboot` si limita a salvarle. L’indirizzo statico deve trovarsi sulla rete di questo computer, altrimenti Chloros lo rifiuta; `--force` ignora tale restrizione, ma solo per un computer a cui verrà riassegnato l’indirizzo o che verrà instradato verso di esso. I riavvii vengono rifiutati mentre il sensore sta registrando. `pool-update-firmware` corrisponde all’opzione **Aggiorna a \<version\>**</version\> dell’interfaccia grafica <version\>per la riga di comando ed è il modo per aggiornare un DAQ-E su Linux, che non dispone di interfaccia grafica. Novità della versione 1.3.0.***
+`pool-info` mostra il firmware del sensore (e se questa versione di Chloros ne contiene uno più recente), il suo indirizzo e come lo ha ottenuto, le impostazioni di rete salvate qualora differiscano da quelle correnti, lo streaming all’accensione e il PTP. `pool-set-network` riavvia il sensore per applicare la modifica e lo ricollega con le impostazioni precedenti; `--no-reboot` si limita a salvarle. L’indirizzo statico deve trovarsi sulla rete di questo computer, altrimenti Chloros lo rifiuta; `--force` ignora tale restrizione, ma solo per un computer a cui verrà riassegnato l’indirizzo o che verrà instradato verso di esso. I riavvii vengono rifiutati mentre il sensore sta registrando. `pool-update-firmware` corrisponde all’opzione **Aggiorna a \<version\>**</version\> dell’interfaccia grafica <version\>per la riga di comando ed è il modo per aggiornare un DAQ-E su Linux, che non dispone di interfaccia grafica. Novità della versione 1.3.0.
+
+***
 
 ## Riepilogo dei comandi
 

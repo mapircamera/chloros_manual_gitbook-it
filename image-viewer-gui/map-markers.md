@@ -78,7 +78,9 @@ Ogni immagine con dati GPS riceve un indicatore alle proprie coordinate.
 | Fornitore        | Note                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Google Maps** | Ampia copertura mondiale; supporta tutti e quattro i tipi di tile                                                                                                            |
-| **Esri ArcGIS**| Immagini aeree spesso a risoluzione più elevata in determinate regioni. Il tipo di tile**Terrain** non è disponibile per Esri e il relativo pulsante è disabilitato quando è selezionato Esri |***
+| **Esri ArcGIS**| Immagini aeree spesso a risoluzione più elevata in determinate regioni. Il tipo di tile**Terrain** non è disponibile per Esri e il relativo pulsante è disabilitato quando è selezionato Esri |
+
+***
 
 ## Tipi di tessere cartografiche
 
@@ -93,7 +95,9 @@ Scegli il tipo di livello cartografico utilizzando i pulsanti (da sinistra a des
 | **Satellite**        | Immagini satellitari dettagliate, senza etichette — l’opzione che richiede la larghezza di banda più elevata |
 | **Ibrido** (predefinito) | Immagini satellitari con strade ed etichette sovrapposte                |
 
-La scheda Mappa si apre su **Ibrido**. La scelta effettuata si applica anche al cambio di provider, laddove quest’ultimo lo supporti.***
+La scheda Mappa si apre su **Ibrido**. La scelta effettuata si applica anche al cambio di provider, laddove quest’ultimo lo supporti.
+
+***
 
 ## Navigazione sulla mappa
 
@@ -141,7 +145,9 @@ La scheda Mappa si apre su **Ibrido**. La scelta effettuata si applica anche al 
 
 ### La mappa è vuota o il caricamento delle tessere si interrompe
 
-I fornitori di tessere sono servizi online. Se le tessere smettono di arrivare, controlla la connessione di rete del dispositivo, quindi prova a cambiare fornitore. Se avevi effettuato uno zoom estremo, premi il pulsante di ripristino **×** per tornare a un livello di zoom normale e consentire alla mappa di richiedere nuovamente le tessere.***
+I fornitori di tessere sono servizi online. Se le tessere smettono di arrivare, controlla la connessione di rete del dispositivo, quindi prova a cambiare fornitore. Se avevi effettuato uno zoom estremo, premi il pulsante di ripristino **×** per tornare a un livello di zoom normale e consentire alla mappa di richiedere nuovamente le tessere.
+
+***
 
 ## Pagine correlate
 

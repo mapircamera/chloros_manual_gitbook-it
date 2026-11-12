@@ -10,7 +10,9 @@ Utilizza il cursore di zoom in alto a destra per regolare la dimensione delle mi
 * **Ctrl + `+`**/**Ctrl + `=`**e**Ctrl + `−`** aumentano o diminuiscono la dimensione di 4 px per ogni pressione. L'intervallo di regolazione tramite tastiera termina a 64 px nella dimensione minima e, nella dimensione massima, a qualsiasi dimensione che permetta di inserire esattamente due miniature per riga nella finestra corrente.
 * La dimensione scelta viene salvata insieme al progetto (`UI → Grid thumbnail size` in `project.json`, valore predefinito `160`), quindi riaprendo il progetto verrà ripristinata.
 
-<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>La *risoluzione* delle miniature è un’impostazione distinta dalla *dimensione* delle miniature: vedi **Visualizza → Risoluzione miniature immagini** in [Impostazioni progetto](../project-settings/project-settings.md) (impostazione predefinita 512 px sul lato più lungo). La dimensione indica quanto è grande il riquadro disegnato; la risoluzione indica la quantità di dettagli recuperati per riempirlo.***
+<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>La *risoluzione* delle miniature è un’impostazione distinta dalla *dimensione* delle miniature: vedi **Visualizza → Risoluzione miniature immagini** in [Impostazioni progetto](../project-settings/project-settings.md) (impostazione predefinita 512 px sul lato più lungo). La dimensione indica quanto è grande il riquadro disegnato; la risoluzione indica la quantità di dettagli recuperati per riempirlo.
+
+***
 
 ## La barra degli strumenti della griglia
 

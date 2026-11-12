@@ -136,7 +136,9 @@ Due regole regolano questi valori:
 * A un thread che è l’**unico** attivo viene concessa l’allocazione massima prevista dal proprio profilo.
 * Quando sono attivi più di un’attività *pesante* sulla GPU, l’allocazione di base di ciascuna attività pesante viene suddivisa tra di esse (senza mai scendere al di sotto del minimo configurato).
 
-Il valore effettivamente utilizzato in fase di esecuzione è il **minore** tra l’allocazione del profilo della piattaforma e la raccomandazione in tempo reale fornita dal monitor della memoria della GPU, quindi una scheda molto sollecitata ha sempre la precedenza su un profilo ottimistico.***
+Il valore effettivamente utilizzato in fase di esecuzione è il **minore** tra l’allocazione del profilo della piattaforma e la raccomandazione in tempo reale fornita dal monitor della memoria della GPU, quindi una scheda molto sollecitata ha sempre la precedenza su un profilo ottimistico.
+
+***
 
 ## Elaborazione Texture Aware
 
