@@ -13,7 +13,7 @@ I controlli si mostrano o si nascondono a seconda del tipo di telecamera selezio
 | **Telecamera RGB** | LATTICE M3C con filtro FRGB (il modello contiene `-FRGB`) | Red / Green / Blue |
 | **Multispettrale Bayer** | LATTICE M3C con FRGN, FOCN o FNGB | FRGN: Red / Green / NIR · FOCN: Orange / Cyan / NIR · FNGB: NIR / Green / Blue |
 | **Mono (M3M)** | LATTICE M3M — un filtro a banda stretta, una banda calibrata | Banda singola |
-| ****Membro dell’array** | Una telecamera collegata come parte di un array sincronizzato (visualizzazione combinata o separata) | In base al proprio filtro |
+| **Membro dell’array** | Una telecamera collegata come parte di un array sincronizzato (visualizzazione combinata o separata) | In base al proprio filtro |
 
 Le telecamere RGB sottoposte a elaborazione fotometrica (bilanciamento del bianco, profili colore, gamma); le telecamere multispettrali e mono vengono sottoposte alla catena radiometrica e saltano i controlli fotometrici. I membri dell’array gestiscono le impostazioni a livello di flusso (formato pixel, risoluzione, binning, trigger, frequenza dei fotogrammi) all’array — tali righe diventano di sola lettura nel pannello specifico per ciascuna telecamera e vengono spostate nel pannello delle impostazioni dell’array.
 
@@ -266,7 +266,7 @@ dell’array mostrano inoltre le righe di sola lettura **Ruolo**(Master in blu /
 | Controllo | Opzioni | Predefinito | Note |
 | --- | --- | --- | --- |
 | **Modalità di trigger** | Off / On | On | Disabilitata per gli elementi dell’array (l’array gestisce il trigger). |
-| ****Sorgente di trigger** | Software / Linea 0 (M8) / Linea 1 / Linea 2 | Linea 0 | Nascosta quando la modalità di trigger è disattivata; disabilitata per i membri dell’array. La Linea 0 è l’ingresso di trigger esterno optoisolato M8. |
+| **Sorgente di trigger** | Software / Linea 0 (M8) / Linea 1 / Linea 2 | Linea 0 | Nascosta quando la modalità di trigger è disattivata; disabilitata per i membri dell’array. La Linea 0 è l’ingresso di trigger esterno optoisolato M8. |
 | **Frequenza fotogrammi**| Auto / Manuale + valore | Auto |**Auto**: il limite di frame rate della telecamera è disattivato — l’esposizione determina gli fps e il riquadro mostra la frequenza effettiva in tempo reale.**Manuale**: si limita il numero di fps tramite un cursore (da 1 fino al massimo consentito dalla larghezza di banda), basato sulla frequenza effettiva corrente. I membri dell’array vedono un valore di sola lettura "N fps (in tempo reale)" con la nota "Impostato nelle impostazioni dell’array". |
 
 ### Rete / Trasporto

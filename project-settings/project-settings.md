@@ -105,7 +105,7 @@ Per i progetti contenenti acquisizioni LATTICE, ogni fotogramma LATTICE importat
 * Le telecamere master RGB emettono dati debayered + anteprima; per queste, la radianza e la riflettanza vengono ignorate in quanto non applicabili.
 * La profondità di bit dei dati debayered/anteprima segue l’impostazione *Formato immagine calibrato*; la radianza è sempre float32.
 * L’elaborazione Survey3 non è influenzata da questi quattro interruttori.
-* Anche i prodotti di radianza e riflettanza delle telecamere multispettrali M3C possono scrivere una ****maschera di clipping** per ogni pixel in una cartella `clamp_masks/` accanto alle cartelle dei prodotti, registrando i punti in cui la separazione delle bande ha troncato un valore negativo a zero. Vedi [Formati immagine di output](../output-image-formats.md#clamp-masks).
+* Anche i prodotti di radianza e riflettanza delle telecamere multispettrali M3C possono scrivere una **maschera di clipping** per ogni pixel in una cartella `clamp_masks/` accanto alle cartelle dei prodotti, registrando i punti in cui la separazione delle bande ha troncato un valore negativo a zero. Vedi [Formati immagine di output](../output-image-formats.md#clamp-masks).
 
 Gli stessi quattro flag esistono in modalità headless come `chloros-cli process --debayered / --preview / --radiance / --reflectance`. Hanno sostituito il vecchio flag CLI `--radiometric-output`, che non esiste più.
 
